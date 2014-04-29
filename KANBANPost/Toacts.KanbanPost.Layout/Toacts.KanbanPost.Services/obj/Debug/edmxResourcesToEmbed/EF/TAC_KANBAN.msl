@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TAC_KANBANModelStoreContainer" CdmEntityContainer="TAC_KANBANEntities">
+    <EntitySetMapping Name="ACCUMULATE_STOCK">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.ACCUMULATE_STOCK">
+        <MappingFragment StoreEntitySet="ACCUMULATE_STOCK">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MODEL_STRUCTURE__ID" ColumnName="MODEL_STRUCTURE__ID" />
+          <ScalarProperty Name="PLAN_IN" ColumnName="PLAN_IN" />
+          <ScalarProperty Name="ACTUAL_IN" ColumnName="ACTUAL_IN" />
+          <ScalarProperty Name="PLAN_OUT" ColumnName="PLAN_OUT" />
+          <ScalarProperty Name="ACTUAL_OUT" ColumnName="ACTUAL_OUT" />
+          <ScalarProperty Name="IN_DATE" ColumnName="IN_DATE" />
+          <ScalarProperty Name="IN_BY" ColumnName="IN_BY" />
+          <ScalarProperty Name="OUT_DATE" ColumnName="OUT_DATE" />
+          <ScalarProperty Name="OUT_BY" ColumnName="OUT_BY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXT_FIN_MAPPING_PART">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.EXT_FIN_MAPPING_PART">
+        <MappingFragment StoreEntitySet="EXT_FIN_MAPPING_PART">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EXT_PART_NO" ColumnName="EXT_PART_NO" />
+          <ScalarProperty Name="FIN_PART_NO" ColumnName="FIN_PART_NO" />
+          <ScalarProperty Name="EXT_UNIT_PER_FIN_UNIT" ColumnName="EXT_UNIT_PER_FIN_UNIT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXT_STOCK">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.EXT_STOCK">
+        <MappingFragment StoreEntitySet="EXT_STOCK">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="WORK_ORDER_ID" ColumnName="WORK_ORDER_ID" />
+          <ScalarProperty Name="STOCK_IN" ColumnName="STOCK_IN" />
+          <ScalarProperty Name="STOCK_OUT" ColumnName="STOCK_OUT" />
+          <ScalarProperty Name="ACC_STOCK_ID" ColumnName="ACC_STOCK_ID" />
+          <ScalarProperty Name="IN_DATE" ColumnName="IN_DATE" />
+          <ScalarProperty Name="IN_BY" ColumnName="IN_BY" />
+          <ScalarProperty Name="OUT_DATE" ColumnName="OUT_DATE" />
+          <ScalarProperty Name="OUT_BY" ColumnName="OUT_BY" />
+          <ScalarProperty Name="MANUAL" ColumnName="MANUAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXT_WORK_ORDER">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.EXT_WORK_ORDER">
+        <MappingFragment StoreEntitySet="EXT_WORK_ORDER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KANBAN_ID" ColumnName="KANBAN_ID" />
+          <ScalarProperty Name="TAG_ID" ColumnName="TAG_ID" />
+          <ScalarProperty Name="MODEL_STRUCTURE_ID" ColumnName="MODEL_STRUCTURE_ID" />
+          <ScalarProperty Name="ACTUAL_QTY" ColumnName="ACTUAL_QTY" />
+          <ScalarProperty Name="LINE_ID" ColumnName="LINE_ID" />
+          <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+          <ScalarProperty Name="ESTIMATE_END_TIME" ColumnName="ESTIMATE_END_TIME" />
+          <ScalarProperty Name="ACTUAL_END_TIME" ColumnName="ACTUAL_END_TIME" />
+          <ScalarProperty Name="WORK_BY" ColumnName="WORK_BY" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="PD" ColumnName="PD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXT_WORK_ORDER_DERAIL">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.EXT_WORK_ORDER_DERAIL">
+        <MappingFragment StoreEntitySet="EXT_WORK_ORDER_DERAIL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="WORK_ORDER_ID" ColumnName="WORK_ORDER_ID" />
+          <ScalarProperty Name="LOST_TIME_ID" ColumnName="LOST_TIME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FIN_STOCK">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.FIN_STOCK">
+        <MappingFragment StoreEntitySet="FIN_STOCK">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="WORK_ORDER_ID" ColumnName="WORK_ORDER_ID" />
+          <ScalarProperty Name="STOCK_IN" ColumnName="STOCK_IN" />
+          <ScalarProperty Name="STOCK_OUT" ColumnName="STOCK_OUT" />
+          <ScalarProperty Name="ACC_STOCK_ID" ColumnName="ACC_STOCK_ID" />
+          <ScalarProperty Name="IN_DATE" ColumnName="IN_DATE" />
+          <ScalarProperty Name="IN_BY" ColumnName="IN_BY" />
+          <ScalarProperty Name="OUT_DATE" ColumnName="OUT_DATE" />
+          <ScalarProperty Name="OUT_BY" ColumnName="OUT_BY" />
+          <ScalarProperty Name="MANUAL" ColumnName="MANUAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FIN_WORK_ORDER">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.FIN_WORK_ORDER">
+        <MappingFragment StoreEntitySet="FIN_WORK_ORDER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="WORK_ORDER_ID" ColumnName="WORK_ORDER_ID" />
+          <ScalarProperty Name="TAG_ID" ColumnName="TAG_ID" />
+          <ScalarProperty Name="MODEL_STRUCTURE_ID" ColumnName="MODEL_STRUCTURE_ID" />
+          <ScalarProperty Name="ACTUAL_QTY" ColumnName="ACTUAL_QTY" />
+          <ScalarProperty Name="LINE_ID" ColumnName="LINE_ID" />
+          <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+          <ScalarProperty Name="ESTIMATE_END_TIME" ColumnName="ESTIMATE_END_TIME" />
+          <ScalarProperty Name="ACTUAL_END_TIME" ColumnName="ACTUAL_END_TIME" />
+          <ScalarProperty Name="WORK_BY" ColumnName="WORK_BY" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="PD" ColumnName="PD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FORECAST_ORDER">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.FORECAST_ORDER">
+        <MappingFragment StoreEntitySet="FORECAST_ORDER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+          <ScalarProperty Name="MODEL_STRUCTURE_ID" ColumnName="MODEL_STRUCTURE_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+          <ScalarProperty Name="MONTH_START" ColumnName="MONTH_START" />
+          <ScalarProperty Name="MONTH_END" ColumnName="MONTH_END" />
+          <ScalarProperty Name="YEAR" ColumnName="YEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FORECAST_ORDER_DETAIL">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.FORECAST_ORDER_DETAIL">
+        <MappingFragment StoreEntitySet="FORECAST_ORDER_DETAIL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MONTH" ColumnName="MONTH" />
+          <ScalarProperty Name="FORECAST_QTY" ColumnName="FORECAST_QTY" />
+          <ScalarProperty Name="PLAN_QTY" ColumnName="PLAN_QTY" />
+          <ScalarProperty Name="FORCAST_ID" ColumnName="FORCAST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KANBAN_EXT">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.KANBAN_EXT">
+        <MappingFragment StoreEntitySet="KANBAN_EXT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TAG_ID" ColumnName="TAG_ID" />
+          <ScalarProperty Name="MODEL_STRUCTURE_ID" ColumnName="MODEL_STRUCTURE_ID" />
+          <ScalarProperty Name="FORECAST_ID" ColumnName="FORECAST_ID" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="LOST_SIZE" ColumnName="LOST_SIZE" />
+          <ScalarProperty Name="CIRCLE" ColumnName="CIRCLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MA_CUSTOMER">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.MA_CUSTOMER">
+        <MappingFragment StoreEntitySet="MA_CUSTOMER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CUSTOMER_NAME" ColumnName="CUSTOMER_NAME" />
+          <ScalarProperty Name="CUSTOMER_SHOT" ColumnName="CUSTOMER_SHOT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MA_LINE">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.MA_LINE">
+        <MappingFragment StoreEntitySet="MA_LINE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LINE_NAME" ColumnName="LINE_NAME" />
+          <ScalarProperty Name="FACTORY_ID" ColumnName="FACTORY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MA_LOSTTIME">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.MA_LOSTTIME">
+        <MappingFragment StoreEntitySet="MA_LOSTTIME">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="LISTTIME" ColumnName="LISTTIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MA_MODEL">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.MA_MODEL">
+        <MappingFragment StoreEntitySet="MA_MODEL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MODEL_NAME" ColumnName="MODEL_NAME" />
+          <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+          <ScalarProperty Name="PREFIX" ColumnName="PREFIX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MA_MODEL_STRUCTURE">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.MA_MODEL_STRUCTURE">
+        <MappingFragment StoreEntitySet="MA_MODEL_STRUCTURE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PART_ID" ColumnName="PART_ID" />
+          <ScalarProperty Name="MODEL_ID" ColumnName="MODEL_ID" />
+          <ScalarProperty Name="LINE_SPEED" ColumnName="LINE_SPEED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MA_OPT_ROLE">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.MA_OPT_ROLE">
+        <MappingFragment StoreEntitySet="MA_OPT_ROLE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ROLE_NAME" ColumnName="ROLE_NAME" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MA_OPT_USER">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.MA_OPT_USER">
+        <MappingFragment StoreEntitySet="MA_OPT_USER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ROLE_ID" ColumnName="ROLE_ID" />
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MA_PART">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.MA_PART">
+        <MappingFragment StoreEntitySet="MA_PART">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PART_NAME" ColumnName="PART_NAME" />
+          <ScalarProperty Name="PART_NO" ColumnName="PART_NO" />
+          <ScalarProperty Name="PROD_LENGTH" ColumnName="PROD_LENGTH" />
+          <ScalarProperty Name="PART_TYPE" ColumnName="PART_TYPE" />
+          <ScalarProperty Name="UNIT_QTY" ColumnName="UNIT_QTY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLAN_EXT">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.PLAN_EXT">
+        <MappingFragment StoreEntitySet="PLAN_EXT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KANBAN_ID" ColumnName="KANBAN_ID" />
+          <ScalarProperty Name="MODEL_STRUCTURE_ID" ColumnName="MODEL_STRUCTURE_ID" />
+          <ScalarProperty Name="LOT_NO" ColumnName="LOT_NO" />
+          <ScalarProperty Name="LINE_ID" ColumnName="LINE_ID" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="MANUAL" ColumnName="MANUAL" />
+          <ScalarProperty Name="CAR_SIZE" ColumnName="CAR_SIZE" />
+          <ScalarProperty Name="LOT_SIZE" ColumnName="LOT_SIZE" />
+          <ScalarProperty Name="CIRCLE_TIME" ColumnName="CIRCLE_TIME" />
+          <ScalarProperty Name="UPDATE_BY" ColumnName="UPDATE_BY" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLAN_FIN">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.PLAN_FIN">
+        <MappingFragment StoreEntitySet="PLAN_FIN">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MODEL_STRUCTURE_ID" ColumnName="MODEL_STRUCTURE_ID" />
+          <ScalarProperty Name="LINE_ID" ColumnName="LINE_ID" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="MANUAL" ColumnName="MANUAL" />
+          <ScalarProperty Name="LOT_SIZE" ColumnName="LOT_SIZE" />
+          <ScalarProperty Name="UPDATE_BY" ColumnName="UPDATE_BY" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STD_STOCK">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.STD_STOCK">
+        <MappingFragment StoreEntitySet="STD_STOCK">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FORCAST_ORDER_ID" ColumnName="FORCAST_ORDER_ID" />
+          <ScalarProperty Name="MODEL_STRUCTURE_ID" ColumnName="MODEL_STRUCTURE_ID" />
+          <ScalarProperty Name="MIN_STOCK_PCS" ColumnName="MIN_STOCK_PCS" />
+          <ScalarProperty Name="MIN_STOCK_DAYS" ColumnName="MIN_STOCK_DAYS" />
+          <ScalarProperty Name="MAX_STOCK_PCS" ColumnName="MAX_STOCK_PCS" />
+          <ScalarProperty Name="MAX_STOCK_DAYS" ColumnName="MAX_STOCK_DAYS" />
+          <ScalarProperty Name="LOT_SIZE" ColumnName="LOT_SIZE" />
+          <ScalarProperty Name="MONTH_STOCK" ColumnName="MONTH_STOCK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TAC_KANBANModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

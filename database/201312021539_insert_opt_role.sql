@@ -1,0 +1,12 @@
+USE [TAC_KANBAN]
+GO
+
+INSERT INTO [dbo].[MA_OPT_ROLE]([ROLE_NAME],[DESCRIPTION])
+     VALUES('EXT','Extrusion');
+
+
+INSERT INTO [dbo].[MA_OPT_ROLE]([ROLE_NAME],[DESCRIPTION])
+     VALUES('FIN','Finishing');
+
+GO
+

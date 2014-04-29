@@ -1,0 +1,4 @@
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Services\bin\Toacts.KanbanPost.Services.dll
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Services\bin\Toacts.KanbanPost.Services.pdb
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Services\obj\Debug\Toacts.KanbanPost.Services.dll
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Services\obj\Debug\Toacts.KanbanPost.Services.pdb

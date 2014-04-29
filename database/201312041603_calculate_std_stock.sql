@@ -1,0 +1,51 @@
+USE [TAC_KANBAN]
+GO
+
+DECLARE @FORECAST_ID int
+DECLARE @MODEL_STRUCTURE_ID int
+DECLARE @TOTAL_QTY int
+DECLARE @LOT_SIZE int
+
+
+DECLARE @PDMINTimes int;
+DECLARE @PDMAXTimes int;
+DECLARE @upper int;
+DECLARE @lower int;
+DECLARE @totalcount int;
+DECLARE @tagprefix varchar(20);
+
+
+SET @upper = 7;
+SET @lower = 2;
+SET @tagprefix = 'K0000000';
+SET @totalcount = 1;
+
+
+DECLARE forecast_model_cursor CURSOR 
+    FOR 
+		SELECT fc.ID as FORECASR_ID,ms.ID as MODEL_STRUCTURE_ID ,fc.QUANTITY as TOTAL_QTY,ms.LOT_SIZE as LOT_SIZE
+		FROM [dbo].[FORECAST_ORDER] fc
+		INNER JOIN ma_customer c on  fc.CUSTOMER_ID = c.id
+		INNER JOIN [dbo].[MA_MODEL_STRUCTURE] ms on ms.[ID] = fc.[MODEL_STRUCTURE_ID]
+		WHERE fc.[STATUS] is NULL
+		ORDER BY fc.ID asc 
+OPEN forecast_model_cursor
+FETCH NEXT FROM forecast_model_cursor INTO @FORECAST_ID,@MODEL_STRUCTURE_ID,@TOTAL_QTY,@LOT_SIZE
+
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+ 
+	--random number to devide quantity 
+	SELECT @PDMINTimes = @TOTAL_QTY / @LOT_SIZE
+	SELECT @PDMAXTimes = (@TOTAL_QTY / @LOT_SIZE) +1
+
+	INSERT INTO [dbo].[STD_STOCK]
+        ([FORCAST_ORDER_ID],[MODEL_STRUCTURE_ID],[MIN_STOCK_PCS],[MIN_STOCK_DAYS],[MAX_STOCK_PCS],[MAX_STOCK_DAYS],[LOT_SIZE],[MONTH_STOCK])
+			SELECT  @FORECAST_ID,@MODEL_STRUCTURE_ID,@LOT_SIZE,@PDMINTimes,@LOT_SIZE*2,@PDMAXTimes,@LOT_SIZE,4
+
+	UPDATE [dbo].[FORECAST_ORDER]  SET [STATUS] = 'USE' WHERE ID = @FORECAST_ID;
+	FETCH NEXT FROM forecast_model_cursor INTO   @FORECAST_ID,@MODEL_STRUCTURE_ID,@TOTAL_QTY,@LOT_SIZE
+END
+CLOSE forecast_model_cursor;
+DEALLOCATE forecast_model_cursor;

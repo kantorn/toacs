@@ -1,0 +1,15 @@
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\DB\MDF\TAC_KANBAN.mdf
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\DB\MDF\TAC_KANBAN_log.ldf
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\Toacts.KanbanPost.Layout.dll
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\Toacts.KanbanPost.Layout.pdb
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\AspNet.ScriptManager.jQuery.dll
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\FlexigridASPNET.dll
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\Newtonsoft.Json.Net35.dll
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\Toacts.KanbanPost.Services.dll
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\Utilities.dll
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\Toacts.KanbanPost.Services.pdb
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\Utilities.pdb
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\FlexigridASPNET.pdb
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\obj\Debug\Toacts.KanbanPost.Layout.csprojResolveAssemblyReference.cache
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\obj\Debug\Toacts.KanbanPost.Layout.dll
+E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\obj\Debug\Toacts.KanbanPost.Layout.pdb
