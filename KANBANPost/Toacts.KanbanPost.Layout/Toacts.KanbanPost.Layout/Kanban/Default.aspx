@@ -22,7 +22,7 @@
             border-radius: 4px;
             color: #555555;
             font-weight: normal;
-            font-size: .8em;
+            font-size: 12px;
             position: relative;
             cursor: pointer;
         }
