@@ -21,7 +21,7 @@
             border-radius: 4px;
             color: #555555;
             font-weight: normal;
-            font-size: .8em;
+            font-size: 12px;
             position: relative;
             cursor: pointer;
         }
@@ -90,23 +90,25 @@
 	            </div>
 	        <div class="cb"></div>
         </div>  
-	    <table id="kanban" title="Issued KANBAN" style="width:930px;height:auto"
-			    url="/Handler/HandlerKanbanList.axd" 
-			    singleSelect="true" iconCls="icon-save" rownumbers="true"
-			    idField="itemid" pagination="true" 
-                data-options="pageSize: 20">
-		    <thead>
-                <%--KanbnaId,customer_name,model_name,part_name,part_no,tag_id,quantity,total_quantity--%>
-			    <tr>
-				    <th field="customer_name" width="85" >customer_name</th>
-				    <th field="model_name" width="100">model_name</th>
-				    <th field="part_name" width="200" >part_name</th>
-				    <th field="part_no" width="180">part_no</th>
-				    <th field="total_quantity" width="90" align="center">total_quantity</th>
-				    <th field="tag_id" width="160" align="right">tag_id</th>
-				    <th field="quantity" width="80" align="right">quantity</th>
-			    </tr>
-		    </thead>
-	    </table>
+        <div style="margin-left:auto;margin-right:auto;">
+	        <table id="kanban" title="Issued KANBAN" style="width:930px;height:auto;"
+			        url="/Handler/HandlerKanbanList.axd" 
+			        singleSelect="true" iconCls="icon-save" rownumbers="true"
+			        idField="itemid" pagination="true" 
+                    data-options="pageSize: 20">
+		        <thead>
+                    <%--KanbnaId,customer_name,model_name,part_name,part_no,tag_id,quantity,total_quantity--%>
+			        <tr>
+				        <th field="customer_name" width="95" >Customer Name</th>
+				        <th field="model_name" width="100">Model Name</th>
+				        <th field="part_name" width="200" >Paet Name</th>
+				        <th field="part_no" width="180">Part No.</th>
+				        <th field="total_quantity" width="90" align="center">Total Quantity</th>
+				        <th field="tag_id" width="160" align="right">Tag Id</th>
+				        <th field="quantity" width="70" align="right">Lot Size</th>
+			        </tr>
+		        </thead>
+	        </table>
+        </div>
 	
 </asp:Content>

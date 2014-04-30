@@ -21,6 +21,5 @@ E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\DB\
 E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\Utilities.dll.config
 E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\Utilities.dll
 E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\Utilities.pdb
-E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
 E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.dll
 E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.pdb

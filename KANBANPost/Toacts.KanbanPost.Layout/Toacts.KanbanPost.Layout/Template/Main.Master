@@ -176,7 +176,7 @@
             <!-- /.navbar-static-side -->
         </nav>
 
-        <div id="page-wrapper" style="min-height: 563px">
+        <div id="page-wrapper" style="height:98vh">
             <!-- /.row -->
             <div class="row">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -187,7 +187,7 @@
         </div>
         <!-- /#page-wrapper -->
         
-        <div class="footer" style="  height: 30px;border-top: solid #cccccc 1px;bottom:0;" >
+        <div class="footer" style="  height: 30px;border-top: solid #cccccc 1px;bottom:0;background:#f8f8f8;" >
             <span style="float:right;margin-right:100px;margin-top:5px;">Copyright  TOACS Co,Ltd. 2014</span>
         </div>
     </div>

@@ -26,7 +26,7 @@ namespace Toacts.KanbanPost.Services.BLL
                                     part_name = mds.MA_PART.PART_NAME,
                                     part_no = mds.MA_PART.PART_NO,
                                     tag_id = kb.TAG_ID,
-                                    quantity = kb.QUANTITY,
+                                    quantity = kb.LOST_SIZE,
                                     total_quantity = kb.FORECAST_ORDER.QUANTITY
                                 };
                     totalRecord = query.Count();

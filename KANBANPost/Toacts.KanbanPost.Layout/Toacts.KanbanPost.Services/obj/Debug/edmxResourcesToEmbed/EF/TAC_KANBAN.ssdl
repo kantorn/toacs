@@ -22,7 +22,6 @@
     <EntitySet Name="PLAN_EXT" EntityType="TAC_KANBANModel.Store.PLAN_EXT" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PLAN_FIN" EntityType="TAC_KANBANModel.Store.PLAN_FIN" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="STD_STOCK" EntityType="TAC_KANBANModel.Store.STD_STOCK" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="sysdiagrams" EntityType="TAC_KANBANModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK_EXT_STOCK_EXT_ACCUMULATE_STOCK" Association="TAC_KANBANModel.Store.FK_EXT_STOCK_EXT_ACCUMULATE_STOCK">
       <End Role="ACCUMULATE_STOCK" EntitySet="ACCUMULATE_STOCK" />
       <End Role="EXT_STOCK" EntitySet="EXT_STOCK" />
@@ -126,18 +125,6 @@
     <AssociationSet Name="FK_PLAN_EXT_MA_MODEL_STRUCTURE" Association="TAC_KANBANModel.Store.FK_PLAN_EXT_MA_MODEL_STRUCTURE">
       <End Role="MA_MODEL_STRUCTURE" EntitySet="MA_MODEL_STRUCTURE" />
       <End Role="PLAN_EXT" EntitySet="PLAN_EXT" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PLAN_FIN_MA_LINE" Association="TAC_KANBANModel.Store.FK_PLAN_FIN_MA_LINE">
-      <End Role="MA_LINE" EntitySet="MA_LINE" />
-      <End Role="PLAN_FIN" EntitySet="PLAN_FIN" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PLAN_FIN_MA_MODEL_STRUCTURE" Association="TAC_KANBANModel.Store.FK_PLAN_FIN_MA_MODEL_STRUCTURE">
-      <End Role="MA_MODEL_STRUCTURE" EntitySet="MA_MODEL_STRUCTURE" />
-      <End Role="PLAN_FIN" EntitySet="PLAN_FIN" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PLAN_FIN_MA_OPT_USER" Association="TAC_KANBANModel.Store.FK_PLAN_FIN_MA_OPT_USER">
-      <End Role="MA_OPT_USER" EntitySet="MA_OPT_USER" />
-      <End Role="PLAN_FIN" EntitySet="PLAN_FIN" />
     </AssociationSet>
     <AssociationSet Name="FK_STD_STOCK_FORECAST_ORDER" Association="TAC_KANBANModel.Store.FK_STD_STOCK_FORECAST_ORDER">
       <End Role="FORECAST_ORDER" EntitySet="FORECAST_ORDER" />
@@ -312,6 +299,7 @@
     <Property Name="MODEL_NAME" Type="nvarchar" MaxLength="50" />
     <Property Name="CUSTOMER_ID" Type="int" />
     <Property Name="PREFIX" Type="varchar" MaxLength="10" />
+    <Property Name="LOT_SIZE" Type="int" />
   </EntityType>
   <EntityType Name="MA_MODEL_STRUCTURE">
     <Key>
@@ -321,6 +309,7 @@
     <Property Name="PART_ID" Type="int" />
     <Property Name="MODEL_ID" Type="int" />
     <Property Name="LINE_SPEED" Type="int" />
+    <Property Name="LOT_SIZE" Type="int" />
   </EntityType>
   <EntityType Name="MA_OPT_ROLE">
     <Key>
@@ -376,13 +365,13 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CUSTOMER_ID" Type="int" />
     <Property Name="MODEL_STRUCTURE_ID" Type="int" />
-    <Property Name="LINE_ID" Type="int" />
-    <Property Name="START_DATE" Type="date" />
-    <Property Name="END_DATE" Type="date" />
-    <Property Name="STATUS" Type="varchar" MaxLength="10" />
-    <Property Name="MANUAL" Type="bit" />
-    <Property Name="LOT_SIZE" Type="ntext" />
+    <Property Name="STATUS" Type="nvarchar" MaxLength="10" />
+    <Property Name="QUANTITY" Type="int" />
+    <Property Name="MONTH_START" Type="int" />
+    <Property Name="MONTH_END" Type="int" />
+    <Property Name="YEAR" Type="int" />
     <Property Name="UPDATE_BY" Type="int" />
     <Property Name="UPDATE_DATE" Type="date" />
   </EntityType>
@@ -399,16 +388,6 @@
     <Property Name="MAX_STOCK_DAYS" Type="int" />
     <Property Name="LOT_SIZE" Type="int" />
     <Property Name="MONTH_STOCK" Type="int" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <Association Name="FK_EXT_STOCK_EXT_ACCUMULATE_STOCK">
     <End Role="ACCUMULATE_STOCK" Type="TAC_KANBANModel.Store.ACCUMULATE_STOCK" Multiplicity="0..1" />
@@ -722,42 +701,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PLAN_FIN_MA_LINE">
-    <End Role="MA_LINE" Type="TAC_KANBANModel.Store.MA_LINE" Multiplicity="0..1" />
-    <End Role="PLAN_FIN" Type="TAC_KANBANModel.Store.PLAN_FIN" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="MA_LINE">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="PLAN_FIN">
-        <PropertyRef Name="LINE_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_PLAN_FIN_MA_MODEL_STRUCTURE">
-    <End Role="MA_MODEL_STRUCTURE" Type="TAC_KANBANModel.Store.MA_MODEL_STRUCTURE" Multiplicity="0..1" />
-    <End Role="PLAN_FIN" Type="TAC_KANBANModel.Store.PLAN_FIN" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="MA_MODEL_STRUCTURE">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="PLAN_FIN">
-        <PropertyRef Name="MODEL_STRUCTURE_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_PLAN_FIN_MA_OPT_USER">
-    <End Role="MA_OPT_USER" Type="TAC_KANBANModel.Store.MA_OPT_USER" Multiplicity="0..1" />
-    <End Role="PLAN_FIN" Type="TAC_KANBANModel.Store.PLAN_FIN" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="MA_OPT_USER">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="PLAN_FIN">
-        <PropertyRef Name="UPDATE_BY" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_STD_STOCK_FORECAST_ORDER">
     <End Role="FORECAST_ORDER" Type="TAC_KANBANModel.Store.FORECAST_ORDER" Multiplicity="0..1" />
     <End Role="STD_STOCK" Type="TAC_KANBANModel.Store.STD_STOCK" Multiplicity="*" />
@@ -782,35 +725,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-  </Function>
-  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
 </Schema>

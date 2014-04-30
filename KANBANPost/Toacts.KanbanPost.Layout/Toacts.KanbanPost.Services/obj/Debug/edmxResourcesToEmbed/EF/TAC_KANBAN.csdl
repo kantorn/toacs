@@ -22,7 +22,6 @@
     <EntitySet Name="PLAN_EXT" EntityType="TAC_KANBANModel.PLAN_EXT" />
     <EntitySet Name="PLAN_FIN" EntityType="TAC_KANBANModel.PLAN_FIN" />
     <EntitySet Name="STD_STOCK" EntityType="TAC_KANBANModel.STD_STOCK" />
-    <EntitySet Name="sysdiagrams" EntityType="TAC_KANBANModel.sysdiagram" />
     <AssociationSet Name="FK_EXT_STOCK_EXT_ACCUMULATE_STOCK" Association="TAC_KANBANModel.FK_EXT_STOCK_EXT_ACCUMULATE_STOCK">
       <End Role="ACCUMULATE_STOCK" EntitySet="ACCUMULATE_STOCK" />
       <End Role="EXT_STOCK" EntitySet="EXT_STOCK" />
@@ -115,10 +114,6 @@
       <End Role="MA_LINE" EntitySet="MA_LINE" />
       <End Role="PLAN_EXT" EntitySet="PLAN_EXT" />
     </AssociationSet>
-    <AssociationSet Name="FK_PLAN_FIN_MA_LINE" Association="TAC_KANBANModel.FK_PLAN_FIN_MA_LINE">
-      <End Role="MA_LINE" EntitySet="MA_LINE" />
-      <End Role="PLAN_FIN" EntitySet="PLAN_FIN" />
-    </AssociationSet>
     <AssociationSet Name="FK_MA_MODEL_STRUCTURE_MA_MODEL" Association="TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_MODEL">
       <End Role="MA_MODEL" EntitySet="MA_MODEL" />
       <End Role="MA_MODEL_STRUCTURE" EntitySet="MA_MODEL_STRUCTURE" />
@@ -131,10 +126,6 @@
       <End Role="MA_MODEL_STRUCTURE" EntitySet="MA_MODEL_STRUCTURE" />
       <End Role="PLAN_EXT" EntitySet="PLAN_EXT" />
     </AssociationSet>
-    <AssociationSet Name="FK_PLAN_FIN_MA_MODEL_STRUCTURE" Association="TAC_KANBANModel.FK_PLAN_FIN_MA_MODEL_STRUCTURE">
-      <End Role="MA_MODEL_STRUCTURE" EntitySet="MA_MODEL_STRUCTURE" />
-      <End Role="PLAN_FIN" EntitySet="PLAN_FIN" />
-    </AssociationSet>
     <AssociationSet Name="FK_STD_STOCK_MA_MODEL_STRUCTURE" Association="TAC_KANBANModel.FK_STD_STOCK_MA_MODEL_STRUCTURE">
       <End Role="MA_MODEL_STRUCTURE" EntitySet="MA_MODEL_STRUCTURE" />
       <End Role="STD_STOCK" EntitySet="STD_STOCK" />
@@ -142,10 +133,6 @@
     <AssociationSet Name="FK_MA_OPT_USER_MA_OPT_ROLE" Association="TAC_KANBANModel.FK_MA_OPT_USER_MA_OPT_ROLE">
       <End Role="MA_OPT_ROLE" EntitySet="MA_OPT_ROLE" />
       <End Role="MA_OPT_USER" EntitySet="MA_OPT_USER" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PLAN_FIN_MA_OPT_USER" Association="TAC_KANBANModel.FK_PLAN_FIN_MA_OPT_USER">
-      <End Role="MA_OPT_USER" EntitySet="MA_OPT_USER" />
-      <End Role="PLAN_FIN" EntitySet="PLAN_FIN" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="ACCUMULATE_STOCK">
@@ -330,7 +317,6 @@
     <NavigationProperty Name="EXT_WORK_ORDER" Relationship="TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_LINE" FromRole="MA_LINE" ToRole="EXT_WORK_ORDER" />
     <NavigationProperty Name="FIN_WORK_ORDER" Relationship="TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_LINE" FromRole="MA_LINE" ToRole="FIN_WORK_ORDER" />
     <NavigationProperty Name="PLAN_EXT" Relationship="TAC_KANBANModel.FK_PLAN_EXT_MA_LINE" FromRole="MA_LINE" ToRole="PLAN_EXT" />
-    <NavigationProperty Name="PLAN_FIN" Relationship="TAC_KANBANModel.FK_PLAN_FIN_MA_LINE" FromRole="MA_LINE" ToRole="PLAN_FIN" />
   </EntityType>
   <EntityType Name="MA_LOSTTIME">
     <Key>
@@ -349,6 +335,7 @@
     <Property Name="MODEL_NAME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
     <Property Name="CUSTOMER_ID" Type="Int32" />
     <Property Name="PREFIX" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="LOT_SIZE" Type="Int32" />
     <NavigationProperty Name="MA_CUSTOMER" Relationship="TAC_KANBANModel.FK_MA_MODEL_MA_CUSTOMER" FromRole="MA_MODEL" ToRole="MA_CUSTOMER" />
     <NavigationProperty Name="MA_MODEL_STRUCTURE" Relationship="TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_MODEL" FromRole="MA_MODEL" ToRole="MA_MODEL_STRUCTURE" />
   </EntityType>
@@ -360,6 +347,7 @@
     <Property Name="PART_ID" Type="Int32" />
     <Property Name="MODEL_ID" Type="Int32" />
     <Property Name="LINE_SPEED" Type="Int32" />
+    <Property Name="LOT_SIZE" Type="Int32" />
     <NavigationProperty Name="EXT_WORK_ORDER" Relationship="TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE" FromRole="MA_MODEL_STRUCTURE" ToRole="EXT_WORK_ORDER" />
     <NavigationProperty Name="FIN_WORK_ORDER" Relationship="TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_MODEL_STRUCTURE" FromRole="MA_MODEL_STRUCTURE" ToRole="FIN_WORK_ORDER" />
     <NavigationProperty Name="FORECAST_ORDER" Relationship="TAC_KANBANModel.FK_FORECAST_ORDER_MA_MODEL_STRUCTURE" FromRole="MA_MODEL_STRUCTURE" ToRole="FORECAST_ORDER" />
@@ -367,7 +355,6 @@
     <NavigationProperty Name="MA_MODEL" Relationship="TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_MODEL" FromRole="MA_MODEL_STRUCTURE" ToRole="MA_MODEL" />
     <NavigationProperty Name="MA_PART" Relationship="TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_PART" FromRole="MA_MODEL_STRUCTURE" ToRole="MA_PART" />
     <NavigationProperty Name="PLAN_EXT" Relationship="TAC_KANBANModel.FK_PLAN_EXT_MA_MODEL_STRUCTURE" FromRole="MA_MODEL_STRUCTURE" ToRole="PLAN_EXT" />
-    <NavigationProperty Name="PLAN_FIN" Relationship="TAC_KANBANModel.FK_PLAN_FIN_MA_MODEL_STRUCTURE" FromRole="MA_MODEL_STRUCTURE" ToRole="PLAN_FIN" />
     <NavigationProperty Name="STD_STOCK" Relationship="TAC_KANBANModel.FK_STD_STOCK_MA_MODEL_STRUCTURE" FromRole="MA_MODEL_STRUCTURE" ToRole="STD_STOCK" />
   </EntityType>
   <EntityType Name="MA_OPT_ROLE">
@@ -392,7 +379,6 @@
     <NavigationProperty Name="EXT_WORK_ORDER" Relationship="TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_OPT_USER" FromRole="MA_OPT_USER" ToRole="EXT_WORK_ORDER" />
     <NavigationProperty Name="FIN_WORK_ORDER" Relationship="TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_OPT_USER" FromRole="MA_OPT_USER" ToRole="FIN_WORK_ORDER" />
     <NavigationProperty Name="MA_OPT_ROLE" Relationship="TAC_KANBANModel.FK_MA_OPT_USER_MA_OPT_ROLE" FromRole="MA_OPT_USER" ToRole="MA_OPT_ROLE" />
-    <NavigationProperty Name="PLAN_FIN" Relationship="TAC_KANBANModel.FK_PLAN_FIN_MA_OPT_USER" FromRole="MA_OPT_USER" ToRole="PLAN_FIN" />
   </EntityType>
   <EntityType Name="MA_PART">
     <Key>
@@ -433,18 +419,15 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CUSTOMER_ID" Type="Int32" />
     <Property Name="MODEL_STRUCTURE_ID" Type="Int32" />
-    <Property Name="LINE_ID" Type="Int32" />
-    <Property Name="START_DATE" Type="DateTime" />
-    <Property Name="END_DATE" Type="DateTime" />
-    <Property Name="STATUS" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
-    <Property Name="MANUAL" Type="Boolean" />
-    <Property Name="LOT_SIZE" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="STATUS" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="QUANTITY" Type="Int32" />
+    <Property Name="MONTH_START" Type="Int32" />
+    <Property Name="MONTH_END" Type="Int32" />
+    <Property Name="YEAR" Type="Int32" />
     <Property Name="UPDATE_BY" Type="Int32" />
     <Property Name="UPDATE_DATE" Type="DateTime" />
-    <NavigationProperty Name="MA_LINE" Relationship="TAC_KANBANModel.FK_PLAN_FIN_MA_LINE" FromRole="PLAN_FIN" ToRole="MA_LINE" />
-    <NavigationProperty Name="MA_MODEL_STRUCTURE" Relationship="TAC_KANBANModel.FK_PLAN_FIN_MA_MODEL_STRUCTURE" FromRole="PLAN_FIN" ToRole="MA_MODEL_STRUCTURE" />
-    <NavigationProperty Name="MA_OPT_USER" Relationship="TAC_KANBANModel.FK_PLAN_FIN_MA_OPT_USER" FromRole="PLAN_FIN" ToRole="MA_OPT_USER" />
   </EntityType>
   <EntityType Name="STD_STOCK">
     <Key>
@@ -461,16 +444,6 @@
     <Property Name="MONTH_STOCK" Type="Int32" />
     <NavigationProperty Name="FORECAST_ORDER" Relationship="TAC_KANBANModel.FK_STD_STOCK_FORECAST_ORDER" FromRole="STD_STOCK" ToRole="FORECAST_ORDER" />
     <NavigationProperty Name="MA_MODEL_STRUCTURE" Relationship="TAC_KANBANModel.FK_STD_STOCK_MA_MODEL_STRUCTURE" FromRole="STD_STOCK" ToRole="MA_MODEL_STRUCTURE" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <Association Name="FK_EXT_STOCK_EXT_ACCUMULATE_STOCK">
     <End Role="ACCUMULATE_STOCK" Type="TAC_KANBANModel.ACCUMULATE_STOCK" Multiplicity="0..1" />
@@ -748,18 +721,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PLAN_FIN_MA_LINE">
-    <End Role="MA_LINE" Type="TAC_KANBANModel.MA_LINE" Multiplicity="0..1" />
-    <End Role="PLAN_FIN" Type="TAC_KANBANModel.PLAN_FIN" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="MA_LINE">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="PLAN_FIN">
-        <PropertyRef Name="LINE_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_MA_MODEL_STRUCTURE_MA_MODEL">
     <End Role="MA_MODEL" Type="TAC_KANBANModel.MA_MODEL" Multiplicity="0..1" />
     <End Role="MA_MODEL_STRUCTURE" Type="TAC_KANBANModel.MA_MODEL_STRUCTURE" Multiplicity="*" />
@@ -796,18 +757,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PLAN_FIN_MA_MODEL_STRUCTURE">
-    <End Role="MA_MODEL_STRUCTURE" Type="TAC_KANBANModel.MA_MODEL_STRUCTURE" Multiplicity="0..1" />
-    <End Role="PLAN_FIN" Type="TAC_KANBANModel.PLAN_FIN" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="MA_MODEL_STRUCTURE">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="PLAN_FIN">
-        <PropertyRef Name="MODEL_STRUCTURE_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_STD_STOCK_MA_MODEL_STRUCTURE">
     <End Role="MA_MODEL_STRUCTURE" Type="TAC_KANBANModel.MA_MODEL_STRUCTURE" Multiplicity="0..1" />
     <End Role="STD_STOCK" Type="TAC_KANBANModel.STD_STOCK" Multiplicity="*" />
@@ -829,18 +778,6 @@
       </Principal>
       <Dependent Role="MA_OPT_USER">
         <PropertyRef Name="ROLE_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_PLAN_FIN_MA_OPT_USER">
-    <End Role="MA_OPT_USER" Type="TAC_KANBANModel.MA_OPT_USER" Multiplicity="0..1" />
-    <End Role="PLAN_FIN" Type="TAC_KANBANModel.PLAN_FIN" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="MA_OPT_USER">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="PLAN_FIN">
-        <PropertyRef Name="UPDATE_BY" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

@@ -16,7 +16,7 @@ namespace Toacts.KanbanPost.Services.EF
     {
       partial void OnContextCreated()
       {         
-         this.SavingChanges += new EventHandler(context_SavingChanges);
+         this.SavingChanges += new System.EventHandler(context_SavingChanges);
       }
       
       private static void context_SavingChanges(object sender, EventArgs e)

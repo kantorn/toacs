@@ -42,14 +42,11 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_PLAN_EXT_KANBAN_EXT", "KANBAN_EXT", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.KANBAN_EXT), "PLAN_EXT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.PLAN_EXT), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_MA_MODEL_MA_CUSTOMER", "MA_CUSTOMER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_CUSTOMER), "MA_MODEL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_PLAN_EXT_MA_LINE", "MA_LINE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_LINE), "PLAN_EXT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.PLAN_EXT), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_PLAN_FIN_MA_LINE", "MA_LINE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_LINE), "PLAN_FIN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.PLAN_FIN), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_MODEL", "MA_MODEL", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL), "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_PART", "MA_PART", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_PART), "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_PLAN_EXT_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "PLAN_EXT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.PLAN_EXT), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_PLAN_FIN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "PLAN_FIN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.PLAN_FIN), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_STD_STOCK_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "STD_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.STD_STOCK), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_MA_OPT_USER_MA_OPT_ROLE", "MA_OPT_ROLE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_ROLE), "MA_OPT_USER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_USER), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_PLAN_FIN_MA_OPT_USER", "MA_OPT_USER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_USER), "PLAN_FIN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.PLAN_FIN), true)]
 
 #endregion
 
@@ -436,22 +433,6 @@ namespace Toacts.KanbanPost.Services.EF
             }
         }
         private ObjectSet<STD_STOCK> _STD_STOCK;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<sysdiagram> sysdiagrams
-        {
-            get
-            {
-                if ((_sysdiagrams == null))
-                {
-                    _sysdiagrams = base.CreateObjectSet<sysdiagram>("sysdiagrams");
-                }
-                return _sysdiagrams;
-            }
-        }
-        private ObjectSet<sysdiagram> _sysdiagrams;
 
         #endregion
 
@@ -623,14 +604,6 @@ namespace Toacts.KanbanPost.Services.EF
         public void AddToSTD_STOCK(STD_STOCK sTD_STOCK)
         {
             base.AddObject("STD_STOCK", sTD_STOCK);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the sysdiagrams EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddTosysdiagrams(sysdiagram sysdiagram)
-        {
-            base.AddObject("sysdiagrams", sysdiagram);
         }
 
         #endregion
@@ -4262,28 +4235,6 @@ namespace Toacts.KanbanPost.Services.EF
                 }
             }
         }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_PLAN_FIN_MA_LINE", "PLAN_FIN")]
-        public EntityCollection<PLAN_FIN> PLAN_FIN
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PLAN_FIN>("TAC_KANBANModel.FK_PLAN_FIN_MA_LINE", "PLAN_FIN");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PLAN_FIN>("TAC_KANBANModel.FK_PLAN_FIN_MA_LINE", "PLAN_FIN", value);
-                }
-            }
-        }
 
         #endregion
 
@@ -4543,6 +4494,30 @@ namespace Toacts.KanbanPost.Services.EF
         private global::System.String _PREFIX;
         partial void OnPREFIXChanging(global::System.String value);
         partial void OnPREFIXChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> LOT_SIZE
+        {
+            get
+            {
+                return _LOT_SIZE;
+            }
+            set
+            {
+                OnLOT_SIZEChanging(value);
+                ReportPropertyChanging("LOT_SIZE");
+                _LOT_SIZE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LOT_SIZE");
+                OnLOT_SIZEChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _LOT_SIZE;
+        partial void OnLOT_SIZEChanging(Nullable<global::System.Int32> value);
+        partial void OnLOT_SIZEChanged();
 
         #endregion
 
@@ -4736,6 +4711,30 @@ namespace Toacts.KanbanPost.Services.EF
         private Nullable<global::System.Int32> _LINE_SPEED;
         partial void OnLINE_SPEEDChanging(Nullable<global::System.Int32> value);
         partial void OnLINE_SPEEDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> LOT_SIZE
+        {
+            get
+            {
+                return _LOT_SIZE;
+            }
+            set
+            {
+                OnLOT_SIZEChanging(value);
+                ReportPropertyChanging("LOT_SIZE");
+                _LOT_SIZE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LOT_SIZE");
+                OnLOT_SIZEChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _LOT_SIZE;
+        partial void OnLOT_SIZEChanging(Nullable<global::System.Int32> value);
+        partial void OnLOT_SIZEChanged();
 
         #endregion
 
@@ -4924,28 +4923,6 @@ namespace Toacts.KanbanPost.Services.EF
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PLAN_EXT>("TAC_KANBANModel.FK_PLAN_EXT_MA_MODEL_STRUCTURE", "PLAN_EXT", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_PLAN_FIN_MA_MODEL_STRUCTURE", "PLAN_FIN")]
-        public EntityCollection<PLAN_FIN> PLAN_FIN
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PLAN_FIN>("TAC_KANBANModel.FK_PLAN_FIN_MA_MODEL_STRUCTURE", "PLAN_FIN");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PLAN_FIN>("TAC_KANBANModel.FK_PLAN_FIN_MA_MODEL_STRUCTURE", "PLAN_FIN", value);
                 }
             }
         }
@@ -5362,28 +5339,6 @@ namespace Toacts.KanbanPost.Services.EF
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_OPT_ROLE>("TAC_KANBANModel.FK_MA_OPT_USER_MA_OPT_ROLE", "MA_OPT_ROLE", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_PLAN_FIN_MA_OPT_USER", "PLAN_FIN")]
-        public EntityCollection<PLAN_FIN> PLAN_FIN
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PLAN_FIN>("TAC_KANBANModel.FK_PLAN_FIN_MA_OPT_USER", "PLAN_FIN");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PLAN_FIN>("TAC_KANBANModel.FK_PLAN_FIN_MA_OPT_USER", "PLAN_FIN", value);
                 }
             }
         }
@@ -6139,6 +6094,30 @@ namespace Toacts.KanbanPost.Services.EF
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
+        public Nullable<global::System.Int32> CUSTOMER_ID
+        {
+            get
+            {
+                return _CUSTOMER_ID;
+            }
+            set
+            {
+                OnCUSTOMER_IDChanging(value);
+                ReportPropertyChanging("CUSTOMER_ID");
+                _CUSTOMER_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CUSTOMER_ID");
+                OnCUSTOMER_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _CUSTOMER_ID;
+        partial void OnCUSTOMER_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnCUSTOMER_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public Nullable<global::System.Int32> MODEL_STRUCTURE_ID
         {
             get
@@ -6157,78 +6136,6 @@ namespace Toacts.KanbanPost.Services.EF
         private Nullable<global::System.Int32> _MODEL_STRUCTURE_ID;
         partial void OnMODEL_STRUCTURE_IDChanging(Nullable<global::System.Int32> value);
         partial void OnMODEL_STRUCTURE_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> LINE_ID
-        {
-            get
-            {
-                return _LINE_ID;
-            }
-            set
-            {
-                OnLINE_IDChanging(value);
-                ReportPropertyChanging("LINE_ID");
-                _LINE_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("LINE_ID");
-                OnLINE_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _LINE_ID;
-        partial void OnLINE_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnLINE_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> START_DATE
-        {
-            get
-            {
-                return _START_DATE;
-            }
-            set
-            {
-                OnSTART_DATEChanging(value);
-                ReportPropertyChanging("START_DATE");
-                _START_DATE = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("START_DATE");
-                OnSTART_DATEChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _START_DATE;
-        partial void OnSTART_DATEChanging(Nullable<global::System.DateTime> value);
-        partial void OnSTART_DATEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> END_DATE
-        {
-            get
-            {
-                return _END_DATE;
-            }
-            set
-            {
-                OnEND_DATEChanging(value);
-                ReportPropertyChanging("END_DATE");
-                _END_DATE = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("END_DATE");
-                OnEND_DATEChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _END_DATE;
-        partial void OnEND_DATEChanging(Nullable<global::System.DateTime> value);
-        partial void OnEND_DATEChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6259,48 +6166,96 @@ namespace Toacts.KanbanPost.Services.EF
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> MANUAL
+        public Nullable<global::System.Int32> QUANTITY
         {
             get
             {
-                return _MANUAL;
+                return _QUANTITY;
             }
             set
             {
-                OnMANUALChanging(value);
-                ReportPropertyChanging("MANUAL");
-                _MANUAL = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MANUAL");
-                OnMANUALChanged();
+                OnQUANTITYChanging(value);
+                ReportPropertyChanging("QUANTITY");
+                _QUANTITY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("QUANTITY");
+                OnQUANTITYChanged();
             }
         }
-        private Nullable<global::System.Boolean> _MANUAL;
-        partial void OnMANUALChanging(Nullable<global::System.Boolean> value);
-        partial void OnMANUALChanged();
+        private Nullable<global::System.Int32> _QUANTITY;
+        partial void OnQUANTITYChanging(Nullable<global::System.Int32> value);
+        partial void OnQUANTITYChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String LOT_SIZE
+        public Nullable<global::System.Int32> MONTH_START
         {
             get
             {
-                return _LOT_SIZE;
+                return _MONTH_START;
             }
             set
             {
-                OnLOT_SIZEChanging(value);
-                ReportPropertyChanging("LOT_SIZE");
-                _LOT_SIZE = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("LOT_SIZE");
-                OnLOT_SIZEChanged();
+                OnMONTH_STARTChanging(value);
+                ReportPropertyChanging("MONTH_START");
+                _MONTH_START = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MONTH_START");
+                OnMONTH_STARTChanged();
             }
         }
-        private global::System.String _LOT_SIZE;
-        partial void OnLOT_SIZEChanging(global::System.String value);
-        partial void OnLOT_SIZEChanged();
+        private Nullable<global::System.Int32> _MONTH_START;
+        partial void OnMONTH_STARTChanging(Nullable<global::System.Int32> value);
+        partial void OnMONTH_STARTChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> MONTH_END
+        {
+            get
+            {
+                return _MONTH_END;
+            }
+            set
+            {
+                OnMONTH_ENDChanging(value);
+                ReportPropertyChanging("MONTH_END");
+                _MONTH_END = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MONTH_END");
+                OnMONTH_ENDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _MONTH_END;
+        partial void OnMONTH_ENDChanging(Nullable<global::System.Int32> value);
+        partial void OnMONTH_ENDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> YEAR
+        {
+            get
+            {
+                return _YEAR;
+            }
+            set
+            {
+                OnYEARChanging(value);
+                ReportPropertyChanging("YEAR");
+                _YEAR = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("YEAR");
+                OnYEARChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _YEAR;
+        partial void OnYEARChanging(Nullable<global::System.Int32> value);
+        partial void OnYEARChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6353,124 +6308,6 @@ namespace Toacts.KanbanPost.Services.EF
         #endregion
 
     
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_PLAN_FIN_MA_LINE", "MA_LINE")]
-        public MA_LINE MA_LINE
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_PLAN_FIN_MA_LINE", "MA_LINE").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_PLAN_FIN_MA_LINE", "MA_LINE").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_LINE> MA_LINEReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_PLAN_FIN_MA_LINE", "MA_LINE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_LINE>("TAC_KANBANModel.FK_PLAN_FIN_MA_LINE", "MA_LINE", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_PLAN_FIN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE")]
-        public MA_MODEL_STRUCTURE MA_MODEL_STRUCTURE
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_PLAN_FIN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_PLAN_FIN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTUREReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_PLAN_FIN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_PLAN_FIN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_PLAN_FIN_MA_OPT_USER", "MA_OPT_USER")]
-        public MA_OPT_USER MA_OPT_USER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_PLAN_FIN_MA_OPT_USER", "MA_OPT_USER").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_PLAN_FIN_MA_OPT_USER", "MA_OPT_USER").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_OPT_USER> MA_OPT_USERReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_PLAN_FIN_MA_OPT_USER", "MA_OPT_USER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_PLAN_FIN_MA_OPT_USER", "MA_OPT_USER", value);
-                }
-            }
-        }
-
-        #endregion
-
     }
     
     /// <summary>
@@ -6800,163 +6637,6 @@ namespace Toacts.KanbanPost.Services.EF
 
         #endregion
 
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="sysdiagram")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class sysdiagram : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new sysdiagram object.
-        /// </summary>
-        /// <param name="name">Initial value of the name property.</param>
-        /// <param name="principal_id">Initial value of the principal_id property.</param>
-        /// <param name="diagram_id">Initial value of the diagram_id property.</param>
-        public static sysdiagram Createsysdiagram(global::System.String name, global::System.Int32 principal_id, global::System.Int32 diagram_id)
-        {
-            sysdiagram sysdiagram = new sysdiagram();
-            sysdiagram.name = name;
-            sysdiagram.principal_id = principal_id;
-            sysdiagram.diagram_id = diagram_id;
-            return sysdiagram;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String name
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                OnnameChanging(value);
-                ReportPropertyChanging("name");
-                _name = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("name");
-                OnnameChanged();
-            }
-        }
-        private global::System.String _name;
-        partial void OnnameChanging(global::System.String value);
-        partial void OnnameChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 principal_id
-        {
-            get
-            {
-                return _principal_id;
-            }
-            set
-            {
-                Onprincipal_idChanging(value);
-                ReportPropertyChanging("principal_id");
-                _principal_id = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("principal_id");
-                Onprincipal_idChanged();
-            }
-        }
-        private global::System.Int32 _principal_id;
-        partial void Onprincipal_idChanging(global::System.Int32 value);
-        partial void Onprincipal_idChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 diagram_id
-        {
-            get
-            {
-                return _diagram_id;
-            }
-            set
-            {
-                if (_diagram_id != value)
-                {
-                    Ondiagram_idChanging(value);
-                    ReportPropertyChanging("diagram_id");
-                    _diagram_id = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("diagram_id");
-                    Ondiagram_idChanged();
-                }
-            }
-        }
-        private global::System.Int32 _diagram_id;
-        partial void Ondiagram_idChanging(global::System.Int32 value);
-        partial void Ondiagram_idChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> version
-        {
-            get
-            {
-                return _version;
-            }
-            set
-            {
-                OnversionChanging(value);
-                ReportPropertyChanging("version");
-                _version = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("version");
-                OnversionChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _version;
-        partial void OnversionChanging(Nullable<global::System.Int32> value);
-        partial void OnversionChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.Byte[] definition
-        {
-            get
-            {
-                return StructuralObject.GetValidValue(_definition);
-            }
-            set
-            {
-                OndefinitionChanging(value);
-                ReportPropertyChanging("definition");
-                _definition = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("definition");
-                OndefinitionChanged();
-            }
-        }
-        private global::System.Byte[] _definition;
-        partial void OndefinitionChanging(global::System.Byte[] value);
-        partial void OndefinitionChanged();
-
-        #endregion
-
-    
     }
 
     #endregion

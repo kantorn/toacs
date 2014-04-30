@@ -83,32 +83,34 @@
         <div class="row">
             <div >
                 <h1 id="h1" class="page-header"  style="font-size:20px;font-wight:bold;margin-top: 5px;margin-left:20px;">Extrusion KANBAN List</h1>
-	            <div class="page-options-nav" style="margin-top:-10px;float:right;margin-right:170px;margin-bottom:20px;">
+	            <div class="page-options-nav" style="margin-top:-10px;float:left;margin-left:30px;margin-bottom:20px;width: 915px;">
                     <a class="fancy-button filter-button arrow-down" href="javascript:void(0)">Filter Results<span class="arrow-down-icon"></span></a> 
                     <a id="modalBtnExternalSaveFilter" class="fancy-button save-filter-button" href="javascript:void(0)">Save Filter</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-		            <a id="modalBtnExternal" class="fancy-button" href="javascript:void(0)">Print KANBAN tags</a>
+		            <a id="modalBtnExternal" class="fancy-button" style="float:right;" href="javascript:void(0)">Print KANBAN tags</a>
 	            </div>
             </div>
             <!-- /.col-lg-12 -->
         </div>
-	    <table id="kanban" title="Issued KANBAN" style="width:930px;height:auto;"
-			    url="/Handler/HandlerKanbanList.axd" 
-			    singleSelect="true" iconCls="icon-save" rownumbers="true"
-			    idField="itemid" pagination="true" 
-                data-options="pageSize: 20">
-		    <thead>
-                <%--KanbnaId,customer_name,model_name,part_name,part_no,tag_id,quantity,total_quantity--%>
-			    <tr>
-				    <th field="customer_name" width="85" >customer_name</th>
-				    <th field="model_name" width="100">model_name</th>
-				    <th field="part_name" width="200" >part_name</th>
-				    <th field="part_no" width="180">part_no</th>
-				    <th field="total_quantity" width="90" align="center">total_quantity</th>
-				    <th field="tag_id" width="160" align="right">tag_id</th>
-				    <th field="quantity" width="80" align="right">quantity</th>
-			    </tr>
-		    </thead>
-	    </table>
+        <div style="margin-left:auto;margin-right:auto;">
+	        <table id="kanban" title="Issued KANBAN" style="width:930px;height:auto;"
+			        url="/Handler/HandlerKanbanList.axd" 
+			        singleSelect="true" iconCls="icon-save" rownumbers="true"
+			        idField="itemid" pagination="true" 
+                    data-options="pageSize: 20">
+		        <thead>
+                    <%--KanbnaId,customer_name,model_name,part_name,part_no,tag_id,quantity,total_quantity--%>
+			        <tr>
+				        <th field="customer_name" width="95" >Customer Name</th>
+				        <th field="model_name" width="100">Model Name</th>
+				        <th field="part_name" width="200" >Paet Name</th>
+				        <th field="part_no" width="180">Part No.</th>
+				        <th field="total_quantity" width="90" align="center">Total Quantity</th>
+				        <th field="tag_id" width="160" align="right">Tag Id</th>
+				        <th field="quantity" width="70" align="right">Lot Size</th>
+			        </tr>
+		        </thead>
+	        </table>
+        </div>
 	
 </asp:Content>
