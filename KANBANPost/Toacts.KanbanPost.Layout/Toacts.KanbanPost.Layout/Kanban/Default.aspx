@@ -2,12 +2,11 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../Contents/Styles/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="../Contents/Styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../Scripts/list-view.js"></script>
+    <script src="../Scripts/jquery-1.6.2.min.js" type="text/javascript"></script>
     <script src="../Scripts/jquery.jqGrid.src.js" type="text/javascript"></script>
     <script src="../Scripts/grid.locale-en.js" type="text/javascript"></script>
-    <script src="../Scripts/jquery-ui.min.js" type="text/javascript"></script>
     <script src="../Scripts/json2.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
 	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
