@@ -16,3 +16,11 @@ E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Utilities\
 E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.dll
 E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.pdb
 E:\project\TOACS\trunk\Develpment\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\DB\MDF\TAC_KANBAN.mdf
+E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\DB\MDF\TAC_KANBAN_log.ldf
+E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\Utilities.dll.config
+E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\Utilities.dll
+E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\Utilities.pdb
+E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.dll
+E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.pdb

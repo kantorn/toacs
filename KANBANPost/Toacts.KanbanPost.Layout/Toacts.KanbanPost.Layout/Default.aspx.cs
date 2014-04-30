@@ -17,8 +17,8 @@ namespace Toacts.KanbanPost.Layout
             if (!IsPostBack)
             {
                 DateTime d = DateTime.Today;
-                int offset = d.DayOfWeek - DayOfWeek.Monday;
-                Label1.Text = String.Format(LABEL_FORMAT, d.AddDays(-offset).ToShortDateString(), d.AddDays(-offset).AddDays(6).ToShortDateString());
+                //int offset = d.DayOfWeek - DayOfWeek.Monday;
+                //Label1.Text = String.Format(LABEL_FORMAT, d.AddDays(-offset).ToShortDateString(), d.AddDays(-offset).AddDays(6).ToShortDateString());
             }
         }
 

@@ -558,7 +558,7 @@ namespace Utilities.Web.DayPilotLite.Web.Ui
 
             foreach (Day d in _days)
             {
-                DateTime h = new DateTime(d.Start.Year, d.Start.Month, d.Start.Day, 0, 0, 0);
+                DateTime h = new DateTime(d.Start.Year, d.Start.Month, d.Start.Day, d.Start.Hour, d.Start.Minute, d.Start.Second);
 
                 // <td>
                 output.AddAttribute("valign", "bottom");
@@ -1076,7 +1076,7 @@ namespace Utilities.Web.DayPilotLite.Web.Ui
                         start = boxStart;
                 }
 
-                return new DateTime(start.Year, start.Month, start.Day, start.Hour, 0, 0);
+                return new DateTime(start.Year, start.Month, start.Day, start.Hour, start.Minute, start.Second);
 
 
             }

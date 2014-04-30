@@ -1079,7 +1079,7 @@ namespace Utilities.Web.DayPilotLite.Web.Ui
             }
             set
             {
-                ViewState["StartDate"] = new DateTime(value.Year, value.Month, value.Day);
+                ViewState["StartDate"] = new DateTime(value.Year, value.Month, value.Day, value.Hour, value.Minute,value.Second);
             }
         }
 
