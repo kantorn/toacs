@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="../Contents/Styles/reset.css" rel="stylesheet" type="text/css" />
     <link href="../Contents/Styles/Master.css" rel="stylesheet" type="text/css" />
         
     <!-- Core CSS - Include with every page -->
@@ -176,7 +177,7 @@
             <!-- /.navbar-static-side -->
         </nav>
 
-        <div id="page-wrapper" style="height:98vh">
+        <div id="page-wrapper" >
             <!-- /.row -->
             <div class="row">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
