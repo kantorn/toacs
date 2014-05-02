@@ -118,7 +118,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-table fa-fw"></i> Stock Information<span class="fa arrow"></a>
+                            <a href="#"><i class="fa fa-table fa-fw"></i> Stock Information<span class="fa arrow"></span></a>
                              <ul class="nav nav-second-level" style="font-size:12px;">
                                 <li>
                                     <a href="#">Stock Monitoring</a>
