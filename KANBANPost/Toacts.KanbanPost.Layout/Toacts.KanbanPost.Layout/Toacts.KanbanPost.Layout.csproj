@@ -72,8 +72,14 @@
     <Content Include="BOM\Default.aspx" />
     <Content Include="Contents\font-awesome\css\font-awesome.css" />
     <Content Include="Contents\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Contents\Images\grid.png" />
+    <Content Include="Contents\Images\icon_sprite.png" />
+    <Content Include="Contents\Images\loader_bg.png" />
+    <Content Include="Contents\Images\slider_handle.png" />
     <Content Include="Contents\Images\toacs_logo.png" />
     <Content Include="Contents\Images\ui-bg_highlight-hard_75_dadada_1x100.png" />
+    <Content Include="Contents\Images\ui-bg_highlight-hard_75_e6e6e6_1x100.png" />
+    <Content Include="Contents\Styles\jquery.Gantt.css" />
     <Content Include="Contents\Styles\jquery.ganttView.css" />
     <Content Include="Contents\Styles\reset.css" />
     <Content Include="Contents\Styles\themes\black\accordion.css" />
@@ -340,7 +346,9 @@
     <Content Include="Contents\Styles\themes\metro\validatebox.css" />
     <Content Include="Contents\Styles\themes\metro\window.css" />
     <Content Include="Kanban\Schedule.aspx" />
+    <Content Include="Kanban\Schedule2.aspx" />
     <Content Include="Scripts\jquery.easyui.min.js" />
+    <Content Include="Scripts\jquery.fn.gantt.js" />
     <Content Include="Scripts\jquery.ganttView.js" />
     <Content Include="Scripts\js\bootstrap.js" />
     <Content Include="Scripts\js\bootstrap.min.js" />
@@ -523,6 +531,13 @@
     </Compile>
     <Compile Include="Kanban\Schedule.aspx.designer.cs">
       <DependentUpon>Schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kanban\Schedule2.aspx.cs">
+      <DependentUpon>Schedule2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kanban\Schedule2.aspx.designer.cs">
+      <DependentUpon>Schedule2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\TOACSRefferences\Reference.cs">

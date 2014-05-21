@@ -96,13 +96,13 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Planning<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level" style="font-size:12px;">
                                 <li>
-                                    <a href="#">Planing Schedule</a>
+                                    <a href="../Kanban/Schedule.aspx">Planing Schedule</a>
                                 </li>
                                 <li>
                                     <a href="#">Planing Management</a>
                                 </li>
                                 <li>
-                                    <a href="#">Extrusion KANBAN</a>
+                                    <a href="../Kanban/">Extrusion KANBAN</a>
                                 </li>
                             </ul>
                         </li>

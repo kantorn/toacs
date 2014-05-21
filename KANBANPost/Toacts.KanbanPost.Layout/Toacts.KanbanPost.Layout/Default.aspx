@@ -8,14 +8,14 @@
             height:25px;
         }
 		.fancy-button:hover {
-            background: url("../Styles/Images/ui-bg_highlight-hard_75_dadada_1x100.png") repeat-x scroll 50% 50% #CCCCCC;
+            background: url("../Contents/Images/ui-bg_highlight-hard_75_dadada_1x100.png") repeat-x scroll 50% 50% #CCCCCC;
         }
         a:hover {
             text-decoration: none;
         }
         .fancy-button {
             border: 2px solid #E1E1E1;
-            background: url("../Styles/Images/ui-bg_highlight-hard_75_e6e6e6_1x100.png") repeat-x scroll 50% 50% #E6E6E6;
+            background: url("../Contents/Images/ui-bg_highlight-hard_75_e6e6e6_1x100.png") repeat-x scroll 50% 50% #E6E6E6;
             padding: 0.4em 1em;
             text-decoration: none;
             border-radius: 4px;
@@ -79,8 +79,8 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <h1 id="h1" style="float:left; padding-top:3px; padding-right:30px;"></h1></br>      
-        <div class="o-1" style="margin:0;">
+        <br/>      
+        <div class="o-1" style="margin-left: auto;height: 75px;margin-right: auto;width: 930px;">
 	            <h1 id="h2" style="float:left; margin-left:30px;font-size: 23px">Extrusion KANBAN List</h1>
 	            <div class="page-options-nav" style="margin-top:15px;float:right;margin-right:20px;">
                     <a class="fancy-button filter-button arrow-down" href="javascript:void(0)">Filter Results<span class="arrow-down-icon"></span></a> 
@@ -90,7 +90,7 @@
 	            </div>
 	        <div class="cb"></div>
         </div>  
-        <div style="margin-left:auto;margin-right:auto;">
+        <div style="margin-left:auto;margin-right:auto;width:930px;">
 	        <table id="kanban" title="Issued KANBAN" style="width:930px;height:auto;"
 			        url="/Handler/HandlerKanbanList.axd" 
 			        singleSelect="true" iconCls="icon-save" rownumbers="true"
