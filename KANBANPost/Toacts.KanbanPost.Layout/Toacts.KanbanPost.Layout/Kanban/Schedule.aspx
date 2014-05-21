@@ -5,27 +5,7 @@
     <link href="../Contents/Styles/jquery.ganttView.css" rel="stylesheet" type="text/css" />
     <script src="../Scripts/js/date.js" type="text/javascript"></script>
     <script src="../Scripts/jquery.ganttView.js" type="text/javascript"></script>
-    <style type="text/css" >
-		
-        .fancy-button:hover {
-            background: url("../Contents/Images/ui-bg_highlight-hard_75_dadada_1x100.png") repeat-x scroll 50% 50% #CCCCCC;
-        }
-        a:hover {
-            text-decoration: none;
-        }
-        .fancy-button {
-            border: 2px solid #E1E1E1;
-            background: url("../Contents/Images/ui-bg_highlight-hard_75_e6e6e6_1x100.png") repeat-x scroll 50% 50% #E6E6E6;
-            padding: 0.4em 1em;
-            text-decoration: none;
-            border-radius: 4px;
-            color: #555555;
-            font-weight: normal;
-            font-size: 12px;
-            position: relative;
-            cursor: pointer;
-        }
-    </style>
+  
     <script type="text/javascript">
         var ganttData = [
 	        {
