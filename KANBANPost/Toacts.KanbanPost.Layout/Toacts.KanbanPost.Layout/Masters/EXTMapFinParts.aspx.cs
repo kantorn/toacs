@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Toacts.KanbanPost.Layout.Kanban
+namespace Toacts.KanbanPost.Layout.Masters
 {
-    public partial class Schedule2 : System.Web.UI.Page
+    public partial class EXTMapFinParts : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

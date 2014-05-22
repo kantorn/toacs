@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Toacts.KanbanPost.Layout.Kanban
+namespace Toacts.KanbanPost.Layout.Masters
 {
 
 
-    public partial class Schedule2
+    public partial class Users
     {
     }
 }

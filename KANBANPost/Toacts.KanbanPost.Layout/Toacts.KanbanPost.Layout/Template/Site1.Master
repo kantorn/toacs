@@ -61,53 +61,53 @@
                     <ul>
 		                <li><a href="">Planning</a>
 			                <ul>
-				                <li><a href="../Kanban/Schedule2.aspx">Planning Schedule</a></li>
+				                <li><a href="../Kanban/Schedule.aspx">Planning Schedule</a></li>
 				                <li><a href="#">Planning Management</a></li>
 				                <li><a href="../Kanban/">Extrusion KANBAN</a></li>
 			                </ul>
                         </li>
 		                <li><a href="#">Order Data</a>
 			                <ul>
-				                <li><a href="#">Import Forcast Order</a></li>
-				                <li><a href="#">Import Finishing Order</a></li>
+				                <li><a href="../Import/ForcastOrder.aspx">Import Forcast Order</a></li>
+				                <li><a href="../Import/FinishingOrder.aspx">Import Finishing Order</a></li>
 			                </ul>
 		                </li>
 		                <li><a href="#">Stock Information</a>
 			                <ul>
-				                <li><a href="#">Stock Monitoring</a></li>
-				                <li><a href="#">Standard Stock Control</a></li>
-				                <li><a href="#">Extrusion Stock</a></li>
-				                <li><a href="#">Finishing Stock</a></li>
+				                <li><a href="../Inventory/Monitoring.aspx">Stock Monitoring</a></li>
+				                <li><a href="../Inventory/Standard.aspx">Standard Stock Control</a></li>
+				                <li><a href="../Inventory/Extrusion.aspx">Extrusion Stock</a></li>
+				                <li><a href="../Inventory/Finishing.aspx">Finishing Stock</a></li>
 			                </ul>
 		                </li>
 		                <li style="border-right:none"><a href="#">Master Data</a>
 			                <ul>
 				                <li>
-                                    <a href="#">Part Master</a>
+                                    <a href="../Masters/Parts.aspx">Part Master</a>
                                 </li>
                                 <li>
-                                    <a href="#">Model Master</a>
+                                    <a href="../Masters/Models.aspx">Model Master</a>
                                 </li>
                                 <li>
-                                    <a href="#">Model Structure</a>
+                                    <a href="../Masters/ModelStructures.aspx">Model Structure</a>
                                 </li>
                                 <li>
-                                    <a href="#">EXT/FIN part</a>
+                                    <a href="../Masters/EXTMapFinParts.aspx">EXT/FIN part</a>
                                 </li>
                                 <li>
-                                    <a href="#">Customer Master</a>
+                                    <a href="../Masters/Customers.aspx">Customer Master</a>
                                 </li>
                                 <li>
-                                    <a href="#">Operator </a>
+                                    <a href="../Masters/Users.aspx">Operator </a>
                                 </li>
                                 <li>
-                                    <a href="#">Operator Group</a>
+                                    <a href="../Masters/UserGroups.aspx">Operator Group</a>
                                 </li>
                                 <li>
-                                    <a href="#">Line Master</a>
+                                    <a href="../Masters/Line.aspx">Line Master</a>
                                 </li>
                                 <li>
-                                    <a href="#">Losttime Master</a>
+                                    <a href="../Masters/PDLosttime.aspx">Losttime Master</a>
                                 </li>
 			                </ul>
 		                </li>

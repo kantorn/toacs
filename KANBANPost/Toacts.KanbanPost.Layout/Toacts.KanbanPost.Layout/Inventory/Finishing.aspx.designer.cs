@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Toacts.KanbanPost.Layout.Extrusion
+namespace Toacts.KanbanPost.Layout.Inventory
 {
 
 
-    public partial class Default
+    public partial class Finishing
     {
     }
 }

@@ -9,7 +9,7 @@
         $(function () {
             $('#h1').activity({ segments: 8, width: 2, space: 0, length: 3, speed: 1.5, align: 'right' });
 
-            $
+       
 
             $('#kanban').datagrid({
                 pageable: true,

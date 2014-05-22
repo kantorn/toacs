@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Toacts.KanbanPost.Layout.Finishing
+namespace Toacts.KanbanPost.Layout.Masters
 {
 
 
-    public partial class Default
+    public partial class UserGroups
     {
     }
 }
