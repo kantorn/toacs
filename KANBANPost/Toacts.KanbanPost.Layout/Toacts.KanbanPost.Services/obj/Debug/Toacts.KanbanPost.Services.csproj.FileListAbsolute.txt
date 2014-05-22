@@ -6,4 +6,3 @@ E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Servi
 E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Services\bin\Toacts.KanbanPost.Services.pdb
 E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Services\obj\Debug\Toacts.KanbanPost.Services.dll
 E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Services\obj\Debug\Toacts.KanbanPost.Services.pdb
-E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Services\obj\Debug\Toacts.KanbanPost.Services.csprojResolveAssemblyReference.cache

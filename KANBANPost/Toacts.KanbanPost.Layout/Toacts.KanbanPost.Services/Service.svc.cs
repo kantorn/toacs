@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using Toacts.KanbanPost.Services.EF;
 
 namespace Toacts.KanbanPost.Services
 {
@@ -15,6 +16,13 @@ namespace Toacts.KanbanPost.Services
         {
             return Toacts.KanbanPost.Services.BLL.Kanban.getKanbanList(ref totalRecord, pageindex, pagesize);
         }
+
+        #region Master Data
+        public List<Toacts.KanbanPost.Services.BLL.Part> getPartMaster(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        {
+            return Toacts.KanbanPost.Services.BLL.MAParts.getPartsList(ref totalRecord, pageindex, pagesize);
+        }
+        #endregion
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {

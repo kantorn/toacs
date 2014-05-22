@@ -7,22 +7,43 @@
     $(function () {
         $('#h1').activity({ segments: 8, width: 2, space: 0, length: 3, speed: 1.5, align: 'right' });
 
-        $('#kanban').datagrid({
+        $('#ma_part').datagrid({
             pageable: true,
             autoheight: true,
-            onLoadSuccess: function (res) {
-                $('#h1').activity(false);
-                for (var i = 0; i < res.merges.length; i++) {
-                    $('#kanban').datagrid('mergeCells', {
-                        index: res.merges[i].index,
-                        field: res.merges[i].field,
-                        rowspan: res.merges[i].rowspan
-                    });
+            singleSelect: true, columns: [[
+            { field: 'ID', title: 'ID', width: 60 },
+            { field: 'PART_NAME', title: 'PART NAME', width: 240, align: 'right', editor: 'text' },
+            { field: 'PART_NO', title: 'PART NO', width: 190, align: 'right', editor: 'text' },
+            { field: 'PROD_LENGTH', title: 'PROD_LENGTH', width: 120, align: 'right', editor: 'numberbox' },
+            { field: 'PART_TYPE', title: 'PART TYPE', width: 90, editor: 'text' },
+            { field: 'UNIT_QTY', title: 'UNIT QTY', width: 90, align: 'center', editor: 'numberbox' },
+            { field: 'Action', title: 'Action', width: 105, align: 'center',
+                formatter: function (value, row, index) {
+                    if (row.editing) {
+                        var s = '<a href="#" onclick="saverow(this)">Save</a> ';
+                        var c = '<a href="#" onclick="cancelrow(this)">Cancel</a>';
+                        return s + c;
+                    } else {
+                        var e = '<a href="#" onclick="editrow(this)">Edit</a> ';
+                        var d = '<a href="#" onclick="deleterow(this)">Delete</a>';
+                        return e + d;
+                    }
                 }
-                var height = $('.datagrid-view1').height();
-                $('.datagrid-body').height(height + 10);
             }
-        }); 
+        ]],
+            onBeforeEdit: function (index, row) {
+                row.editing = true;
+                updateActions(index);
+            },
+            onAfterEdit: function (index, row) {
+                row.editing = false;
+                updateActions(index);
+            },
+            onCancelEdit: function (index, row) {
+                row.editing = false;
+                updateActions(index);
+            }
+        });
 
         $('.filter-button').click(function () {
             if (!$('.filter-button').hasClass('actived')) {
@@ -34,9 +55,55 @@
                 $('.filter-display').fadeOut('fast');
             }
         });
+
+        $('.insert-button').click(function () {
+            insert();
+        });
     });
     //]]>
 
+    function updateActions(index) {
+        $('#ma_part').datagrid('updateRow', {
+            index: index,
+            row: {}
+        });
+    }
+    function getRowIndex(target) {
+        var tr = $(target).closest('tr.datagrid-row');
+        return parseInt(tr.attr('datagrid-row-index'));
+    }
+    function editrow(target) {
+        $('#ma_part').datagrid('beginEdit', getRowIndex(target));
+    }
+    function deleterow(target) {
+        $.messager.confirm('Confirm', 'Are you sure?', function (r) {
+            if (r) {
+                $('#tt').datagrid('deleteRow', getRowIndex(target));
+            }
+        });
+    }
+    function saverow(target) {
+        $('#ma_part').datagrid('endEdit', getRowIndex(target));
+    }
+    function cancelrow(target) {
+        $('#ma_part').datagrid('cancelEdit', getRowIndex(target));
+    }
+    function insert() {
+        var row = $('#ma_part').datagrid('getSelected');
+        if (row) {
+            var index = $('#ma_part').datagrid('getRowIndex', row);
+        } else {
+            index = 0;
+        }
+        $('#ma_part').datagrid('insertRow', {
+            index: index,
+            row: {
+                status: 'P'
+            }
+        });
+        $('#ma_part').datagrid('selectRow', index);
+        $('#ma_part').datagrid('beginEdit', index);
+    }
     //
     // FG Data Load
     function fgDataLoad(sender, args) {
@@ -70,6 +137,8 @@
         <div class="o-1" style="margin-left: auto;height: 75px;margin-right: auto;width: 930px;">
 	            <h1 id="h2" style="float:left; margin-left:30px;font-size: 23px;color: #264DB1;font-weight: bold;">Part Master Data</h1>
 	            <div class="page-options-nav" style="margin-top:15px;float:right;margin-right:20px;">
+                    <a class="fancy-button insert-button arrow-down" href="javascript:void(0)">Insert Row<span class="arrow-down-icon"></span></a> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="fancy-button filter-button arrow-down" href="javascript:void(0)">Filter Data<span class="arrow-down-icon"></span></a> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
 	            </div>
@@ -78,21 +147,21 @@
         <div class="filter-display">
         </div>
         <div style="margin-left:auto;margin-right:auto;width:930px;">
-	        <table id="kanban" title="Issued KANBAN" style="width:930px;height:auto;"
-			        url="/Handler/HandlerKanbanList.axd" 
+	        <table id="ma_part" title="Issued KANBAN" style="width:930px;height:auto;"
+			        url="/Handler/PartMasterHandler.axd" 
 			        singleSelect="true" iconCls="icon-save" rownumbers="true"
 			        idField="itemid" pagination="true" 
                     data-options="pageSize: 20">
 		        <thead>
                     <%--KanbnaId,customer_name,model_name,part_name,part_no,tag_id,quantity,total_quantity--%>
 			        <tr>
-				        <th field="customer_name" width="95" >Customer Name</th>
-				        <th field="model_name" width="100">Model Name</th>
-				        <th field="part_name" width="200" >Paet Name</th>
-				        <th field="part_no" width="180">Part No.</th>
-				        <th field="total_quantity" width="90" align="center">Total Quantity</th>
-				        <th field="tag_id" width="160" align="right">Tag Id</th>
-				        <th field="quantity" width="70" align="right">Lot Size</th>
+				        <th field="ID" width="95" >ID</th>
+				        <th field="PART_NAME" width="250">Part Name</th>
+				        <th field="PART_NO" width="200" >Paet No</th>
+				        <th field="PROD_LENGTH" width="130">Prod. Length</th>
+				        <th field="PART_TYPE" width="100" align="center">Part Type</th>
+				        <th field="UNIT_QTY" width="100" align="right">Quantity/Unit</th>
+				        <th field="ACTION" width="120" align="right">Action</th>
 			        </tr>
 		        </thead>
 	        </table>

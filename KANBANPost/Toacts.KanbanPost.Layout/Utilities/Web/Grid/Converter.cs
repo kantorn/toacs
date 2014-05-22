@@ -41,20 +41,23 @@ namespace Utilities.Web.Grid
                         foreach (object obj in _rows)
                         {
                             var p = Convert.ChangeType(obj, stype);
-                            if (prevValue != prop.GetValue(p, null).ToString())
+                            if (prop.GetValue(p, null) != null)
                             {
-                                if (!String.IsNullOrEmpty(prevValue))
+                                if (prevValue != prop.GetValue(p, null).ToString())
                                 {
-                                    mergerItem.rowspan = rowIndex - startRowIndex;
-                                    mergerItem.index = rowIndex - mergerItem.rowspan;
-                                    this._merged.Add(mergerItem);
-                                    mergerItem = new MergerdGrid();
-                                    mergerItem.field = prop.Name.ToString();
-                                    startRowIndex = rowIndex;
+                                    if (!String.IsNullOrEmpty(prevValue))
+                                    {
+                                        mergerItem.rowspan = rowIndex - startRowIndex;
+                                        mergerItem.index = rowIndex - mergerItem.rowspan;
+                                        this._merged.Add(mergerItem);
+                                        mergerItem = new MergerdGrid();
+                                        mergerItem.field = prop.Name.ToString();
+                                        startRowIndex = rowIndex;
+                                    }
+                                    prevValue = prop.GetValue(p, null).ToString();
                                 }
-                                prevValue = prop.GetValue(p, null).ToString();
+                                rowIndex++;
                             }
-                            rowIndex++;
                         }
 
                         mergerItem.index = startRowIndex;

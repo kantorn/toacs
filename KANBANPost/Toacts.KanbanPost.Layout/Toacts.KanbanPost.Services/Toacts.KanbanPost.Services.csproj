@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="BLL\ForecastOrder.cs" />
     <Compile Include="BLL\Kanban.cs" />
+    <Compile Include="BLL\MAParts.cs" />
     <Compile Include="EF\TAC_KANBAN.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
