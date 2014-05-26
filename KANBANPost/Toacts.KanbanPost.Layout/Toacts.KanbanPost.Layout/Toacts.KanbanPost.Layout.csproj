@@ -362,6 +362,12 @@
     <Content Include="Masters\UserGroups.aspx" />
     <Content Include="Masters\Users.aspx" />
     <Content Include="Production\Default.aspx" />
+    <Content Include="Production\Extrusion\ExtrusinOrderCreate.aspx" />
+    <Content Include="Production\Extrusion\ExtrusionOrderComplete.aspx" />
+    <Content Include="Production\Extrusion\ExtrusionScan.aspx" />
+    <Content Include="Production\Finishing\FinishingOrderComplete.aspx" />
+    <Content Include="Production\Finishing\FinishingOrderCreate.aspx" />
+    <Content Include="Production\Finishing\FinishingScan.aspx" />
     <Content Include="Production\PdLogin.aspx" />
     <Content Include="Scripts\jquery.easyui.min.js" />
     <Content Include="Scripts\jquery.fn.gantt.js" />
@@ -631,6 +637,48 @@
     <Compile Include="Production\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Production\Extrusion\ExtrusinOrderCreate.aspx.cs">
+      <DependentUpon>ExtrusinOrderCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Production\Extrusion\ExtrusinOrderCreate.aspx.designer.cs">
+      <DependentUpon>ExtrusinOrderCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Production\Extrusion\ExtrusionOrderComplete.aspx.cs">
+      <DependentUpon>ExtrusionOrderComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Production\Extrusion\ExtrusionOrderComplete.aspx.designer.cs">
+      <DependentUpon>ExtrusionOrderComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Production\Extrusion\ExtrusionScan.aspx.cs">
+      <DependentUpon>ExtrusionScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Production\Extrusion\ExtrusionScan.aspx.designer.cs">
+      <DependentUpon>ExtrusionScan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Production\Finishing\FinishingOrderComplete.aspx.cs">
+      <DependentUpon>FinishingOrderComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Production\Finishing\FinishingOrderComplete.aspx.designer.cs">
+      <DependentUpon>FinishingOrderComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Production\Finishing\FinishingOrderCreate.aspx.cs">
+      <DependentUpon>FinishingOrderCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Production\Finishing\FinishingOrderCreate.aspx.designer.cs">
+      <DependentUpon>FinishingOrderCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Production\Finishing\FinishingScan.aspx.cs">
+      <DependentUpon>FinishingScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Production\Finishing\FinishingScan.aspx.designer.cs">
+      <DependentUpon>FinishingScan.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Production\PdLogin.aspx.cs">
       <DependentUpon>PdLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -666,10 +714,7 @@
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Production\Extrusion\" />
-    <Folder Include="Production\Finishing\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Template\Main.Master" />
   </ItemGroup>
