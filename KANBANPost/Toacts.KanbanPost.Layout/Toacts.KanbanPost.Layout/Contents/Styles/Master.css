@@ -112,3 +112,36 @@ margin-left: 250px;
 	margin-top:10px;
 }
 html,body { height: 100%; margin: 0px; padding: 0px; }
+
+ .lot-information
+{
+    font-weight:bold;
+    color:#666666;
+    padding: 2px 5px;
+    font-size:12px;
+    margin-bottom:6px;
+    display:inline-block;
+}
+.lot-information.data
+{
+    font-weight:normal;
+}
+        
+.group-radio
+{
+    padding: 2px 5px
+}
+          
+.group-radio input
+{
+    margin: 0px 7px
+} 
+        
+.prod-information span
+{
+    margin: 20px 10px;
+}
+input 
+{
+    font-size:12px;    
+}

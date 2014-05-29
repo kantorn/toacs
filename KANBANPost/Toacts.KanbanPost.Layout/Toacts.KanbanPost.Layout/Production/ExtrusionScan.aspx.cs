@@ -13,5 +13,21 @@ namespace Toacts.KanbanPost.Layout.Production.Extrusion
         {
 
         }
+
+        protected void txtKanban_TextChanged(object sender, EventArgs e)
+        {
+            if (this.txtKanban.Text == "TG00001") 
+            {
+                if (Session["action"] == "Create")
+                {
+                    Response.Redirect("../Production/ExtrusionOrderCreate.aspx");
+                
+                }
+                else if (Session["action"] == "Complete")
+                {
+                    Response.Redirect("../Production/ExtrusionOrderComplete.aspx");
+                }
+            }
+        }
     }
 }

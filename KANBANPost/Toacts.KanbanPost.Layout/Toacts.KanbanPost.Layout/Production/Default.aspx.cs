@@ -13,5 +13,17 @@ namespace Toacts.KanbanPost.Layout.Production
         {
 
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            if((this.UserName.Text == "extrusion" ) && (this.Password.Text == "123"))
+            {
+                Response.Redirect("../Production/ExtrusionSelection.aspx");
+            }
+            else if((this.UserName.Text == "finishing" ) && (this.Password.Text == "123"))
+            {
+                Response.Redirect("../Production/FinishingSelection.aspx");
+            }
+        }
     }
 }

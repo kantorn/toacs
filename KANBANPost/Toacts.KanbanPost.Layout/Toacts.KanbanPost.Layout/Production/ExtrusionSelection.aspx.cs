@@ -13,5 +13,17 @@ namespace Toacts.KanbanPost.Layout.Production.Extrusion
         {
 
         }
+
+        protected void CreateNewOrder_Click(object sender, EventArgs e)
+        {
+            Session["action"] = "Create";
+            Response.Redirect("../Production/ExtrusionScan.aspx");
+        }
+
+        protected void CompleteOrder_Click(object sender, EventArgs e)
+        {
+            Session["action"] = "Complete";
+            Response.Redirect("../Production/ExtrusionScan.aspx");
+        }
     }
 }
