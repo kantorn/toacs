@@ -1,9 +1,9 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="Toacts.KanbanPost.Layout.Template.Main" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Production.master.cs" Inherits="Toacts.KanbanPost.Layout.Template.Production" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
+<head runat="server">
     <title></title>
     <link href="../Contents/Styles/Master.css" rel="stylesheet" type="text/css" />
         
@@ -35,16 +35,16 @@
     <script src="../Scripts/json2.js" type="text/javascript"></script>
     <link href="../Contents/Styles/themes/default/easyui.css" rel="stylesheet" type="text/css" />
     <link href="../Contents/Styles/themes/icon.css" rel="stylesheet" type="text/css" />
-    <script src="../Scripts/jquery.easyui.min.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery.easyui.min.js" type="text/javascript"></script>    
     <script src="../Scripts/activity-indicator.js" type="text/javascript"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body style="background:white;" >
-    <form id="form1" runat="server">   
+<body style="background:#ffffff;">
+    <form id="form1" runat="server" >
     <asp:ScriptManager ID="sm" runat="server" />    
     <div>
-    <nav class="navbar navbar-fixed-top navbar-default" role="navigation" style="padding-top: 20px;padding-bottom: 15px;">
+       <nav class="navbar navbar-fixed-top navbar-default" role="navigation" style="padding-top: 20px;padding-bottom: 15px;">
             <div class="container" style="height:70px;width: 940px;margin-left: auto;margin-right: auto;">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -57,63 +57,6 @@
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
              
-                <div class="menu-bar">
-                    <ul>
-		                <li><a href="">Planning</a>
-			                <ul>
-				                <li><a href="../Kanban/Schedule.aspx">Planning Schedule</a></li>
-				                <li><a href="../Kanban/PlanManagement.aspx">Planning Management</a></li>
-				                <li><a href="../Kanban/">Extrusion KANBAN</a></li>
-			                </ul>
-                        </li>
-		                <li><a href="#">Order Data</a>
-			                <ul>
-				                <li><a href="../Import/ForcastOrder.aspx">Import Forcast Order</a></li>
-				                <li><a href="../Import/FinishingOrder.aspx">Import Finishing Order</a></li>
-			                </ul>
-		                </li>
-		                <li><a href="#">Stock Information</a>
-			                <ul>
-				                <li><a href="../Inventory/Monitoring.aspx">Stock Monitoring</a></li>
-				                <li><a href="../Inventory/Standard.aspx">Standard Stock Control</a></li>
-				                <li><a href="../Inventory/Extrusion.aspx">Extrusion Stock</a></li>
-				                <li><a href="../Inventory/Finishing.aspx">Finishing Stock</a></li>
-			                </ul>
-		                </li>
-		                <li style="border-right:none"><a href="#">Master Data</a>
-			                <ul>
-				                <li>
-                                    <a href="../Masters/Parts.aspx">Part Master</a>
-                                </li>
-                                <li>
-                                    <a href="../Masters/Models.aspx">Model Master</a>
-                                </li>
-                                <li>
-                                    <a href="../Masters/ModelStructures.aspx">Model Structure</a>
-                                </li>
-                                <li>
-                                    <a href="../Masters/EXTMapFinParts.aspx">EXT/FIN part</a>
-                                </li>
-                                <li>
-                                    <a href="../Masters/Customers.aspx">Customer Master</a>
-                                </li>
-                                <li>
-                                    <a href="../Masters/Users.aspx">Operator </a>
-                                </li>
-                                <li>
-                                    <a href="../Masters/UserGroups.aspx">Operator Group</a>
-                                </li>
-                                <li>
-                                    <a href="../Masters/Line.aspx">Line Master</a>
-                                </li>
-                                <li>
-                                    <a href="../Masters/PDLosttime.aspx">Losttime Master</a>
-                                </li>
-			                </ul>
-		                </li>
-	                </ul>
-                </div>     
-
                 <div class="collapse navbar-collapse navbar-ex1-collapse" style="margin-top:10px;">
                     <!-- /.navbar-collapse -->                
                        
@@ -126,10 +69,8 @@
                             <ul class="dropdown-menu dropdown-user">
                                 <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                                 </li>
-                                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                                </li>
                                 <li class="divider"></li>
-                                <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                                <li><a href="Default.aspx"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                                 </li>
                             </ul>
                             <!-- /.dropdown-user -->
@@ -143,7 +84,7 @@
         </nav>  
     </div>    
     <div id="wrapper">   
-        <div class="main-content">
+        <div class="main-content" style="width:980px;" >
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
             </asp:ContentPlaceHolder>

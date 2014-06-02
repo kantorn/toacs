@@ -11,7 +11,22 @@ namespace Toacts.KanbanPost.Layout.Production.Finishing
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            divInfo.Visible = false;  
+        }
+        protected void txtKanban_TextChanged(object sender, EventArgs e)
+        {
+            if (this.txtKanban.Text == "TG00001")
+            {
+                txtKanban.Enabled = false;
+                divInfo.Visible = true;  
+            }
+        }
 
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtKanban.Text = "";
+            divInfo.Visible = false;
+            txtKanban.Enabled = true;
         }
     }
 }

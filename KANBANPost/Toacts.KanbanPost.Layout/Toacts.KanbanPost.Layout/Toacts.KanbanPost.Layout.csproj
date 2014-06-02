@@ -358,6 +358,7 @@
     <Content Include="Inventory\Finishing.aspx" />
     <Content Include="Inventory\Monitoring.aspx" />
     <Content Include="Inventory\Standard.aspx" />
+    <Content Include="Kanban\PlanManagement.aspx" />
     <Content Include="Kanban\Schedule.aspx" />
     <Content Include="Masters\Customers.aspx" />
     <Content Include="Masters\EXTMapFinParts.aspx" />
@@ -517,6 +518,7 @@
     </Compile>
     <Compile Include="Handler\KanbanListHandler.cs" />
     <Compile Include="Handler\PartMasterHandler.cs" />
+    <Compile Include="Handler\PlanManagementHandler.cs" />
     <Compile Include="Helper\SessionHelper.cs" />
     <Compile Include="Import\FinishingOrder.aspx.cs">
       <DependentUpon>FinishingOrder.aspx</DependentUpon>
@@ -568,6 +570,13 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\GroupedGridView.cs" />
+    <Compile Include="Kanban\PlanManagement.aspx.cs">
+      <DependentUpon>PlanManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kanban\PlanManagement.aspx.designer.cs">
+      <DependentUpon>PlanManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Kanban\Schedule.aspx.cs">
       <DependentUpon>Schedule.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

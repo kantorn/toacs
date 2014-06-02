@@ -92,7 +92,7 @@
 			        <tr>
 				        <th field="customer_name" width="95" >Customer Name</th>
 				        <th field="model_name" width="100">Model Name</th>
-				        <th field="part_name" width="200" >Paet Name</th>
+				        <th field="part_name" width="200" >Part Name</th>
 				        <th field="part_no" width="180">Part No.</th>
 				        <th field="total_quantity" width="90" align="center">Total Quantity</th>
 				        <th field="tag_id" width="160" align="right">Tag Id</th>

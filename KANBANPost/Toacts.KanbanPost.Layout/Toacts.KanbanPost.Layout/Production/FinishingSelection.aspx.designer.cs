@@ -7,36 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Toacts.KanbanPost.Layout.Production.Finishing {
+namespace Toacts.KanbanPost.Layout.Production {
     
     
-    public partial class FinishingOrderComplete {
+    public partial class FinishingSelection {
         
         /// <summary>
-        /// txtKanban control.
+        /// CreateNewOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtKanban;
+        protected global::System.Web.UI.WebControls.Button CreateNewOrder;
         
         /// <summary>
-        /// divInfo control.
+        /// CompleteOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divInfo;
-        
-        /// <summary>
-        /// btnCancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancel;
+        protected global::System.Web.UI.WebControls.Button CompleteOrder;
     }
 }

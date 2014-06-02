@@ -8,6 +8,21 @@ using System.Collections;
 
 namespace Utilities.Web.Grid
 {
+    public class GridHeaderProperties
+    {
+        public string field { get; set; }
+        public string title { get; set; }
+        public string width { get; set; }
+        public string editor { get; set; }
+
+        public GridHeaderProperties(string _field, string _title, string _width, string _editor)
+        {
+            this.field = _field;
+            this.title = _title;
+            this.width = _width;
+            this.editor = _editor;
+        }
+    }
     public class GridResult
     {
         private IList _rows;
