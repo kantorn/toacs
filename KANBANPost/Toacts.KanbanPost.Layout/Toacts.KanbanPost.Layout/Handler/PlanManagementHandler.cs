@@ -42,10 +42,15 @@ namespace Toacts.KanbanPost.Layout.Handler
             int dayCount = 0;
             foreach (PropertyInfo p in propInfos)
             {
-                if (p.Name.Contains("day") || p.Name.Contains("Total"))
+                if (p.Name.Contains("day"))
                 {
                     string fieldName = startOfWeek.AddDays(dayCount).DayOfWeek.ToString().Substring(0,3) + "(" + startOfWeek.AddDays(dayCount).Day.ToString()  + ")";
                     result.Add(new GridHeaderProperties(p.Name, fieldName, "", "numberbox"));
+                    dayCount++;
+                }
+                else if  (p.Name.Contains("Total"))
+                {
+                    result.Add(new GridHeaderProperties(p.Name, p.Name, "", ""));
                     dayCount++;
                 }
             }
