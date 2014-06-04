@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AspNet.ScriptManager.jQuery">
-      <HintPath>..\packages\AspNet.ScriptManager.jQuery.2.0.3\lib\net40\AspNet.ScriptManager.jQuery.dll</HintPath>
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.2.1.1\lib\net40\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
     <Reference Include="FlexigridASPNET, Version=1.0.4462.38746, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -519,6 +519,7 @@
     <Compile Include="Handler\KanbanListHandler.cs" />
     <Compile Include="Handler\PartMasterHandler.cs" />
     <Compile Include="Handler\PlanManagementHandler.cs" />
+    <Compile Include="Handler\StockMonitoringHandler.cs" />
     <Compile Include="Helper\SessionHelper.cs" />
     <Compile Include="Import\FinishingOrder.aspx.cs">
       <DependentUpon>FinishingOrder.aspx</DependentUpon>

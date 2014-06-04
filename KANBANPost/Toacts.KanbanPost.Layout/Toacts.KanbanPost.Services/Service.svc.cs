@@ -24,6 +24,13 @@ namespace Toacts.KanbanPost.Services
         }
         #endregion
 
+        #region Monitoring Data
+        public List<Toacts.KanbanPost.Services.BLL.MonitoringList> getMonitoringList(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        {
+            return Toacts.KanbanPost.Services.BLL.Monitoring.getMonitoringList(ref totalRecord, pageindex, pagesize);
+        }
+        #endregion
+
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)

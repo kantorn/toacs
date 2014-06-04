@@ -13,13 +13,6 @@
              autoheight: true,
              onLoadSuccess: function (res) {
                  $('#h1').activity(false);
-                 for (var i = 0; i < res.merges.length; i++) {
-                     $('#kanban').datagrid('mergeCells', {
-                         index: res.merges[i].index,
-                         field: res.merges[i].field,
-                         rowspan: res.merges[i].rowspan
-                     });
-                 }
                  var height = $('.datagrid-view1').height();
                  $('.datagrid-body').height(height + 10);
              }
@@ -81,20 +74,21 @@
         </div>
         <div style="margin-left:auto;margin-right:auto;width:930px;">
 	        <table id="kanban" title="Issued KANBAN" style="width:930px;height:auto;"
-			        url="/Handler/HandlerKanbanList.axd" 
+			        url="/Handler/StockMonitoringHandler.axd" 
 			        singleSelect="true" iconCls="icon-save" rownumbers="true"
 			        idField="itemid" pagination="true" 
                     data-options="pageSize: 20">
 		        <thead>
                     <%--KanbnaId,customer_name,model_name,part_name,part_no,tag_id,quantity,total_quantity--%>
 			        <tr>
-				        <th field="customer_name" width="95" >Customer Name</th>
-				        <th field="model_name" width="100">Model Name</th>
-				        <th field="part_name" width="200" >Paet Name</th>
-				        <th field="part_no" width="180">Part No.</th>
-				        <th field="total_quantity" width="90" align="center">Total Quantity</th>
-				        <th field="tag_id" width="160" align="right">Tag Id</th>
-				        <th field="quantity" width="70" align="right">Lot Size</th>
+				        <th field="part_no" width="150" >Part No.</th>
+				        <th field="part_number" width="195">Part Number</th>
+				        <th field="pd_line" width="90" >PD Line</th>
+				        <th field="lot_size" width="90">Lot Size</th>
+				        <th field="max" width="90" align="center">Max</th>
+				        <th field="min" width="90" align="right">Min</th>
+				        <th field="now_stock" width="90" align="right">Now Stock</th>
+                        <th field="status" width="90 align="right">Status</th>
 			        </tr>
 		        </thead>
 	        </table>
