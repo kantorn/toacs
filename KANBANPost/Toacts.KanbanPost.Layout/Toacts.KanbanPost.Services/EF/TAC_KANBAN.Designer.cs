@@ -19,34 +19,51 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_STOCK_EXT_ACCUMULATE_STOCK", "ACCUMULATE_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.ACCUMULATE_STOCK), "EXT_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_STOCK), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_FIN_STOCK_EXT_ACCUMULATE_STOCK", "ACCUMULATE_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.ACCUMULATE_STOCK), "FIN_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.FIN_STOCK), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_STOCK_ACCUMULATE_STOCK", "ACCUMULATE_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.ACCUMULATE_STOCK), "BEN_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_STOCK), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_STOCK_ACCUMULATE_STOCK", "ACCUMULATE_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.ACCUMULATE_STOCK), "EXT_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_STOCK), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_KANBAN_BEN_PLAN", "BEN_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.BEN_PLAN), "BEN_KANBAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_KANBAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_KANBAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "BEN_KANBAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_KANBAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_WORK_ORDER_BEN_KANBAN", "BEN_KANBAN", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.BEN_KANBAN), "BEN_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_WORK_ORDER), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_PLAN_FIN_PLAN", "FIN_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.FIN_PLAN), "BEN_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_PLAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_PLAN_MA_LINE", "MA_LINE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_LINE), "BEN_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_PLAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "BEN_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_PLAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_PLAN_MA_OPT_USER", "MA_OPT_USER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_USER), "BEN_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_PLAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_PLAN_STD_STOCK", "STD_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.STD_STOCK), "BEN_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_PLAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_STOCK_BEN_PLAN", "BEN_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.BEN_PLAN), "BEN_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_STOCK), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_WORK_ORDER_BEN_PLAN", "BEN_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.BEN_PLAN), "BEN_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_WORK_ORDER), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_STOCK_BEN_WORK_ORDER", "BEN_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.BEN_WORK_ORDER), "BEN_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_STOCK), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_STOCK_MA_OPT_USER", "MA_OPT_USER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_USER), "BEN_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_STOCK), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_STOCK_MA_OPT_USER1", "MA_OPT_USER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_USER), "BEN_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_STOCK), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "BEN_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_WORK_ORDER), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_BEN_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_USER), "BEN_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.BEN_WORK_ORDER), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_FIN_MAPPING_PART_MA_PART", "MA_PART", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_PART), "EXT_FIN_MAPPING_PART", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_FIN_MAPPING_PART), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_KANBAN_EXT_PLAN", "EXT_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.EXT_PLAN), "EXT_KANBAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_KANBAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_EXT_KANBAN", "EXT_KANBAN", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.EXT_KANBAN), "EXT_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_WORK_ORDER), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_PLAN_FIN_PLAN", "FIN_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.FIN_PLAN), "EXT_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_PLAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_PLAN_MA_LINE", "MA_LINE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_LINE), "EXT_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_PLAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "EXT_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_PLAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_PLAN_MA_OPT_USER", "MA_OPT_USER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_USER), "EXT_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_PLAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_PLAN_STD_STOCK", "STD_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.STD_STOCK), "EXT_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_PLAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_STOCK_EXT_PLAN", "EXT_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.EXT_PLAN), "EXT_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_STOCK), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.EXT_WORK_ORDER), "EXT_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_STOCK), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_STOCK_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "EXT_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_STOCK), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_STOCK_MA_OPT_USER", "MA_OPT_USER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_USER), "EXT_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_STOCK), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_STOCK_MA_OPT_USER1", "MA_OPT_USER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_USER), "EXT_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_STOCK), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.EXT_WORK_ORDER), "EXT_WORK_ORDER_DERAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_WORK_ORDER_DERAIL), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_KANBAN_EXT", "KANBAN_EXT", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.KANBAN_EXT), "EXT_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_WORK_ORDER), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_MA_LINE", "MA_LINE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_LINE), "EXT_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_WORK_ORDER), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "EXT_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_WORK_ORDER), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_USER), "EXT_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_WORK_ORDER), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_FIN_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.EXT_WORK_ORDER), "FIN_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.FIN_STOCK), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_FIN_WORK_ORDER_EXT_WORK_ORDER", "EXT_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.EXT_WORK_ORDER), "FIN_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.FIN_WORK_ORDER), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "MA_LOSTTIME", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_LOSTTIME), "EXT_WORK_ORDER_DERAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.EXT_WORK_ORDER_DERAIL), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_FIN_WORK_ORDER_MA_LINE", "MA_LINE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_LINE), "FIN_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.FIN_WORK_ORDER), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_FIN_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "FIN_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.FIN_WORK_ORDER), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_FIN_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_USER), "FIN_WORK_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.FIN_WORK_ORDER), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_FIN_PLAN_MA_LINE", "MA_LINE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_LINE), "FIN_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.FIN_PLAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_FIN_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "FIN_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.FIN_PLAN), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_FIN_PLAN_MA_OPT_USER", "MA_OPT_USER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_USER), "FIN_PLAN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.FIN_PLAN), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.FORECAST_ORDER), "FORECAST_ORDER_DETAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.FORECAST_ORDER_DETAIL), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_FORECAST_ORDER_MA_CUSTOMER", "MA_CUSTOMER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_CUSTOMER), "FORECAST_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.FORECAST_ORDER), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_FORECAST_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "FORECAST_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.FORECAST_ORDER), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_KANBAN_EXT_FORECAST_ORDER", "FORECAST_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.FORECAST_ORDER), "KANBAN_EXT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.KANBAN_EXT), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_FORECAST_ORDER_FORECAST_ORDER", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "FORECAST_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.FORECAST_ORDER), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_STD_STOCK_FORECAST_ORDER", "FORECAST_ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.FORECAST_ORDER), "STD_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.STD_STOCK), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_KANBAN_EXT_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "KANBAN_EXT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.KANBAN_EXT), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_PLAN_EXT_KANBAN_EXT", "KANBAN_EXT", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.KANBAN_EXT), "PLAN_EXT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.PLAN_EXT), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_MA_MODEL_MA_CUSTOMER", "MA_CUSTOMER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_CUSTOMER), "MA_MODEL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_PLAN_EXT_MA_LINE", "MA_LINE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_LINE), "PLAN_EXT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.PLAN_EXT), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_MODEL", "MA_MODEL", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL), "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_LINE_BEN", "MA_LINE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_LINE), "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_LINE_EXT", "MA_LINE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_LINE), "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), true)]
+[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_LINE_FIN", "MA_LINE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_LINE), "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), true)]
 [assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_PART", "MA_PART", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_PART), "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_PLAN_EXT_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "PLAN_EXT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.PLAN_EXT), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_STD_STOCK_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_MODEL_STRUCTURE), "STD_STOCK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.STD_STOCK), true)]
-[assembly: EdmRelationshipAttribute("TAC_KANBANModel", "FK_MA_OPT_USER_MA_OPT_ROLE", "MA_OPT_ROLE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_ROLE), "MA_OPT_USER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Toacts.KanbanPost.Services.EF.MA_OPT_USER), true)]
 
 #endregion
 
@@ -117,6 +134,70 @@ namespace Toacts.KanbanPost.Services.EF
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<BEN_KANBAN> BEN_KANBAN
+        {
+            get
+            {
+                if ((_BEN_KANBAN == null))
+                {
+                    _BEN_KANBAN = base.CreateObjectSet<BEN_KANBAN>("BEN_KANBAN");
+                }
+                return _BEN_KANBAN;
+            }
+        }
+        private ObjectSet<BEN_KANBAN> _BEN_KANBAN;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<BEN_PLAN> BEN_PLAN
+        {
+            get
+            {
+                if ((_BEN_PLAN == null))
+                {
+                    _BEN_PLAN = base.CreateObjectSet<BEN_PLAN>("BEN_PLAN");
+                }
+                return _BEN_PLAN;
+            }
+        }
+        private ObjectSet<BEN_PLAN> _BEN_PLAN;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<BEN_STOCK> BEN_STOCK
+        {
+            get
+            {
+                if ((_BEN_STOCK == null))
+                {
+                    _BEN_STOCK = base.CreateObjectSet<BEN_STOCK>("BEN_STOCK");
+                }
+                return _BEN_STOCK;
+            }
+        }
+        private ObjectSet<BEN_STOCK> _BEN_STOCK;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<BEN_WORK_ORDER> BEN_WORK_ORDER
+        {
+            get
+            {
+                if ((_BEN_WORK_ORDER == null))
+                {
+                    _BEN_WORK_ORDER = base.CreateObjectSet<BEN_WORK_ORDER>("BEN_WORK_ORDER");
+                }
+                return _BEN_WORK_ORDER;
+            }
+        }
+        private ObjectSet<BEN_WORK_ORDER> _BEN_WORK_ORDER;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<EXT_FIN_MAPPING_PART> EXT_FIN_MAPPING_PART
         {
             get
@@ -129,6 +210,38 @@ namespace Toacts.KanbanPost.Services.EF
             }
         }
         private ObjectSet<EXT_FIN_MAPPING_PART> _EXT_FIN_MAPPING_PART;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<EXT_KANBAN> EXT_KANBAN
+        {
+            get
+            {
+                if ((_EXT_KANBAN == null))
+                {
+                    _EXT_KANBAN = base.CreateObjectSet<EXT_KANBAN>("EXT_KANBAN");
+                }
+                return _EXT_KANBAN;
+            }
+        }
+        private ObjectSet<EXT_KANBAN> _EXT_KANBAN;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<EXT_PLAN> EXT_PLAN
+        {
+            get
+            {
+                if ((_EXT_PLAN == null))
+                {
+                    _EXT_PLAN = base.CreateObjectSet<EXT_PLAN>("EXT_PLAN");
+                }
+                return _EXT_PLAN;
+            }
+        }
+        private ObjectSet<EXT_PLAN> _EXT_PLAN;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -181,34 +294,18 @@ namespace Toacts.KanbanPost.Services.EF
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<FIN_STOCK> FIN_STOCK
+        public ObjectSet<FIN_PLAN> FIN_PLAN
         {
             get
             {
-                if ((_FIN_STOCK == null))
+                if ((_FIN_PLAN == null))
                 {
-                    _FIN_STOCK = base.CreateObjectSet<FIN_STOCK>("FIN_STOCK");
+                    _FIN_PLAN = base.CreateObjectSet<FIN_PLAN>("FIN_PLAN");
                 }
-                return _FIN_STOCK;
+                return _FIN_PLAN;
             }
         }
-        private ObjectSet<FIN_STOCK> _FIN_STOCK;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<FIN_WORK_ORDER> FIN_WORK_ORDER
-        {
-            get
-            {
-                if ((_FIN_WORK_ORDER == null))
-                {
-                    _FIN_WORK_ORDER = base.CreateObjectSet<FIN_WORK_ORDER>("FIN_WORK_ORDER");
-                }
-                return _FIN_WORK_ORDER;
-            }
-        }
-        private ObjectSet<FIN_WORK_ORDER> _FIN_WORK_ORDER;
+        private ObjectSet<FIN_PLAN> _FIN_PLAN;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -241,22 +338,6 @@ namespace Toacts.KanbanPost.Services.EF
             }
         }
         private ObjectSet<FORECAST_ORDER_DETAIL> _FORECAST_ORDER_DETAIL;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<KANBAN_EXT> KANBAN_EXT
-        {
-            get
-            {
-                if ((_KANBAN_EXT == null))
-                {
-                    _KANBAN_EXT = base.CreateObjectSet<KANBAN_EXT>("KANBAN_EXT");
-                }
-                return _KANBAN_EXT;
-            }
-        }
-        private ObjectSet<KANBAN_EXT> _KANBAN_EXT;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -389,38 +470,6 @@ namespace Toacts.KanbanPost.Services.EF
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<PLAN_EXT> PLAN_EXT
-        {
-            get
-            {
-                if ((_PLAN_EXT == null))
-                {
-                    _PLAN_EXT = base.CreateObjectSet<PLAN_EXT>("PLAN_EXT");
-                }
-                return _PLAN_EXT;
-            }
-        }
-        private ObjectSet<PLAN_EXT> _PLAN_EXT;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<PLAN_FIN> PLAN_FIN
-        {
-            get
-            {
-                if ((_PLAN_FIN == null))
-                {
-                    _PLAN_FIN = base.CreateObjectSet<PLAN_FIN>("PLAN_FIN");
-                }
-                return _PLAN_FIN;
-            }
-        }
-        private ObjectSet<PLAN_FIN> _PLAN_FIN;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<STD_STOCK> STD_STOCK
         {
             get
@@ -433,6 +482,22 @@ namespace Toacts.KanbanPost.Services.EF
             }
         }
         private ObjectSet<STD_STOCK> _STD_STOCK;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<sysdiagram> sysdiagrams
+        {
+            get
+            {
+                if ((_sysdiagrams == null))
+                {
+                    _sysdiagrams = base.CreateObjectSet<sysdiagram>("sysdiagrams");
+                }
+                return _sysdiagrams;
+            }
+        }
+        private ObjectSet<sysdiagram> _sysdiagrams;
 
         #endregion
 
@@ -447,11 +512,59 @@ namespace Toacts.KanbanPost.Services.EF
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the BEN_KANBAN EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToBEN_KANBAN(BEN_KANBAN bEN_KANBAN)
+        {
+            base.AddObject("BEN_KANBAN", bEN_KANBAN);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the BEN_PLAN EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToBEN_PLAN(BEN_PLAN bEN_PLAN)
+        {
+            base.AddObject("BEN_PLAN", bEN_PLAN);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the BEN_STOCK EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToBEN_STOCK(BEN_STOCK bEN_STOCK)
+        {
+            base.AddObject("BEN_STOCK", bEN_STOCK);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the BEN_WORK_ORDER EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToBEN_WORK_ORDER(BEN_WORK_ORDER bEN_WORK_ORDER)
+        {
+            base.AddObject("BEN_WORK_ORDER", bEN_WORK_ORDER);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the EXT_FIN_MAPPING_PART EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToEXT_FIN_MAPPING_PART(EXT_FIN_MAPPING_PART eXT_FIN_MAPPING_PART)
         {
             base.AddObject("EXT_FIN_MAPPING_PART", eXT_FIN_MAPPING_PART);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the EXT_KANBAN EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToEXT_KANBAN(EXT_KANBAN eXT_KANBAN)
+        {
+            base.AddObject("EXT_KANBAN", eXT_KANBAN);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the EXT_PLAN EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToEXT_PLAN(EXT_PLAN eXT_PLAN)
+        {
+            base.AddObject("EXT_PLAN", eXT_PLAN);
         }
     
         /// <summary>
@@ -479,19 +592,11 @@ namespace Toacts.KanbanPost.Services.EF
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the FIN_STOCK EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the FIN_PLAN EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToFIN_STOCK(FIN_STOCK fIN_STOCK)
+        public void AddToFIN_PLAN(FIN_PLAN fIN_PLAN)
         {
-            base.AddObject("FIN_STOCK", fIN_STOCK);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the FIN_WORK_ORDER EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToFIN_WORK_ORDER(FIN_WORK_ORDER fIN_WORK_ORDER)
-        {
-            base.AddObject("FIN_WORK_ORDER", fIN_WORK_ORDER);
+            base.AddObject("FIN_PLAN", fIN_PLAN);
         }
     
         /// <summary>
@@ -508,14 +613,6 @@ namespace Toacts.KanbanPost.Services.EF
         public void AddToFORECAST_ORDER_DETAIL(FORECAST_ORDER_DETAIL fORECAST_ORDER_DETAIL)
         {
             base.AddObject("FORECAST_ORDER_DETAIL", fORECAST_ORDER_DETAIL);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the KANBAN_EXT EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToKANBAN_EXT(KANBAN_EXT kANBAN_EXT)
-        {
-            base.AddObject("KANBAN_EXT", kANBAN_EXT);
         }
     
         /// <summary>
@@ -583,27 +680,19 @@ namespace Toacts.KanbanPost.Services.EF
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the PLAN_EXT EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToPLAN_EXT(PLAN_EXT pLAN_EXT)
-        {
-            base.AddObject("PLAN_EXT", pLAN_EXT);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the PLAN_FIN EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToPLAN_FIN(PLAN_FIN pLAN_FIN)
-        {
-            base.AddObject("PLAN_FIN", pLAN_FIN);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the STD_STOCK EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToSTD_STOCK(STD_STOCK sTD_STOCK)
         {
             base.AddObject("STD_STOCK", sTD_STOCK);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the sysdiagrams EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTosysdiagrams(sysdiagram sysdiagram)
+        {
+            base.AddObject("sysdiagrams", sysdiagram);
         }
 
         #endregion
@@ -671,24 +760,24 @@ namespace Toacts.KanbanPost.Services.EF
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> MODEL_STRUCTURE__ID
+        public Nullable<global::System.Int32> MODEL_STRUCTURE_ID
         {
             get
             {
-                return _MODEL_STRUCTURE__ID;
+                return _MODEL_STRUCTURE_ID;
             }
             set
             {
-                OnMODEL_STRUCTURE__IDChanging(value);
-                ReportPropertyChanging("MODEL_STRUCTURE__ID");
-                _MODEL_STRUCTURE__ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MODEL_STRUCTURE__ID");
-                OnMODEL_STRUCTURE__IDChanged();
+                OnMODEL_STRUCTURE_IDChanging(value);
+                ReportPropertyChanging("MODEL_STRUCTURE_ID");
+                _MODEL_STRUCTURE_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MODEL_STRUCTURE_ID");
+                OnMODEL_STRUCTURE_IDChanged();
             }
         }
-        private Nullable<global::System.Int32> _MODEL_STRUCTURE__ID;
-        partial void OnMODEL_STRUCTURE__IDChanging(Nullable<global::System.Int32> value);
-        partial void OnMODEL_STRUCTURE__IDChanged();
+        private Nullable<global::System.Int32> _MODEL_STRUCTURE_ID;
+        partial void OnMODEL_STRUCTURE_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnMODEL_STRUCTURE_IDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -791,2407 +880,120 @@ namespace Toacts.KanbanPost.Services.EF
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> IN_DATE
+        public Nullable<global::System.DateTime> ACTUAL_IN_DATE
         {
             get
             {
-                return _IN_DATE;
+                return _ACTUAL_IN_DATE;
             }
             set
             {
-                OnIN_DATEChanging(value);
-                ReportPropertyChanging("IN_DATE");
-                _IN_DATE = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IN_DATE");
-                OnIN_DATEChanged();
+                OnACTUAL_IN_DATEChanging(value);
+                ReportPropertyChanging("ACTUAL_IN_DATE");
+                _ACTUAL_IN_DATE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ACTUAL_IN_DATE");
+                OnACTUAL_IN_DATEChanged();
             }
         }
-        private Nullable<global::System.DateTime> _IN_DATE;
-        partial void OnIN_DATEChanging(Nullable<global::System.DateTime> value);
-        partial void OnIN_DATEChanged();
+        private Nullable<global::System.DateTime> _ACTUAL_IN_DATE;
+        partial void OnACTUAL_IN_DATEChanging(Nullable<global::System.DateTime> value);
+        partial void OnACTUAL_IN_DATEChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IN_BY
+        public Nullable<global::System.Int32> ACTUAL_IN_BY
         {
             get
             {
-                return _IN_BY;
+                return _ACTUAL_IN_BY;
             }
             set
             {
-                OnIN_BYChanging(value);
-                ReportPropertyChanging("IN_BY");
-                _IN_BY = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IN_BY");
-                OnIN_BYChanged();
+                OnACTUAL_IN_BYChanging(value);
+                ReportPropertyChanging("ACTUAL_IN_BY");
+                _ACTUAL_IN_BY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ACTUAL_IN_BY");
+                OnACTUAL_IN_BYChanged();
             }
         }
-        private Nullable<global::System.Int32> _IN_BY;
-        partial void OnIN_BYChanging(Nullable<global::System.Int32> value);
-        partial void OnIN_BYChanged();
+        private Nullable<global::System.Int32> _ACTUAL_IN_BY;
+        partial void OnACTUAL_IN_BYChanging(Nullable<global::System.Int32> value);
+        partial void OnACTUAL_IN_BYChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> OUT_DATE
+        public Nullable<global::System.DateTime> ACTUAL_OUT_DATE
         {
             get
             {
-                return _OUT_DATE;
+                return _ACTUAL_OUT_DATE;
             }
             set
             {
-                OnOUT_DATEChanging(value);
-                ReportPropertyChanging("OUT_DATE");
-                _OUT_DATE = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("OUT_DATE");
-                OnOUT_DATEChanged();
+                OnACTUAL_OUT_DATEChanging(value);
+                ReportPropertyChanging("ACTUAL_OUT_DATE");
+                _ACTUAL_OUT_DATE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ACTUAL_OUT_DATE");
+                OnACTUAL_OUT_DATEChanged();
             }
         }
-        private Nullable<global::System.DateTime> _OUT_DATE;
-        partial void OnOUT_DATEChanging(Nullable<global::System.DateTime> value);
-        partial void OnOUT_DATEChanged();
+        private Nullable<global::System.DateTime> _ACTUAL_OUT_DATE;
+        partial void OnACTUAL_OUT_DATEChanging(Nullable<global::System.DateTime> value);
+        partial void OnACTUAL_OUT_DATEChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> OUT_BY
+        public Nullable<global::System.Int32> ACTUAL_OUT_BY
         {
             get
             {
-                return _OUT_BY;
+                return _ACTUAL_OUT_BY;
             }
             set
             {
-                OnOUT_BYChanging(value);
-                ReportPropertyChanging("OUT_BY");
-                _OUT_BY = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("OUT_BY");
-                OnOUT_BYChanged();
+                OnACTUAL_OUT_BYChanging(value);
+                ReportPropertyChanging("ACTUAL_OUT_BY");
+                _ACTUAL_OUT_BY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ACTUAL_OUT_BY");
+                OnACTUAL_OUT_BYChanged();
             }
         }
-        private Nullable<global::System.Int32> _OUT_BY;
-        partial void OnOUT_BYChanging(Nullable<global::System.Int32> value);
-        partial void OnOUT_BYChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_EXT_ACCUMULATE_STOCK", "EXT_STOCK")]
-        public EntityCollection<EXT_STOCK> EXT_STOCK
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_EXT_ACCUMULATE_STOCK", "EXT_STOCK");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_EXT_ACCUMULATE_STOCK", "EXT_STOCK", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_STOCK_EXT_ACCUMULATE_STOCK", "FIN_STOCK")]
-        public EntityCollection<FIN_STOCK> FIN_STOCK
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FIN_STOCK>("TAC_KANBANModel.FK_FIN_STOCK_EXT_ACCUMULATE_STOCK", "FIN_STOCK");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FIN_STOCK>("TAC_KANBANModel.FK_FIN_STOCK_EXT_ACCUMULATE_STOCK", "FIN_STOCK", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="EXT_FIN_MAPPING_PART")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class EXT_FIN_MAPPING_PART : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new EXT_FIN_MAPPING_PART object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static EXT_FIN_MAPPING_PART CreateEXT_FIN_MAPPING_PART(global::System.Int32 id)
-        {
-            EXT_FIN_MAPPING_PART eXT_FIN_MAPPING_PART = new EXT_FIN_MAPPING_PART();
-            eXT_FIN_MAPPING_PART.ID = id;
-            return eXT_FIN_MAPPING_PART;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
+        private Nullable<global::System.Int32> _ACTUAL_OUT_BY;
+        partial void OnACTUAL_OUT_BYChanging(Nullable<global::System.Int32> value);
+        partial void OnACTUAL_OUT_BYChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String EXT_PART_NO
+        public Nullable<global::System.Int32> MONTH
         {
             get
             {
-                return _EXT_PART_NO;
+                return _MONTH;
             }
             set
             {
-                OnEXT_PART_NOChanging(value);
-                ReportPropertyChanging("EXT_PART_NO");
-                _EXT_PART_NO = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("EXT_PART_NO");
-                OnEXT_PART_NOChanged();
+                OnMONTHChanging(value);
+                ReportPropertyChanging("MONTH");
+                _MONTH = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MONTH");
+                OnMONTHChanged();
             }
         }
-        private global::System.String _EXT_PART_NO;
-        partial void OnEXT_PART_NOChanging(global::System.String value);
-        partial void OnEXT_PART_NOChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String FIN_PART_NO
-        {
-            get
-            {
-                return _FIN_PART_NO;
-            }
-            set
-            {
-                OnFIN_PART_NOChanging(value);
-                ReportPropertyChanging("FIN_PART_NO");
-                _FIN_PART_NO = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("FIN_PART_NO");
-                OnFIN_PART_NOChanged();
-            }
-        }
-        private global::System.String _FIN_PART_NO;
-        partial void OnFIN_PART_NOChanging(global::System.String value);
-        partial void OnFIN_PART_NOChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> EXT_UNIT_PER_FIN_UNIT
-        {
-            get
-            {
-                return _EXT_UNIT_PER_FIN_UNIT;
-            }
-            set
-            {
-                OnEXT_UNIT_PER_FIN_UNITChanging(value);
-                ReportPropertyChanging("EXT_UNIT_PER_FIN_UNIT");
-                _EXT_UNIT_PER_FIN_UNIT = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("EXT_UNIT_PER_FIN_UNIT");
-                OnEXT_UNIT_PER_FIN_UNITChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _EXT_UNIT_PER_FIN_UNIT;
-        partial void OnEXT_UNIT_PER_FIN_UNITChanging(Nullable<global::System.Int32> value);
-        partial void OnEXT_UNIT_PER_FIN_UNITChanged();
-
-        #endregion
-
-    
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="EXT_STOCK")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class EXT_STOCK : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new EXT_STOCK object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static EXT_STOCK CreateEXT_STOCK(global::System.Int32 id)
-        {
-            EXT_STOCK eXT_STOCK = new EXT_STOCK();
-            eXT_STOCK.ID = id;
-            return eXT_STOCK;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> WORK_ORDER_ID
-        {
-            get
-            {
-                return _WORK_ORDER_ID;
-            }
-            set
-            {
-                OnWORK_ORDER_IDChanging(value);
-                ReportPropertyChanging("WORK_ORDER_ID");
-                _WORK_ORDER_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("WORK_ORDER_ID");
-                OnWORK_ORDER_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _WORK_ORDER_ID;
-        partial void OnWORK_ORDER_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnWORK_ORDER_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> STOCK_IN
-        {
-            get
-            {
-                return _STOCK_IN;
-            }
-            set
-            {
-                OnSTOCK_INChanging(value);
-                ReportPropertyChanging("STOCK_IN");
-                _STOCK_IN = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("STOCK_IN");
-                OnSTOCK_INChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _STOCK_IN;
-        partial void OnSTOCK_INChanging(Nullable<global::System.Int32> value);
-        partial void OnSTOCK_INChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> STOCK_OUT
-        {
-            get
-            {
-                return _STOCK_OUT;
-            }
-            set
-            {
-                OnSTOCK_OUTChanging(value);
-                ReportPropertyChanging("STOCK_OUT");
-                _STOCK_OUT = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("STOCK_OUT");
-                OnSTOCK_OUTChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _STOCK_OUT;
-        partial void OnSTOCK_OUTChanging(Nullable<global::System.Int32> value);
-        partial void OnSTOCK_OUTChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> ACC_STOCK_ID
-        {
-            get
-            {
-                return _ACC_STOCK_ID;
-            }
-            set
-            {
-                OnACC_STOCK_IDChanging(value);
-                ReportPropertyChanging("ACC_STOCK_ID");
-                _ACC_STOCK_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ACC_STOCK_ID");
-                OnACC_STOCK_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _ACC_STOCK_ID;
-        partial void OnACC_STOCK_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnACC_STOCK_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> IN_DATE
-        {
-            get
-            {
-                return _IN_DATE;
-            }
-            set
-            {
-                OnIN_DATEChanging(value);
-                ReportPropertyChanging("IN_DATE");
-                _IN_DATE = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IN_DATE");
-                OnIN_DATEChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _IN_DATE;
-        partial void OnIN_DATEChanging(Nullable<global::System.DateTime> value);
-        partial void OnIN_DATEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IN_BY
-        {
-            get
-            {
-                return _IN_BY;
-            }
-            set
-            {
-                OnIN_BYChanging(value);
-                ReportPropertyChanging("IN_BY");
-                _IN_BY = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IN_BY");
-                OnIN_BYChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IN_BY;
-        partial void OnIN_BYChanging(Nullable<global::System.Int32> value);
-        partial void OnIN_BYChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> OUT_DATE
-        {
-            get
-            {
-                return _OUT_DATE;
-            }
-            set
-            {
-                OnOUT_DATEChanging(value);
-                ReportPropertyChanging("OUT_DATE");
-                _OUT_DATE = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("OUT_DATE");
-                OnOUT_DATEChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _OUT_DATE;
-        partial void OnOUT_DATEChanging(Nullable<global::System.DateTime> value);
-        partial void OnOUT_DATEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> OUT_BY
-        {
-            get
-            {
-                return _OUT_BY;
-            }
-            set
-            {
-                OnOUT_BYChanging(value);
-                ReportPropertyChanging("OUT_BY");
-                _OUT_BY = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("OUT_BY");
-                OnOUT_BYChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _OUT_BY;
-        partial void OnOUT_BYChanging(Nullable<global::System.Int32> value);
-        partial void OnOUT_BYChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> MANUAL
-        {
-            get
-            {
-                return _MANUAL;
-            }
-            set
-            {
-                OnMANUALChanging(value);
-                ReportPropertyChanging("MANUAL");
-                _MANUAL = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MANUAL");
-                OnMANUALChanged();
-            }
-        }
-        private Nullable<global::System.Boolean> _MANUAL;
-        partial void OnMANUALChanging(Nullable<global::System.Boolean> value);
-        partial void OnMANUALChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_EXT_ACCUMULATE_STOCK", "ACCUMULATE_STOCK")]
-        public ACCUMULATE_STOCK ACCUMULATE_STOCK
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_EXT_ACCUMULATE_STOCK", "ACCUMULATE_STOCK").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_EXT_ACCUMULATE_STOCK", "ACCUMULATE_STOCK").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<ACCUMULATE_STOCK> ACCUMULATE_STOCKReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_EXT_ACCUMULATE_STOCK", "ACCUMULATE_STOCK");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_EXT_ACCUMULATE_STOCK", "ACCUMULATE_STOCK", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER")]
-        public EXT_WORK_ORDER EXT_WORK_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<EXT_WORK_ORDER> EXT_WORK_ORDERReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="EXT_WORK_ORDER")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class EXT_WORK_ORDER : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new EXT_WORK_ORDER object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static EXT_WORK_ORDER CreateEXT_WORK_ORDER(global::System.Int32 id)
-        {
-            EXT_WORK_ORDER eXT_WORK_ORDER = new EXT_WORK_ORDER();
-            eXT_WORK_ORDER.ID = id;
-            return eXT_WORK_ORDER;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> KANBAN_ID
-        {
-            get
-            {
-                return _KANBAN_ID;
-            }
-            set
-            {
-                OnKANBAN_IDChanging(value);
-                ReportPropertyChanging("KANBAN_ID");
-                _KANBAN_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("KANBAN_ID");
-                OnKANBAN_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _KANBAN_ID;
-        partial void OnKANBAN_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnKANBAN_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String TAG_ID
-        {
-            get
-            {
-                return _TAG_ID;
-            }
-            set
-            {
-                OnTAG_IDChanging(value);
-                ReportPropertyChanging("TAG_ID");
-                _TAG_ID = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("TAG_ID");
-                OnTAG_IDChanged();
-            }
-        }
-        private global::System.String _TAG_ID;
-        partial void OnTAG_IDChanging(global::System.String value);
-        partial void OnTAG_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> MODEL_STRUCTURE_ID
-        {
-            get
-            {
-                return _MODEL_STRUCTURE_ID;
-            }
-            set
-            {
-                OnMODEL_STRUCTURE_IDChanging(value);
-                ReportPropertyChanging("MODEL_STRUCTURE_ID");
-                _MODEL_STRUCTURE_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MODEL_STRUCTURE_ID");
-                OnMODEL_STRUCTURE_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _MODEL_STRUCTURE_ID;
-        partial void OnMODEL_STRUCTURE_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnMODEL_STRUCTURE_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String ACTUAL_QTY
-        {
-            get
-            {
-                return _ACTUAL_QTY;
-            }
-            set
-            {
-                OnACTUAL_QTYChanging(value);
-                ReportPropertyChanging("ACTUAL_QTY");
-                _ACTUAL_QTY = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("ACTUAL_QTY");
-                OnACTUAL_QTYChanged();
-            }
-        }
-        private global::System.String _ACTUAL_QTY;
-        partial void OnACTUAL_QTYChanging(global::System.String value);
-        partial void OnACTUAL_QTYChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> LINE_ID
-        {
-            get
-            {
-                return _LINE_ID;
-            }
-            set
-            {
-                OnLINE_IDChanging(value);
-                ReportPropertyChanging("LINE_ID");
-                _LINE_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("LINE_ID");
-                OnLINE_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _LINE_ID;
-        partial void OnLINE_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnLINE_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> START_TIME
-        {
-            get
-            {
-                return _START_TIME;
-            }
-            set
-            {
-                OnSTART_TIMEChanging(value);
-                ReportPropertyChanging("START_TIME");
-                _START_TIME = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("START_TIME");
-                OnSTART_TIMEChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _START_TIME;
-        partial void OnSTART_TIMEChanging(Nullable<global::System.DateTime> value);
-        partial void OnSTART_TIMEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> ESTIMATE_END_TIME
-        {
-            get
-            {
-                return _ESTIMATE_END_TIME;
-            }
-            set
-            {
-                OnESTIMATE_END_TIMEChanging(value);
-                ReportPropertyChanging("ESTIMATE_END_TIME");
-                _ESTIMATE_END_TIME = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ESTIMATE_END_TIME");
-                OnESTIMATE_END_TIMEChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _ESTIMATE_END_TIME;
-        partial void OnESTIMATE_END_TIMEChanging(Nullable<global::System.DateTime> value);
-        partial void OnESTIMATE_END_TIMEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> ACTUAL_END_TIME
-        {
-            get
-            {
-                return _ACTUAL_END_TIME;
-            }
-            set
-            {
-                OnACTUAL_END_TIMEChanging(value);
-                ReportPropertyChanging("ACTUAL_END_TIME");
-                _ACTUAL_END_TIME = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ACTUAL_END_TIME");
-                OnACTUAL_END_TIMEChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _ACTUAL_END_TIME;
-        partial void OnACTUAL_END_TIMEChanging(Nullable<global::System.DateTime> value);
-        partial void OnACTUAL_END_TIMEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> WORK_BY
-        {
-            get
-            {
-                return _WORK_BY;
-            }
-            set
-            {
-                OnWORK_BYChanging(value);
-                ReportPropertyChanging("WORK_BY");
-                _WORK_BY = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("WORK_BY");
-                OnWORK_BYChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _WORK_BY;
-        partial void OnWORK_BYChanging(Nullable<global::System.Int32> value);
-        partial void OnWORK_BYChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String STATUS
-        {
-            get
-            {
-                return _STATUS;
-            }
-            set
-            {
-                OnSTATUSChanging(value);
-                ReportPropertyChanging("STATUS");
-                _STATUS = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("STATUS");
-                OnSTATUSChanged();
-            }
-        }
-        private global::System.String _STATUS;
-        partial void OnSTATUSChanging(global::System.String value);
-        partial void OnSTATUSChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String PD
-        {
-            get
-            {
-                return _PD;
-            }
-            set
-            {
-                OnPDChanging(value);
-                ReportPropertyChanging("PD");
-                _PD = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("PD");
-                OnPDChanged();
-            }
-        }
-        private global::System.String _PD;
-        partial void OnPDChanging(global::System.String value);
-        partial void OnPDChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_STOCK")]
-        public EntityCollection<EXT_STOCK> EXT_STOCK
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_STOCK");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_STOCK", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER_DERAIL")]
-        public EntityCollection<EXT_WORK_ORDER_DERAIL> EXT_WORK_ORDER_DERAIL
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_WORK_ORDER_DERAIL>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER_DERAIL");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_WORK_ORDER_DERAIL>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER_DERAIL", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_KANBAN_EXT", "KANBAN_EXT")]
-        public KANBAN_EXT KANBAN_EXT
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<KANBAN_EXT>("TAC_KANBANModel.FK_EXT_WORK_ORDER_KANBAN_EXT", "KANBAN_EXT").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<KANBAN_EXT>("TAC_KANBANModel.FK_EXT_WORK_ORDER_KANBAN_EXT", "KANBAN_EXT").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<KANBAN_EXT> KANBAN_EXTReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<KANBAN_EXT>("TAC_KANBANModel.FK_EXT_WORK_ORDER_KANBAN_EXT", "KANBAN_EXT");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<KANBAN_EXT>("TAC_KANBANModel.FK_EXT_WORK_ORDER_KANBAN_EXT", "KANBAN_EXT", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_MA_LINE", "MA_LINE")]
-        public MA_LINE MA_LINE
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_LINE", "MA_LINE").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_LINE", "MA_LINE").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_LINE> MA_LINEReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_LINE", "MA_LINE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_LINE>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_LINE", "MA_LINE", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE")]
-        public MA_MODEL_STRUCTURE MA_MODEL_STRUCTURE
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTUREReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER")]
-        public MA_OPT_USER MA_OPT_USER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_OPT_USER> MA_OPT_USERReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_STOCK_EXT_WORK_ORDER", "FIN_STOCK")]
-        public EntityCollection<FIN_STOCK> FIN_STOCK
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FIN_STOCK>("TAC_KANBANModel.FK_FIN_STOCK_EXT_WORK_ORDER", "FIN_STOCK");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FIN_STOCK>("TAC_KANBANModel.FK_FIN_STOCK_EXT_WORK_ORDER", "FIN_STOCK", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_WORK_ORDER_EXT_WORK_ORDER", "FIN_WORK_ORDER")]
-        public EntityCollection<FIN_WORK_ORDER> FIN_WORK_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FIN_WORK_ORDER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_EXT_WORK_ORDER", "FIN_WORK_ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FIN_WORK_ORDER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_EXT_WORK_ORDER", "FIN_WORK_ORDER", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="EXT_WORK_ORDER_DERAIL")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class EXT_WORK_ORDER_DERAIL : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new EXT_WORK_ORDER_DERAIL object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static EXT_WORK_ORDER_DERAIL CreateEXT_WORK_ORDER_DERAIL(global::System.Int32 id)
-        {
-            EXT_WORK_ORDER_DERAIL eXT_WORK_ORDER_DERAIL = new EXT_WORK_ORDER_DERAIL();
-            eXT_WORK_ORDER_DERAIL.ID = id;
-            return eXT_WORK_ORDER_DERAIL;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> WORK_ORDER_ID
-        {
-            get
-            {
-                return _WORK_ORDER_ID;
-            }
-            set
-            {
-                OnWORK_ORDER_IDChanging(value);
-                ReportPropertyChanging("WORK_ORDER_ID");
-                _WORK_ORDER_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("WORK_ORDER_ID");
-                OnWORK_ORDER_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _WORK_ORDER_ID;
-        partial void OnWORK_ORDER_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnWORK_ORDER_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> LOST_TIME_ID
-        {
-            get
-            {
-                return _LOST_TIME_ID;
-            }
-            set
-            {
-                OnLOST_TIME_IDChanging(value);
-                ReportPropertyChanging("LOST_TIME_ID");
-                _LOST_TIME_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("LOST_TIME_ID");
-                OnLOST_TIME_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _LOST_TIME_ID;
-        partial void OnLOST_TIME_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnLOST_TIME_IDChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER")]
-        public EXT_WORK_ORDER EXT_WORK_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<EXT_WORK_ORDER> EXT_WORK_ORDERReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "MA_LOSTTIME")]
-        public MA_LOSTTIME MA_LOSTTIME
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LOSTTIME>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "MA_LOSTTIME").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LOSTTIME>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "MA_LOSTTIME").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_LOSTTIME> MA_LOSTTIMEReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LOSTTIME>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "MA_LOSTTIME");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_LOSTTIME>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "MA_LOSTTIME", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="FIN_STOCK")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class FIN_STOCK : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new FIN_STOCK object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static FIN_STOCK CreateFIN_STOCK(global::System.Int32 id)
-        {
-            FIN_STOCK fIN_STOCK = new FIN_STOCK();
-            fIN_STOCK.ID = id;
-            return fIN_STOCK;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> WORK_ORDER_ID
-        {
-            get
-            {
-                return _WORK_ORDER_ID;
-            }
-            set
-            {
-                OnWORK_ORDER_IDChanging(value);
-                ReportPropertyChanging("WORK_ORDER_ID");
-                _WORK_ORDER_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("WORK_ORDER_ID");
-                OnWORK_ORDER_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _WORK_ORDER_ID;
-        partial void OnWORK_ORDER_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnWORK_ORDER_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> STOCK_IN
-        {
-            get
-            {
-                return _STOCK_IN;
-            }
-            set
-            {
-                OnSTOCK_INChanging(value);
-                ReportPropertyChanging("STOCK_IN");
-                _STOCK_IN = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("STOCK_IN");
-                OnSTOCK_INChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _STOCK_IN;
-        partial void OnSTOCK_INChanging(Nullable<global::System.Int32> value);
-        partial void OnSTOCK_INChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> STOCK_OUT
-        {
-            get
-            {
-                return _STOCK_OUT;
-            }
-            set
-            {
-                OnSTOCK_OUTChanging(value);
-                ReportPropertyChanging("STOCK_OUT");
-                _STOCK_OUT = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("STOCK_OUT");
-                OnSTOCK_OUTChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _STOCK_OUT;
-        partial void OnSTOCK_OUTChanging(Nullable<global::System.Int32> value);
-        partial void OnSTOCK_OUTChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> ACC_STOCK_ID
-        {
-            get
-            {
-                return _ACC_STOCK_ID;
-            }
-            set
-            {
-                OnACC_STOCK_IDChanging(value);
-                ReportPropertyChanging("ACC_STOCK_ID");
-                _ACC_STOCK_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ACC_STOCK_ID");
-                OnACC_STOCK_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _ACC_STOCK_ID;
-        partial void OnACC_STOCK_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnACC_STOCK_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> IN_DATE
-        {
-            get
-            {
-                return _IN_DATE;
-            }
-            set
-            {
-                OnIN_DATEChanging(value);
-                ReportPropertyChanging("IN_DATE");
-                _IN_DATE = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IN_DATE");
-                OnIN_DATEChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _IN_DATE;
-        partial void OnIN_DATEChanging(Nullable<global::System.DateTime> value);
-        partial void OnIN_DATEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IN_BY
-        {
-            get
-            {
-                return _IN_BY;
-            }
-            set
-            {
-                OnIN_BYChanging(value);
-                ReportPropertyChanging("IN_BY");
-                _IN_BY = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IN_BY");
-                OnIN_BYChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IN_BY;
-        partial void OnIN_BYChanging(Nullable<global::System.Int32> value);
-        partial void OnIN_BYChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> OUT_DATE
-        {
-            get
-            {
-                return _OUT_DATE;
-            }
-            set
-            {
-                OnOUT_DATEChanging(value);
-                ReportPropertyChanging("OUT_DATE");
-                _OUT_DATE = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("OUT_DATE");
-                OnOUT_DATEChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _OUT_DATE;
-        partial void OnOUT_DATEChanging(Nullable<global::System.DateTime> value);
-        partial void OnOUT_DATEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> OUT_BY
-        {
-            get
-            {
-                return _OUT_BY;
-            }
-            set
-            {
-                OnOUT_BYChanging(value);
-                ReportPropertyChanging("OUT_BY");
-                _OUT_BY = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("OUT_BY");
-                OnOUT_BYChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _OUT_BY;
-        partial void OnOUT_BYChanging(Nullable<global::System.Int32> value);
-        partial void OnOUT_BYChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> MANUAL
-        {
-            get
-            {
-                return _MANUAL;
-            }
-            set
-            {
-                OnMANUALChanging(value);
-                ReportPropertyChanging("MANUAL");
-                _MANUAL = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MANUAL");
-                OnMANUALChanged();
-            }
-        }
-        private Nullable<global::System.Boolean> _MANUAL;
-        partial void OnMANUALChanging(Nullable<global::System.Boolean> value);
-        partial void OnMANUALChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_STOCK_EXT_ACCUMULATE_STOCK", "ACCUMULATE_STOCK")]
-        public ACCUMULATE_STOCK ACCUMULATE_STOCK
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_FIN_STOCK_EXT_ACCUMULATE_STOCK", "ACCUMULATE_STOCK").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_FIN_STOCK_EXT_ACCUMULATE_STOCK", "ACCUMULATE_STOCK").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<ACCUMULATE_STOCK> ACCUMULATE_STOCKReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_FIN_STOCK_EXT_ACCUMULATE_STOCK", "ACCUMULATE_STOCK");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_FIN_STOCK_EXT_ACCUMULATE_STOCK", "ACCUMULATE_STOCK", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER")]
-        public EXT_WORK_ORDER EXT_WORK_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_FIN_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_FIN_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<EXT_WORK_ORDER> EXT_WORK_ORDERReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_FIN_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_FIN_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="FIN_WORK_ORDER")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class FIN_WORK_ORDER : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new FIN_WORK_ORDER object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static FIN_WORK_ORDER CreateFIN_WORK_ORDER(global::System.Int32 id)
-        {
-            FIN_WORK_ORDER fIN_WORK_ORDER = new FIN_WORK_ORDER();
-            fIN_WORK_ORDER.ID = id;
-            return fIN_WORK_ORDER;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> WORK_ORDER_ID
-        {
-            get
-            {
-                return _WORK_ORDER_ID;
-            }
-            set
-            {
-                OnWORK_ORDER_IDChanging(value);
-                ReportPropertyChanging("WORK_ORDER_ID");
-                _WORK_ORDER_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("WORK_ORDER_ID");
-                OnWORK_ORDER_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _WORK_ORDER_ID;
-        partial void OnWORK_ORDER_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnWORK_ORDER_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String TAG_ID
-        {
-            get
-            {
-                return _TAG_ID;
-            }
-            set
-            {
-                OnTAG_IDChanging(value);
-                ReportPropertyChanging("TAG_ID");
-                _TAG_ID = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("TAG_ID");
-                OnTAG_IDChanged();
-            }
-        }
-        private global::System.String _TAG_ID;
-        partial void OnTAG_IDChanging(global::System.String value);
-        partial void OnTAG_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> MODEL_STRUCTURE_ID
-        {
-            get
-            {
-                return _MODEL_STRUCTURE_ID;
-            }
-            set
-            {
-                OnMODEL_STRUCTURE_IDChanging(value);
-                ReportPropertyChanging("MODEL_STRUCTURE_ID");
-                _MODEL_STRUCTURE_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MODEL_STRUCTURE_ID");
-                OnMODEL_STRUCTURE_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _MODEL_STRUCTURE_ID;
-        partial void OnMODEL_STRUCTURE_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnMODEL_STRUCTURE_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String ACTUAL_QTY
-        {
-            get
-            {
-                return _ACTUAL_QTY;
-            }
-            set
-            {
-                OnACTUAL_QTYChanging(value);
-                ReportPropertyChanging("ACTUAL_QTY");
-                _ACTUAL_QTY = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("ACTUAL_QTY");
-                OnACTUAL_QTYChanged();
-            }
-        }
-        private global::System.String _ACTUAL_QTY;
-        partial void OnACTUAL_QTYChanging(global::System.String value);
-        partial void OnACTUAL_QTYChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> LINE_ID
-        {
-            get
-            {
-                return _LINE_ID;
-            }
-            set
-            {
-                OnLINE_IDChanging(value);
-                ReportPropertyChanging("LINE_ID");
-                _LINE_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("LINE_ID");
-                OnLINE_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _LINE_ID;
-        partial void OnLINE_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnLINE_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> START_TIME
-        {
-            get
-            {
-                return _START_TIME;
-            }
-            set
-            {
-                OnSTART_TIMEChanging(value);
-                ReportPropertyChanging("START_TIME");
-                _START_TIME = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("START_TIME");
-                OnSTART_TIMEChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _START_TIME;
-        partial void OnSTART_TIMEChanging(Nullable<global::System.DateTime> value);
-        partial void OnSTART_TIMEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> ESTIMATE_END_TIME
-        {
-            get
-            {
-                return _ESTIMATE_END_TIME;
-            }
-            set
-            {
-                OnESTIMATE_END_TIMEChanging(value);
-                ReportPropertyChanging("ESTIMATE_END_TIME");
-                _ESTIMATE_END_TIME = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ESTIMATE_END_TIME");
-                OnESTIMATE_END_TIMEChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _ESTIMATE_END_TIME;
-        partial void OnESTIMATE_END_TIMEChanging(Nullable<global::System.DateTime> value);
-        partial void OnESTIMATE_END_TIMEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> ACTUAL_END_TIME
-        {
-            get
-            {
-                return _ACTUAL_END_TIME;
-            }
-            set
-            {
-                OnACTUAL_END_TIMEChanging(value);
-                ReportPropertyChanging("ACTUAL_END_TIME");
-                _ACTUAL_END_TIME = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ACTUAL_END_TIME");
-                OnACTUAL_END_TIMEChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _ACTUAL_END_TIME;
-        partial void OnACTUAL_END_TIMEChanging(Nullable<global::System.DateTime> value);
-        partial void OnACTUAL_END_TIMEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> WORK_BY
-        {
-            get
-            {
-                return _WORK_BY;
-            }
-            set
-            {
-                OnWORK_BYChanging(value);
-                ReportPropertyChanging("WORK_BY");
-                _WORK_BY = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("WORK_BY");
-                OnWORK_BYChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _WORK_BY;
-        partial void OnWORK_BYChanging(Nullable<global::System.Int32> value);
-        partial void OnWORK_BYChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String STATUS
-        {
-            get
-            {
-                return _STATUS;
-            }
-            set
-            {
-                OnSTATUSChanging(value);
-                ReportPropertyChanging("STATUS");
-                _STATUS = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("STATUS");
-                OnSTATUSChanged();
-            }
-        }
-        private global::System.String _STATUS;
-        partial void OnSTATUSChanging(global::System.String value);
-        partial void OnSTATUSChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String PD
-        {
-            get
-            {
-                return _PD;
-            }
-            set
-            {
-                OnPDChanging(value);
-                ReportPropertyChanging("PD");
-                _PD = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("PD");
-                OnPDChanged();
-            }
-        }
-        private global::System.String _PD;
-        partial void OnPDChanging(global::System.String value);
-        partial void OnPDChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_WORK_ORDER_EXT_WORK_ORDER", "EXT_WORK_ORDER")]
-        public EXT_WORK_ORDER EXT_WORK_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_EXT_WORK_ORDER", "EXT_WORK_ORDER").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_EXT_WORK_ORDER", "EXT_WORK_ORDER").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<EXT_WORK_ORDER> EXT_WORK_ORDERReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_EXT_WORK_ORDER", "EXT_WORK_ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_EXT_WORK_ORDER", "EXT_WORK_ORDER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_WORK_ORDER_MA_LINE", "MA_LINE")]
-        public MA_LINE MA_LINE
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_LINE", "MA_LINE").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_LINE", "MA_LINE").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_LINE> MA_LINEReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_LINE", "MA_LINE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_LINE>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_LINE", "MA_LINE", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE")]
-        public MA_MODEL_STRUCTURE MA_MODEL_STRUCTURE
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTUREReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER")]
-        public MA_OPT_USER MA_OPT_USER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_OPT_USER> MA_OPT_USERReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="FORECAST_ORDER")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class FORECAST_ORDER : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new FORECAST_ORDER object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static FORECAST_ORDER CreateFORECAST_ORDER(global::System.Int32 id)
-        {
-            FORECAST_ORDER fORECAST_ORDER = new FORECAST_ORDER();
-            fORECAST_ORDER.ID = id;
-            return fORECAST_ORDER;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> CUSTOMER_ID
-        {
-            get
-            {
-                return _CUSTOMER_ID;
-            }
-            set
-            {
-                OnCUSTOMER_IDChanging(value);
-                ReportPropertyChanging("CUSTOMER_ID");
-                _CUSTOMER_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("CUSTOMER_ID");
-                OnCUSTOMER_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _CUSTOMER_ID;
-        partial void OnCUSTOMER_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnCUSTOMER_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> MODEL_STRUCTURE_ID
-        {
-            get
-            {
-                return _MODEL_STRUCTURE_ID;
-            }
-            set
-            {
-                OnMODEL_STRUCTURE_IDChanging(value);
-                ReportPropertyChanging("MODEL_STRUCTURE_ID");
-                _MODEL_STRUCTURE_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MODEL_STRUCTURE_ID");
-                OnMODEL_STRUCTURE_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _MODEL_STRUCTURE_ID;
-        partial void OnMODEL_STRUCTURE_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnMODEL_STRUCTURE_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String STATUS
-        {
-            get
-            {
-                return _STATUS;
-            }
-            set
-            {
-                OnSTATUSChanging(value);
-                ReportPropertyChanging("STATUS");
-                _STATUS = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("STATUS");
-                OnSTATUSChanged();
-            }
-        }
-        private global::System.String _STATUS;
-        partial void OnSTATUSChanging(global::System.String value);
-        partial void OnSTATUSChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> QUANTITY
-        {
-            get
-            {
-                return _QUANTITY;
-            }
-            set
-            {
-                OnQUANTITYChanging(value);
-                ReportPropertyChanging("QUANTITY");
-                _QUANTITY = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("QUANTITY");
-                OnQUANTITYChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _QUANTITY;
-        partial void OnQUANTITYChanging(Nullable<global::System.Int32> value);
-        partial void OnQUANTITYChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> MONTH_START
-        {
-            get
-            {
-                return _MONTH_START;
-            }
-            set
-            {
-                OnMONTH_STARTChanging(value);
-                ReportPropertyChanging("MONTH_START");
-                _MONTH_START = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MONTH_START");
-                OnMONTH_STARTChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _MONTH_START;
-        partial void OnMONTH_STARTChanging(Nullable<global::System.Int32> value);
-        partial void OnMONTH_STARTChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> MONTH_END
-        {
-            get
-            {
-                return _MONTH_END;
-            }
-            set
-            {
-                OnMONTH_ENDChanging(value);
-                ReportPropertyChanging("MONTH_END");
-                _MONTH_END = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MONTH_END");
-                OnMONTH_ENDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _MONTH_END;
-        partial void OnMONTH_ENDChanging(Nullable<global::System.Int32> value);
-        partial void OnMONTH_ENDChanged();
+        private Nullable<global::System.Int32> _MONTH;
+        partial void OnMONTHChanging(Nullable<global::System.Int32> value);
+        partial void OnMONTHChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3228,18 +1030,18 @@ namespace Toacts.KanbanPost.Services.EF
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER_DETAIL")]
-        public EntityCollection<FORECAST_ORDER_DETAIL> FORECAST_ORDER_DETAIL
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_STOCK_ACCUMULATE_STOCK", "BEN_STOCK")]
+        public EntityCollection<BEN_STOCK> BEN_STOCK
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FORECAST_ORDER_DETAIL>("TAC_KANBANModel.FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER_DETAIL");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_STOCK>("TAC_KANBANModel.FK_BEN_STOCK_ACCUMULATE_STOCK", "BEN_STOCK");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FORECAST_ORDER_DETAIL>("TAC_KANBANModel.FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER_DETAIL", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_STOCK>("TAC_KANBANModel.FK_BEN_STOCK_ACCUMULATE_STOCK", "BEN_STOCK", value);
                 }
             }
         }
@@ -3250,116 +1052,18 @@ namespace Toacts.KanbanPost.Services.EF
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FORECAST_ORDER_MA_CUSTOMER", "MA_CUSTOMER")]
-        public MA_CUSTOMER MA_CUSTOMER
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_ACCUMULATE_STOCK", "EXT_STOCK")]
+        public EntityCollection<EXT_STOCK> EXT_STOCK
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_CUSTOMER>("TAC_KANBANModel.FK_FORECAST_ORDER_MA_CUSTOMER", "MA_CUSTOMER").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_CUSTOMER>("TAC_KANBANModel.FK_FORECAST_ORDER_MA_CUSTOMER", "MA_CUSTOMER").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_CUSTOMER> MA_CUSTOMERReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_CUSTOMER>("TAC_KANBANModel.FK_FORECAST_ORDER_MA_CUSTOMER", "MA_CUSTOMER");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_ACCUMULATE_STOCK", "EXT_STOCK");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_CUSTOMER>("TAC_KANBANModel.FK_FORECAST_ORDER_MA_CUSTOMER", "MA_CUSTOMER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FORECAST_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE")]
-        public MA_MODEL_STRUCTURE MA_MODEL_STRUCTURE
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FORECAST_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FORECAST_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTUREReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FORECAST_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FORECAST_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_KANBAN_EXT_FORECAST_ORDER", "KANBAN_EXT")]
-        public EntityCollection<KANBAN_EXT> KANBAN_EXT
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<KANBAN_EXT>("TAC_KANBANModel.FK_KANBAN_EXT_FORECAST_ORDER", "KANBAN_EXT");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<KANBAN_EXT>("TAC_KANBANModel.FK_KANBAN_EXT_FORECAST_ORDER", "KANBAN_EXT", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_STD_STOCK_FORECAST_ORDER", "STD_STOCK")]
-        public EntityCollection<STD_STOCK> STD_STOCK
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<STD_STOCK>("TAC_KANBANModel.FK_STD_STOCK_FORECAST_ORDER", "STD_STOCK");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<STD_STOCK>("TAC_KANBANModel.FK_STD_STOCK_FORECAST_ORDER", "STD_STOCK", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_ACCUMULATE_STOCK", "EXT_STOCK", value);
                 }
             }
         }
@@ -3371,217 +1075,22 @@ namespace Toacts.KanbanPost.Services.EF
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="FORECAST_ORDER_DETAIL")]
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="BEN_KANBAN")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class FORECAST_ORDER_DETAIL : EntityObject
+    public partial class BEN_KANBAN : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new FORECAST_ORDER_DETAIL object.
+        /// Create a new BEN_KANBAN object.
         /// </summary>
         /// <param name="id">Initial value of the ID property.</param>
-        public static FORECAST_ORDER_DETAIL CreateFORECAST_ORDER_DETAIL(global::System.Int32 id)
+        public static BEN_KANBAN CreateBEN_KANBAN(global::System.Int32 id)
         {
-            FORECAST_ORDER_DETAIL fORECAST_ORDER_DETAIL = new FORECAST_ORDER_DETAIL();
-            fORECAST_ORDER_DETAIL.ID = id;
-            return fORECAST_ORDER_DETAIL;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> MONTH
-        {
-            get
-            {
-                return _MONTH;
-            }
-            set
-            {
-                OnMONTHChanging(value);
-                ReportPropertyChanging("MONTH");
-                _MONTH = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MONTH");
-                OnMONTHChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _MONTH;
-        partial void OnMONTHChanging(Nullable<global::System.Int32> value);
-        partial void OnMONTHChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> FORECAST_QTY
-        {
-            get
-            {
-                return _FORECAST_QTY;
-            }
-            set
-            {
-                OnFORECAST_QTYChanging(value);
-                ReportPropertyChanging("FORECAST_QTY");
-                _FORECAST_QTY = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FORECAST_QTY");
-                OnFORECAST_QTYChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _FORECAST_QTY;
-        partial void OnFORECAST_QTYChanging(Nullable<global::System.Int32> value);
-        partial void OnFORECAST_QTYChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> PLAN_QTY
-        {
-            get
-            {
-                return _PLAN_QTY;
-            }
-            set
-            {
-                OnPLAN_QTYChanging(value);
-                ReportPropertyChanging("PLAN_QTY");
-                _PLAN_QTY = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PLAN_QTY");
-                OnPLAN_QTYChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _PLAN_QTY;
-        partial void OnPLAN_QTYChanging(Nullable<global::System.Int32> value);
-        partial void OnPLAN_QTYChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> FORCAST_ID
-        {
-            get
-            {
-                return _FORCAST_ID;
-            }
-            set
-            {
-                OnFORCAST_IDChanging(value);
-                ReportPropertyChanging("FORCAST_ID");
-                _FORCAST_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FORCAST_ID");
-                OnFORCAST_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _FORCAST_ID;
-        partial void OnFORCAST_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnFORCAST_IDChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER")]
-        public FORECAST_ORDER FORECAST_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FORECAST_ORDER>("TAC_KANBANModel.FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FORECAST_ORDER>("TAC_KANBANModel.FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<FORECAST_ORDER> FORECAST_ORDERReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FORECAST_ORDER>("TAC_KANBANModel.FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<FORECAST_ORDER>("TAC_KANBANModel.FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="KANBAN_EXT")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class KANBAN_EXT : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new KANBAN_EXT object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static KANBAN_EXT CreateKANBAN_EXT(global::System.Int32 id)
-        {
-            KANBAN_EXT kANBAN_EXT = new KANBAN_EXT();
-            kANBAN_EXT.ID = id;
-            return kANBAN_EXT;
+            BEN_KANBAN bEN_KANBAN = new BEN_KANBAN();
+            bEN_KANBAN.ID = id;
+            return bEN_KANBAN;
         }
 
         #endregion
@@ -3668,24 +1177,24 @@ namespace Toacts.KanbanPost.Services.EF
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> FORECAST_ID
+        public Nullable<global::System.Int32> PLAN_ID
         {
             get
             {
-                return _FORECAST_ID;
+                return _PLAN_ID;
             }
             set
             {
-                OnFORECAST_IDChanging(value);
-                ReportPropertyChanging("FORECAST_ID");
-                _FORECAST_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FORECAST_ID");
-                OnFORECAST_IDChanged();
+                OnPLAN_IDChanging(value);
+                ReportPropertyChanging("PLAN_ID");
+                _PLAN_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PLAN_ID");
+                OnPLAN_IDChanged();
             }
         }
-        private Nullable<global::System.Int32> _FORECAST_ID;
-        partial void OnFORECAST_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnFORECAST_IDChanged();
+        private Nullable<global::System.Int32> _PLAN_ID;
+        partial void OnPLAN_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnPLAN_IDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3716,6 +1225,54 @@ namespace Toacts.KanbanPost.Services.EF
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> ISSUES_DATE
+        {
+            get
+            {
+                return _ISSUES_DATE;
+            }
+            set
+            {
+                OnISSUES_DATEChanging(value);
+                ReportPropertyChanging("ISSUES_DATE");
+                _ISSUES_DATE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ISSUES_DATE");
+                OnISSUES_DATEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _ISSUES_DATE;
+        partial void OnISSUES_DATEChanging(Nullable<global::System.DateTime> value);
+        partial void OnISSUES_DATEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PROCESSES
+        {
+            get
+            {
+                return _PROCESSES;
+            }
+            set
+            {
+                OnPROCESSESChanging(value);
+                ReportPropertyChanging("PROCESSES");
+                _PROCESSES = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PROCESSES");
+                OnPROCESSESChanged();
+            }
+        }
+        private global::System.String _PROCESSES;
+        partial void OnPROCESSESChanging(global::System.String value);
+        partial void OnPROCESSESChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public global::System.String STATUS
         {
             get
@@ -3734,54 +1291,6 @@ namespace Toacts.KanbanPost.Services.EF
         private global::System.String _STATUS;
         partial void OnSTATUSChanging(global::System.String value);
         partial void OnSTATUSChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> LOST_SIZE
-        {
-            get
-            {
-                return _LOST_SIZE;
-            }
-            set
-            {
-                OnLOST_SIZEChanging(value);
-                ReportPropertyChanging("LOST_SIZE");
-                _LOST_SIZE = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("LOST_SIZE");
-                OnLOST_SIZEChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _LOST_SIZE;
-        partial void OnLOST_SIZEChanging(Nullable<global::System.Int32> value);
-        partial void OnLOST_SIZEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> CIRCLE
-        {
-            get
-            {
-                return _CIRCLE;
-            }
-            set
-            {
-                OnCIRCLEChanging(value);
-                ReportPropertyChanging("CIRCLE");
-                _CIRCLE = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("CIRCLE");
-                OnCIRCLEChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _CIRCLE;
-        partial void OnCIRCLEChanging(Nullable<global::System.Int32> value);
-        partial void OnCIRCLEChanged();
 
         #endregion
 
@@ -3794,38 +1303,16 @@ namespace Toacts.KanbanPost.Services.EF
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_KANBAN_EXT", "EXT_WORK_ORDER")]
-        public EntityCollection<EXT_WORK_ORDER> EXT_WORK_ORDER
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_KANBAN_BEN_PLAN", "BEN_PLAN")]
+        public BEN_PLAN BEN_PLAN
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_KANBAN_EXT", "EXT_WORK_ORDER");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_PLAN>("TAC_KANBANModel.FK_BEN_KANBAN_BEN_PLAN", "BEN_PLAN").Value;
             }
             set
             {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_KANBAN_EXT", "EXT_WORK_ORDER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_KANBAN_EXT_FORECAST_ORDER", "FORECAST_ORDER")]
-        public FORECAST_ORDER FORECAST_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FORECAST_ORDER>("TAC_KANBANModel.FK_KANBAN_EXT_FORECAST_ORDER", "FORECAST_ORDER").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FORECAST_ORDER>("TAC_KANBANModel.FK_KANBAN_EXT_FORECAST_ORDER", "FORECAST_ORDER").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_PLAN>("TAC_KANBANModel.FK_BEN_KANBAN_BEN_PLAN", "BEN_PLAN").Value = value;
             }
         }
         /// <summary>
@@ -3833,17 +1320,17 @@ namespace Toacts.KanbanPost.Services.EF
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<FORECAST_ORDER> FORECAST_ORDERReference
+        public EntityReference<BEN_PLAN> BEN_PLANReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FORECAST_ORDER>("TAC_KANBANModel.FK_KANBAN_EXT_FORECAST_ORDER", "FORECAST_ORDER");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_PLAN>("TAC_KANBANModel.FK_BEN_KANBAN_BEN_PLAN", "BEN_PLAN");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<FORECAST_ORDER>("TAC_KANBANModel.FK_KANBAN_EXT_FORECAST_ORDER", "FORECAST_ORDER", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BEN_PLAN>("TAC_KANBANModel.FK_BEN_KANBAN_BEN_PLAN", "BEN_PLAN", value);
                 }
             }
         }
@@ -3854,16 +1341,16 @@ namespace Toacts.KanbanPost.Services.EF
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_KANBAN_EXT_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE")]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_KANBAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE")]
         public MA_MODEL_STRUCTURE MA_MODEL_STRUCTURE
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_KANBAN_EXT_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_BEN_KANBAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_KANBAN_EXT_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_BEN_KANBAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value = value;
             }
         }
         /// <summary>
@@ -3875,13 +1362,13 @@ namespace Toacts.KanbanPost.Services.EF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_KANBAN_EXT_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_BEN_KANBAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_KANBAN_EXT_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_BEN_KANBAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", value);
                 }
             }
         }
@@ -3892,18 +1379,18 @@ namespace Toacts.KanbanPost.Services.EF
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_PLAN_EXT_KANBAN_EXT", "PLAN_EXT")]
-        public EntityCollection<PLAN_EXT> PLAN_EXT
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_WORK_ORDER_BEN_KANBAN", "BEN_WORK_ORDER")]
+        public EntityCollection<BEN_WORK_ORDER> BEN_WORK_ORDER
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PLAN_EXT>("TAC_KANBANModel.FK_PLAN_EXT_KANBAN_EXT", "PLAN_EXT");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_WORK_ORDER>("TAC_KANBANModel.FK_BEN_WORK_ORDER_BEN_KANBAN", "BEN_WORK_ORDER");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PLAN_EXT>("TAC_KANBANModel.FK_PLAN_EXT_KANBAN_EXT", "PLAN_EXT", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_WORK_ORDER>("TAC_KANBANModel.FK_BEN_WORK_ORDER_BEN_KANBAN", "BEN_WORK_ORDER", value);
                 }
             }
         }
@@ -3915,22 +1402,22 @@ namespace Toacts.KanbanPost.Services.EF
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_CUSTOMER")]
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="BEN_PLAN")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class MA_CUSTOMER : EntityObject
+    public partial class BEN_PLAN : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new MA_CUSTOMER object.
+        /// Create a new BEN_PLAN object.
         /// </summary>
         /// <param name="id">Initial value of the ID property.</param>
-        public static MA_CUSTOMER CreateMA_CUSTOMER(global::System.Int32 id)
+        public static BEN_PLAN CreateBEN_PLAN(global::System.Int32 id)
         {
-            MA_CUSTOMER mA_CUSTOMER = new MA_CUSTOMER();
-            mA_CUSTOMER.ID = id;
-            return mA_CUSTOMER;
+            BEN_PLAN bEN_PLAN = new BEN_PLAN();
+            bEN_PLAN.ID = id;
+            return bEN_PLAN;
         }
 
         #endregion
@@ -3969,1662 +1456,24 @@ namespace Toacts.KanbanPost.Services.EF
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String CUSTOMER_NAME
+        public Nullable<global::System.Int32> BEN_KANBAN_ID
         {
             get
             {
-                return _CUSTOMER_NAME;
+                return _BEN_KANBAN_ID;
             }
             set
             {
-                OnCUSTOMER_NAMEChanging(value);
-                ReportPropertyChanging("CUSTOMER_NAME");
-                _CUSTOMER_NAME = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("CUSTOMER_NAME");
-                OnCUSTOMER_NAMEChanged();
-            }
-        }
-        private global::System.String _CUSTOMER_NAME;
-        partial void OnCUSTOMER_NAMEChanging(global::System.String value);
-        partial void OnCUSTOMER_NAMEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String CUSTOMER_SHOT
-        {
-            get
-            {
-                return _CUSTOMER_SHOT;
-            }
-            set
-            {
-                OnCUSTOMER_SHOTChanging(value);
-                ReportPropertyChanging("CUSTOMER_SHOT");
-                _CUSTOMER_SHOT = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("CUSTOMER_SHOT");
-                OnCUSTOMER_SHOTChanged();
-            }
-        }
-        private global::System.String _CUSTOMER_SHOT;
-        partial void OnCUSTOMER_SHOTChanging(global::System.String value);
-        partial void OnCUSTOMER_SHOTChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FORECAST_ORDER_MA_CUSTOMER", "FORECAST_ORDER")]
-        public EntityCollection<FORECAST_ORDER> FORECAST_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FORECAST_ORDER>("TAC_KANBANModel.FK_FORECAST_ORDER_MA_CUSTOMER", "FORECAST_ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FORECAST_ORDER>("TAC_KANBANModel.FK_FORECAST_ORDER_MA_CUSTOMER", "FORECAST_ORDER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_MA_CUSTOMER", "MA_MODEL")]
-        public EntityCollection<MA_MODEL> MA_MODEL
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MA_MODEL>("TAC_KANBANModel.FK_MA_MODEL_MA_CUSTOMER", "MA_MODEL");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MA_MODEL>("TAC_KANBANModel.FK_MA_MODEL_MA_CUSTOMER", "MA_MODEL", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_LINE")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class MA_LINE : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new MA_LINE object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static MA_LINE CreateMA_LINE(global::System.Int32 id)
-        {
-            MA_LINE mA_LINE = new MA_LINE();
-            mA_LINE.ID = id;
-            return mA_LINE;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String LINE_NAME
-        {
-            get
-            {
-                return _LINE_NAME;
-            }
-            set
-            {
-                OnLINE_NAMEChanging(value);
-                ReportPropertyChanging("LINE_NAME");
-                _LINE_NAME = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("LINE_NAME");
-                OnLINE_NAMEChanged();
-            }
-        }
-        private global::System.String _LINE_NAME;
-        partial void OnLINE_NAMEChanging(global::System.String value);
-        partial void OnLINE_NAMEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> FACTORY_ID
-        {
-            get
-            {
-                return _FACTORY_ID;
-            }
-            set
-            {
-                OnFACTORY_IDChanging(value);
-                ReportPropertyChanging("FACTORY_ID");
-                _FACTORY_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FACTORY_ID");
-                OnFACTORY_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _FACTORY_ID;
-        partial void OnFACTORY_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnFACTORY_IDChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_MA_LINE", "EXT_WORK_ORDER")]
-        public EntityCollection<EXT_WORK_ORDER> EXT_WORK_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_LINE", "EXT_WORK_ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_LINE", "EXT_WORK_ORDER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_WORK_ORDER_MA_LINE", "FIN_WORK_ORDER")]
-        public EntityCollection<FIN_WORK_ORDER> FIN_WORK_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FIN_WORK_ORDER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_LINE", "FIN_WORK_ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FIN_WORK_ORDER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_LINE", "FIN_WORK_ORDER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_PLAN_EXT_MA_LINE", "PLAN_EXT")]
-        public EntityCollection<PLAN_EXT> PLAN_EXT
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PLAN_EXT>("TAC_KANBANModel.FK_PLAN_EXT_MA_LINE", "PLAN_EXT");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PLAN_EXT>("TAC_KANBANModel.FK_PLAN_EXT_MA_LINE", "PLAN_EXT", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_LOSTTIME")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class MA_LOSTTIME : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new MA_LOSTTIME object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static MA_LOSTTIME CreateMA_LOSTTIME(global::System.Int32 id)
-        {
-            MA_LOSTTIME mA_LOSTTIME = new MA_LOSTTIME();
-            mA_LOSTTIME.ID = id;
-            return mA_LOSTTIME;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String DESCRIPTION
-        {
-            get
-            {
-                return _DESCRIPTION;
-            }
-            set
-            {
-                OnDESCRIPTIONChanging(value);
-                ReportPropertyChanging("DESCRIPTION");
-                _DESCRIPTION = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("DESCRIPTION");
-                OnDESCRIPTIONChanged();
-            }
-        }
-        private global::System.String _DESCRIPTION;
-        partial void OnDESCRIPTIONChanging(global::System.String value);
-        partial void OnDESCRIPTIONChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> LISTTIME
-        {
-            get
-            {
-                return _LISTTIME;
-            }
-            set
-            {
-                OnLISTTIMEChanging(value);
-                ReportPropertyChanging("LISTTIME");
-                _LISTTIME = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("LISTTIME");
-                OnLISTTIMEChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _LISTTIME;
-        partial void OnLISTTIMEChanging(Nullable<global::System.Int32> value);
-        partial void OnLISTTIMEChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "EXT_WORK_ORDER_DERAIL")]
-        public EntityCollection<EXT_WORK_ORDER_DERAIL> EXT_WORK_ORDER_DERAIL
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_WORK_ORDER_DERAIL>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "EXT_WORK_ORDER_DERAIL");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_WORK_ORDER_DERAIL>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "EXT_WORK_ORDER_DERAIL", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_MODEL")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class MA_MODEL : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new MA_MODEL object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static MA_MODEL CreateMA_MODEL(global::System.Int32 id)
-        {
-            MA_MODEL mA_MODEL = new MA_MODEL();
-            mA_MODEL.ID = id;
-            return mA_MODEL;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String MODEL_NAME
-        {
-            get
-            {
-                return _MODEL_NAME;
-            }
-            set
-            {
-                OnMODEL_NAMEChanging(value);
-                ReportPropertyChanging("MODEL_NAME");
-                _MODEL_NAME = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("MODEL_NAME");
-                OnMODEL_NAMEChanged();
-            }
-        }
-        private global::System.String _MODEL_NAME;
-        partial void OnMODEL_NAMEChanging(global::System.String value);
-        partial void OnMODEL_NAMEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> CUSTOMER_ID
-        {
-            get
-            {
-                return _CUSTOMER_ID;
-            }
-            set
-            {
-                OnCUSTOMER_IDChanging(value);
-                ReportPropertyChanging("CUSTOMER_ID");
-                _CUSTOMER_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("CUSTOMER_ID");
-                OnCUSTOMER_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _CUSTOMER_ID;
-        partial void OnCUSTOMER_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnCUSTOMER_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String PREFIX
-        {
-            get
-            {
-                return _PREFIX;
-            }
-            set
-            {
-                OnPREFIXChanging(value);
-                ReportPropertyChanging("PREFIX");
-                _PREFIX = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("PREFIX");
-                OnPREFIXChanged();
-            }
-        }
-        private global::System.String _PREFIX;
-        partial void OnPREFIXChanging(global::System.String value);
-        partial void OnPREFIXChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> LOT_SIZE
-        {
-            get
-            {
-                return _LOT_SIZE;
-            }
-            set
-            {
-                OnLOT_SIZEChanging(value);
-                ReportPropertyChanging("LOT_SIZE");
-                _LOT_SIZE = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("LOT_SIZE");
-                OnLOT_SIZEChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _LOT_SIZE;
-        partial void OnLOT_SIZEChanging(Nullable<global::System.Int32> value);
-        partial void OnLOT_SIZEChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_MA_CUSTOMER", "MA_CUSTOMER")]
-        public MA_CUSTOMER MA_CUSTOMER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_CUSTOMER>("TAC_KANBANModel.FK_MA_MODEL_MA_CUSTOMER", "MA_CUSTOMER").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_CUSTOMER>("TAC_KANBANModel.FK_MA_MODEL_MA_CUSTOMER", "MA_CUSTOMER").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_CUSTOMER> MA_CUSTOMERReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_CUSTOMER>("TAC_KANBANModel.FK_MA_MODEL_MA_CUSTOMER", "MA_CUSTOMER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_CUSTOMER>("TAC_KANBANModel.FK_MA_MODEL_MA_CUSTOMER", "MA_CUSTOMER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_MODEL", "MA_MODEL_STRUCTURE")]
-        public EntityCollection<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTURE
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_MODEL", "MA_MODEL_STRUCTURE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_MODEL", "MA_MODEL_STRUCTURE", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_MODEL_STRUCTURE")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class MA_MODEL_STRUCTURE : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new MA_MODEL_STRUCTURE object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static MA_MODEL_STRUCTURE CreateMA_MODEL_STRUCTURE(global::System.Int32 id)
-        {
-            MA_MODEL_STRUCTURE mA_MODEL_STRUCTURE = new MA_MODEL_STRUCTURE();
-            mA_MODEL_STRUCTURE.ID = id;
-            return mA_MODEL_STRUCTURE;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> PART_ID
-        {
-            get
-            {
-                return _PART_ID;
-            }
-            set
-            {
-                OnPART_IDChanging(value);
-                ReportPropertyChanging("PART_ID");
-                _PART_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PART_ID");
-                OnPART_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _PART_ID;
-        partial void OnPART_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnPART_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> MODEL_ID
-        {
-            get
-            {
-                return _MODEL_ID;
-            }
-            set
-            {
-                OnMODEL_IDChanging(value);
-                ReportPropertyChanging("MODEL_ID");
-                _MODEL_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MODEL_ID");
-                OnMODEL_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _MODEL_ID;
-        partial void OnMODEL_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnMODEL_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> LINE_SPEED
-        {
-            get
-            {
-                return _LINE_SPEED;
-            }
-            set
-            {
-                OnLINE_SPEEDChanging(value);
-                ReportPropertyChanging("LINE_SPEED");
-                _LINE_SPEED = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("LINE_SPEED");
-                OnLINE_SPEEDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _LINE_SPEED;
-        partial void OnLINE_SPEEDChanging(Nullable<global::System.Int32> value);
-        partial void OnLINE_SPEEDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> LOT_SIZE
-        {
-            get
-            {
-                return _LOT_SIZE;
-            }
-            set
-            {
-                OnLOT_SIZEChanging(value);
-                ReportPropertyChanging("LOT_SIZE");
-                _LOT_SIZE = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("LOT_SIZE");
-                OnLOT_SIZEChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _LOT_SIZE;
-        partial void OnLOT_SIZEChanging(Nullable<global::System.Int32> value);
-        partial void OnLOT_SIZEChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "EXT_WORK_ORDER")]
-        public EntityCollection<EXT_WORK_ORDER> EXT_WORK_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "EXT_WORK_ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "EXT_WORK_ORDER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_WORK_ORDER_MA_MODEL_STRUCTURE", "FIN_WORK_ORDER")]
-        public EntityCollection<FIN_WORK_ORDER> FIN_WORK_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FIN_WORK_ORDER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_MODEL_STRUCTURE", "FIN_WORK_ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FIN_WORK_ORDER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_MODEL_STRUCTURE", "FIN_WORK_ORDER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FORECAST_ORDER_MA_MODEL_STRUCTURE", "FORECAST_ORDER")]
-        public EntityCollection<FORECAST_ORDER> FORECAST_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FORECAST_ORDER>("TAC_KANBANModel.FK_FORECAST_ORDER_MA_MODEL_STRUCTURE", "FORECAST_ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FORECAST_ORDER>("TAC_KANBANModel.FK_FORECAST_ORDER_MA_MODEL_STRUCTURE", "FORECAST_ORDER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_KANBAN_EXT_MA_MODEL_STRUCTURE", "KANBAN_EXT")]
-        public EntityCollection<KANBAN_EXT> KANBAN_EXT
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<KANBAN_EXT>("TAC_KANBANModel.FK_KANBAN_EXT_MA_MODEL_STRUCTURE", "KANBAN_EXT");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<KANBAN_EXT>("TAC_KANBANModel.FK_KANBAN_EXT_MA_MODEL_STRUCTURE", "KANBAN_EXT", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_MODEL", "MA_MODEL")]
-        public MA_MODEL MA_MODEL
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_MODEL", "MA_MODEL").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_MODEL", "MA_MODEL").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_MODEL> MA_MODELReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_MODEL", "MA_MODEL");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_MODEL", "MA_MODEL", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_PART", "MA_PART")]
-        public MA_PART MA_PART
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_PART>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_PART", "MA_PART").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_PART>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_PART", "MA_PART").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_PART> MA_PARTReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_PART>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_PART", "MA_PART");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_PART>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_PART", "MA_PART", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_PLAN_EXT_MA_MODEL_STRUCTURE", "PLAN_EXT")]
-        public EntityCollection<PLAN_EXT> PLAN_EXT
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PLAN_EXT>("TAC_KANBANModel.FK_PLAN_EXT_MA_MODEL_STRUCTURE", "PLAN_EXT");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PLAN_EXT>("TAC_KANBANModel.FK_PLAN_EXT_MA_MODEL_STRUCTURE", "PLAN_EXT", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_STD_STOCK_MA_MODEL_STRUCTURE", "STD_STOCK")]
-        public EntityCollection<STD_STOCK> STD_STOCK
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<STD_STOCK>("TAC_KANBANModel.FK_STD_STOCK_MA_MODEL_STRUCTURE", "STD_STOCK");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<STD_STOCK>("TAC_KANBANModel.FK_STD_STOCK_MA_MODEL_STRUCTURE", "STD_STOCK", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_OPT_ROLE")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class MA_OPT_ROLE : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new MA_OPT_ROLE object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static MA_OPT_ROLE CreateMA_OPT_ROLE(global::System.Int32 id)
-        {
-            MA_OPT_ROLE mA_OPT_ROLE = new MA_OPT_ROLE();
-            mA_OPT_ROLE.ID = id;
-            return mA_OPT_ROLE;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String ROLE_NAME
-        {
-            get
-            {
-                return _ROLE_NAME;
-            }
-            set
-            {
-                OnROLE_NAMEChanging(value);
-                ReportPropertyChanging("ROLE_NAME");
-                _ROLE_NAME = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("ROLE_NAME");
-                OnROLE_NAMEChanged();
-            }
-        }
-        private global::System.String _ROLE_NAME;
-        partial void OnROLE_NAMEChanging(global::System.String value);
-        partial void OnROLE_NAMEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String DESCRIPTION
-        {
-            get
-            {
-                return _DESCRIPTION;
-            }
-            set
-            {
-                OnDESCRIPTIONChanging(value);
-                ReportPropertyChanging("DESCRIPTION");
-                _DESCRIPTION = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("DESCRIPTION");
-                OnDESCRIPTIONChanged();
-            }
-        }
-        private global::System.String _DESCRIPTION;
-        partial void OnDESCRIPTIONChanging(global::System.String value);
-        partial void OnDESCRIPTIONChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_OPT_USER_MA_OPT_ROLE", "MA_OPT_USER")]
-        public EntityCollection<MA_OPT_USER> MA_OPT_USER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MA_OPT_USER>("TAC_KANBANModel.FK_MA_OPT_USER_MA_OPT_ROLE", "MA_OPT_USER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MA_OPT_USER>("TAC_KANBANModel.FK_MA_OPT_USER_MA_OPT_ROLE", "MA_OPT_USER", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_OPT_USER")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class MA_OPT_USER : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new MA_OPT_USER object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static MA_OPT_USER CreateMA_OPT_USER(global::System.Int32 id)
-        {
-            MA_OPT_USER mA_OPT_USER = new MA_OPT_USER();
-            mA_OPT_USER.ID = id;
-            return mA_OPT_USER;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String USER_NAME
-        {
-            get
-            {
-                return _USER_NAME;
-            }
-            set
-            {
-                OnUSER_NAMEChanging(value);
-                ReportPropertyChanging("USER_NAME");
-                _USER_NAME = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("USER_NAME");
-                OnUSER_NAMEChanged();
-            }
-        }
-        private global::System.String _USER_NAME;
-        partial void OnUSER_NAMEChanging(global::System.String value);
-        partial void OnUSER_NAMEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String PASSWORD
-        {
-            get
-            {
-                return _PASSWORD;
-            }
-            set
-            {
-                OnPASSWORDChanging(value);
-                ReportPropertyChanging("PASSWORD");
-                _PASSWORD = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("PASSWORD");
-                OnPASSWORDChanged();
-            }
-        }
-        private global::System.String _PASSWORD;
-        partial void OnPASSWORDChanging(global::System.String value);
-        partial void OnPASSWORDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> ROLE_ID
-        {
-            get
-            {
-                return _ROLE_ID;
-            }
-            set
-            {
-                OnROLE_IDChanging(value);
-                ReportPropertyChanging("ROLE_ID");
-                _ROLE_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ROLE_ID");
-                OnROLE_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _ROLE_ID;
-        partial void OnROLE_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnROLE_IDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String USER_CODE
-        {
-            get
-            {
-                return _USER_CODE;
-            }
-            set
-            {
-                OnUSER_CODEChanging(value);
-                ReportPropertyChanging("USER_CODE");
-                _USER_CODE = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("USER_CODE");
-                OnUSER_CODEChanged();
-            }
-        }
-        private global::System.String _USER_CODE;
-        partial void OnUSER_CODEChanging(global::System.String value);
-        partial void OnUSER_CODEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.Byte[] IMAGE
-        {
-            get
-            {
-                return StructuralObject.GetValidValue(_IMAGE);
-            }
-            set
-            {
-                OnIMAGEChanging(value);
-                ReportPropertyChanging("IMAGE");
-                _IMAGE = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("IMAGE");
-                OnIMAGEChanged();
-            }
-        }
-        private global::System.Byte[] _IMAGE;
-        partial void OnIMAGEChanging(global::System.Byte[] value);
-        partial void OnIMAGEChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_MA_OPT_USER", "EXT_WORK_ORDER")]
-        public EntityCollection<EXT_WORK_ORDER> EXT_WORK_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_OPT_USER", "EXT_WORK_ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_OPT_USER", "EXT_WORK_ORDER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_WORK_ORDER_MA_OPT_USER", "FIN_WORK_ORDER")]
-        public EntityCollection<FIN_WORK_ORDER> FIN_WORK_ORDER
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FIN_WORK_ORDER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_OPT_USER", "FIN_WORK_ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FIN_WORK_ORDER>("TAC_KANBANModel.FK_FIN_WORK_ORDER_MA_OPT_USER", "FIN_WORK_ORDER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_OPT_USER_MA_OPT_ROLE", "MA_OPT_ROLE")]
-        public MA_OPT_ROLE MA_OPT_ROLE
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_ROLE>("TAC_KANBANModel.FK_MA_OPT_USER_MA_OPT_ROLE", "MA_OPT_ROLE").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_ROLE>("TAC_KANBANModel.FK_MA_OPT_USER_MA_OPT_ROLE", "MA_OPT_ROLE").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_OPT_ROLE> MA_OPT_ROLEReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_ROLE>("TAC_KANBANModel.FK_MA_OPT_USER_MA_OPT_ROLE", "MA_OPT_ROLE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_OPT_ROLE>("TAC_KANBANModel.FK_MA_OPT_USER_MA_OPT_ROLE", "MA_OPT_ROLE", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_PART")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class MA_PART : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new MA_PART object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static MA_PART CreateMA_PART(global::System.Int32 id)
-        {
-            MA_PART mA_PART = new MA_PART();
-            mA_PART.ID = id;
-            return mA_PART;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String PART_NAME
-        {
-            get
-            {
-                return _PART_NAME;
-            }
-            set
-            {
-                OnPART_NAMEChanging(value);
-                ReportPropertyChanging("PART_NAME");
-                _PART_NAME = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("PART_NAME");
-                OnPART_NAMEChanged();
-            }
-        }
-        private global::System.String _PART_NAME;
-        partial void OnPART_NAMEChanging(global::System.String value);
-        partial void OnPART_NAMEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String PART_NO
-        {
-            get
-            {
-                return _PART_NO;
-            }
-            set
-            {
-                OnPART_NOChanging(value);
-                ReportPropertyChanging("PART_NO");
-                _PART_NO = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("PART_NO");
-                OnPART_NOChanged();
-            }
-        }
-        private global::System.String _PART_NO;
-        partial void OnPART_NOChanging(global::System.String value);
-        partial void OnPART_NOChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> PROD_LENGTH
-        {
-            get
-            {
-                return _PROD_LENGTH;
-            }
-            set
-            {
-                OnPROD_LENGTHChanging(value);
-                ReportPropertyChanging("PROD_LENGTH");
-                _PROD_LENGTH = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PROD_LENGTH");
-                OnPROD_LENGTHChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _PROD_LENGTH;
-        partial void OnPROD_LENGTHChanging(Nullable<global::System.Int32> value);
-        partial void OnPROD_LENGTHChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String PART_TYPE
-        {
-            get
-            {
-                return _PART_TYPE;
-            }
-            set
-            {
-                OnPART_TYPEChanging(value);
-                ReportPropertyChanging("PART_TYPE");
-                _PART_TYPE = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("PART_TYPE");
-                OnPART_TYPEChanged();
-            }
-        }
-        private global::System.String _PART_TYPE;
-        partial void OnPART_TYPEChanging(global::System.String value);
-        partial void OnPART_TYPEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> UNIT_QTY
-        {
-            get
-            {
-                return _UNIT_QTY;
-            }
-            set
-            {
-                OnUNIT_QTYChanging(value);
-                ReportPropertyChanging("UNIT_QTY");
-                _UNIT_QTY = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("UNIT_QTY");
-                OnUNIT_QTYChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _UNIT_QTY;
-        partial void OnUNIT_QTYChanging(Nullable<global::System.Int32> value);
-        partial void OnUNIT_QTYChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_PART", "MA_MODEL_STRUCTURE")]
-        public EntityCollection<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTURE
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_PART", "MA_MODEL_STRUCTURE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_PART", "MA_MODEL_STRUCTURE", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="PLAN_EXT")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class PLAN_EXT : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new PLAN_EXT object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        public static PLAN_EXT CreatePLAN_EXT(global::System.Int32 id)
-        {
-            PLAN_EXT pLAN_EXT = new PLAN_EXT();
-            pLAN_EXT.ID = id;
-            return pLAN_EXT;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> KANBAN_ID
-        {
-            get
-            {
-                return _KANBAN_ID;
-            }
-            set
-            {
-                OnKANBAN_IDChanging(value);
-                ReportPropertyChanging("KANBAN_ID");
-                _KANBAN_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("KANBAN_ID");
-                OnKANBAN_IDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _KANBAN_ID;
-        partial void OnKANBAN_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnKANBAN_IDChanged();
+                OnBEN_KANBAN_IDChanging(value);
+                ReportPropertyChanging("BEN_KANBAN_ID");
+                _BEN_KANBAN_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("BEN_KANBAN_ID");
+                OnBEN_KANBAN_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _BEN_KANBAN_ID;
+        partial void OnBEN_KANBAN_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnBEN_KANBAN_IDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5649,6 +1498,54 @@ namespace Toacts.KanbanPost.Services.EF
         private Nullable<global::System.Int32> _MODEL_STRUCTURE_ID;
         partial void OnMODEL_STRUCTURE_IDChanging(Nullable<global::System.Int32> value);
         partial void OnMODEL_STRUCTURE_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> STD_STOCK_ID
+        {
+            get
+            {
+                return _STD_STOCK_ID;
+            }
+            set
+            {
+                OnSTD_STOCK_IDChanging(value);
+                ReportPropertyChanging("STD_STOCK_ID");
+                _STD_STOCK_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("STD_STOCK_ID");
+                OnSTD_STOCK_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _STD_STOCK_ID;
+        partial void OnSTD_STOCK_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnSTD_STOCK_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> FIN_PLAN_ID
+        {
+            get
+            {
+                return _FIN_PLAN_ID;
+            }
+            set
+            {
+                OnFIN_PLAN_IDChanging(value);
+                ReportPropertyChanging("FIN_PLAN_ID");
+                _FIN_PLAN_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FIN_PLAN_ID");
+                OnFIN_PLAN_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _FIN_PLAN_ID;
+        partial void OnFIN_PLAN_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnFIN_PLAN_IDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5925,34 +1822,18 @@ namespace Toacts.KanbanPost.Services.EF
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_PLAN_EXT_KANBAN_EXT", "KANBAN_EXT")]
-        public KANBAN_EXT KANBAN_EXT
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_KANBAN_BEN_PLAN", "BEN_KANBAN")]
+        public EntityCollection<BEN_KANBAN> BEN_KANBAN
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<KANBAN_EXT>("TAC_KANBANModel.FK_PLAN_EXT_KANBAN_EXT", "KANBAN_EXT").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<KANBAN_EXT>("TAC_KANBANModel.FK_PLAN_EXT_KANBAN_EXT", "KANBAN_EXT").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<KANBAN_EXT> KANBAN_EXTReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<KANBAN_EXT>("TAC_KANBANModel.FK_PLAN_EXT_KANBAN_EXT", "KANBAN_EXT");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_KANBAN>("TAC_KANBANModel.FK_BEN_KANBAN_BEN_PLAN", "BEN_KANBAN");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<KANBAN_EXT>("TAC_KANBANModel.FK_PLAN_EXT_KANBAN_EXT", "KANBAN_EXT", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_KANBAN>("TAC_KANBANModel.FK_BEN_KANBAN_BEN_PLAN", "BEN_KANBAN", value);
                 }
             }
         }
@@ -5963,16 +1844,54 @@ namespace Toacts.KanbanPost.Services.EF
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_PLAN_EXT_MA_LINE", "MA_LINE")]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_PLAN_FIN_PLAN", "FIN_PLAN")]
+        public FIN_PLAN FIN_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FIN_PLAN>("TAC_KANBANModel.FK_BEN_PLAN_FIN_PLAN", "FIN_PLAN").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FIN_PLAN>("TAC_KANBANModel.FK_BEN_PLAN_FIN_PLAN", "FIN_PLAN").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<FIN_PLAN> FIN_PLANReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FIN_PLAN>("TAC_KANBANModel.FK_BEN_PLAN_FIN_PLAN", "FIN_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<FIN_PLAN>("TAC_KANBANModel.FK_BEN_PLAN_FIN_PLAN", "FIN_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_PLAN_MA_LINE", "MA_LINE")]
         public MA_LINE MA_LINE
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_PLAN_EXT_MA_LINE", "MA_LINE").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_BEN_PLAN_MA_LINE", "MA_LINE").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_PLAN_EXT_MA_LINE", "MA_LINE").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_BEN_PLAN_MA_LINE", "MA_LINE").Value = value;
             }
         }
         /// <summary>
@@ -5984,13 +1903,13 @@ namespace Toacts.KanbanPost.Services.EF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_PLAN_EXT_MA_LINE", "MA_LINE");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_BEN_PLAN_MA_LINE", "MA_LINE");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_LINE>("TAC_KANBANModel.FK_PLAN_EXT_MA_LINE", "MA_LINE", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_LINE>("TAC_KANBANModel.FK_BEN_PLAN_MA_LINE", "MA_LINE", value);
                 }
             }
         }
@@ -6001,16 +1920,16 @@ namespace Toacts.KanbanPost.Services.EF
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_PLAN_EXT_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE")]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE")]
         public MA_MODEL_STRUCTURE MA_MODEL_STRUCTURE
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_PLAN_EXT_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_BEN_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_PLAN_EXT_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_BEN_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value = value;
             }
         }
         /// <summary>
@@ -6022,13 +1941,133 @@ namespace Toacts.KanbanPost.Services.EF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_PLAN_EXT_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_BEN_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_PLAN_EXT_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_BEN_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_PLAN_MA_OPT_USER", "MA_OPT_USER")]
+        public MA_OPT_USER MA_OPT_USER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_PLAN_MA_OPT_USER", "MA_OPT_USER").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_PLAN_MA_OPT_USER", "MA_OPT_USER").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_OPT_USER> MA_OPT_USERReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_PLAN_MA_OPT_USER", "MA_OPT_USER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_PLAN_MA_OPT_USER", "MA_OPT_USER", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_PLAN_STD_STOCK", "STD_STOCK")]
+        public STD_STOCK STD_STOCK
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<STD_STOCK>("TAC_KANBANModel.FK_BEN_PLAN_STD_STOCK", "STD_STOCK").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<STD_STOCK>("TAC_KANBANModel.FK_BEN_PLAN_STD_STOCK", "STD_STOCK").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<STD_STOCK> STD_STOCKReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<STD_STOCK>("TAC_KANBANModel.FK_BEN_PLAN_STD_STOCK", "STD_STOCK");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<STD_STOCK>("TAC_KANBANModel.FK_BEN_PLAN_STD_STOCK", "STD_STOCK", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_STOCK_BEN_PLAN", "BEN_STOCK")]
+        public EntityCollection<BEN_STOCK> BEN_STOCK
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_STOCK>("TAC_KANBANModel.FK_BEN_STOCK_BEN_PLAN", "BEN_STOCK");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_STOCK>("TAC_KANBANModel.FK_BEN_STOCK_BEN_PLAN", "BEN_STOCK", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_WORK_ORDER_BEN_PLAN", "BEN_WORK_ORDER")]
+        public EntityCollection<BEN_WORK_ORDER> BEN_WORK_ORDER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_WORK_ORDER>("TAC_KANBANModel.FK_BEN_WORK_ORDER_BEN_PLAN", "BEN_WORK_ORDER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_WORK_ORDER>("TAC_KANBANModel.FK_BEN_WORK_ORDER_BEN_PLAN", "BEN_WORK_ORDER", value);
                 }
             }
         }
@@ -6040,22 +2079,3855 @@ namespace Toacts.KanbanPost.Services.EF
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="PLAN_FIN")]
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="BEN_STOCK")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class PLAN_FIN : EntityObject
+    public partial class BEN_STOCK : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new PLAN_FIN object.
+        /// Create a new BEN_STOCK object.
         /// </summary>
         /// <param name="id">Initial value of the ID property.</param>
-        public static PLAN_FIN CreatePLAN_FIN(global::System.Int32 id)
+        public static BEN_STOCK CreateBEN_STOCK(global::System.Int32 id)
         {
-            PLAN_FIN pLAN_FIN = new PLAN_FIN();
-            pLAN_FIN.ID = id;
-            return pLAN_FIN;
+            BEN_STOCK bEN_STOCK = new BEN_STOCK();
+            bEN_STOCK.ID = id;
+            return bEN_STOCK;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> BEN_PLAN_ID
+        {
+            get
+            {
+                return _BEN_PLAN_ID;
+            }
+            set
+            {
+                OnBEN_PLAN_IDChanging(value);
+                ReportPropertyChanging("BEN_PLAN_ID");
+                _BEN_PLAN_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("BEN_PLAN_ID");
+                OnBEN_PLAN_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _BEN_PLAN_ID;
+        partial void OnBEN_PLAN_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnBEN_PLAN_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> BEN_WORK_ORDER_ID
+        {
+            get
+            {
+                return _BEN_WORK_ORDER_ID;
+            }
+            set
+            {
+                OnBEN_WORK_ORDER_IDChanging(value);
+                ReportPropertyChanging("BEN_WORK_ORDER_ID");
+                _BEN_WORK_ORDER_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("BEN_WORK_ORDER_ID");
+                OnBEN_WORK_ORDER_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _BEN_WORK_ORDER_ID;
+        partial void OnBEN_WORK_ORDER_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnBEN_WORK_ORDER_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> MODEL_STRUCTURE_ID
+        {
+            get
+            {
+                return _MODEL_STRUCTURE_ID;
+            }
+            set
+            {
+                OnMODEL_STRUCTURE_IDChanging(value);
+                ReportPropertyChanging("MODEL_STRUCTURE_ID");
+                _MODEL_STRUCTURE_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MODEL_STRUCTURE_ID");
+                OnMODEL_STRUCTURE_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _MODEL_STRUCTURE_ID;
+        partial void OnMODEL_STRUCTURE_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnMODEL_STRUCTURE_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> ACC_STOCK_ID
+        {
+            get
+            {
+                return _ACC_STOCK_ID;
+            }
+            set
+            {
+                OnACC_STOCK_IDChanging(value);
+                ReportPropertyChanging("ACC_STOCK_ID");
+                _ACC_STOCK_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ACC_STOCK_ID");
+                OnACC_STOCK_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _ACC_STOCK_ID;
+        partial void OnACC_STOCK_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnACC_STOCK_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> STOCK_IN
+        {
+            get
+            {
+                return _STOCK_IN;
+            }
+            set
+            {
+                OnSTOCK_INChanging(value);
+                ReportPropertyChanging("STOCK_IN");
+                _STOCK_IN = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("STOCK_IN");
+                OnSTOCK_INChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _STOCK_IN;
+        partial void OnSTOCK_INChanging(Nullable<global::System.Int32> value);
+        partial void OnSTOCK_INChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> STOCK_OUT
+        {
+            get
+            {
+                return _STOCK_OUT;
+            }
+            set
+            {
+                OnSTOCK_OUTChanging(value);
+                ReportPropertyChanging("STOCK_OUT");
+                _STOCK_OUT = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("STOCK_OUT");
+                OnSTOCK_OUTChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _STOCK_OUT;
+        partial void OnSTOCK_OUTChanging(Nullable<global::System.Int32> value);
+        partial void OnSTOCK_OUTChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> IN_DATE
+        {
+            get
+            {
+                return _IN_DATE;
+            }
+            set
+            {
+                OnIN_DATEChanging(value);
+                ReportPropertyChanging("IN_DATE");
+                _IN_DATE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IN_DATE");
+                OnIN_DATEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _IN_DATE;
+        partial void OnIN_DATEChanging(Nullable<global::System.DateTime> value);
+        partial void OnIN_DATEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IN_BY
+        {
+            get
+            {
+                return _IN_BY;
+            }
+            set
+            {
+                OnIN_BYChanging(value);
+                ReportPropertyChanging("IN_BY");
+                _IN_BY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IN_BY");
+                OnIN_BYChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IN_BY;
+        partial void OnIN_BYChanging(Nullable<global::System.Int32> value);
+        partial void OnIN_BYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> OUT_DATE
+        {
+            get
+            {
+                return _OUT_DATE;
+            }
+            set
+            {
+                OnOUT_DATEChanging(value);
+                ReportPropertyChanging("OUT_DATE");
+                _OUT_DATE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("OUT_DATE");
+                OnOUT_DATEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _OUT_DATE;
+        partial void OnOUT_DATEChanging(Nullable<global::System.DateTime> value);
+        partial void OnOUT_DATEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> OUT_BY
+        {
+            get
+            {
+                return _OUT_BY;
+            }
+            set
+            {
+                OnOUT_BYChanging(value);
+                ReportPropertyChanging("OUT_BY");
+                _OUT_BY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("OUT_BY");
+                OnOUT_BYChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _OUT_BY;
+        partial void OnOUT_BYChanging(Nullable<global::System.Int32> value);
+        partial void OnOUT_BYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> MANUAL
+        {
+            get
+            {
+                return _MANUAL;
+            }
+            set
+            {
+                OnMANUALChanging(value);
+                ReportPropertyChanging("MANUAL");
+                _MANUAL = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MANUAL");
+                OnMANUALChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _MANUAL;
+        partial void OnMANUALChanging(Nullable<global::System.Boolean> value);
+        partial void OnMANUALChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_STOCK_ACCUMULATE_STOCK", "ACCUMULATE_STOCK")]
+        public ACCUMULATE_STOCK ACCUMULATE_STOCK
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_BEN_STOCK_ACCUMULATE_STOCK", "ACCUMULATE_STOCK").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_BEN_STOCK_ACCUMULATE_STOCK", "ACCUMULATE_STOCK").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<ACCUMULATE_STOCK> ACCUMULATE_STOCKReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_BEN_STOCK_ACCUMULATE_STOCK", "ACCUMULATE_STOCK");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_BEN_STOCK_ACCUMULATE_STOCK", "ACCUMULATE_STOCK", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_STOCK_BEN_PLAN", "BEN_PLAN")]
+        public BEN_PLAN BEN_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_PLAN>("TAC_KANBANModel.FK_BEN_STOCK_BEN_PLAN", "BEN_PLAN").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_PLAN>("TAC_KANBANModel.FK_BEN_STOCK_BEN_PLAN", "BEN_PLAN").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<BEN_PLAN> BEN_PLANReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_PLAN>("TAC_KANBANModel.FK_BEN_STOCK_BEN_PLAN", "BEN_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BEN_PLAN>("TAC_KANBANModel.FK_BEN_STOCK_BEN_PLAN", "BEN_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_STOCK_BEN_WORK_ORDER", "BEN_WORK_ORDER")]
+        public BEN_WORK_ORDER BEN_WORK_ORDER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_WORK_ORDER>("TAC_KANBANModel.FK_BEN_STOCK_BEN_WORK_ORDER", "BEN_WORK_ORDER").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_WORK_ORDER>("TAC_KANBANModel.FK_BEN_STOCK_BEN_WORK_ORDER", "BEN_WORK_ORDER").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<BEN_WORK_ORDER> BEN_WORK_ORDERReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_WORK_ORDER>("TAC_KANBANModel.FK_BEN_STOCK_BEN_WORK_ORDER", "BEN_WORK_ORDER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BEN_WORK_ORDER>("TAC_KANBANModel.FK_BEN_STOCK_BEN_WORK_ORDER", "BEN_WORK_ORDER", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_STOCK_MA_OPT_USER", "MA_OPT_USER")]
+        public MA_OPT_USER MA_OPT_USER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_STOCK_MA_OPT_USER", "MA_OPT_USER").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_STOCK_MA_OPT_USER", "MA_OPT_USER").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_OPT_USER> MA_OPT_USERReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_STOCK_MA_OPT_USER", "MA_OPT_USER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_STOCK_MA_OPT_USER", "MA_OPT_USER", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_STOCK_MA_OPT_USER1", "MA_OPT_USER")]
+        public MA_OPT_USER MA_OPT_USER1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_STOCK_MA_OPT_USER1", "MA_OPT_USER").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_STOCK_MA_OPT_USER1", "MA_OPT_USER").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_OPT_USER> MA_OPT_USER1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_STOCK_MA_OPT_USER1", "MA_OPT_USER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_STOCK_MA_OPT_USER1", "MA_OPT_USER", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="BEN_WORK_ORDER")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class BEN_WORK_ORDER : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new BEN_WORK_ORDER object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static BEN_WORK_ORDER CreateBEN_WORK_ORDER(global::System.Int32 id)
+        {
+            BEN_WORK_ORDER bEN_WORK_ORDER = new BEN_WORK_ORDER();
+            bEN_WORK_ORDER.ID = id;
+            return bEN_WORK_ORDER;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> BEN_KANBAN_ID
+        {
+            get
+            {
+                return _BEN_KANBAN_ID;
+            }
+            set
+            {
+                OnBEN_KANBAN_IDChanging(value);
+                ReportPropertyChanging("BEN_KANBAN_ID");
+                _BEN_KANBAN_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("BEN_KANBAN_ID");
+                OnBEN_KANBAN_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _BEN_KANBAN_ID;
+        partial void OnBEN_KANBAN_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnBEN_KANBAN_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> BEN_PLAN_ID
+        {
+            get
+            {
+                return _BEN_PLAN_ID;
+            }
+            set
+            {
+                OnBEN_PLAN_IDChanging(value);
+                ReportPropertyChanging("BEN_PLAN_ID");
+                _BEN_PLAN_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("BEN_PLAN_ID");
+                OnBEN_PLAN_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _BEN_PLAN_ID;
+        partial void OnBEN_PLAN_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnBEN_PLAN_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> MODEL_STRUCTURE_ID
+        {
+            get
+            {
+                return _MODEL_STRUCTURE_ID;
+            }
+            set
+            {
+                OnMODEL_STRUCTURE_IDChanging(value);
+                ReportPropertyChanging("MODEL_STRUCTURE_ID");
+                _MODEL_STRUCTURE_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MODEL_STRUCTURE_ID");
+                OnMODEL_STRUCTURE_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _MODEL_STRUCTURE_ID;
+        partial void OnMODEL_STRUCTURE_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnMODEL_STRUCTURE_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String ACTUAL_QTY
+        {
+            get
+            {
+                return _ACTUAL_QTY;
+            }
+            set
+            {
+                OnACTUAL_QTYChanging(value);
+                ReportPropertyChanging("ACTUAL_QTY");
+                _ACTUAL_QTY = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("ACTUAL_QTY");
+                OnACTUAL_QTYChanged();
+            }
+        }
+        private global::System.String _ACTUAL_QTY;
+        partial void OnACTUAL_QTYChanging(global::System.String value);
+        partial void OnACTUAL_QTYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> START_TIME
+        {
+            get
+            {
+                return _START_TIME;
+            }
+            set
+            {
+                OnSTART_TIMEChanging(value);
+                ReportPropertyChanging("START_TIME");
+                _START_TIME = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("START_TIME");
+                OnSTART_TIMEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _START_TIME;
+        partial void OnSTART_TIMEChanging(Nullable<global::System.DateTime> value);
+        partial void OnSTART_TIMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> ESTIMATE_END_TIME
+        {
+            get
+            {
+                return _ESTIMATE_END_TIME;
+            }
+            set
+            {
+                OnESTIMATE_END_TIMEChanging(value);
+                ReportPropertyChanging("ESTIMATE_END_TIME");
+                _ESTIMATE_END_TIME = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ESTIMATE_END_TIME");
+                OnESTIMATE_END_TIMEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _ESTIMATE_END_TIME;
+        partial void OnESTIMATE_END_TIMEChanging(Nullable<global::System.DateTime> value);
+        partial void OnESTIMATE_END_TIMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> ACTUAL_END_TIME
+        {
+            get
+            {
+                return _ACTUAL_END_TIME;
+            }
+            set
+            {
+                OnACTUAL_END_TIMEChanging(value);
+                ReportPropertyChanging("ACTUAL_END_TIME");
+                _ACTUAL_END_TIME = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ACTUAL_END_TIME");
+                OnACTUAL_END_TIMEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _ACTUAL_END_TIME;
+        partial void OnACTUAL_END_TIMEChanging(Nullable<global::System.DateTime> value);
+        partial void OnACTUAL_END_TIMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> WORK_BY
+        {
+            get
+            {
+                return _WORK_BY;
+            }
+            set
+            {
+                OnWORK_BYChanging(value);
+                ReportPropertyChanging("WORK_BY");
+                _WORK_BY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("WORK_BY");
+                OnWORK_BYChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _WORK_BY;
+        partial void OnWORK_BYChanging(Nullable<global::System.Int32> value);
+        partial void OnWORK_BYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String STATUS
+        {
+            get
+            {
+                return _STATUS;
+            }
+            set
+            {
+                OnSTATUSChanging(value);
+                ReportPropertyChanging("STATUS");
+                _STATUS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("STATUS");
+                OnSTATUSChanged();
+            }
+        }
+        private global::System.String _STATUS;
+        partial void OnSTATUSChanging(global::System.String value);
+        partial void OnSTATUSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PD_BY
+        {
+            get
+            {
+                return _PD_BY;
+            }
+            set
+            {
+                OnPD_BYChanging(value);
+                ReportPropertyChanging("PD_BY");
+                _PD_BY = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PD_BY");
+                OnPD_BYChanged();
+            }
+        }
+        private global::System.String _PD_BY;
+        partial void OnPD_BYChanging(global::System.String value);
+        partial void OnPD_BYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> PD_DATE
+        {
+            get
+            {
+                return _PD_DATE;
+            }
+            set
+            {
+                OnPD_DATEChanging(value);
+                ReportPropertyChanging("PD_DATE");
+                _PD_DATE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PD_DATE");
+                OnPD_DATEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _PD_DATE;
+        partial void OnPD_DATEChanging(Nullable<global::System.DateTime> value);
+        partial void OnPD_DATEChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_WORK_ORDER_BEN_KANBAN", "BEN_KANBAN")]
+        public BEN_KANBAN BEN_KANBAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_KANBAN>("TAC_KANBANModel.FK_BEN_WORK_ORDER_BEN_KANBAN", "BEN_KANBAN").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_KANBAN>("TAC_KANBANModel.FK_BEN_WORK_ORDER_BEN_KANBAN", "BEN_KANBAN").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<BEN_KANBAN> BEN_KANBANReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_KANBAN>("TAC_KANBANModel.FK_BEN_WORK_ORDER_BEN_KANBAN", "BEN_KANBAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BEN_KANBAN>("TAC_KANBANModel.FK_BEN_WORK_ORDER_BEN_KANBAN", "BEN_KANBAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_WORK_ORDER_BEN_PLAN", "BEN_PLAN")]
+        public BEN_PLAN BEN_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_PLAN>("TAC_KANBANModel.FK_BEN_WORK_ORDER_BEN_PLAN", "BEN_PLAN").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_PLAN>("TAC_KANBANModel.FK_BEN_WORK_ORDER_BEN_PLAN", "BEN_PLAN").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<BEN_PLAN> BEN_PLANReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BEN_PLAN>("TAC_KANBANModel.FK_BEN_WORK_ORDER_BEN_PLAN", "BEN_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BEN_PLAN>("TAC_KANBANModel.FK_BEN_WORK_ORDER_BEN_PLAN", "BEN_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_STOCK_BEN_WORK_ORDER", "BEN_STOCK")]
+        public EntityCollection<BEN_STOCK> BEN_STOCK
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_STOCK>("TAC_KANBANModel.FK_BEN_STOCK_BEN_WORK_ORDER", "BEN_STOCK");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_STOCK>("TAC_KANBANModel.FK_BEN_STOCK_BEN_WORK_ORDER", "BEN_STOCK", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE")]
+        public MA_MODEL_STRUCTURE MA_MODEL_STRUCTURE
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_BEN_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_BEN_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTUREReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_BEN_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_BEN_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER")]
+        public MA_OPT_USER MA_OPT_USER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_OPT_USER> MA_OPT_USERReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_BEN_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="EXT_FIN_MAPPING_PART")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class EXT_FIN_MAPPING_PART : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new EXT_FIN_MAPPING_PART object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static EXT_FIN_MAPPING_PART CreateEXT_FIN_MAPPING_PART(global::System.Int32 id)
+        {
+            EXT_FIN_MAPPING_PART eXT_FIN_MAPPING_PART = new EXT_FIN_MAPPING_PART();
+            eXT_FIN_MAPPING_PART.ID = id;
+            return eXT_FIN_MAPPING_PART;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> PART_ID
+        {
+            get
+            {
+                return _PART_ID;
+            }
+            set
+            {
+                OnPART_IDChanging(value);
+                ReportPropertyChanging("PART_ID");
+                _PART_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PART_ID");
+                OnPART_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _PART_ID;
+        partial void OnPART_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnPART_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String EXT_PART_NO
+        {
+            get
+            {
+                return _EXT_PART_NO;
+            }
+            set
+            {
+                OnEXT_PART_NOChanging(value);
+                ReportPropertyChanging("EXT_PART_NO");
+                _EXT_PART_NO = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("EXT_PART_NO");
+                OnEXT_PART_NOChanged();
+            }
+        }
+        private global::System.String _EXT_PART_NO;
+        partial void OnEXT_PART_NOChanging(global::System.String value);
+        partial void OnEXT_PART_NOChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String FIN_PART_NO
+        {
+            get
+            {
+                return _FIN_PART_NO;
+            }
+            set
+            {
+                OnFIN_PART_NOChanging(value);
+                ReportPropertyChanging("FIN_PART_NO");
+                _FIN_PART_NO = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("FIN_PART_NO");
+                OnFIN_PART_NOChanged();
+            }
+        }
+        private global::System.String _FIN_PART_NO;
+        partial void OnFIN_PART_NOChanging(global::System.String value);
+        partial void OnFIN_PART_NOChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> EXT_UNIT_PER_FIN_UNIT
+        {
+            get
+            {
+                return _EXT_UNIT_PER_FIN_UNIT;
+            }
+            set
+            {
+                OnEXT_UNIT_PER_FIN_UNITChanging(value);
+                ReportPropertyChanging("EXT_UNIT_PER_FIN_UNIT");
+                _EXT_UNIT_PER_FIN_UNIT = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("EXT_UNIT_PER_FIN_UNIT");
+                OnEXT_UNIT_PER_FIN_UNITChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _EXT_UNIT_PER_FIN_UNIT;
+        partial void OnEXT_UNIT_PER_FIN_UNITChanging(Nullable<global::System.Int32> value);
+        partial void OnEXT_UNIT_PER_FIN_UNITChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_FIN_MAPPING_PART_MA_PART", "MA_PART")]
+        public MA_PART MA_PART
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_PART>("TAC_KANBANModel.FK_EXT_FIN_MAPPING_PART_MA_PART", "MA_PART").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_PART>("TAC_KANBANModel.FK_EXT_FIN_MAPPING_PART_MA_PART", "MA_PART").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_PART> MA_PARTReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_PART>("TAC_KANBANModel.FK_EXT_FIN_MAPPING_PART_MA_PART", "MA_PART");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_PART>("TAC_KANBANModel.FK_EXT_FIN_MAPPING_PART_MA_PART", "MA_PART", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="EXT_KANBAN")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class EXT_KANBAN : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new EXT_KANBAN object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static EXT_KANBAN CreateEXT_KANBAN(global::System.Int32 id)
+        {
+            EXT_KANBAN eXT_KANBAN = new EXT_KANBAN();
+            eXT_KANBAN.ID = id;
+            return eXT_KANBAN;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String TAG_ID
+        {
+            get
+            {
+                return _TAG_ID;
+            }
+            set
+            {
+                OnTAG_IDChanging(value);
+                ReportPropertyChanging("TAG_ID");
+                _TAG_ID = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("TAG_ID");
+                OnTAG_IDChanged();
+            }
+        }
+        private global::System.String _TAG_ID;
+        partial void OnTAG_IDChanging(global::System.String value);
+        partial void OnTAG_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> MODEL_STRUCTURE_ID
+        {
+            get
+            {
+                return _MODEL_STRUCTURE_ID;
+            }
+            set
+            {
+                OnMODEL_STRUCTURE_IDChanging(value);
+                ReportPropertyChanging("MODEL_STRUCTURE_ID");
+                _MODEL_STRUCTURE_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MODEL_STRUCTURE_ID");
+                OnMODEL_STRUCTURE_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _MODEL_STRUCTURE_ID;
+        partial void OnMODEL_STRUCTURE_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnMODEL_STRUCTURE_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> PLAN_ID
+        {
+            get
+            {
+                return _PLAN_ID;
+            }
+            set
+            {
+                OnPLAN_IDChanging(value);
+                ReportPropertyChanging("PLAN_ID");
+                _PLAN_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PLAN_ID");
+                OnPLAN_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _PLAN_ID;
+        partial void OnPLAN_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnPLAN_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> QUANTITY
+        {
+            get
+            {
+                return _QUANTITY;
+            }
+            set
+            {
+                OnQUANTITYChanging(value);
+                ReportPropertyChanging("QUANTITY");
+                _QUANTITY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("QUANTITY");
+                OnQUANTITYChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _QUANTITY;
+        partial void OnQUANTITYChanging(Nullable<global::System.Int32> value);
+        partial void OnQUANTITYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> ISSUES_DATE
+        {
+            get
+            {
+                return _ISSUES_DATE;
+            }
+            set
+            {
+                OnISSUES_DATEChanging(value);
+                ReportPropertyChanging("ISSUES_DATE");
+                _ISSUES_DATE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ISSUES_DATE");
+                OnISSUES_DATEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _ISSUES_DATE;
+        partial void OnISSUES_DATEChanging(Nullable<global::System.DateTime> value);
+        partial void OnISSUES_DATEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PROCESSES
+        {
+            get
+            {
+                return _PROCESSES;
+            }
+            set
+            {
+                OnPROCESSESChanging(value);
+                ReportPropertyChanging("PROCESSES");
+                _PROCESSES = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PROCESSES");
+                OnPROCESSESChanged();
+            }
+        }
+        private global::System.String _PROCESSES;
+        partial void OnPROCESSESChanging(global::System.String value);
+        partial void OnPROCESSESChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String STATUS
+        {
+            get
+            {
+                return _STATUS;
+            }
+            set
+            {
+                OnSTATUSChanging(value);
+                ReportPropertyChanging("STATUS");
+                _STATUS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("STATUS");
+                OnSTATUSChanged();
+            }
+        }
+        private global::System.String _STATUS;
+        partial void OnSTATUSChanging(global::System.String value);
+        partial void OnSTATUSChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_KANBAN_EXT_PLAN", "EXT_PLAN")]
+        public EXT_PLAN EXT_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_PLAN>("TAC_KANBANModel.FK_EXT_KANBAN_EXT_PLAN", "EXT_PLAN").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_PLAN>("TAC_KANBANModel.FK_EXT_KANBAN_EXT_PLAN", "EXT_PLAN").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<EXT_PLAN> EXT_PLANReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_PLAN>("TAC_KANBANModel.FK_EXT_KANBAN_EXT_PLAN", "EXT_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EXT_PLAN>("TAC_KANBANModel.FK_EXT_KANBAN_EXT_PLAN", "EXT_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_EXT_KANBAN", "EXT_WORK_ORDER")]
+        public EntityCollection<EXT_WORK_ORDER> EXT_WORK_ORDER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_EXT_KANBAN", "EXT_WORK_ORDER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_EXT_KANBAN", "EXT_WORK_ORDER", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="EXT_PLAN")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class EXT_PLAN : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new EXT_PLAN object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static EXT_PLAN CreateEXT_PLAN(global::System.Int32 id)
+        {
+            EXT_PLAN eXT_PLAN = new EXT_PLAN();
+            eXT_PLAN.ID = id;
+            return eXT_PLAN;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> EXT_KANBAN_ID
+        {
+            get
+            {
+                return _EXT_KANBAN_ID;
+            }
+            set
+            {
+                OnEXT_KANBAN_IDChanging(value);
+                ReportPropertyChanging("EXT_KANBAN_ID");
+                _EXT_KANBAN_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("EXT_KANBAN_ID");
+                OnEXT_KANBAN_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _EXT_KANBAN_ID;
+        partial void OnEXT_KANBAN_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnEXT_KANBAN_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> MODEL_STRUCTURE_ID
+        {
+            get
+            {
+                return _MODEL_STRUCTURE_ID;
+            }
+            set
+            {
+                OnMODEL_STRUCTURE_IDChanging(value);
+                ReportPropertyChanging("MODEL_STRUCTURE_ID");
+                _MODEL_STRUCTURE_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MODEL_STRUCTURE_ID");
+                OnMODEL_STRUCTURE_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _MODEL_STRUCTURE_ID;
+        partial void OnMODEL_STRUCTURE_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnMODEL_STRUCTURE_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> STD_STOCK_ID
+        {
+            get
+            {
+                return _STD_STOCK_ID;
+            }
+            set
+            {
+                OnSTD_STOCK_IDChanging(value);
+                ReportPropertyChanging("STD_STOCK_ID");
+                _STD_STOCK_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("STD_STOCK_ID");
+                OnSTD_STOCK_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _STD_STOCK_ID;
+        partial void OnSTD_STOCK_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnSTD_STOCK_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> FIN_PLAN_ID
+        {
+            get
+            {
+                return _FIN_PLAN_ID;
+            }
+            set
+            {
+                OnFIN_PLAN_IDChanging(value);
+                ReportPropertyChanging("FIN_PLAN_ID");
+                _FIN_PLAN_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FIN_PLAN_ID");
+                OnFIN_PLAN_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _FIN_PLAN_ID;
+        partial void OnFIN_PLAN_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnFIN_PLAN_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String LOT_NO
+        {
+            get
+            {
+                return _LOT_NO;
+            }
+            set
+            {
+                OnLOT_NOChanging(value);
+                ReportPropertyChanging("LOT_NO");
+                _LOT_NO = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("LOT_NO");
+                OnLOT_NOChanged();
+            }
+        }
+        private global::System.String _LOT_NO;
+        partial void OnLOT_NOChanging(global::System.String value);
+        partial void OnLOT_NOChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> LINE_ID
+        {
+            get
+            {
+                return _LINE_ID;
+            }
+            set
+            {
+                OnLINE_IDChanging(value);
+                ReportPropertyChanging("LINE_ID");
+                _LINE_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LINE_ID");
+                OnLINE_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _LINE_ID;
+        partial void OnLINE_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnLINE_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> START_DATE
+        {
+            get
+            {
+                return _START_DATE;
+            }
+            set
+            {
+                OnSTART_DATEChanging(value);
+                ReportPropertyChanging("START_DATE");
+                _START_DATE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("START_DATE");
+                OnSTART_DATEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _START_DATE;
+        partial void OnSTART_DATEChanging(Nullable<global::System.DateTime> value);
+        partial void OnSTART_DATEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> END_DATE
+        {
+            get
+            {
+                return _END_DATE;
+            }
+            set
+            {
+                OnEND_DATEChanging(value);
+                ReportPropertyChanging("END_DATE");
+                _END_DATE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("END_DATE");
+                OnEND_DATEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _END_DATE;
+        partial void OnEND_DATEChanging(Nullable<global::System.DateTime> value);
+        partial void OnEND_DATEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String STATUS
+        {
+            get
+            {
+                return _STATUS;
+            }
+            set
+            {
+                OnSTATUSChanging(value);
+                ReportPropertyChanging("STATUS");
+                _STATUS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("STATUS");
+                OnSTATUSChanged();
+            }
+        }
+        private global::System.String _STATUS;
+        partial void OnSTATUSChanging(global::System.String value);
+        partial void OnSTATUSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> MANUAL
+        {
+            get
+            {
+                return _MANUAL;
+            }
+            set
+            {
+                OnMANUALChanging(value);
+                ReportPropertyChanging("MANUAL");
+                _MANUAL = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MANUAL");
+                OnMANUALChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _MANUAL;
+        partial void OnMANUALChanging(Nullable<global::System.Boolean> value);
+        partial void OnMANUALChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> CAR_SIZE
+        {
+            get
+            {
+                return _CAR_SIZE;
+            }
+            set
+            {
+                OnCAR_SIZEChanging(value);
+                ReportPropertyChanging("CAR_SIZE");
+                _CAR_SIZE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CAR_SIZE");
+                OnCAR_SIZEChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _CAR_SIZE;
+        partial void OnCAR_SIZEChanging(Nullable<global::System.Int32> value);
+        partial void OnCAR_SIZEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> LOT_SIZE
+        {
+            get
+            {
+                return _LOT_SIZE;
+            }
+            set
+            {
+                OnLOT_SIZEChanging(value);
+                ReportPropertyChanging("LOT_SIZE");
+                _LOT_SIZE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LOT_SIZE");
+                OnLOT_SIZEChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _LOT_SIZE;
+        partial void OnLOT_SIZEChanging(Nullable<global::System.Int32> value);
+        partial void OnLOT_SIZEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> CIRCLE_TIME
+        {
+            get
+            {
+                return _CIRCLE_TIME;
+            }
+            set
+            {
+                OnCIRCLE_TIMEChanging(value);
+                ReportPropertyChanging("CIRCLE_TIME");
+                _CIRCLE_TIME = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CIRCLE_TIME");
+                OnCIRCLE_TIMEChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _CIRCLE_TIME;
+        partial void OnCIRCLE_TIMEChanging(Nullable<global::System.Int32> value);
+        partial void OnCIRCLE_TIMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> UPDATE_BY
+        {
+            get
+            {
+                return _UPDATE_BY;
+            }
+            set
+            {
+                OnUPDATE_BYChanging(value);
+                ReportPropertyChanging("UPDATE_BY");
+                _UPDATE_BY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("UPDATE_BY");
+                OnUPDATE_BYChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _UPDATE_BY;
+        partial void OnUPDATE_BYChanging(Nullable<global::System.Int32> value);
+        partial void OnUPDATE_BYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> UPDATE_DATE
+        {
+            get
+            {
+                return _UPDATE_DATE;
+            }
+            set
+            {
+                OnUPDATE_DATEChanging(value);
+                ReportPropertyChanging("UPDATE_DATE");
+                _UPDATE_DATE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("UPDATE_DATE");
+                OnUPDATE_DATEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _UPDATE_DATE;
+        partial void OnUPDATE_DATEChanging(Nullable<global::System.DateTime> value);
+        partial void OnUPDATE_DATEChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_KANBAN_EXT_PLAN", "EXT_KANBAN")]
+        public EntityCollection<EXT_KANBAN> EXT_KANBAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_KANBAN>("TAC_KANBANModel.FK_EXT_KANBAN_EXT_PLAN", "EXT_KANBAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_KANBAN>("TAC_KANBANModel.FK_EXT_KANBAN_EXT_PLAN", "EXT_KANBAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_PLAN_FIN_PLAN", "FIN_PLAN")]
+        public FIN_PLAN FIN_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FIN_PLAN>("TAC_KANBANModel.FK_EXT_PLAN_FIN_PLAN", "FIN_PLAN").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FIN_PLAN>("TAC_KANBANModel.FK_EXT_PLAN_FIN_PLAN", "FIN_PLAN").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<FIN_PLAN> FIN_PLANReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FIN_PLAN>("TAC_KANBANModel.FK_EXT_PLAN_FIN_PLAN", "FIN_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<FIN_PLAN>("TAC_KANBANModel.FK_EXT_PLAN_FIN_PLAN", "FIN_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_PLAN_MA_LINE", "MA_LINE")]
+        public MA_LINE MA_LINE
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_EXT_PLAN_MA_LINE", "MA_LINE").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_EXT_PLAN_MA_LINE", "MA_LINE").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_LINE> MA_LINEReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_EXT_PLAN_MA_LINE", "MA_LINE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_LINE>("TAC_KANBANModel.FK_EXT_PLAN_MA_LINE", "MA_LINE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE")]
+        public MA_MODEL_STRUCTURE MA_MODEL_STRUCTURE
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTUREReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_PLAN_MA_OPT_USER", "MA_OPT_USER")]
+        public MA_OPT_USER MA_OPT_USER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_PLAN_MA_OPT_USER", "MA_OPT_USER").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_PLAN_MA_OPT_USER", "MA_OPT_USER").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_OPT_USER> MA_OPT_USERReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_PLAN_MA_OPT_USER", "MA_OPT_USER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_PLAN_MA_OPT_USER", "MA_OPT_USER", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_PLAN_STD_STOCK", "STD_STOCK")]
+        public STD_STOCK STD_STOCK
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<STD_STOCK>("TAC_KANBANModel.FK_EXT_PLAN_STD_STOCK", "STD_STOCK").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<STD_STOCK>("TAC_KANBANModel.FK_EXT_PLAN_STD_STOCK", "STD_STOCK").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<STD_STOCK> STD_STOCKReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<STD_STOCK>("TAC_KANBANModel.FK_EXT_PLAN_STD_STOCK", "STD_STOCK");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<STD_STOCK>("TAC_KANBANModel.FK_EXT_PLAN_STD_STOCK", "STD_STOCK", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_EXT_PLAN", "EXT_STOCK")]
+        public EntityCollection<EXT_STOCK> EXT_STOCK
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_EXT_PLAN", "EXT_STOCK");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_EXT_PLAN", "EXT_STOCK", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="EXT_STOCK")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class EXT_STOCK : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new EXT_STOCK object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static EXT_STOCK CreateEXT_STOCK(global::System.Int32 id)
+        {
+            EXT_STOCK eXT_STOCK = new EXT_STOCK();
+            eXT_STOCK.ID = id;
+            return eXT_STOCK;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> EXT_PLAN_ID
+        {
+            get
+            {
+                return _EXT_PLAN_ID;
+            }
+            set
+            {
+                OnEXT_PLAN_IDChanging(value);
+                ReportPropertyChanging("EXT_PLAN_ID");
+                _EXT_PLAN_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("EXT_PLAN_ID");
+                OnEXT_PLAN_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _EXT_PLAN_ID;
+        partial void OnEXT_PLAN_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnEXT_PLAN_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> EXT_WORK_ORDER_ID
+        {
+            get
+            {
+                return _EXT_WORK_ORDER_ID;
+            }
+            set
+            {
+                OnEXT_WORK_ORDER_IDChanging(value);
+                ReportPropertyChanging("EXT_WORK_ORDER_ID");
+                _EXT_WORK_ORDER_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("EXT_WORK_ORDER_ID");
+                OnEXT_WORK_ORDER_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _EXT_WORK_ORDER_ID;
+        partial void OnEXT_WORK_ORDER_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnEXT_WORK_ORDER_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> MODEL_STRUCTURE_ID
+        {
+            get
+            {
+                return _MODEL_STRUCTURE_ID;
+            }
+            set
+            {
+                OnMODEL_STRUCTURE_IDChanging(value);
+                ReportPropertyChanging("MODEL_STRUCTURE_ID");
+                _MODEL_STRUCTURE_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MODEL_STRUCTURE_ID");
+                OnMODEL_STRUCTURE_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _MODEL_STRUCTURE_ID;
+        partial void OnMODEL_STRUCTURE_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnMODEL_STRUCTURE_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> ACC_STOCK_ID
+        {
+            get
+            {
+                return _ACC_STOCK_ID;
+            }
+            set
+            {
+                OnACC_STOCK_IDChanging(value);
+                ReportPropertyChanging("ACC_STOCK_ID");
+                _ACC_STOCK_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ACC_STOCK_ID");
+                OnACC_STOCK_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _ACC_STOCK_ID;
+        partial void OnACC_STOCK_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnACC_STOCK_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> STOCK_IN
+        {
+            get
+            {
+                return _STOCK_IN;
+            }
+            set
+            {
+                OnSTOCK_INChanging(value);
+                ReportPropertyChanging("STOCK_IN");
+                _STOCK_IN = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("STOCK_IN");
+                OnSTOCK_INChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _STOCK_IN;
+        partial void OnSTOCK_INChanging(Nullable<global::System.Int32> value);
+        partial void OnSTOCK_INChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> STOCK_OUT
+        {
+            get
+            {
+                return _STOCK_OUT;
+            }
+            set
+            {
+                OnSTOCK_OUTChanging(value);
+                ReportPropertyChanging("STOCK_OUT");
+                _STOCK_OUT = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("STOCK_OUT");
+                OnSTOCK_OUTChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _STOCK_OUT;
+        partial void OnSTOCK_OUTChanging(Nullable<global::System.Int32> value);
+        partial void OnSTOCK_OUTChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> IN_DATE
+        {
+            get
+            {
+                return _IN_DATE;
+            }
+            set
+            {
+                OnIN_DATEChanging(value);
+                ReportPropertyChanging("IN_DATE");
+                _IN_DATE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IN_DATE");
+                OnIN_DATEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _IN_DATE;
+        partial void OnIN_DATEChanging(Nullable<global::System.DateTime> value);
+        partial void OnIN_DATEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IN_BY
+        {
+            get
+            {
+                return _IN_BY;
+            }
+            set
+            {
+                OnIN_BYChanging(value);
+                ReportPropertyChanging("IN_BY");
+                _IN_BY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IN_BY");
+                OnIN_BYChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IN_BY;
+        partial void OnIN_BYChanging(Nullable<global::System.Int32> value);
+        partial void OnIN_BYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> OUT_DATE
+        {
+            get
+            {
+                return _OUT_DATE;
+            }
+            set
+            {
+                OnOUT_DATEChanging(value);
+                ReportPropertyChanging("OUT_DATE");
+                _OUT_DATE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("OUT_DATE");
+                OnOUT_DATEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _OUT_DATE;
+        partial void OnOUT_DATEChanging(Nullable<global::System.DateTime> value);
+        partial void OnOUT_DATEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> OUT_BY
+        {
+            get
+            {
+                return _OUT_BY;
+            }
+            set
+            {
+                OnOUT_BYChanging(value);
+                ReportPropertyChanging("OUT_BY");
+                _OUT_BY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("OUT_BY");
+                OnOUT_BYChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _OUT_BY;
+        partial void OnOUT_BYChanging(Nullable<global::System.Int32> value);
+        partial void OnOUT_BYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> MANUAL
+        {
+            get
+            {
+                return _MANUAL;
+            }
+            set
+            {
+                OnMANUALChanging(value);
+                ReportPropertyChanging("MANUAL");
+                _MANUAL = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MANUAL");
+                OnMANUALChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _MANUAL;
+        partial void OnMANUALChanging(Nullable<global::System.Boolean> value);
+        partial void OnMANUALChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_ACCUMULATE_STOCK", "ACCUMULATE_STOCK")]
+        public ACCUMULATE_STOCK ACCUMULATE_STOCK
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_ACCUMULATE_STOCK", "ACCUMULATE_STOCK").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_ACCUMULATE_STOCK", "ACCUMULATE_STOCK").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<ACCUMULATE_STOCK> ACCUMULATE_STOCKReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_ACCUMULATE_STOCK", "ACCUMULATE_STOCK");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ACCUMULATE_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_ACCUMULATE_STOCK", "ACCUMULATE_STOCK", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_EXT_PLAN", "EXT_PLAN")]
+        public EXT_PLAN EXT_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_PLAN>("TAC_KANBANModel.FK_EXT_STOCK_EXT_PLAN", "EXT_PLAN").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_PLAN>("TAC_KANBANModel.FK_EXT_STOCK_EXT_PLAN", "EXT_PLAN").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<EXT_PLAN> EXT_PLANReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_PLAN>("TAC_KANBANModel.FK_EXT_STOCK_EXT_PLAN", "EXT_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EXT_PLAN>("TAC_KANBANModel.FK_EXT_STOCK_EXT_PLAN", "EXT_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER")]
+        public EXT_WORK_ORDER EXT_WORK_ORDER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<EXT_WORK_ORDER> EXT_WORK_ORDERReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_WORK_ORDER", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE")]
+        public MA_MODEL_STRUCTURE MA_MODEL_STRUCTURE
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_STOCK_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_STOCK_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTUREReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_STOCK_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_STOCK_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_MA_OPT_USER", "MA_OPT_USER")]
+        public MA_OPT_USER MA_OPT_USER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_STOCK_MA_OPT_USER", "MA_OPT_USER").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_STOCK_MA_OPT_USER", "MA_OPT_USER").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_OPT_USER> MA_OPT_USERReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_STOCK_MA_OPT_USER", "MA_OPT_USER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_STOCK_MA_OPT_USER", "MA_OPT_USER", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_MA_OPT_USER1", "MA_OPT_USER")]
+        public MA_OPT_USER MA_OPT_USER1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_STOCK_MA_OPT_USER1", "MA_OPT_USER").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_STOCK_MA_OPT_USER1", "MA_OPT_USER").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_OPT_USER> MA_OPT_USER1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_STOCK_MA_OPT_USER1", "MA_OPT_USER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_STOCK_MA_OPT_USER1", "MA_OPT_USER", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="EXT_WORK_ORDER")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class EXT_WORK_ORDER : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new EXT_WORK_ORDER object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static EXT_WORK_ORDER CreateEXT_WORK_ORDER(global::System.Int32 id)
+        {
+            EXT_WORK_ORDER eXT_WORK_ORDER = new EXT_WORK_ORDER();
+            eXT_WORK_ORDER.ID = id;
+            return eXT_WORK_ORDER;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> KANBAN_ID
+        {
+            get
+            {
+                return _KANBAN_ID;
+            }
+            set
+            {
+                OnKANBAN_IDChanging(value);
+                ReportPropertyChanging("KANBAN_ID");
+                _KANBAN_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("KANBAN_ID");
+                OnKANBAN_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _KANBAN_ID;
+        partial void OnKANBAN_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnKANBAN_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> EXT_PLAN_ID
+        {
+            get
+            {
+                return _EXT_PLAN_ID;
+            }
+            set
+            {
+                OnEXT_PLAN_IDChanging(value);
+                ReportPropertyChanging("EXT_PLAN_ID");
+                _EXT_PLAN_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("EXT_PLAN_ID");
+                OnEXT_PLAN_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _EXT_PLAN_ID;
+        partial void OnEXT_PLAN_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnEXT_PLAN_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> MODEL_STRUCTURE_ID
+        {
+            get
+            {
+                return _MODEL_STRUCTURE_ID;
+            }
+            set
+            {
+                OnMODEL_STRUCTURE_IDChanging(value);
+                ReportPropertyChanging("MODEL_STRUCTURE_ID");
+                _MODEL_STRUCTURE_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MODEL_STRUCTURE_ID");
+                OnMODEL_STRUCTURE_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _MODEL_STRUCTURE_ID;
+        partial void OnMODEL_STRUCTURE_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnMODEL_STRUCTURE_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String ACTUAL_QTY
+        {
+            get
+            {
+                return _ACTUAL_QTY;
+            }
+            set
+            {
+                OnACTUAL_QTYChanging(value);
+                ReportPropertyChanging("ACTUAL_QTY");
+                _ACTUAL_QTY = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("ACTUAL_QTY");
+                OnACTUAL_QTYChanged();
+            }
+        }
+        private global::System.String _ACTUAL_QTY;
+        partial void OnACTUAL_QTYChanging(global::System.String value);
+        partial void OnACTUAL_QTYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> START_TIME
+        {
+            get
+            {
+                return _START_TIME;
+            }
+            set
+            {
+                OnSTART_TIMEChanging(value);
+                ReportPropertyChanging("START_TIME");
+                _START_TIME = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("START_TIME");
+                OnSTART_TIMEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _START_TIME;
+        partial void OnSTART_TIMEChanging(Nullable<global::System.DateTime> value);
+        partial void OnSTART_TIMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> ESTIMATE_END_TIME
+        {
+            get
+            {
+                return _ESTIMATE_END_TIME;
+            }
+            set
+            {
+                OnESTIMATE_END_TIMEChanging(value);
+                ReportPropertyChanging("ESTIMATE_END_TIME");
+                _ESTIMATE_END_TIME = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ESTIMATE_END_TIME");
+                OnESTIMATE_END_TIMEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _ESTIMATE_END_TIME;
+        partial void OnESTIMATE_END_TIMEChanging(Nullable<global::System.DateTime> value);
+        partial void OnESTIMATE_END_TIMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> ACTUAL_END_TIME
+        {
+            get
+            {
+                return _ACTUAL_END_TIME;
+            }
+            set
+            {
+                OnACTUAL_END_TIMEChanging(value);
+                ReportPropertyChanging("ACTUAL_END_TIME");
+                _ACTUAL_END_TIME = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ACTUAL_END_TIME");
+                OnACTUAL_END_TIMEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _ACTUAL_END_TIME;
+        partial void OnACTUAL_END_TIMEChanging(Nullable<global::System.DateTime> value);
+        partial void OnACTUAL_END_TIMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> WORK_BY
+        {
+            get
+            {
+                return _WORK_BY;
+            }
+            set
+            {
+                OnWORK_BYChanging(value);
+                ReportPropertyChanging("WORK_BY");
+                _WORK_BY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("WORK_BY");
+                OnWORK_BYChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _WORK_BY;
+        partial void OnWORK_BYChanging(Nullable<global::System.Int32> value);
+        partial void OnWORK_BYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String STATUS
+        {
+            get
+            {
+                return _STATUS;
+            }
+            set
+            {
+                OnSTATUSChanging(value);
+                ReportPropertyChanging("STATUS");
+                _STATUS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("STATUS");
+                OnSTATUSChanged();
+            }
+        }
+        private global::System.String _STATUS;
+        partial void OnSTATUSChanging(global::System.String value);
+        partial void OnSTATUSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PD_BY
+        {
+            get
+            {
+                return _PD_BY;
+            }
+            set
+            {
+                OnPD_BYChanging(value);
+                ReportPropertyChanging("PD_BY");
+                _PD_BY = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PD_BY");
+                OnPD_BYChanged();
+            }
+        }
+        private global::System.String _PD_BY;
+        partial void OnPD_BYChanging(global::System.String value);
+        partial void OnPD_BYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> PD_DATE
+        {
+            get
+            {
+                return _PD_DATE;
+            }
+            set
+            {
+                OnPD_DATEChanging(value);
+                ReportPropertyChanging("PD_DATE");
+                _PD_DATE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PD_DATE");
+                OnPD_DATEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _PD_DATE;
+        partial void OnPD_DATEChanging(Nullable<global::System.DateTime> value);
+        partial void OnPD_DATEChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_EXT_KANBAN", "EXT_KANBAN")]
+        public EXT_KANBAN EXT_KANBAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_KANBAN>("TAC_KANBANModel.FK_EXT_WORK_ORDER_EXT_KANBAN", "EXT_KANBAN").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_KANBAN>("TAC_KANBANModel.FK_EXT_WORK_ORDER_EXT_KANBAN", "EXT_KANBAN").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<EXT_KANBAN> EXT_KANBANReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_KANBAN>("TAC_KANBANModel.FK_EXT_WORK_ORDER_EXT_KANBAN", "EXT_KANBAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EXT_KANBAN>("TAC_KANBANModel.FK_EXT_WORK_ORDER_EXT_KANBAN", "EXT_KANBAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_STOCK")]
+        public EntityCollection<EXT_STOCK> EXT_STOCK
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_STOCK");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_EXT_WORK_ORDER", "EXT_STOCK", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER_DERAIL")]
+        public EntityCollection<EXT_WORK_ORDER_DERAIL> EXT_WORK_ORDER_DERAIL
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_WORK_ORDER_DERAIL>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER_DERAIL");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_WORK_ORDER_DERAIL>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER_DERAIL", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE")]
+        public MA_MODEL_STRUCTURE MA_MODEL_STRUCTURE
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTUREReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER")]
+        public MA_OPT_USER MA_OPT_USER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_OPT_USER> MA_OPT_USERReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_OPT_USER", "MA_OPT_USER", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="EXT_WORK_ORDER_DERAIL")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class EXT_WORK_ORDER_DERAIL : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new EXT_WORK_ORDER_DERAIL object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static EXT_WORK_ORDER_DERAIL CreateEXT_WORK_ORDER_DERAIL(global::System.Int32 id)
+        {
+            EXT_WORK_ORDER_DERAIL eXT_WORK_ORDER_DERAIL = new EXT_WORK_ORDER_DERAIL();
+            eXT_WORK_ORDER_DERAIL.ID = id;
+            return eXT_WORK_ORDER_DERAIL;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> WORK_ORDER_ID
+        {
+            get
+            {
+                return _WORK_ORDER_ID;
+            }
+            set
+            {
+                OnWORK_ORDER_IDChanging(value);
+                ReportPropertyChanging("WORK_ORDER_ID");
+                _WORK_ORDER_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("WORK_ORDER_ID");
+                OnWORK_ORDER_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _WORK_ORDER_ID;
+        partial void OnWORK_ORDER_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnWORK_ORDER_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> LOST_TIME_ID
+        {
+            get
+            {
+                return _LOST_TIME_ID;
+            }
+            set
+            {
+                OnLOST_TIME_IDChanging(value);
+                ReportPropertyChanging("LOST_TIME_ID");
+                _LOST_TIME_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LOST_TIME_ID");
+                OnLOST_TIME_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _LOST_TIME_ID;
+        partial void OnLOST_TIME_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnLOST_TIME_IDChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER")]
+        public EXT_WORK_ORDER EXT_WORK_ORDER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<EXT_WORK_ORDER> EXT_WORK_ORDERReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_EXT_WORK_ORDER", "EXT_WORK_ORDER", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "MA_LOSTTIME")]
+        public MA_LOSTTIME MA_LOSTTIME
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LOSTTIME>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "MA_LOSTTIME").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LOSTTIME>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "MA_LOSTTIME").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_LOSTTIME> MA_LOSTTIMEReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LOSTTIME>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "MA_LOSTTIME");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_LOSTTIME>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "MA_LOSTTIME", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="FIN_PLAN")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class FIN_PLAN : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new FIN_PLAN object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static FIN_PLAN CreateFIN_PLAN(global::System.Int32 id)
+        {
+            FIN_PLAN fIN_PLAN = new FIN_PLAN();
+            fIN_PLAN.ID = id;
+            return fIN_PLAN;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> CUSTOMER_ID
+        {
+            get
+            {
+                return _CUSTOMER_ID;
+            }
+            set
+            {
+                OnCUSTOMER_IDChanging(value);
+                ReportPropertyChanging("CUSTOMER_ID");
+                _CUSTOMER_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CUSTOMER_ID");
+                OnCUSTOMER_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _CUSTOMER_ID;
+        partial void OnCUSTOMER_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnCUSTOMER_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> MODEL_STRUCTURE_ID
+        {
+            get
+            {
+                return _MODEL_STRUCTURE_ID;
+            }
+            set
+            {
+                OnMODEL_STRUCTURE_IDChanging(value);
+                ReportPropertyChanging("MODEL_STRUCTURE_ID");
+                _MODEL_STRUCTURE_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MODEL_STRUCTURE_ID");
+                OnMODEL_STRUCTURE_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _MODEL_STRUCTURE_ID;
+        partial void OnMODEL_STRUCTURE_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnMODEL_STRUCTURE_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> LINE_ID
+        {
+            get
+            {
+                return _LINE_ID;
+            }
+            set
+            {
+                OnLINE_IDChanging(value);
+                ReportPropertyChanging("LINE_ID");
+                _LINE_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LINE_ID");
+                OnLINE_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _LINE_ID;
+        partial void OnLINE_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnLINE_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String STATUS
+        {
+            get
+            {
+                return _STATUS;
+            }
+            set
+            {
+                OnSTATUSChanging(value);
+                ReportPropertyChanging("STATUS");
+                _STATUS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("STATUS");
+                OnSTATUSChanged();
+            }
+        }
+        private global::System.String _STATUS;
+        partial void OnSTATUSChanging(global::System.String value);
+        partial void OnSTATUSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> QUANTITY_CAL
+        {
+            get
+            {
+                return _QUANTITY_CAL;
+            }
+            set
+            {
+                OnQUANTITY_CALChanging(value);
+                ReportPropertyChanging("QUANTITY_CAL");
+                _QUANTITY_CAL = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("QUANTITY_CAL");
+                OnQUANTITY_CALChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _QUANTITY_CAL;
+        partial void OnQUANTITY_CALChanging(Nullable<global::System.Int32> value);
+        partial void OnQUANTITY_CALChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String QUANTITY_ADJ
+        {
+            get
+            {
+                return _QUANTITY_ADJ;
+            }
+            set
+            {
+                OnQUANTITY_ADJChanging(value);
+                ReportPropertyChanging("QUANTITY_ADJ");
+                _QUANTITY_ADJ = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("QUANTITY_ADJ");
+                OnQUANTITY_ADJChanged();
+            }
+        }
+        private global::System.String _QUANTITY_ADJ;
+        partial void OnQUANTITY_ADJChanging(global::System.String value);
+        partial void OnQUANTITY_ADJChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> MONTH
+        {
+            get
+            {
+                return _MONTH;
+            }
+            set
+            {
+                OnMONTHChanging(value);
+                ReportPropertyChanging("MONTH");
+                _MONTH = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MONTH");
+                OnMONTHChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _MONTH;
+        partial void OnMONTHChanging(Nullable<global::System.Int32> value);
+        partial void OnMONTHChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> YEAR
+        {
+            get
+            {
+                return _YEAR;
+            }
+            set
+            {
+                OnYEARChanging(value);
+                ReportPropertyChanging("YEAR");
+                _YEAR = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("YEAR");
+                OnYEARChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _YEAR;
+        partial void OnYEARChanging(Nullable<global::System.Int32> value);
+        partial void OnYEARChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> UPDATE_BY
+        {
+            get
+            {
+                return _UPDATE_BY;
+            }
+            set
+            {
+                OnUPDATE_BYChanging(value);
+                ReportPropertyChanging("UPDATE_BY");
+                _UPDATE_BY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("UPDATE_BY");
+                OnUPDATE_BYChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _UPDATE_BY;
+        partial void OnUPDATE_BYChanging(Nullable<global::System.Int32> value);
+        partial void OnUPDATE_BYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> UPDATE_DATE
+        {
+            get
+            {
+                return _UPDATE_DATE;
+            }
+            set
+            {
+                OnUPDATE_DATEChanging(value);
+                ReportPropertyChanging("UPDATE_DATE");
+                _UPDATE_DATE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("UPDATE_DATE");
+                OnUPDATE_DATEChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _UPDATE_DATE;
+        partial void OnUPDATE_DATEChanging(Nullable<global::System.DateTime> value);
+        partial void OnUPDATE_DATEChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_PLAN_FIN_PLAN", "BEN_PLAN")]
+        public EntityCollection<BEN_PLAN> BEN_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_PLAN>("TAC_KANBANModel.FK_BEN_PLAN_FIN_PLAN", "BEN_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_PLAN>("TAC_KANBANModel.FK_BEN_PLAN_FIN_PLAN", "BEN_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_PLAN_FIN_PLAN", "EXT_PLAN")]
+        public EntityCollection<EXT_PLAN> EXT_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_PLAN>("TAC_KANBANModel.FK_EXT_PLAN_FIN_PLAN", "EXT_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_PLAN>("TAC_KANBANModel.FK_EXT_PLAN_FIN_PLAN", "EXT_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_PLAN_MA_LINE", "MA_LINE")]
+        public MA_LINE MA_LINE
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_FIN_PLAN_MA_LINE", "MA_LINE").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_FIN_PLAN_MA_LINE", "MA_LINE").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_LINE> MA_LINEReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_FIN_PLAN_MA_LINE", "MA_LINE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_LINE>("TAC_KANBANModel.FK_FIN_PLAN_MA_LINE", "MA_LINE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE")]
+        public MA_MODEL_STRUCTURE MA_MODEL_STRUCTURE
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FIN_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FIN_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTUREReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FIN_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FIN_PLAN_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_PLAN_MA_OPT_USER", "MA_OPT_USER")]
+        public MA_OPT_USER MA_OPT_USER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_FIN_PLAN_MA_OPT_USER", "MA_OPT_USER").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_FIN_PLAN_MA_OPT_USER", "MA_OPT_USER").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_OPT_USER> MA_OPT_USERReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_FIN_PLAN_MA_OPT_USER", "MA_OPT_USER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_OPT_USER>("TAC_KANBANModel.FK_FIN_PLAN_MA_OPT_USER", "MA_OPT_USER", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="FORECAST_ORDER")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class FORECAST_ORDER : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new FORECAST_ORDER object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static FORECAST_ORDER CreateFORECAST_ORDER(global::System.Int32 id)
+        {
+            FORECAST_ORDER fORECAST_ORDER = new FORECAST_ORDER();
+            fORECAST_ORDER.ID = id;
+            return fORECAST_ORDER;
         }
 
         #endregion
@@ -6190,48 +6062,24 @@ namespace Toacts.KanbanPost.Services.EF
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> MONTH_START
+        public Nullable<global::System.Int32> MONTH
         {
             get
             {
-                return _MONTH_START;
+                return _MONTH;
             }
             set
             {
-                OnMONTH_STARTChanging(value);
-                ReportPropertyChanging("MONTH_START");
-                _MONTH_START = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MONTH_START");
-                OnMONTH_STARTChanged();
+                OnMONTHChanging(value);
+                ReportPropertyChanging("MONTH");
+                _MONTH = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MONTH");
+                OnMONTHChanged();
             }
         }
-        private Nullable<global::System.Int32> _MONTH_START;
-        partial void OnMONTH_STARTChanging(Nullable<global::System.Int32> value);
-        partial void OnMONTH_STARTChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> MONTH_END
-        {
-            get
-            {
-                return _MONTH_END;
-            }
-            set
-            {
-                OnMONTH_ENDChanging(value);
-                ReportPropertyChanging("MONTH_END");
-                _MONTH_END = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MONTH_END");
-                OnMONTH_ENDChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _MONTH_END;
-        partial void OnMONTH_ENDChanging(Nullable<global::System.Int32> value);
-        partial void OnMONTH_ENDChanged();
+        private Nullable<global::System.Int32> _MONTH;
+        partial void OnMONTHChanging(Nullable<global::System.Int32> value);
+        partial void OnMONTHChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6256,58 +6104,2639 @@ namespace Toacts.KanbanPost.Services.EF
         private Nullable<global::System.Int32> _YEAR;
         partial void OnYEARChanging(Nullable<global::System.Int32> value);
         partial void OnYEARChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> UPDATE_BY
-        {
-            get
-            {
-                return _UPDATE_BY;
-            }
-            set
-            {
-                OnUPDATE_BYChanging(value);
-                ReportPropertyChanging("UPDATE_BY");
-                _UPDATE_BY = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("UPDATE_BY");
-                OnUPDATE_BYChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _UPDATE_BY;
-        partial void OnUPDATE_BYChanging(Nullable<global::System.Int32> value);
-        partial void OnUPDATE_BYChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> UPDATE_DATE
-        {
-            get
-            {
-                return _UPDATE_DATE;
-            }
-            set
-            {
-                OnUPDATE_DATEChanging(value);
-                ReportPropertyChanging("UPDATE_DATE");
-                _UPDATE_DATE = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("UPDATE_DATE");
-                OnUPDATE_DATEChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _UPDATE_DATE;
-        partial void OnUPDATE_DATEChanging(Nullable<global::System.DateTime> value);
-        partial void OnUPDATE_DATEChanged();
 
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER_DETAIL")]
+        public EntityCollection<FORECAST_ORDER_DETAIL> FORECAST_ORDER_DETAIL
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FORECAST_ORDER_DETAIL>("TAC_KANBANModel.FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER_DETAIL");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FORECAST_ORDER_DETAIL>("TAC_KANBANModel.FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER_DETAIL", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FORECAST_ORDER_FORECAST_ORDER", "MA_MODEL_STRUCTURE")]
+        public MA_MODEL_STRUCTURE MA_MODEL_STRUCTURE
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FORECAST_ORDER_FORECAST_ORDER", "MA_MODEL_STRUCTURE").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FORECAST_ORDER_FORECAST_ORDER", "MA_MODEL_STRUCTURE").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTUREReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FORECAST_ORDER_FORECAST_ORDER", "MA_MODEL_STRUCTURE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_FORECAST_ORDER_FORECAST_ORDER", "MA_MODEL_STRUCTURE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_STD_STOCK_FORECAST_ORDER", "STD_STOCK")]
+        public EntityCollection<STD_STOCK> STD_STOCK
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<STD_STOCK>("TAC_KANBANModel.FK_STD_STOCK_FORECAST_ORDER", "STD_STOCK");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<STD_STOCK>("TAC_KANBANModel.FK_STD_STOCK_FORECAST_ORDER", "STD_STOCK", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="FORECAST_ORDER_DETAIL")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class FORECAST_ORDER_DETAIL : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new FORECAST_ORDER_DETAIL object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static FORECAST_ORDER_DETAIL CreateFORECAST_ORDER_DETAIL(global::System.Int32 id)
+        {
+            FORECAST_ORDER_DETAIL fORECAST_ORDER_DETAIL = new FORECAST_ORDER_DETAIL();
+            fORECAST_ORDER_DETAIL.ID = id;
+            return fORECAST_ORDER_DETAIL;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> MONTH
+        {
+            get
+            {
+                return _MONTH;
+            }
+            set
+            {
+                OnMONTHChanging(value);
+                ReportPropertyChanging("MONTH");
+                _MONTH = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MONTH");
+                OnMONTHChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _MONTH;
+        partial void OnMONTHChanging(Nullable<global::System.Int32> value);
+        partial void OnMONTHChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> FORECAST_QTY
+        {
+            get
+            {
+                return _FORECAST_QTY;
+            }
+            set
+            {
+                OnFORECAST_QTYChanging(value);
+                ReportPropertyChanging("FORECAST_QTY");
+                _FORECAST_QTY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FORECAST_QTY");
+                OnFORECAST_QTYChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _FORECAST_QTY;
+        partial void OnFORECAST_QTYChanging(Nullable<global::System.Int32> value);
+        partial void OnFORECAST_QTYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> PLAN_QTY
+        {
+            get
+            {
+                return _PLAN_QTY;
+            }
+            set
+            {
+                OnPLAN_QTYChanging(value);
+                ReportPropertyChanging("PLAN_QTY");
+                _PLAN_QTY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PLAN_QTY");
+                OnPLAN_QTYChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _PLAN_QTY;
+        partial void OnPLAN_QTYChanging(Nullable<global::System.Int32> value);
+        partial void OnPLAN_QTYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> FORCAST_ID
+        {
+            get
+            {
+                return _FORCAST_ID;
+            }
+            set
+            {
+                OnFORCAST_IDChanging(value);
+                ReportPropertyChanging("FORCAST_ID");
+                _FORCAST_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FORCAST_ID");
+                OnFORCAST_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _FORCAST_ID;
+        partial void OnFORCAST_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnFORCAST_IDChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER")]
+        public FORECAST_ORDER FORECAST_ORDER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FORECAST_ORDER>("TAC_KANBANModel.FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FORECAST_ORDER>("TAC_KANBANModel.FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<FORECAST_ORDER> FORECAST_ORDERReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FORECAST_ORDER>("TAC_KANBANModel.FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<FORECAST_ORDER>("TAC_KANBANModel.FK_FORECAST_ORDER_DETAIL_FORECAST_ORDER", "FORECAST_ORDER", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_CUSTOMER")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class MA_CUSTOMER : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new MA_CUSTOMER object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static MA_CUSTOMER CreateMA_CUSTOMER(global::System.Int32 id)
+        {
+            MA_CUSTOMER mA_CUSTOMER = new MA_CUSTOMER();
+            mA_CUSTOMER.ID = id;
+            return mA_CUSTOMER;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CUSTOMER_NAME
+        {
+            get
+            {
+                return _CUSTOMER_NAME;
+            }
+            set
+            {
+                OnCUSTOMER_NAMEChanging(value);
+                ReportPropertyChanging("CUSTOMER_NAME");
+                _CUSTOMER_NAME = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CUSTOMER_NAME");
+                OnCUSTOMER_NAMEChanged();
+            }
+        }
+        private global::System.String _CUSTOMER_NAME;
+        partial void OnCUSTOMER_NAMEChanging(global::System.String value);
+        partial void OnCUSTOMER_NAMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CUSTOMER_SHOT
+        {
+            get
+            {
+                return _CUSTOMER_SHOT;
+            }
+            set
+            {
+                OnCUSTOMER_SHOTChanging(value);
+                ReportPropertyChanging("CUSTOMER_SHOT");
+                _CUSTOMER_SHOT = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CUSTOMER_SHOT");
+                OnCUSTOMER_SHOTChanged();
+            }
+        }
+        private global::System.String _CUSTOMER_SHOT;
+        partial void OnCUSTOMER_SHOTChanging(global::System.String value);
+        partial void OnCUSTOMER_SHOTChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_MA_CUSTOMER", "MA_MODEL")]
+        public EntityCollection<MA_MODEL> MA_MODEL
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MA_MODEL>("TAC_KANBANModel.FK_MA_MODEL_MA_CUSTOMER", "MA_MODEL");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MA_MODEL>("TAC_KANBANModel.FK_MA_MODEL_MA_CUSTOMER", "MA_MODEL", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_LINE")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class MA_LINE : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new MA_LINE object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static MA_LINE CreateMA_LINE(global::System.Int32 id)
+        {
+            MA_LINE mA_LINE = new MA_LINE();
+            mA_LINE.ID = id;
+            return mA_LINE;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String LINE_NAME
+        {
+            get
+            {
+                return _LINE_NAME;
+            }
+            set
+            {
+                OnLINE_NAMEChanging(value);
+                ReportPropertyChanging("LINE_NAME");
+                _LINE_NAME = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("LINE_NAME");
+                OnLINE_NAMEChanged();
+            }
+        }
+        private global::System.String _LINE_NAME;
+        partial void OnLINE_NAMEChanging(global::System.String value);
+        partial void OnLINE_NAMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> FACTORY
+        {
+            get
+            {
+                return _FACTORY;
+            }
+            set
+            {
+                OnFACTORYChanging(value);
+                ReportPropertyChanging("FACTORY");
+                _FACTORY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FACTORY");
+                OnFACTORYChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _FACTORY;
+        partial void OnFACTORYChanging(Nullable<global::System.Int32> value);
+        partial void OnFACTORYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PROCESS_NAME
+        {
+            get
+            {
+                return _PROCESS_NAME;
+            }
+            set
+            {
+                OnPROCESS_NAMEChanging(value);
+                ReportPropertyChanging("PROCESS_NAME");
+                _PROCESS_NAME = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PROCESS_NAME");
+                OnPROCESS_NAMEChanged();
+            }
+        }
+        private global::System.String _PROCESS_NAME;
+        partial void OnPROCESS_NAMEChanging(global::System.String value);
+        partial void OnPROCESS_NAMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> PROCESS_SEQ
+        {
+            get
+            {
+                return _PROCESS_SEQ;
+            }
+            set
+            {
+                OnPROCESS_SEQChanging(value);
+                ReportPropertyChanging("PROCESS_SEQ");
+                _PROCESS_SEQ = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PROCESS_SEQ");
+                OnPROCESS_SEQChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _PROCESS_SEQ;
+        partial void OnPROCESS_SEQChanging(Nullable<global::System.Int32> value);
+        partial void OnPROCESS_SEQChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_PLAN_MA_LINE", "BEN_PLAN")]
+        public EntityCollection<BEN_PLAN> BEN_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_PLAN>("TAC_KANBANModel.FK_BEN_PLAN_MA_LINE", "BEN_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_PLAN>("TAC_KANBANModel.FK_BEN_PLAN_MA_LINE", "BEN_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_PLAN_MA_LINE", "EXT_PLAN")]
+        public EntityCollection<EXT_PLAN> EXT_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_PLAN>("TAC_KANBANModel.FK_EXT_PLAN_MA_LINE", "EXT_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_PLAN>("TAC_KANBANModel.FK_EXT_PLAN_MA_LINE", "EXT_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_PLAN_MA_LINE", "FIN_PLAN")]
+        public EntityCollection<FIN_PLAN> FIN_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FIN_PLAN>("TAC_KANBANModel.FK_FIN_PLAN_MA_LINE", "FIN_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FIN_PLAN>("TAC_KANBANModel.FK_FIN_PLAN_MA_LINE", "FIN_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_LINE_BEN", "MA_MODEL_STRUCTURE")]
+        public EntityCollection<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTURE
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_BEN", "MA_MODEL_STRUCTURE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_BEN", "MA_MODEL_STRUCTURE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_LINE_EXT", "MA_MODEL_STRUCTURE")]
+        public EntityCollection<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTURE1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_EXT", "MA_MODEL_STRUCTURE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_EXT", "MA_MODEL_STRUCTURE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_LINE_FIN", "MA_MODEL_STRUCTURE")]
+        public EntityCollection<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTURE2
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_FIN", "MA_MODEL_STRUCTURE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_FIN", "MA_MODEL_STRUCTURE", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_LOSTTIME")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class MA_LOSTTIME : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new MA_LOSTTIME object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static MA_LOSTTIME CreateMA_LOSTTIME(global::System.Int32 id)
+        {
+            MA_LOSTTIME mA_LOSTTIME = new MA_LOSTTIME();
+            mA_LOSTTIME.ID = id;
+            return mA_LOSTTIME;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String DESCRIPTION
+        {
+            get
+            {
+                return _DESCRIPTION;
+            }
+            set
+            {
+                OnDESCRIPTIONChanging(value);
+                ReportPropertyChanging("DESCRIPTION");
+                _DESCRIPTION = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("DESCRIPTION");
+                OnDESCRIPTIONChanged();
+            }
+        }
+        private global::System.String _DESCRIPTION;
+        partial void OnDESCRIPTIONChanging(global::System.String value);
+        partial void OnDESCRIPTIONChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> LISTTIME
+        {
+            get
+            {
+                return _LISTTIME;
+            }
+            set
+            {
+                OnLISTTIMEChanging(value);
+                ReportPropertyChanging("LISTTIME");
+                _LISTTIME = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LISTTIME");
+                OnLISTTIMEChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _LISTTIME;
+        partial void OnLISTTIMEChanging(Nullable<global::System.Int32> value);
+        partial void OnLISTTIMEChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "EXT_WORK_ORDER_DERAIL")]
+        public EntityCollection<EXT_WORK_ORDER_DERAIL> EXT_WORK_ORDER_DERAIL
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_WORK_ORDER_DERAIL>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "EXT_WORK_ORDER_DERAIL");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_WORK_ORDER_DERAIL>("TAC_KANBANModel.FK_EXT_WORK_ORDER_DERAIL_MA_LOSTTIME", "EXT_WORK_ORDER_DERAIL", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_MODEL")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class MA_MODEL : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new MA_MODEL object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static MA_MODEL CreateMA_MODEL(global::System.Int32 id)
+        {
+            MA_MODEL mA_MODEL = new MA_MODEL();
+            mA_MODEL.ID = id;
+            return mA_MODEL;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String MODEL_NAME
+        {
+            get
+            {
+                return _MODEL_NAME;
+            }
+            set
+            {
+                OnMODEL_NAMEChanging(value);
+                ReportPropertyChanging("MODEL_NAME");
+                _MODEL_NAME = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("MODEL_NAME");
+                OnMODEL_NAMEChanged();
+            }
+        }
+        private global::System.String _MODEL_NAME;
+        partial void OnMODEL_NAMEChanging(global::System.String value);
+        partial void OnMODEL_NAMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> CUSTOMER_ID
+        {
+            get
+            {
+                return _CUSTOMER_ID;
+            }
+            set
+            {
+                OnCUSTOMER_IDChanging(value);
+                ReportPropertyChanging("CUSTOMER_ID");
+                _CUSTOMER_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CUSTOMER_ID");
+                OnCUSTOMER_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _CUSTOMER_ID;
+        partial void OnCUSTOMER_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnCUSTOMER_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PREFIX
+        {
+            get
+            {
+                return _PREFIX;
+            }
+            set
+            {
+                OnPREFIXChanging(value);
+                ReportPropertyChanging("PREFIX");
+                _PREFIX = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PREFIX");
+                OnPREFIXChanged();
+            }
+        }
+        private global::System.String _PREFIX;
+        partial void OnPREFIXChanging(global::System.String value);
+        partial void OnPREFIXChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_MA_CUSTOMER", "MA_CUSTOMER")]
+        public MA_CUSTOMER MA_CUSTOMER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_CUSTOMER>("TAC_KANBANModel.FK_MA_MODEL_MA_CUSTOMER", "MA_CUSTOMER").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_CUSTOMER>("TAC_KANBANModel.FK_MA_MODEL_MA_CUSTOMER", "MA_CUSTOMER").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_CUSTOMER> MA_CUSTOMERReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_CUSTOMER>("TAC_KANBANModel.FK_MA_MODEL_MA_CUSTOMER", "MA_CUSTOMER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_CUSTOMER>("TAC_KANBANModel.FK_MA_MODEL_MA_CUSTOMER", "MA_CUSTOMER", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_MODEL_STRUCTURE")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class MA_MODEL_STRUCTURE : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new MA_MODEL_STRUCTURE object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static MA_MODEL_STRUCTURE CreateMA_MODEL_STRUCTURE(global::System.Int32 id)
+        {
+            MA_MODEL_STRUCTURE mA_MODEL_STRUCTURE = new MA_MODEL_STRUCTURE();
+            mA_MODEL_STRUCTURE.ID = id;
+            return mA_MODEL_STRUCTURE;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> PART_ID
+        {
+            get
+            {
+                return _PART_ID;
+            }
+            set
+            {
+                OnPART_IDChanging(value);
+                ReportPropertyChanging("PART_ID");
+                _PART_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PART_ID");
+                OnPART_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _PART_ID;
+        partial void OnPART_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnPART_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> MODEL_ID
+        {
+            get
+            {
+                return _MODEL_ID;
+            }
+            set
+            {
+                OnMODEL_IDChanging(value);
+                ReportPropertyChanging("MODEL_ID");
+                _MODEL_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MODEL_ID");
+                OnMODEL_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _MODEL_ID;
+        partial void OnMODEL_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnMODEL_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> LINE_SPEED
+        {
+            get
+            {
+                return _LINE_SPEED;
+            }
+            set
+            {
+                OnLINE_SPEEDChanging(value);
+                ReportPropertyChanging("LINE_SPEED");
+                _LINE_SPEED = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LINE_SPEED");
+                OnLINE_SPEEDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _LINE_SPEED;
+        partial void OnLINE_SPEEDChanging(Nullable<global::System.Int32> value);
+        partial void OnLINE_SPEEDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> LOT_SIZE
+        {
+            get
+            {
+                return _LOT_SIZE;
+            }
+            set
+            {
+                OnLOT_SIZEChanging(value);
+                ReportPropertyChanging("LOT_SIZE");
+                _LOT_SIZE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LOT_SIZE");
+                OnLOT_SIZEChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _LOT_SIZE;
+        partial void OnLOT_SIZEChanging(Nullable<global::System.Int32> value);
+        partial void OnLOT_SIZEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> PERCENT_DEFECT
+        {
+            get
+            {
+                return _PERCENT_DEFECT;
+            }
+            set
+            {
+                OnPERCENT_DEFECTChanging(value);
+                ReportPropertyChanging("PERCENT_DEFECT");
+                _PERCENT_DEFECT = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PERCENT_DEFECT");
+                OnPERCENT_DEFECTChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _PERCENT_DEFECT;
+        partial void OnPERCENT_DEFECTChanging(Nullable<global::System.Int32> value);
+        partial void OnPERCENT_DEFECTChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> DEFAULT_EXT_LINE_ID
+        {
+            get
+            {
+                return _DEFAULT_EXT_LINE_ID;
+            }
+            set
+            {
+                OnDEFAULT_EXT_LINE_IDChanging(value);
+                ReportPropertyChanging("DEFAULT_EXT_LINE_ID");
+                _DEFAULT_EXT_LINE_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DEFAULT_EXT_LINE_ID");
+                OnDEFAULT_EXT_LINE_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _DEFAULT_EXT_LINE_ID;
+        partial void OnDEFAULT_EXT_LINE_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnDEFAULT_EXT_LINE_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> DEFAULT_BEN_LINE_ID
+        {
+            get
+            {
+                return _DEFAULT_BEN_LINE_ID;
+            }
+            set
+            {
+                OnDEFAULT_BEN_LINE_IDChanging(value);
+                ReportPropertyChanging("DEFAULT_BEN_LINE_ID");
+                _DEFAULT_BEN_LINE_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DEFAULT_BEN_LINE_ID");
+                OnDEFAULT_BEN_LINE_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _DEFAULT_BEN_LINE_ID;
+        partial void OnDEFAULT_BEN_LINE_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnDEFAULT_BEN_LINE_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> DEFAULT_FIN_LINE_ID
+        {
+            get
+            {
+                return _DEFAULT_FIN_LINE_ID;
+            }
+            set
+            {
+                OnDEFAULT_FIN_LINE_IDChanging(value);
+                ReportPropertyChanging("DEFAULT_FIN_LINE_ID");
+                _DEFAULT_FIN_LINE_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DEFAULT_FIN_LINE_ID");
+                OnDEFAULT_FIN_LINE_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _DEFAULT_FIN_LINE_ID;
+        partial void OnDEFAULT_FIN_LINE_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnDEFAULT_FIN_LINE_IDChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_KANBAN_MA_MODEL_STRUCTURE", "BEN_KANBAN")]
+        public EntityCollection<BEN_KANBAN> BEN_KANBAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_KANBAN>("TAC_KANBANModel.FK_BEN_KANBAN_MA_MODEL_STRUCTURE", "BEN_KANBAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_KANBAN>("TAC_KANBANModel.FK_BEN_KANBAN_MA_MODEL_STRUCTURE", "BEN_KANBAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_PLAN_MA_MODEL_STRUCTURE", "BEN_PLAN")]
+        public EntityCollection<BEN_PLAN> BEN_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_PLAN>("TAC_KANBANModel.FK_BEN_PLAN_MA_MODEL_STRUCTURE", "BEN_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_PLAN>("TAC_KANBANModel.FK_BEN_PLAN_MA_MODEL_STRUCTURE", "BEN_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_WORK_ORDER_MA_MODEL_STRUCTURE", "BEN_WORK_ORDER")]
+        public EntityCollection<BEN_WORK_ORDER> BEN_WORK_ORDER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_WORK_ORDER>("TAC_KANBANModel.FK_BEN_WORK_ORDER_MA_MODEL_STRUCTURE", "BEN_WORK_ORDER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_WORK_ORDER>("TAC_KANBANModel.FK_BEN_WORK_ORDER_MA_MODEL_STRUCTURE", "BEN_WORK_ORDER", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_PLAN_MA_MODEL_STRUCTURE", "EXT_PLAN")]
+        public EntityCollection<EXT_PLAN> EXT_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_PLAN>("TAC_KANBANModel.FK_EXT_PLAN_MA_MODEL_STRUCTURE", "EXT_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_PLAN>("TAC_KANBANModel.FK_EXT_PLAN_MA_MODEL_STRUCTURE", "EXT_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_MA_MODEL_STRUCTURE", "EXT_STOCK")]
+        public EntityCollection<EXT_STOCK> EXT_STOCK
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_MA_MODEL_STRUCTURE", "EXT_STOCK");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_MA_MODEL_STRUCTURE", "EXT_STOCK", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "EXT_WORK_ORDER")]
+        public EntityCollection<EXT_WORK_ORDER> EXT_WORK_ORDER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "EXT_WORK_ORDER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_MODEL_STRUCTURE", "EXT_WORK_ORDER", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_PLAN_MA_MODEL_STRUCTURE", "FIN_PLAN")]
+        public EntityCollection<FIN_PLAN> FIN_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FIN_PLAN>("TAC_KANBANModel.FK_FIN_PLAN_MA_MODEL_STRUCTURE", "FIN_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FIN_PLAN>("TAC_KANBANModel.FK_FIN_PLAN_MA_MODEL_STRUCTURE", "FIN_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FORECAST_ORDER_FORECAST_ORDER", "FORECAST_ORDER")]
+        public EntityCollection<FORECAST_ORDER> FORECAST_ORDER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FORECAST_ORDER>("TAC_KANBANModel.FK_FORECAST_ORDER_FORECAST_ORDER", "FORECAST_ORDER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FORECAST_ORDER>("TAC_KANBANModel.FK_FORECAST_ORDER_FORECAST_ORDER", "FORECAST_ORDER", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_LINE_BEN", "MA_LINE")]
+        public MA_LINE MA_LINE
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_BEN", "MA_LINE").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_BEN", "MA_LINE").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_LINE> MA_LINEReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_BEN", "MA_LINE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_LINE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_BEN", "MA_LINE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_LINE_EXT", "MA_LINE")]
+        public MA_LINE MA_LINE1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_EXT", "MA_LINE").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_EXT", "MA_LINE").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_LINE> MA_LINE1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_EXT", "MA_LINE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_LINE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_EXT", "MA_LINE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_LINE_FIN", "MA_LINE")]
+        public MA_LINE MA_LINE2
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_FIN", "MA_LINE").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_FIN", "MA_LINE").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_LINE> MA_LINE2Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_LINE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_FIN", "MA_LINE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_LINE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_LINE_FIN", "MA_LINE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_PART", "MA_PART")]
+        public MA_PART MA_PART
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_PART>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_PART", "MA_PART").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_PART>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_PART", "MA_PART").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<MA_PART> MA_PARTReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_PART>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_PART", "MA_PART");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_PART>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_PART", "MA_PART", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_OPT_ROLE")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class MA_OPT_ROLE : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new MA_OPT_ROLE object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static MA_OPT_ROLE CreateMA_OPT_ROLE(global::System.Int32 id)
+        {
+            MA_OPT_ROLE mA_OPT_ROLE = new MA_OPT_ROLE();
+            mA_OPT_ROLE.ID = id;
+            return mA_OPT_ROLE;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String ROLE_NAME
+        {
+            get
+            {
+                return _ROLE_NAME;
+            }
+            set
+            {
+                OnROLE_NAMEChanging(value);
+                ReportPropertyChanging("ROLE_NAME");
+                _ROLE_NAME = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("ROLE_NAME");
+                OnROLE_NAMEChanged();
+            }
+        }
+        private global::System.String _ROLE_NAME;
+        partial void OnROLE_NAMEChanging(global::System.String value);
+        partial void OnROLE_NAMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String DESCRIPTION
+        {
+            get
+            {
+                return _DESCRIPTION;
+            }
+            set
+            {
+                OnDESCRIPTIONChanging(value);
+                ReportPropertyChanging("DESCRIPTION");
+                _DESCRIPTION = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("DESCRIPTION");
+                OnDESCRIPTIONChanged();
+            }
+        }
+        private global::System.String _DESCRIPTION;
+        partial void OnDESCRIPTIONChanging(global::System.String value);
+        partial void OnDESCRIPTIONChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_OPT_USER")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class MA_OPT_USER : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new MA_OPT_USER object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static MA_OPT_USER CreateMA_OPT_USER(global::System.Int32 id)
+        {
+            MA_OPT_USER mA_OPT_USER = new MA_OPT_USER();
+            mA_OPT_USER.ID = id;
+            return mA_OPT_USER;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String USER_NAME
+        {
+            get
+            {
+                return _USER_NAME;
+            }
+            set
+            {
+                OnUSER_NAMEChanging(value);
+                ReportPropertyChanging("USER_NAME");
+                _USER_NAME = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("USER_NAME");
+                OnUSER_NAMEChanged();
+            }
+        }
+        private global::System.String _USER_NAME;
+        partial void OnUSER_NAMEChanging(global::System.String value);
+        partial void OnUSER_NAMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PASSWORD
+        {
+            get
+            {
+                return _PASSWORD;
+            }
+            set
+            {
+                OnPASSWORDChanging(value);
+                ReportPropertyChanging("PASSWORD");
+                _PASSWORD = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PASSWORD");
+                OnPASSWORDChanged();
+            }
+        }
+        private global::System.String _PASSWORD;
+        partial void OnPASSWORDChanging(global::System.String value);
+        partial void OnPASSWORDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> ROLE_ID
+        {
+            get
+            {
+                return _ROLE_ID;
+            }
+            set
+            {
+                OnROLE_IDChanging(value);
+                ReportPropertyChanging("ROLE_ID");
+                _ROLE_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ROLE_ID");
+                OnROLE_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _ROLE_ID;
+        partial void OnROLE_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnROLE_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String USER_CODE
+        {
+            get
+            {
+                return _USER_CODE;
+            }
+            set
+            {
+                OnUSER_CODEChanging(value);
+                ReportPropertyChanging("USER_CODE");
+                _USER_CODE = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("USER_CODE");
+                OnUSER_CODEChanged();
+            }
+        }
+        private global::System.String _USER_CODE;
+        partial void OnUSER_CODEChanging(global::System.String value);
+        partial void OnUSER_CODEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] IMAGE
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_IMAGE);
+            }
+            set
+            {
+                OnIMAGEChanging(value);
+                ReportPropertyChanging("IMAGE");
+                _IMAGE = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("IMAGE");
+                OnIMAGEChanged();
+            }
+        }
+        private global::System.Byte[] _IMAGE;
+        partial void OnIMAGEChanging(global::System.Byte[] value);
+        partial void OnIMAGEChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_PLAN_MA_OPT_USER", "BEN_PLAN")]
+        public EntityCollection<BEN_PLAN> BEN_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_PLAN>("TAC_KANBANModel.FK_BEN_PLAN_MA_OPT_USER", "BEN_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_PLAN>("TAC_KANBANModel.FK_BEN_PLAN_MA_OPT_USER", "BEN_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_STOCK_MA_OPT_USER", "BEN_STOCK")]
+        public EntityCollection<BEN_STOCK> BEN_STOCK
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_STOCK>("TAC_KANBANModel.FK_BEN_STOCK_MA_OPT_USER", "BEN_STOCK");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_STOCK>("TAC_KANBANModel.FK_BEN_STOCK_MA_OPT_USER", "BEN_STOCK", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_STOCK_MA_OPT_USER1", "BEN_STOCK")]
+        public EntityCollection<BEN_STOCK> BEN_STOCK1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_STOCK>("TAC_KANBANModel.FK_BEN_STOCK_MA_OPT_USER1", "BEN_STOCK");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_STOCK>("TAC_KANBANModel.FK_BEN_STOCK_MA_OPT_USER1", "BEN_STOCK", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_WORK_ORDER_MA_OPT_USER", "BEN_WORK_ORDER")]
+        public EntityCollection<BEN_WORK_ORDER> BEN_WORK_ORDER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_WORK_ORDER>("TAC_KANBANModel.FK_BEN_WORK_ORDER_MA_OPT_USER", "BEN_WORK_ORDER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_WORK_ORDER>("TAC_KANBANModel.FK_BEN_WORK_ORDER_MA_OPT_USER", "BEN_WORK_ORDER", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_PLAN_MA_OPT_USER", "EXT_PLAN")]
+        public EntityCollection<EXT_PLAN> EXT_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_PLAN>("TAC_KANBANModel.FK_EXT_PLAN_MA_OPT_USER", "EXT_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_PLAN>("TAC_KANBANModel.FK_EXT_PLAN_MA_OPT_USER", "EXT_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_MA_OPT_USER", "EXT_STOCK")]
+        public EntityCollection<EXT_STOCK> EXT_STOCK
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_MA_OPT_USER", "EXT_STOCK");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_MA_OPT_USER", "EXT_STOCK", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_STOCK_MA_OPT_USER1", "EXT_STOCK")]
+        public EntityCollection<EXT_STOCK> EXT_STOCK1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_MA_OPT_USER1", "EXT_STOCK");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_STOCK>("TAC_KANBANModel.FK_EXT_STOCK_MA_OPT_USER1", "EXT_STOCK", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_WORK_ORDER_MA_OPT_USER", "EXT_WORK_ORDER")]
+        public EntityCollection<EXT_WORK_ORDER> EXT_WORK_ORDER
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_OPT_USER", "EXT_WORK_ORDER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_WORK_ORDER>("TAC_KANBANModel.FK_EXT_WORK_ORDER_MA_OPT_USER", "EXT_WORK_ORDER", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_FIN_PLAN_MA_OPT_USER", "FIN_PLAN")]
+        public EntityCollection<FIN_PLAN> FIN_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FIN_PLAN>("TAC_KANBANModel.FK_FIN_PLAN_MA_OPT_USER", "FIN_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FIN_PLAN>("TAC_KANBANModel.FK_FIN_PLAN_MA_OPT_USER", "FIN_PLAN", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="MA_PART")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class MA_PART : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new MA_PART object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static MA_PART CreateMA_PART(global::System.Int32 id)
+        {
+            MA_PART mA_PART = new MA_PART();
+            mA_PART.ID = id;
+            return mA_PART;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PART_NAME
+        {
+            get
+            {
+                return _PART_NAME;
+            }
+            set
+            {
+                OnPART_NAMEChanging(value);
+                ReportPropertyChanging("PART_NAME");
+                _PART_NAME = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PART_NAME");
+                OnPART_NAMEChanged();
+            }
+        }
+        private global::System.String _PART_NAME;
+        partial void OnPART_NAMEChanging(global::System.String value);
+        partial void OnPART_NAMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String SHORT_NAME
+        {
+            get
+            {
+                return _SHORT_NAME;
+            }
+            set
+            {
+                OnSHORT_NAMEChanging(value);
+                ReportPropertyChanging("SHORT_NAME");
+                _SHORT_NAME = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("SHORT_NAME");
+                OnSHORT_NAMEChanged();
+            }
+        }
+        private global::System.String _SHORT_NAME;
+        partial void OnSHORT_NAMEChanging(global::System.String value);
+        partial void OnSHORT_NAMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PART_NO
+        {
+            get
+            {
+                return _PART_NO;
+            }
+            set
+            {
+                OnPART_NOChanging(value);
+                ReportPropertyChanging("PART_NO");
+                _PART_NO = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PART_NO");
+                OnPART_NOChanged();
+            }
+        }
+        private global::System.String _PART_NO;
+        partial void OnPART_NOChanging(global::System.String value);
+        partial void OnPART_NOChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> PROD_LENGTH
+        {
+            get
+            {
+                return _PROD_LENGTH;
+            }
+            set
+            {
+                OnPROD_LENGTHChanging(value);
+                ReportPropertyChanging("PROD_LENGTH");
+                _PROD_LENGTH = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PROD_LENGTH");
+                OnPROD_LENGTHChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _PROD_LENGTH;
+        partial void OnPROD_LENGTHChanging(Nullable<global::System.Int32> value);
+        partial void OnPROD_LENGTHChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PACKING_TYPE
+        {
+            get
+            {
+                return _PACKING_TYPE;
+            }
+            set
+            {
+                OnPACKING_TYPEChanging(value);
+                ReportPropertyChanging("PACKING_TYPE");
+                _PACKING_TYPE = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PACKING_TYPE");
+                OnPACKING_TYPEChanged();
+            }
+        }
+        private global::System.String _PACKING_TYPE;
+        partial void OnPACKING_TYPEChanging(global::System.String value);
+        partial void OnPACKING_TYPEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PLASTIC_1
+        {
+            get
+            {
+                return _PLASTIC_1;
+            }
+            set
+            {
+                OnPLASTIC_1Changing(value);
+                ReportPropertyChanging("PLASTIC_1");
+                _PLASTIC_1 = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PLASTIC_1");
+                OnPLASTIC_1Changed();
+            }
+        }
+        private global::System.String _PLASTIC_1;
+        partial void OnPLASTIC_1Changing(global::System.String value);
+        partial void OnPLASTIC_1Changed();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PLASTIC_2
+        {
+            get
+            {
+                return _PLASTIC_2;
+            }
+            set
+            {
+                OnPLASTIC_2Changing(value);
+                ReportPropertyChanging("PLASTIC_2");
+                _PLASTIC_2 = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PLASTIC_2");
+                OnPLASTIC_2Changed();
+            }
+        }
+        private global::System.String _PLASTIC_2;
+        partial void OnPLASTIC_2Changing(global::System.String value);
+        partial void OnPLASTIC_2Changed();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PLASTIC_3
+        {
+            get
+            {
+                return _PLASTIC_3;
+            }
+            set
+            {
+                OnPLASTIC_3Changing(value);
+                ReportPropertyChanging("PLASTIC_3");
+                _PLASTIC_3 = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PLASTIC_3");
+                OnPLASTIC_3Changed();
+            }
+        }
+        private global::System.String _PLASTIC_3;
+        partial void OnPLASTIC_3Changing(global::System.String value);
+        partial void OnPLASTIC_3Changed();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String METAL
+        {
+            get
+            {
+                return _METAL;
+            }
+            set
+            {
+                OnMETALChanging(value);
+                ReportPropertyChanging("METAL");
+                _METAL = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("METAL");
+                OnMETALChanged();
+            }
+        }
+        private global::System.String _METAL;
+        partial void OnMETALChanging(global::System.String value);
+        partial void OnMETALChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PROFILE_1
+        {
+            get
+            {
+                return _PROFILE_1;
+            }
+            set
+            {
+                OnPROFILE_1Changing(value);
+                ReportPropertyChanging("PROFILE_1");
+                _PROFILE_1 = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PROFILE_1");
+                OnPROFILE_1Changed();
+            }
+        }
+        private global::System.String _PROFILE_1;
+        partial void OnPROFILE_1Changing(global::System.String value);
+        partial void OnPROFILE_1Changed();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PROFILE_2
+        {
+            get
+            {
+                return _PROFILE_2;
+            }
+            set
+            {
+                OnPROFILE_2Changing(value);
+                ReportPropertyChanging("PROFILE_2");
+                _PROFILE_2 = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PROFILE_2");
+                OnPROFILE_2Changed();
+            }
+        }
+        private global::System.String _PROFILE_2;
+        partial void OnPROFILE_2Changing(global::System.String value);
+        partial void OnPROFILE_2Changed();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> EXTCUT
+        {
+            get
+            {
+                return _EXTCUT;
+            }
+            set
+            {
+                OnEXTCUTChanging(value);
+                ReportPropertyChanging("EXTCUT");
+                _EXTCUT = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("EXTCUT");
+                OnEXTCUTChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _EXTCUT;
+        partial void OnEXTCUTChanging(Nullable<global::System.Int32> value);
+        partial void OnEXTCUTChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> PACK_PCS_LOT
+        {
+            get
+            {
+                return _PACK_PCS_LOT;
+            }
+            set
+            {
+                OnPACK_PCS_LOTChanging(value);
+                ReportPropertyChanging("PACK_PCS_LOT");
+                _PACK_PCS_LOT = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PACK_PCS_LOT");
+                OnPACK_PCS_LOTChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _PACK_PCS_LOT;
+        partial void OnPACK_PCS_LOTChanging(Nullable<global::System.Int32> value);
+        partial void OnPACK_PCS_LOTChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> PCS_TRAY
+        {
+            get
+            {
+                return _PCS_TRAY;
+            }
+            set
+            {
+                OnPCS_TRAYChanging(value);
+                ReportPropertyChanging("PCS_TRAY");
+                _PCS_TRAY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PCS_TRAY");
+                OnPCS_TRAYChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _PCS_TRAY;
+        partial void OnPCS_TRAYChanging(Nullable<global::System.Int32> value);
+        partial void OnPCS_TRAYChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> PCS_CART_LOT
+        {
+            get
+            {
+                return _PCS_CART_LOT;
+            }
+            set
+            {
+                OnPCS_CART_LOTChanging(value);
+                ReportPropertyChanging("PCS_CART_LOT");
+                _PCS_CART_LOT = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PCS_CART_LOT");
+                OnPCS_CART_LOTChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _PCS_CART_LOT;
+        partial void OnPCS_CART_LOTChanging(Nullable<global::System.Int32> value);
+        partial void OnPCS_CART_LOTChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String SIZECART
+        {
+            get
+            {
+                return _SIZECART;
+            }
+            set
+            {
+                OnSIZECARTChanging(value);
+                ReportPropertyChanging("SIZECART");
+                _SIZECART = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("SIZECART");
+                OnSIZECARTChanged();
+            }
+        }
+        private global::System.String _SIZECART;
+        partial void OnSIZECARTChanging(global::System.String value);
+        partial void OnSIZECARTChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> LENGTH
+        {
+            get
+            {
+                return _LENGTH;
+            }
+            set
+            {
+                OnLENGTHChanging(value);
+                ReportPropertyChanging("LENGTH");
+                _LENGTH = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LENGTH");
+                OnLENGTHChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _LENGTH;
+        partial void OnLENGTHChanging(Nullable<global::System.Int32> value);
+        partial void OnLENGTHChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String LINE_SPEED
+        {
+            get
+            {
+                return _LINE_SPEED;
+            }
+            set
+            {
+                OnLINE_SPEEDChanging(value);
+                ReportPropertyChanging("LINE_SPEED");
+                _LINE_SPEED = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("LINE_SPEED");
+                OnLINE_SPEEDChanged();
+            }
+        }
+        private global::System.String _LINE_SPEED;
+        partial void OnLINE_SPEEDChanging(global::System.String value);
+        partial void OnLINE_SPEEDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] PART_IMAGE
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_PART_IMAGE);
+            }
+            set
+            {
+                OnPART_IMAGEChanging(value);
+                ReportPropertyChanging("PART_IMAGE");
+                _PART_IMAGE = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PART_IMAGE");
+                OnPART_IMAGEChanged();
+            }
+        }
+        private global::System.Byte[] _PART_IMAGE;
+        partial void OnPART_IMAGEChanging(global::System.Byte[] value);
+        partial void OnPART_IMAGEChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_FIN_MAPPING_PART_MA_PART", "EXT_FIN_MAPPING_PART")]
+        public EntityCollection<EXT_FIN_MAPPING_PART> EXT_FIN_MAPPING_PART
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_FIN_MAPPING_PART>("TAC_KANBANModel.FK_EXT_FIN_MAPPING_PART_MA_PART", "EXT_FIN_MAPPING_PART");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_FIN_MAPPING_PART>("TAC_KANBANModel.FK_EXT_FIN_MAPPING_PART_MA_PART", "EXT_FIN_MAPPING_PART", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_MA_MODEL_STRUCTURE_MA_PART", "MA_MODEL_STRUCTURE")]
+        public EntityCollection<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTURE
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_PART", "MA_MODEL_STRUCTURE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_MA_MODEL_STRUCTURE_MA_PART", "MA_MODEL_STRUCTURE", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
     
     /// <summary>
@@ -6367,48 +8796,48 @@ namespace Toacts.KanbanPost.Services.EF
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> FORCAST_ORDER_ID
+        public Nullable<global::System.Int32> FORECAST_ORDER_ID
         {
             get
             {
-                return _FORCAST_ORDER_ID;
+                return _FORECAST_ORDER_ID;
             }
             set
             {
-                OnFORCAST_ORDER_IDChanging(value);
-                ReportPropertyChanging("FORCAST_ORDER_ID");
-                _FORCAST_ORDER_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FORCAST_ORDER_ID");
-                OnFORCAST_ORDER_IDChanged();
+                OnFORECAST_ORDER_IDChanging(value);
+                ReportPropertyChanging("FORECAST_ORDER_ID");
+                _FORECAST_ORDER_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FORECAST_ORDER_ID");
+                OnFORECAST_ORDER_IDChanged();
             }
         }
-        private Nullable<global::System.Int32> _FORCAST_ORDER_ID;
-        partial void OnFORCAST_ORDER_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnFORCAST_ORDER_IDChanged();
+        private Nullable<global::System.Int32> _FORECAST_ORDER_ID;
+        partial void OnFORECAST_ORDER_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnFORECAST_ORDER_IDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> MODEL_STRUCTURE_ID
+        public Nullable<global::System.Int32> FIN_PLAN_ID
         {
             get
             {
-                return _MODEL_STRUCTURE_ID;
+                return _FIN_PLAN_ID;
             }
             set
             {
-                OnMODEL_STRUCTURE_IDChanging(value);
-                ReportPropertyChanging("MODEL_STRUCTURE_ID");
-                _MODEL_STRUCTURE_ID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MODEL_STRUCTURE_ID");
-                OnMODEL_STRUCTURE_IDChanged();
+                OnFIN_PLAN_IDChanging(value);
+                ReportPropertyChanging("FIN_PLAN_ID");
+                _FIN_PLAN_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FIN_PLAN_ID");
+                OnFIN_PLAN_IDChanged();
             }
         }
-        private Nullable<global::System.Int32> _MODEL_STRUCTURE_ID;
-        partial void OnMODEL_STRUCTURE_IDChanging(Nullable<global::System.Int32> value);
-        partial void OnMODEL_STRUCTURE_IDChanged();
+        private Nullable<global::System.Int32> _FIN_PLAN_ID;
+        partial void OnFIN_PLAN_IDChanging(Nullable<global::System.Int32> value);
+        partial void OnFIN_PLAN_IDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6439,24 +8868,24 @@ namespace Toacts.KanbanPost.Services.EF
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> MIN_STOCK_DAYS
+        public Nullable<global::System.Int32> MIN_STOCK_DAY
         {
             get
             {
-                return _MIN_STOCK_DAYS;
+                return _MIN_STOCK_DAY;
             }
             set
             {
-                OnMIN_STOCK_DAYSChanging(value);
-                ReportPropertyChanging("MIN_STOCK_DAYS");
-                _MIN_STOCK_DAYS = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MIN_STOCK_DAYS");
-                OnMIN_STOCK_DAYSChanged();
+                OnMIN_STOCK_DAYChanging(value);
+                ReportPropertyChanging("MIN_STOCK_DAY");
+                _MIN_STOCK_DAY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MIN_STOCK_DAY");
+                OnMIN_STOCK_DAYChanged();
             }
         }
-        private Nullable<global::System.Int32> _MIN_STOCK_DAYS;
-        partial void OnMIN_STOCK_DAYSChanging(Nullable<global::System.Int32> value);
-        partial void OnMIN_STOCK_DAYSChanged();
+        private Nullable<global::System.Int32> _MIN_STOCK_DAY;
+        partial void OnMIN_STOCK_DAYChanging(Nullable<global::System.Int32> value);
+        partial void OnMIN_STOCK_DAYChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6487,48 +8916,48 @@ namespace Toacts.KanbanPost.Services.EF
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> MAX_STOCK_DAYS
+        public Nullable<global::System.Int32> MAX_STOCK_DAY
         {
             get
             {
-                return _MAX_STOCK_DAYS;
+                return _MAX_STOCK_DAY;
             }
             set
             {
-                OnMAX_STOCK_DAYSChanging(value);
-                ReportPropertyChanging("MAX_STOCK_DAYS");
-                _MAX_STOCK_DAYS = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MAX_STOCK_DAYS");
-                OnMAX_STOCK_DAYSChanged();
+                OnMAX_STOCK_DAYChanging(value);
+                ReportPropertyChanging("MAX_STOCK_DAY");
+                _MAX_STOCK_DAY = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MAX_STOCK_DAY");
+                OnMAX_STOCK_DAYChanged();
             }
         }
-        private Nullable<global::System.Int32> _MAX_STOCK_DAYS;
-        partial void OnMAX_STOCK_DAYSChanging(Nullable<global::System.Int32> value);
-        partial void OnMAX_STOCK_DAYSChanged();
+        private Nullable<global::System.Int32> _MAX_STOCK_DAY;
+        partial void OnMAX_STOCK_DAYChanging(Nullable<global::System.Int32> value);
+        partial void OnMAX_STOCK_DAYChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> LOT_SIZE
+        public Nullable<global::System.Int32> LOST_SIZE
         {
             get
             {
-                return _LOT_SIZE;
+                return _LOST_SIZE;
             }
             set
             {
-                OnLOT_SIZEChanging(value);
-                ReportPropertyChanging("LOT_SIZE");
-                _LOT_SIZE = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("LOT_SIZE");
-                OnLOT_SIZEChanged();
+                OnLOST_SIZEChanging(value);
+                ReportPropertyChanging("LOST_SIZE");
+                _LOST_SIZE = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LOST_SIZE");
+                OnLOST_SIZEChanged();
             }
         }
-        private Nullable<global::System.Int32> _LOT_SIZE;
-        partial void OnLOT_SIZEChanging(Nullable<global::System.Int32> value);
-        partial void OnLOT_SIZEChanged();
+        private Nullable<global::System.Int32> _LOST_SIZE;
+        partial void OnLOST_SIZEChanging(Nullable<global::System.Int32> value);
+        partial void OnLOST_SIZEChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6558,6 +8987,50 @@ namespace Toacts.KanbanPost.Services.EF
 
     
         #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_BEN_PLAN_STD_STOCK", "BEN_PLAN")]
+        public EntityCollection<BEN_PLAN> BEN_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BEN_PLAN>("TAC_KANBANModel.FK_BEN_PLAN_STD_STOCK", "BEN_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BEN_PLAN>("TAC_KANBANModel.FK_BEN_PLAN_STD_STOCK", "BEN_PLAN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_EXT_PLAN_STD_STOCK", "EXT_PLAN")]
+        public EntityCollection<EXT_PLAN> EXT_PLAN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EXT_PLAN>("TAC_KANBANModel.FK_EXT_PLAN_STD_STOCK", "EXT_PLAN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXT_PLAN>("TAC_KANBANModel.FK_EXT_PLAN_STD_STOCK", "EXT_PLAN", value);
+                }
+            }
+        }
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6596,47 +9069,166 @@ namespace Toacts.KanbanPost.Services.EF
                 }
             }
         }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TAC_KANBANModel", Name="sysdiagram")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class sysdiagram : EntityObject
+    {
+        #region Factory Method
     
         /// <summary>
-        /// No Metadata Documentation available.
+        /// Create a new sysdiagram object.
         /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TAC_KANBANModel", "FK_STD_STOCK_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE")]
-        public MA_MODEL_STRUCTURE MA_MODEL_STRUCTURE
+        /// <param name="name">Initial value of the name property.</param>
+        /// <param name="principal_id">Initial value of the principal_id property.</param>
+        /// <param name="diagram_id">Initial value of the diagram_id property.</param>
+        public static sysdiagram Createsysdiagram(global::System.String name, global::System.Int32 principal_id, global::System.Int32 diagram_id)
         {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_STD_STOCK_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_STD_STOCK_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<MA_MODEL_STRUCTURE> MA_MODEL_STRUCTUREReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_STD_STOCK_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MA_MODEL_STRUCTURE>("TAC_KANBANModel.FK_STD_STOCK_MA_MODEL_STRUCTURE", "MA_MODEL_STRUCTURE", value);
-                }
-            }
+            sysdiagram sysdiagram = new sysdiagram();
+            sysdiagram.name = name;
+            sysdiagram.principal_id = principal_id;
+            sysdiagram.diagram_id = diagram_id;
+            return sysdiagram;
         }
 
         #endregion
 
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                OnnameChanging(value);
+                ReportPropertyChanging("name");
+                _name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("name");
+                OnnameChanged();
+            }
+        }
+        private global::System.String _name;
+        partial void OnnameChanging(global::System.String value);
+        partial void OnnameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 principal_id
+        {
+            get
+            {
+                return _principal_id;
+            }
+            set
+            {
+                Onprincipal_idChanging(value);
+                ReportPropertyChanging("principal_id");
+                _principal_id = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("principal_id");
+                Onprincipal_idChanged();
+            }
+        }
+        private global::System.Int32 _principal_id;
+        partial void Onprincipal_idChanging(global::System.Int32 value);
+        partial void Onprincipal_idChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 diagram_id
+        {
+            get
+            {
+                return _diagram_id;
+            }
+            set
+            {
+                if (_diagram_id != value)
+                {
+                    Ondiagram_idChanging(value);
+                    ReportPropertyChanging("diagram_id");
+                    _diagram_id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("diagram_id");
+                    Ondiagram_idChanged();
+                }
+            }
+        }
+        private global::System.Int32 _diagram_id;
+        partial void Ondiagram_idChanging(global::System.Int32 value);
+        partial void Ondiagram_idChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> version
+        {
+            get
+            {
+                return _version;
+            }
+            set
+            {
+                OnversionChanging(value);
+                ReportPropertyChanging("version");
+                _version = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("version");
+                OnversionChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _version;
+        partial void OnversionChanging(Nullable<global::System.Int32> value);
+        partial void OnversionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] definition
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_definition);
+            }
+            set
+            {
+                OndefinitionChanging(value);
+                ReportPropertyChanging("definition");
+                _definition = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("definition");
+                OndefinitionChanged();
+            }
+        }
+        private global::System.Byte[] _definition;
+        partial void OndefinitionChanging(global::System.Byte[] value);
+        partial void OndefinitionChanged();
+
+        #endregion
+
+    
     }
 
     #endregion

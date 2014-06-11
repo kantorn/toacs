@@ -22,8 +22,8 @@ namespace Toacts.KanbanPost.Services.BLL
                                     PART_NAME = mp.PART_NAME,
                                     PART_NO = mp.PART_NO,
                                     PROD_LENGTH = mp.PROD_LENGTH,
-                                    PART_TYPE = mp.PART_TYPE,
-                                    UNIT_QTY = mp.UNIT_QTY,
+                                    PART_TYPE = mp.PACKING_TYPE,
+                                    UNIT_QTY = mp.PACK_PCS_LOT,
                                 };
                     totalRecord = query.Count();
                     if (pageindex.HasValue && pagesize.HasValue)

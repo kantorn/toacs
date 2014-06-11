@@ -18,6 +18,10 @@ namespace Toacts.KanbanPost.Services
                                                                       int? pagesize = null);
 
         [OperationContract]
+        List<Toacts.KanbanPost.Services.BLL.Part> getPartMaster(ref int totalRecord, int? pageindex = null,
+                                                                      int? pagesize = null);
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
