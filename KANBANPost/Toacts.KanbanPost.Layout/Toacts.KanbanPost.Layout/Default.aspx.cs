@@ -16,11 +16,27 @@ namespace Toacts.KanbanPost.Layout
         {
             if (!IsPostBack)
             {
-                DateTime d = DateTime.Today;
-                //int offset = d.DayOfWeek - DayOfWeek.Monday;
-                //Label1.Text = String.Format(LABEL_FORMAT, d.AddDays(-offset).ToShortDateString(), d.AddDays(-offset).AddDays(6).ToShortDateString());
+                Session["user"] = null;
             }
         }
 
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            if ((this.UserName.Text == "extrusion") && (this.Password.Text == "123"))
+            {
+                Session["user"] = "extrusion";
+                Response.Redirect("/Production/ExtrusionSelection.aspx");
+            }
+            else if ((this.UserName.Text == "finishing") && (this.Password.Text == "123"))
+            {
+                Session["user"] = "finishing";
+                Response.Redirect("/Production/FinishingSelection.aspx");
+            }
+            else if ((this.UserName.Text == "plan") && (this.Password.Text == "123"))
+            {
+                Session["user"] = "plan";
+                Response.Redirect("/Kanban/Default.aspx");
+            }
+        }
     }
 }

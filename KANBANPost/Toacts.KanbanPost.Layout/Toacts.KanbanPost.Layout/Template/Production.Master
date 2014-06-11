@@ -57,7 +57,7 @@
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
              
-                <div class="collapse navbar-collapse navbar-ex1-collapse" style="margin-top:10px;">
+                <div class="collapse navbar-collapse navbar-ex1-collapse" id="logout" runat="server" style="margin-top:10px;">
                     <!-- /.navbar-collapse -->                
                        
                     <ul class="nav navbar-top-links navbar-right">
@@ -70,7 +70,7 @@
                                 <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                                 </li>
                                 <li class="divider"></li>
-                                <li><a href="Default.aspx"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                                <li><a href="../Default.aspx"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                                 </li>
                             </ul>
                             <!-- /.dropdown-user -->

@@ -11,7 +11,14 @@ namespace Toacts.KanbanPost.Layout.Template
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["user"] == null)
+            {
+                logout.Visible = false;
+            }
+            else
+            {
+                logout.Visible = true;
+            }
         }
     }
 }
