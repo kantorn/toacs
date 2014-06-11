@@ -24,3 +24,12 @@ E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\Uti
 E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.dll
 E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.pdb
 E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\DB\MDF\TAC_KANBAN.mdf
+D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\DB\MDF\TAC_KANBAN_log.ldf
+D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\Utilities.dll.config
+D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\Utilities.dll
+D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\Utilities.pdb
+D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.dll
+D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.pdb
+D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\bin\Debug\AspNet.ScriptManager.jQuery.dll
+D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
