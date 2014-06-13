@@ -2,18 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
  <style type="text/css" >
      
-        
-        #forecast .datagrid-body tr:nth-child(odd) 
-        {
-            background: #ffffff;
-        }
-        
         .datagrid-view2
         {
             border-right:none;
         }
         
-        #master-stock .lines-bottom .datagrid-body td{
+        .lines-bottom .datagrid-body td{
             border-bottom:1px solid #cccccc;
             border-right:1px dotted transparent;
         }
@@ -31,17 +25,18 @@
             rownumbers: false,
             onLoadSuccess: function (res) {
                 $('#h1').activity(false);
-                for (var i = 0; i < res.merges.length; i++) {
-                    $('#finishing-data').datagrid('mergeCells', {
-                        index: res.merges[i].index,
-                        field: res.merges[i].field,
-                        rowspan: res.merges[i].rowspan
-                    });
-                }
+//                for (var i = 0; i < res.merges.length; i++) {
+//                    $('#finishing-data').datagrid('mergeCells', {
+//                        index: res.merges[i].index,
+//                        field: res.merges[i].field,
+//                        rowspan: res.merges[i].rowspan
+//                    });
+//                }
                 var height = $('.datagrid-view1').height();
                 $('.datagrid-body').height(height + 10);
             }
         });
+        $('#finishing-data').datagrid('getPanel').addClass('lines-bottom');
 
 
         $('#master-stock').datagrid({
@@ -50,13 +45,13 @@
             rownumbers: false,
             onLoadSuccess: function (res) {
                 $('#h1').activity(false);
-                for (var i = 0; i < res.merges.length; i++) {
-                    $('#finishing-data').datagrid('mergeCells', {
-                        index: res.merges[i].index,
-                        field: res.merges[i].field,
-                        rowspan: res.merges[i].rowspan
-                    });
-                }
+//                for (var i = 0; i < res.merges.length; i++) {
+//                    $('#finishing-data').datagrid('mergeCells', {
+//                        index: res.merges[i].index,
+//                        field: res.merges[i].field,
+//                        rowspan: res.merges[i].rowspan
+//                    });
+//                }
                 var height = $('.datagrid-view1').height();
                 $('.datagrid-body').height(height + 10);
             }
@@ -64,8 +59,6 @@
 
         $('#master-stock').datagrid('getPanel').addClass('lines-bottom');
         
-        //$("#pager_left").hide();
-
         $('.filter-button').click(function () {
             if (!$('.filter-button').hasClass('actived')) {
                 $('.filter-button').addClass('actived')
@@ -126,19 +119,21 @@
             <div id="forecast" title="Forcast Order"  >            
 	            <h3 id="h3"  >Forcast Order</h3>
 	            <table id="finishing-data" title="Finishing Order" style="width:930px;height:auto;"
-			            url="/Handler/HandlerKanbanList.axd" 
+			            url="/Handler/ForecastOrderHandler.axd" 
 			            singleSelect="true" iconCls="icon-save" 
 			            idField="itemid" pagination="true" 
                         data-options="pageSize: 20">
 		            <thead>
 			            <tr>
-				            <th field="customer_name" width="95" >Customer Name</th>
-				            <th field="model_name" width="100">Model Name</th>
-				            <th field="part_name" width="200" >Paet Name</th>
-				            <th field="part_no" width="180">Part No.</th>
-				            <th field="total_quantity" width="90" align="center">Total Quantity</th>
-				            <th field="tag_id" width="160" align="right">Tag Id</th>
-				            <th field="quantity" width="70" align="right">Lot Size</th>
+				            <th field="part_no" width="200" >Part No</th>
+				            <th field="customer" width="175">Customer</th>
+				            <th field="line_no" width="95" >Line</th>
+				            <th field="factory" width="80">Factory</th>
+				            <th field="model" width="50" align="center">Model</th>
+				            <th field="packing_size" width="75" align="center">Pack Size</th>
+				            <th field="packing_type" width="75" align="center">Pack Type</th>
+				            <th field="forecast" width="100" align="center">Forecast</th>
+				            <th field="ct" width="60" align="center">CT</th>
 			            </tr>
 		            </thead>
 	            </table>

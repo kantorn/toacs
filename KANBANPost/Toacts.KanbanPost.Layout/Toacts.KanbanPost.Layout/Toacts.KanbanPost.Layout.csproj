@@ -531,6 +531,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handler\ForecastOrderHandler.cs" />
     <Compile Include="Handler\KanbanListHandler.cs" />
     <Compile Include="Handler\MasterStockHandler.cs" />
     <Compile Include="Handler\PartMasterHandler.cs" />

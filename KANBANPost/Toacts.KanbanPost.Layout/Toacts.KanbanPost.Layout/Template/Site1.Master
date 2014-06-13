@@ -149,9 +149,7 @@
             </asp:ContentPlaceHolder>
         </div>
     </div>    
-    <div class="footer">
-        <span >Copyright  TOACS Co,Ltd. 2014</span>
-    </div>
+ 
     </form>
 </body>
 </html>
