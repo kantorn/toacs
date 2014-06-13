@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AspNet.ScriptManager.jQuery">
-      <HintPath>..\packages\AspNet.ScriptManager.jQuery.2.1.1\lib\net40\AspNet.ScriptManager.jQuery.dll</HintPath>
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.2.0.3\lib\net40\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
     <Reference Include="FlexigridASPNET, Version=1.0.4462.38746, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -77,6 +77,7 @@
     <Content Include="Contents\Images\loader_bg.png" />
     <Content Include="Contents\Images\slider_handle.png" />
     <Content Include="Contents\Images\toacs_logo.png" />
+    <Content Include="Contents\Images\ui-bg_glass_85_dfeffc_1x400.png" />
     <Content Include="Contents\Images\ui-bg_highlight-hard_75_dadada_1x100.png" />
     <Content Include="Contents\Images\ui-bg_highlight-hard_75_e6e6e6_1x100.png" />
     <Content Include="Contents\Styles\images\grid.png" />
@@ -360,6 +361,7 @@
     <Content Include="Inventory\Standard.aspx" />
     <Content Include="Kanban\PlanManagement.aspx" />
     <Content Include="Kanban\Schedule.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Masters\Customers.aspx" />
     <Content Include="Masters\EXTMapFinParts.aspx" />
     <Content Include="Masters\Line.aspx" />
@@ -369,7 +371,6 @@
     <Content Include="Masters\PDLosttime.aspx" />
     <Content Include="Masters\UserGroups.aspx" />
     <Content Include="Masters\Users.aspx" />
-    <Content Include="Production\Default.aspx" />
     <Content Include="Production\ExtrusionOrderCreate.aspx" />
     <Content Include="Production\ExtrusionOrderComplete.aspx" />
     <Content Include="Production\ExtrusionScan.aspx" />
@@ -377,7 +378,9 @@
     <Content Include="Production\FinishingOrderComplete.aspx" />
     <Content Include="Production\FinishingOrderCreate.aspx" />
     <Content Include="Production\FinishingSelection.aspx" />
+    <Content Include="Production\PDScheudle.aspx" />
     <Content Include="Scripts\combodate.js" />
+    <Content Include="Scripts\datagrid-detailview.js" />
     <Content Include="Scripts\jquery.easyui.min.js" />
     <Content Include="Scripts\jquery.fn.gantt.js" />
     <Content Include="Scripts\jquery.ganttView.js" />
@@ -467,7 +470,9 @@
     <None Include="Contents\fonts\glyphicons-halflings-regular.svg" />
     <None Include="Contents\fonts\glyphicons-halflings-regular.ttf" />
     <None Include="Contents\fonts\glyphicons-halflings-regular.woff" />
-    <None Include="Service References\TOACSRefferences\Service.disco" />
+    <None Include="Properties\DataSources\Toacts.KanbanPost.Services.BLL.KanbanList.datasource" />
+    <None Include="Properties\DataSources\Toacts.KanbanPost.Services.BLL.Part.datasource" />
+    <None Include="Properties\DataSources\Toacts.KanbanPost.Services.CompositeType.datasource" />
     <None Include="Service References\TOACSRefferences\configuration91.svcinfo" />
     <None Include="Service References\TOACSRefferences\configuration.svcinfo" />
     <None Include="Service References\TOACSRefferences\Reference.svcmap">
@@ -475,21 +480,31 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Scripts\prettify.js" />
-    <Content Include="Web.config" />
+    <None Include="Service References\TOACSRefferences\Service1.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <None Include="Service References\TOACSRefferences\Service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\TOACSRefferences\Service2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Template\Site1.Master" />
     <Content Include="Template\Production.Master" />
+    <None Include="Service References\TOACSRefferences\Service11.wsdl" />
+    <None Include="Service References\TOACSRefferences\Service4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TOACSRefferences\Service41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TOACSRefferences\Service42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TOACSRefferences\Service43.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrator\Default.aspx.cs">
@@ -518,8 +533,8 @@
     </Compile>
     <Compile Include="Handler\KanbanListHandler.cs" />
     <Compile Include="Handler\PartMasterHandler.cs" />
+    <Compile Include="Handler\PDScheduleHandler.cs" />
     <Compile Include="Handler\PlanManagementHandler.cs" />
-    <Compile Include="Handler\StockMonitoringHandler.cs" />
     <Compile Include="Helper\SessionHelper.cs" />
     <Compile Include="Import\FinishingOrder.aspx.cs">
       <DependentUpon>FinishingOrder.aspx</DependentUpon>
@@ -585,6 +600,13 @@
     <Compile Include="Kanban\Schedule.aspx.designer.cs">
       <DependentUpon>Schedule.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Masters\Customers.aspx.cs">
       <DependentUpon>Customers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -648,13 +670,6 @@
     <Compile Include="Masters\Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Production\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Production\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Production\ExtrusionOrderCreate.aspx.cs">
       <DependentUpon>ExtrusionOrderCreate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -704,6 +719,13 @@
     <Compile Include="Production\FinishingSelection.aspx.designer.cs">
       <DependentUpon>FinishingSelection.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Production\PDScheudle.aspx.cs">
+      <DependentUpon>PDScheudle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Production\PDScheudle.aspx.designer.cs">
+      <DependentUpon>PDScheudle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\TOACSRefferences\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -748,10 +770,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <None Include="Service References\TOACSRefferences\Service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\TOACSRefferences\Service1.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

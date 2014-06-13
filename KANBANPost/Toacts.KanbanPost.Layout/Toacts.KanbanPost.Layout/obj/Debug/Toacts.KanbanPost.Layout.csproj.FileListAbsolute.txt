@@ -28,17 +28,3 @@ E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layou
 E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\obj\Debug\Toacts.KanbanPost.Layout.csprojResolveAssemblyReference.cache
 E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\obj\Debug\Toacts.KanbanPost.Layout.dll
 E:\project\Git\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\obj\Debug\Toacts.KanbanPost.Layout.pdb
-D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\obj\Debug\Toacts.KanbanPost.Layout.csprojResolveAssemblyReference.cache
-D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\DB\MDF\TAC_KANBAN.mdf
-D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\DB\MDF\TAC_KANBAN_log.ldf
-D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\Toacts.KanbanPost.Layout.dll
-D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\Toacts.KanbanPost.Layout.pdb
-D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\FlexigridASPNET.dll
-D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\Newtonsoft.Json.Net35.dll
-D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\Toacts.KanbanPost.Services.dll
-D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\Utilities.dll
-D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\Toacts.KanbanPost.Services.pdb
-D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\Utilities.pdb
-D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\obj\Debug\Toacts.KanbanPost.Layout.dll
-D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\obj\Debug\Toacts.KanbanPost.Layout.pdb
-D:\Work\toacs\KANBANPost\Toacts.KanbanPost.Layout\Toacts.KanbanPost.Layout\bin\AspNet.ScriptManager.jQuery.dll

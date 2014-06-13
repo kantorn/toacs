@@ -1,23 +1,30 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/Site1.Master" AutoEventWireup="true" CodeBehind="PlanManagement.aspx.cs" Inherits="Toacts.KanbanPost.Layout.Kanban.PlanManagement" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css" >
+        .datagrid-body tr:nth-child(odd) 
+        {
+            background: #ffffff;
+        }
+    </style>
+    <script type="text/javascript" src="../Scripts/datagrid-detailview.js"></script>
    <script type="text/javascript" language="javascript">
 
        // Doc Ready
        //<![CDATA[
        var column = [];
        var frozen = [[{ field: 'Part_No', title: 'Part No' },
-                       { field: 'Customer_Name', title: 'Customer', width: 50 },
+                       { field: 'Customer_Name', title: 'Customer', width: 70 },
                        { field: 'Model_Name', title: 'Model', width: 40 },
                        { field: 'Line_Speed', title: 'CT' ,width:40},
-                       { field: 'Packing', title: 'Packing', width: 40 },
+                       { field: 'Packing', title: 'Packing', width: 50 },
                        { field: 'Forecast_Qty', title: 'Forecast', width: 80}]];
 
-        var lastIndex = {};
-       var gridList = new Array("#plan1", "#plan2");
+       var lastIndex = {};
+       var gridList = new Array("#plan1", "#plan2", "#plan3", "#plan4", "#plan5", "#plan6", "#plan7", "#plan8", "#plan9");
 
        $(document).ready(function () {
            $('#h1').activity({ segments: 8, width: 2, space: 0, length: 3, speed: 1.5, align: 'right' });
-         
+
            //alert(sPage);
            $.ajax({
                url: '/Handler/PlanManagementHandler.axd?init=true',
@@ -47,26 +54,77 @@
                    $('.filter-display').fadeOut('fast');
                }
            });
+
+           $('#h_extrusion').click(function () {
+               if ($(this).hasClass('hide-content')) {
+                   $(this).removeClass('hide-content');
+                   $('#content_extrusion').fadeIn('fast');
+               }
+               else {
+                   $(this).addClass('hide-content');
+                   $('#content_extrusion').fadeOut('fast');
+               }
+           });
+           $('#h_bending').click(function () {
+               if ($(this).hasClass('hide-content')) {
+                   $(this).removeClass('hide-content');
+                   $('#content_bending').fadeIn('fast');
+               }
+               else {
+                   $(this).addClass('hide-content');
+                   $('#content_bending').fadeOut('fast');
+               }
+           });
        });
        //]]>
 
 
+       var str_header = '<table style="width:100%;text-align:right;"><tr><td style="width:50%;" >Min Stock : 3</td><td style="padding-right:15px;">Plan Use Time</td></tr>' +
+                         '<tr><td >Max Stock : 3</td><td style="padding-right:15px;">Actual Stock In</td></tr>' +
+                         '<tr><td ></td><td style="padding-right:15px;" >Plan Stock Out</td></tr>' +
+                         '<tr><td >EOF Stock : 481</td><td style="padding-right:15px;" >Actual Stock Out</td></tr>' +
+                        '</table>'
+
+       var str_result = '<table><tr><td field="day1"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day1">0</div></td><td field="day2"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day2">0</div></td><td field="day3"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day3">0</div></td><td field="day4"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day4">0</div></td><td field="day5"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day5">0</div></td><td field="day6"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day6">0</div></td><td field="day7"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day7">0</div></td><td field="day8"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day8">0</div></td><td field="day9"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day9">0</div></td><td field="day10"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day10">0</div></td><td field="day11"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day11">0</div></td><td field="day12"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day12">0</div></td><td field="day13"><div style="" class="datagrid-cell datagrid-cell-c1-day13">0</div></td><td field="day14"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day14">0</div></td><td field="Total"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-Total">0</div></td></tr>' + 
+                        '<tr><td field="day1"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day1">0</div></td><td field="day2"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day2">0</div></td><td field="day3"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day3">0</div></td><td field="day4"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day4">0</div></td><td field="day5"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day5">0</div></td><td field="day6"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day6">0</div></td><td field="day7"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day7">0</div></td><td field="day8"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day8">0</div></td><td field="day9"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day9">0</div></td><td field="day10"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day10">0</div></td><td field="day11"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day11">0</div></td><td field="day12"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day12">0</div></td><td field="day13"><div style="" class="datagrid-cell datagrid-cell-c1-day13">0</div></td><td field="day14"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day14">0</div></td><td field="Total"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-Total">0</div></td></tr>' +
+                        '<tr><td field="day1"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day1">0</div></td><td field="day2"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day2">0</div></td><td field="day3"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day3">0</div></td><td field="day4"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day4">0</div></td><td field="day5"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day5">0</div></td><td field="day6"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day6">0</div></td><td field="day7"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day7">0</div></td><td field="day8"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day8">0</div></td><td field="day9"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day9">0</div></td><td field="day10"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day10">0</div></td><td field="day11"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day11">0</div></td><td field="day12"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day12">0</div></td><td field="day13"><div style="" class="datagrid-cell datagrid-cell-c1-day13">0</div></td><td field="day14"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day14">0</div></td><td field="Total"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-Total">0</div></td></tr>' +
+                        '<tr><td field="day1"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day1">0</div></td><td field="day2"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day2">0</div></td><td field="day3"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day3">0</div></td><td field="day4"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day4">0</div></td><td field="day5"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day5">0</div></td><td field="day6"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day6">0</div></td><td field="day7"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day7">0</div></td><td field="day8"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day8">0</div></td><td field="day9"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day9">0</div></td><td field="day10"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day10">0</div></td><td field="day11"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day11">0</div></td><td field="day12"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day12">0</div></td><td field="day13"><div style="" class="datagrid-cell datagrid-cell-c1-day13">0</div></td><td field="day14"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day14">0</div></td><td field="Total"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-Total">0</div></td></tr>' +
+                        '</table>'
        function loadDataGrid(currentGrid) {
-           $(currentGrid).datagrid({
-                   url : "/Handler/PlanManagementHandler.axd" ,
+          // setTimeout(function () {
+               $(currentGrid).datagrid({
+                   url: "/Handler/PlanManagementHandler.axd",
                    pageable: true,
                    autoheight: true,
-                   frozenColumns : frozen,
-                   columns : column,
+                   rownumbers: false,
+                   frozenColumns: frozen,
+                   autoRowHeight: false,
+                   columns: column,
                    onClickRow: function (rowIndex) {
+                       $('.datagrid-row-selected').removeClass('datagrid-row-selected')
                        if (lastIndex[i] != rowIndex) {
                            $(currentGrid).datagrid('endEdit', lastIndex[currentGrid]);
                            $(currentGrid).datagrid('beginEdit', rowIndex);
                            setEditing(rowIndex, currentGrid);
                        }
                        lastIndex[currentGrid] = rowIndex;
+                   },
+                   view: detailview,
+                   detailFormatter: function (rowIndex, rowData) {
+                       return str_result;
+                   },
+                   onExpandRow: function (index, row) {
+                       if ($('#datagrid-row-r1-1-' + index).next().find('table').length == 0) {
+                           $('#datagrid-row-r1-1-' + index).next().find('.datagrid-row-detail').empty();
+                           $('#datagrid-row-r1-1-' + index).next().find('.datagrid-row-detail').append(str_header);
+                       }
+
                    }
-            });
+               });
+
+               $(currentGrid).datagrid('getPanel').addClass('lines-bottom');
+           //}, 100);
+
        }
 
        function setEditing(rowIndex,girdId) {
@@ -115,18 +173,18 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <br/>      
-        <div class="o-1" style="margin-left: auto;height: 55px;margin-right: auto;width: 930px;">
-	            <h1 id="h2" style="float:left; margin-left:30px;font-size: 23px;color: #264DB1;font-weight: bold;">Planing Management</h1>
-	    <div class="cb"></div>
-        </div>  
-        <div class="filter-display">
+    <div class="main-contain-inner">    
+        <div class="o-1"  >
+	        <h1 id="h2" >Planing Management</h1>
         </div>
-        <div  class="easyui-tabs"  style="margin-left:auto;margin-right:auto;width:940px;">
-            <div title="Finishing Line 1-A-1"  >
-	            <div class="page-options-nav" style="margin-top:15px;margin-left:30px;height:40px;width:900px;">
-	                <h1 id="h3" style="margin-left:30px;font-size: 23px;color: #264DB1;font-weight: bold;float:left;margin-top: 2px;">Finishing Line 1-A-1</h1>
-		            <a  class="fancy-button" style="float:right;margin-right:10px;" href="javascript:void(0)">Save</a>
+          <div class="o-2"  >
+	        <h2 id="h_extrusion" >Extrusion Plan</h2>
+        </div>
+        <div  class="easyui-tabs" id="content_extrusion"  style="margin-left:auto;margin-right:auto;width:940px;">
+            <div title="Extrusion Line 1-A-1"  >
+	            <h3 id="h3" style="">Extrusion Line 1-A-1</h3>
+	            <div class="page-options-nav" >
+		            <a  class="fancy-button"   href="javascript:void(0)"><i class="fa fa-save"  ></i>Save</a>
 	            </div>
 	            <table id="plan1" title="Plan Management" style="width:938px;height:auto;
 			            singleSelect="true" iconCls="icon-save" rownumbers="true"
@@ -134,10 +192,10 @@
                         data-options="pageSize: 20 " >
 	            </table>
             </div>
-            <div title="Finishing Line 1-B-1" >
-	            <div class="page-options-nav" style="margin-top:15px;margin-left:30px;height:40px;width:900px;">
-	                <h1 id="h4" style="margin-left:30px;font-size: 23px;color: #264DB1;font-weight: bold;float:left;margin-top: 2px;">Finishing Line 1-B-1</h1>
-		            <a  class="fancy-button" style="float:right;margin-right:10px;" href="javascript:void(0)">Save</a>
+            <div title="Extrusion Line 1-A-2" >
+	             <h3 id="h8" style="">Extrusion Line 1-A-2</h3>
+	            <div class="page-options-nav"  >
+		            <a  class="fancy-button"  href="javascript:void(0)"><i class="fa fa-save" ></i>Save</a>
 	            </div>
 	            <table id="plan2" title="Plan Management" style="width:938px;height:auto;
 			            singleSelect="true" iconCls="icon-save" rownumbers="true"
@@ -145,5 +203,88 @@
                         data-options="pageSize: 20 " >
 	            </table>
             </div>
+            <div title="Extrusion Line 1-A-3" >
+	             <h3 id="h6" style="">Extrusion Line 1-A-3</h3>
+	            <div class="page-options-nav"  >
+		            <a  class="fancy-button"  href="javascript:void(0)"><i class="fa fa-save" ></i>Save</a>
+	            </div>
+	            <table id="plan3" title="Plan Management" style="width:938px;height:auto;
+			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            idField="itemid" pagination="true" 
+                        data-options="pageSize: 20 " >
+	            </table>
+            </div>
+            <div title="Extrusion Line 1-A-4" >
+	             <h3 id="h7" style="">Extrusion Line 1-A-4</h3>
+	            <div class="page-options-nav"  >
+		            <a  class="fancy-button"  href="javascript:void(0)"><i class="fa fa-save" ></i>Save</a>
+	            </div>
+	            <table id="plan4" title="Plan Management" style="width:938px;height:auto;
+			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            idField="itemid" pagination="true" 
+                        data-options="pageSize: 20 " >
+	            </table>
+            </div>
+            <div title="Extrusion Line 1-A-5" >
+	            <h3 id="h9" style="">Extrusion Line 1-A-5</h3>
+	            <div class="page-options-nav"  >
+		            <a  class="fancy-button"  href="javascript:void(0)"><i class="fa fa-save" ></i>Save</a>
+	            </div>
+	            <table id="plan5" title="Plan Management" style="width:938px;height:auto;
+			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            idField="itemid" pagination="true" 
+                        data-options="pageSize: 20 " >
+	            </table>
+            </div>
+            <div title="Extrusion Line 1-A-6" >
+	             <h3 id="h10" style="">Extrusion Line 1-A-6</h3>
+	            <div class="page-options-nav"  >
+		            <a  class="fancy-button"  href="javascript:void(0)"><i class="fa fa-save" ></i>Save</a>
+	            </div>
+	            <table id="plan6" title="Plan Management" style="width:938px;height:auto;
+			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            idField="itemid" pagination="true" 
+                        data-options="pageSize: 20 " >
+	            </table>
+            </div>
         </div>
+        <div class="o-2"  >
+	            <h2 id="h_bending" >Bending Plan</h1>
+        </div>
+        <div  class="easyui-tabs" id="content_bending"  style="margin-left:auto;margin-right:auto;width:940px;">
+            <div title="Bending Line 1-A-1"  >
+	            <h3 id="h11" style="">Bending Line 1-A-1</h3>
+	            <div class="page-options-nav"  >
+		            <a  class="fancy-button"   href="javascript:void(0)"><i class="fa fa-save"  ></i>Save</a>
+	            </div>
+	            <table id="plan7" title="Plan Management" style="width:938px;height:auto;
+			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            idField="itemid" pagination="true" 
+                        data-options="pageSize: 20 " >
+	            </table>
+            </div>
+            <div title="Bending Line 1-A-2" >
+	            <h3 id="h4" style="">Bending Line 1-A-2</h3>
+	            <div class="page-options-nav"  >
+		            <a  class="fancy-button"   href="javascript:void(0)"><i class="fa fa-save" ></i>Save</a>
+	            </div>
+	            <table id="plan8" title="Plan Management" style="width:938px;height:auto;
+			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            idField="itemid" pagination="true" 
+                        data-options="pageSize: 20 " >
+	            </table>
+            </div>
+            <div title="Bending Line 1-A-3" >
+                <h3 id="h5" style="">Bending Line 1-A-3</h3>
+	            <div class="page-options-nav"  >
+		            <a  class="fancy-button"   href="javascript:void(0)"><i class="fa fa-save"  ></i>Save</a>
+	            </div>
+	            <table id="plan9" title="Plan Management" style="width:938px;height:auto;
+			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            idField="itemid" pagination="true" 
+                        data-options="pageSize: 20 " >
+	            </table>
+            </div>
+        </div>
+    </div>
 </asp:Content>

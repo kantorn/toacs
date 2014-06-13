@@ -43,7 +43,10 @@ margin-left: 250px;
 	position: relative;
 	display: inline-table;
 }
-.menu-bar ul:after {
+.menu-bar ul:after 
+{
+    
+    
 	content: ""; clear: both; display: block;
 }
 .menu-bar  ul li {
@@ -90,8 +93,7 @@ margin-left: 250px;
 	margin-right: auto;
     margin-left: auto;
     width:100%;
-    background:white;
-    margin-top: 45px;
+    margin-top:  85px;
 }
 		
 .footer
@@ -144,4 +146,231 @@ html,body { height: 100%; margin: 0px; padding: 0px; }
 input 
 {
     font-size:12px;    
+}
+
+/*custom grid style*/
+.lines-bottom .datagrid-body td{
+    border-bottom:1px solid #cccccc;
+    border-right:1px dotted transparent;
+    height: 30px;
+}
+.lines-right .datagrid-body td{
+    border-right:1px solid #cccccc;
+}   
+.lines-right .datagrid-body td:last-child 
+{
+    border-right:none;
+}  
+.panel-header
+{
+    display:none;
+}
+        
+.datagrid-view 
+{
+    border-top: solid 1px #95B8E7
+}
+        
+.datagrid-header
+{
+    background: transparent;
+}
+        
+.datagrid-header-row td
+{
+    border:none;    
+}
+        
+.datagrid-header .datagrid-cell span {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333
+}
+        
+.datagrid-header-row, .datagrid-row {
+    height: 30px;
+}
+        
+.datagrid .panel-body {
+    border-left: none;
+    border-right: none;
+}
+        
+tr .datagrid-cell {
+    height: 15px;
+}
+        
+.datagrid-view2
+{
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+        
+.datagrid-body tr:nth-child(odd) 
+{
+    background: #f9f9f9;
+}
+
+/*custom grid style*/
+        
+/*custom tabs style*/
+.tabs-header 
+{
+    border:none;
+    background:transparent;
+}
+        
+.tabs
+{
+    padding-left:0px;   
+    min-height: 35px;
+}
+        
+.tabs li 
+{
+    margin: 0 0px -3px 0;
+}
+.tabs  a.tabs-inner
+{
+    min-height: 35px;
+}
+.tabs li a.tabs-inner
+{
+    background: transparent;
+    border: none;
+}
+.tabs li.tabs-selected a.tabs-inner
+{
+    border-bottom: 1px solid #7DAAD3;
+    background: #7DAAD3;
+    color:#ffffff;
+}
+        
+.tabs-title
+{
+    padding:20px;
+    font-size: 13px;
+}
+        
+.tabs-panels 
+{
+    border-top: solid 2px #7DAAD3;
+    border-left: none;
+    border-right: none;
+}
+        
+        
+.tabs-scroller-left 
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: #ffffff url('../Styles/themes/bootstrap/images/tabs_icons.png') no-repeat 1px center;
+}
+.tabs-scroller-right
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: #ffffff url('../Styles/themes/bootstrap/images/tabs_icons.png') no-repeat -15px center;
+            
+}
+/*custom tabs style*/
+
+
+/* file upload */
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+}
+.fileUpload input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+} 
+.fileUpload span {
+	font-size: 12px;
+}
+/* file upload */
+
+.o-1{
+    margin-left: auto;
+    height: 60px;
+    margin-right: auto;
+    width: 930px;
+    margin-top: 15px;
+}
+.o-2{
+    margin-left: auto;
+    margin-right: auto;
+    width: 930px;
+}
+
+.page-options-nav
+{
+    margin-bottom:15px;
+    margin-right:20px;
+    margin-left:30px;
+    height: 40px;
+    padding: 18px;
+    float: right;
+    
+}
+
+
+.page-options-nav.show-border
+{
+    border: solid 1px #cccccc;
+    width: 100%;
+    height: 60px;
+    margin: 0px;
+}
+
+.main-contain-inner
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:930px;    
+    padding-top: 21px;
+    background:#ffffff;
+}
+
+h1{
+    margin-left:30px;
+    font-size: 23px;
+    color: #264DB1;
+    font-weight: bold;
+    float:left;
+}
+
+h2
+{
+    text-decoration: underline; 
+    margin-left:30px;
+    font-size: 16px;
+    color: #264DB1;
+    font-weight: bold;
+    cursor: pointer;    
+}
+
+h3
+{
+    margin-left:30px;
+    font-size: 23px;
+    color: #264DB1;
+    font-weight: bold;
+    float:left;
+    margin-top: 2px;    
+    line-height: 55px;
+}
+
+.fancy-button i
+{
+    color: #333;
+    margin-right: 11px;
 }

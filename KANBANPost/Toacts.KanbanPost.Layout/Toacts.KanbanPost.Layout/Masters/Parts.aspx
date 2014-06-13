@@ -1,5 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/Site1.Master" AutoEventWireup="true" CodeBehind="Parts.aspx.cs" Inherits="Toacts.KanbanPost.Layout.Masters.Parts" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<style type="text/css" >
+    .lines-bottom .datagrid-body td{
+        border-bottom:1px solid #cccccc;
+        border-right:1px dotted transparent;
+    }
+</style>
 <script type="text/javascript" language="javascript">
 
     // Doc Ready
@@ -10,14 +16,15 @@
         $('#ma_part').datagrid({
             pageable: true,
             autoheight: true,
+            rownumbers : false,
             singleSelect: true, columns: [[
-            { field: 'ID', title: 'ID', width: 60 },
-            { field: 'PART_NAME', title: 'PART NAME', width: 240, align: 'right', editor: 'text' },
-            { field: 'PART_NO', title: 'PART NO', width: 190, align: 'right', editor: 'text' },
-            { field: 'PROD_LENGTH', title: 'PROD_LENGTH', width: 120, align: 'right', editor: 'numberbox' },
-            { field: 'PART_TYPE', title: 'PART TYPE', width: 90, editor: 'text' },
+            { field: 'ID', title: 'ID', width: 60 ,hidden:true},
+            { field: 'PART_NAME', title: 'PART NAME', width: 240, align: 'left', editor: 'text' },
+            { field: 'PART_NO', title: 'PART NO', width: 190, align: 'rigleftht', editor: 'text' },
+            { field: 'PROD_LENGTH', title: 'PROD_LENGTH', width: 120, align: 'center', editor: 'numberbox' },
+            { field: 'PART_TYPE', title: 'PART TYPE', align: 'left', width: 90, editor: 'text' },
             { field: 'UNIT_QTY', title: 'UNIT QTY', width: 90, align: 'center', editor: 'numberbox' },
-            { field: 'Action', title: 'Action', width: 105, align: 'center',
+            { field: 'Action', title: 'Action', width: 190, align: 'center',
                 formatter: function (value, row, index) {
                     if (row.editing) {
                         var s = '<a href="#" onclick="saverow(this)">Save</a> ';
@@ -43,7 +50,18 @@
                 row.editing = false;
                 updateActions(index);
             }
-        });
+        })
+
+        $('#ma_part').datagrid('getPanel').addClass('lines-bottom');
+        var p = $('#ma_part').datagrid('getPager');
+        if (p) {
+            $(p).pagination({
+                onBeforeRefresh: function () {
+                    alert('before refresh');
+                }
+            });
+        }
+
 
         $('.filter-button').click(function () {
             if (!$('.filter-button').hasClass('actived')) {
@@ -131,12 +149,13 @@
 
 
     </script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <br/>      
-        <div class="o-1" style="margin-left: auto;height: 75px;margin-right: auto;width: 930px;">
-	            <h1 id="h2" style="float:left; margin-left:30px;font-size: 23px;color: #264DB1;font-weight: bold;">Part Master Data</h1>
-	            <div class="page-options-nav" style="margin-top:15px;float:right;margin-right:20px;">
+    <div class="main-contain-inner">       
+        <div class="o-1"  >
+	            <h1 id="h2"  >Part Master Data</h1>
+	            <div class="page-options-nav" >
                     <a class="fancy-button insert-button arrow-down" href="javascript:void(0)">Insert Row<span class="arrow-down-icon"></span></a> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="fancy-button filter-button arrow-down" href="javascript:void(0)">Filter Data<span class="arrow-down-icon"></span></a> 
@@ -146,7 +165,7 @@
         </div>  
         <div class="filter-display">
         </div>
-        <div style="margin-left:auto;margin-right:auto;width:930px;">
+        <div >
 	        <table id="ma_part" title="Issued KANBAN" style="width:930px;height:auto;"
 			        url="/Handler/PartMasterHandler.axd" 
 			        singleSelect="true" iconCls="icon-save" rownumbers="true"
@@ -166,4 +185,5 @@
 		        </thead>
 	        </table>
         </div>
+    </div>
 </asp:Content>

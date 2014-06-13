@@ -1,5 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/Site1.Master" AutoEventWireup="true" CodeBehind="ForcastOrder.aspx.cs" Inherits="Toacts.KanbanPost.Layout.Import.ForcastOrder" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+ <style type="text/css" >
+        .datagrid-body tr:nth-child(odd) 
+        {
+            background: #ffffff;
+        }      
+        .datagrid-view2
+        {
+            border-right:none;
+        }
+        
+        .lines-bottom .datagrid-body td{
+            border-bottom:1px solid #cccccc;
+            border-right:1px dotted transparent;
+        }
+    </style>
 <script type="text/javascript" language="javascript">
 
     // Doc Ready
@@ -7,11 +22,10 @@
     $(function () {
         $('#h1').activity({ segments: 8, width: 2, space: 0, length: 3, speed: 1.5, align: 'right' });
 
-        $
-
         $('#finishing-data').datagrid({
             pageable: true,
             autoheight: true,
+            rownumbers: false,
             onLoadSuccess: function (res) {
                 $('#h1').activity(false);
                 for (var i = 0; i < res.merges.length; i++) {
@@ -26,22 +40,7 @@
             }
         });
 
-        $('#master-stock').datagrid({
-            pageable: true,
-            autoheight: true,
-            onLoadSuccess: function (res) {
-                $('#h1').activity(false);
-                for (var i = 0; i < res.merges.length; i++) {
-                    $('#master-stock').datagrid('mergeCells', {
-                        index: res.merges[i].index,
-                        field: res.merges[i].field,
-                        rowspan: res.merges[i].rowspan
-                    });
-                }
-                var height = $('.datagrid-view1').height();
-                $('.datagrid-body').height(height + 10);
-            }
-        });
+        $(currentGrid).datagrid('getPanel').addClass('lines-bottom');
         //$("#pager_left").hide();
 
         $('.filter-button').click(function () {
@@ -82,31 +81,12 @@
     }
     </script>
 
-    <style>
-        .fileUpload {
-	        position: relative;
-	        overflow: hidden;
-        }
-        .fileUpload input.upload {
-	        position: absolute;
-	        top: 0;
-	        right: 0;
-	        margin: 0;
-	        padding: 0;
-	        cursor: pointer;
-	        opacity: 0;
-	        filter: alpha(opacity=0);
-        } 
-        .fileUpload span {
-	        font-size: 12px;
-        }
-    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br/>      
-     <div class="o-1" style="margin-left: auto;height: 100px;margin-right: auto;width: 940px;">
-	            <h1 id="h2" style="margin-left:30px;font-size: 23px;color: #264DB1;font-weight: bold;">Import Forcast Order</h1>
-	            <div class="page-options-nav" style="margin-top:15px;border: solid 1px #cccccc;height: 60px;padding: 18px;">
+    <div class="main-contain-inner"  >    
+        <div class="o-1"  >
+	        <h1 id="h2"  >Import Forcast Order</h1>
+	        <div class="page-options-nav show-border" >
                     <span>Import Forcast Order :</span>
                     <input type="text" value="" style="width:220px;" />
                     <div class="fileUpload btn btn-primary">
@@ -121,48 +101,45 @@
         
         <div  class="easyui-tabs"  style="margin-left:auto;margin-right:auto;width:940px;margin-top: 15px;">
             <div title="Forcast Order"  >            
-                 <div style="margin-left:auto;margin-right:auto;width:930px;">
-	                    <h1 id="h1" style="margin-left:30px;font-size: 23px;color: #264DB1;font-weight: bold;">Forcast Order</h1>
-	                    <table id="finishing-data" title="Finishing Order" style="width:930px;height:auto;"
-			                    url="/Handler/HandlerKanbanList.axd" 
-			                    singleSelect="true" iconCls="icon-save" rownumbers="true"
-			                    idField="itemid" pagination="true" 
-                                data-options="pageSize: 20">
-		                    <thead>
-			                    <tr>
-				                    <th field="customer_name" width="95" >Customer Name</th>
-				                    <th field="model_name" width="100">Model Name</th>
-				                    <th field="part_name" width="200" >Paet Name</th>
-				                    <th field="part_no" width="180">Part No.</th>
-				                    <th field="total_quantity" width="90" align="center">Total Quantity</th>
-				                    <th field="tag_id" width="160" align="right">Tag Id</th>
-				                    <th field="quantity" width="70" align="right">Lot Size</th>
-			                    </tr>
-		                    </thead>
-	                    </table>
-                    </div>
+	            <h3 id="h3"  >Forcast Order</h3>
+	            <table id="finishing-data" title="Finishing Order" style="width:930px;height:auto;"
+			            url="/Handler/HandlerKanbanList.axd" 
+			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            idField="itemid" pagination="true" 
+                        data-options="pageSize: 20">
+		            <thead>
+			            <tr>
+				            <th field="customer_name" width="95" >Customer Name</th>
+				            <th field="model_name" width="100">Model Name</th>
+				            <th field="part_name" width="200" >Paet Name</th>
+				            <th field="part_no" width="180">Part No.</th>
+				            <th field="total_quantity" width="90" align="center">Total Quantity</th>
+				            <th field="tag_id" width="160" align="right">Tag Id</th>
+				            <th field="quantity" width="70" align="right">Lot Size</th>
+			            </tr>
+		            </thead>
+	            </table>
             </div>
             <div title="Master Stock Data"  >     
-                <div style="margin-left:auto;margin-right:auto;width:930px;">
-	                    <h1 id="h3" style="margin-left:30px;font-size: 23px;color: #264DB1;font-weight: bold;">Master stock data</h1>
-	                    <table id="master-stock" title="Finishing Order" style="width:930px;height:auto;"
-			                    url="/Handler/HandlerKanbanList.axd" 
-			                    singleSelect="true" iconCls="icon-save" rownumbers="true"
-			                    idField="itemid" pagination="true" 
-                                data-options="pageSize: 20">
-		                    <thead>
-			                    <tr>
-				                    <th field="customer_name" width="95" >Customer Name</th>
-				                    <th field="model_name" width="100">Model Name</th>
-				                    <th field="part_name" width="200" >Paet Name</th>
-				                    <th field="part_no" width="180">Part No.</th>
-				                    <th field="total_quantity" width="90" align="center">Total Quantity</th>
-				                    <th field="tag_id" width="160" align="right">Tag Id</th>
-				                    <th field="quantity" width="70" align="right">Lot Size</th>
-			                    </tr>
-		                    </thead>
-	                    </table>
-                    </div>       
+	            <h3 id="h2"  >Master stock data</h3>
+	            <table id="master-stock" title="Finishing Order" style="width:930px;height:auto;"
+			            url="/Handler/HandlerKanbanList.axd" 
+			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            idField="itemid" pagination="true" 
+                        data-options="pageSize: 20">
+		            <thead>
+			            <tr>
+				            <th field="customer_name" width="95" >Customer Name</th>
+				            <th field="model_name" width="100">Model Name</th>
+				            <th field="part_name" width="200" >Paet Name</th>
+				            <th field="part_no" width="180">Part No.</th>
+				            <th field="total_quantity" width="90" align="center">Total Quantity</th>
+				            <th field="tag_id" width="160" align="right">Tag Id</th>
+				            <th field="quantity" width="105" align="right">Lot Size</th>
+			            </tr>
+		            </thead>
+	            </table>
             </div>
         </div>
+    </div>
 </asp:Content>

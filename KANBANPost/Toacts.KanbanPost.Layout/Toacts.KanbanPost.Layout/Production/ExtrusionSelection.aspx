@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="width:650px;margin-left:auto;margin-right:auto;margin-top: 200px;border: solid 1px #cccccc;border-radius:15px;box-shadow: 0px 0px 9px rgba(0,0,0,0.15);padding: 50px">
+    <div style="width:650px;margin-left:auto;margin-right:auto;margin-top: 200px;border: solid 1px #cccccc;border-radius:15px;box-shadow: 0px 0px 9px rgba(0,0,0,0.15);padding: 50px;background:white;">
             <span style="position:absolute;margin-top:-90px;font-size:24px;color:#428bca">Please select operation for Extrusion process</span>
 		    <asp:Button runat="server" id="CreateNewOrder"  
                 class="fancy-button ui-button ui-widget ui-state-default ui-corner-all" 
