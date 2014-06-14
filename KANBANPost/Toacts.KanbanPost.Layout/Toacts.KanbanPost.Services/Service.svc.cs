@@ -22,6 +22,30 @@ namespace Toacts.KanbanPost.Services
         {
             return Toacts.KanbanPost.Services.BLL.MAParts.getPartsList(ref totalRecord, pageindex, pagesize);
         }
+        public List<Toacts.KanbanPost.Services.BLL.LosttimeMaster> getLosttimeMaster(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        {
+            return Toacts.KanbanPost.Services.BLL.MALosttime.getLosttimeList(ref totalRecord, pageindex, pagesize);
+        }
+
+        public List<Toacts.KanbanPost.Services.BLL.LineMaster> getLineMaster(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        {
+            return Toacts.KanbanPost.Services.BLL.MALine.getLineList(ref totalRecord, pageindex, pagesize);
+        }
+
+        public List<Toacts.KanbanPost.Services.BLL.OpeatorRoleMaster> getOperatorRoleMaster(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        {
+            return Toacts.KanbanPost.Services.BLL.MAOperatorRoles.getOperatorRoleList(ref totalRecord, pageindex, pagesize);
+        }
+
+        public List<Toacts.KanbanPost.Services.BLL.CustomerMaster> getCustomerMaster(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        {
+            return Toacts.KanbanPost.Services.BLL.MACustomer.getCustomerMasterList(ref totalRecord, pageindex, pagesize);
+        }
+
+        public List<Toacts.KanbanPost.Services.BLL.OperatorMaster> getOperatorMaster(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        {
+            return Toacts.KanbanPost.Services.BLL.MAOperator.getOperatorMasterList(ref totalRecord, pageindex, pagesize);
+        }
         #endregion
 
         #region Monitoring Data

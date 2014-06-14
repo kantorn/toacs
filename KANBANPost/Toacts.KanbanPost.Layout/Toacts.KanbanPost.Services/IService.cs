@@ -20,6 +20,25 @@ namespace Toacts.KanbanPost.Services
         [OperationContract]
         List<Toacts.KanbanPost.Services.BLL.Part> getPartMaster(ref int totalRecord, int? pageindex = null,
                                                                       int? pagesize = null);
+        [OperationContract]
+        List<Toacts.KanbanPost.Services.BLL.LosttimeMaster> getLosttimeMaster(ref int totalRecord, int? pageindex = null,
+                                                                      int? pagesize = null);
+
+        [OperationContract]
+        List<Toacts.KanbanPost.Services.BLL.LineMaster> getLineMaster(ref int totalRecord, int? pageindex = null,
+                                                                      int? pagesize = null);
+
+        [OperationContract]
+        List<Toacts.KanbanPost.Services.BLL.OpeatorRoleMaster> getOperatorRoleMaster(ref int totalRecord, int? pageindex = null,
+                                                                      int? pagesize = null);
+
+        [OperationContract]
+        List<Toacts.KanbanPost.Services.BLL.CustomerMaster> getCustomerMaster(ref int totalRecord, int? pageindex = null,
+                                                                      int? pagesize = null);
+
+        [OperationContract]
+        List<Toacts.KanbanPost.Services.BLL.OperatorMaster> getOperatorMaster(ref int totalRecord, int? pageindex = null,
+                                                                      int? pagesize = null);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

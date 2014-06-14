@@ -68,6 +68,11 @@
   <ItemGroup>
     <Compile Include="BLL\ForecastOrder.cs" />
     <Compile Include="BLL\Kanban.cs" />
+    <Compile Include="BLL\MACustomer.cs" />
+    <Compile Include="BLL\MALine.cs" />
+    <Compile Include="BLL\MALosttime.cs" />
+    <Compile Include="BLL\MAOperator.cs" />
+    <Compile Include="BLL\MAOperatorRoles.cs" />
     <Compile Include="BLL\MAParts.cs" />
     <Compile Include="BLL\Monitoring.cs" />
     <Compile Include="EF\TAC_KANBAN.Designer.cs">
