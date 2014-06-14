@@ -18,12 +18,9 @@
             autoheight: true,
             rownumbers: false,
             singleSelect: true, columns: [[
-            { field: 'ID', title: 'ID', width: 60, hidden: true },
-            { field: 'PART_NAME', title: 'PART NAME', width: 240, align: 'left', editor: 'text' },
-            { field: 'PART_NO', title: 'PART NO', width: 190, align: 'rigleftht', editor: 'text' },
-            { field: 'PROD_LENGTH', title: 'PROD_LENGTH', width: 120, align: 'center', editor: 'numberbox' },
-            { field: 'PART_TYPE', title: 'PART TYPE', align: 'left', width: 90, editor: 'text' },
-            { field: 'UNIT_QTY', title: 'UNIT QTY', width: 90, align: 'center', editor: 'numberbox' },
+            { field: 'id', title: 'id', width: 60, hidden: true },
+            { field: 'rolename', title: 'Role Name', width: 240, align: 'left', editor: 'text' },
+            { field: 'description', title: 'description', width: 190, align: 'left', editor: 'text' },
             { field: 'Action', title: 'Action', width: 190, align: 'center',
                 formatter: function (value, row, index) {
                     if (row.editing) {
@@ -137,15 +134,13 @@
         $('#h1').activity({ segments: 8, width: 2, space: 0, length: 3, speed: 1.5, align: 'right' });
     }
 
-
-
     </script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="main-contain-inner">       
         <div class="o-1"  >
-	            <h1 id="h2"  >Part Master Data</h1>
+	            <h1 id="h2"  >Operator Group Master Data</h1>
 	            <div class="page-options-nav" >
                     <a class="fancy-button insert-button arrow-down" href="javascript:void(0)">Insert Row<span class="arrow-down-icon"></span></a> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
@@ -156,22 +151,18 @@
         </div>  
         <div class="filter-display">
         </div>
-        <div >
-	        <table id="ma_part" title="Issued KANBAN" style="width:930px;height:auto;"
-			        url="/Handler/PartMasterHandler.axd" 
+        <div style="width:630px;margin-left:auto;margin-right:auto;" >
+	        <table id="ma_part" title="Issued KANBAN" style="width:630px;height:auto;"
+			        url="/Handler/OperatorRoleMasterHandler.axd" 
 			        singleSelect="true" iconCls="icon-save" rownumbers="true"
 			        idField="itemid" pagination="true" 
                     data-options="pageSize: 20">
 		        <thead>
                     <%--KanbnaId,customer_name,model_name,part_name,part_no,tag_id,quantity,total_quantity--%>
 			        <tr>
-				        <th field="ID" width="95" >ID</th>
-				        <th field="PART_NAME" width="250">Part Name</th>
-				        <th field="PART_NO" width="200" >Paet No</th>
-				        <th field="PROD_LENGTH" width="130">Prod. Length</th>
-				        <th field="PART_TYPE" width="100" align="center">Part Type</th>
-				        <th field="UNIT_QTY" width="100" align="right">Quantity/Unit</th>
-				        <th field="ACTION" width="120" align="right">Action</th>
+				        <th field="id" width="95" >ID</th>
+				        <th field="rolename" width="250">Role Name</th>
+				        <th field="description" width="200" >Description</th>
 			        </tr>
 		        </thead>
 	        </table>
