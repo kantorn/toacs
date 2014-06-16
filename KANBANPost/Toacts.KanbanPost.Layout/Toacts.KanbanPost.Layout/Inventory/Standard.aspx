@@ -1,5 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/Site1.Master" AutoEventWireup="true" CodeBehind="Standard.aspx.cs" Inherits="Toacts.KanbanPost.Layout.Inventory.Standard" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+ <style type="text/css" >
+        .datagrid-body tr:nth-child(odd) 
+        {
+            background: #ffffff;
+        }
+    </style>
  <script type="text/javascript" language="javascript">
 
      // Doc Ready
@@ -24,6 +30,8 @@
                  $('.datagrid-body').height(height + 10);
              }
          });
+         $('#kanban').datagrid('getPanel').addClass('lines-bottom');
+         $('#kanban').datagrid('getPanel').addClass('lines-right');
          //$("#pager_left").hide();
 
          $('.filter-button').click(function () {
@@ -68,35 +76,56 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <br/>      
-        <div class="o-1" style="margin-left: auto;height: 75px;margin-right: auto;width: 930px;">
-	            <h1 id="h2" style="float:left; margin-left:30px;font-size: 23px;color: #264DB1;font-weight: bold;">Standard Stock</h1>
-	            <div class="page-options-nav" style="margin-top:15px;float:right;margin-right:20px;">
+    <div class="main-contain-inner">    
+        <div class="o-1" >
+	            <h1 id="h1" >Standard Stock</h1>
+	            <div class="page-options-nav noborder" >
                     <a class="fancy-button filter-button arrow-down" href="javascript:void(0)">Filter Data<span class="arrow-down-icon"></span></a> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
 	            </div>
 	        <div class="cb"></div>
         </div>  
         <div class="filter-display">
+            <div class="filter-button-close" style="float: right;padding: 10px;" >
+                <a class="fancy-button close-filter" style="padding:2px 6px 2px 6px;" href="javascript:$('.filter-button').click();">x</a>
+            </div>
+            <div style="width: 50%;float: left;padding:20px 50px;"> 
+                <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Customer :</span>
+                <asp:TextBox id="txtCustomer" runat="server" ></asp:TextBox>
+                <br/>
+                <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Model :</span>
+                <asp:TextBox id="TextBox1"  runat="server" ></asp:TextBox>
+                <br/>
+            </div>
+            <div style="width: 50%;float: left;padding:20px 0px;margin-left:-75px;"> 
+                <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Part Name :</span>
+                <asp:TextBox id="TextBox2" runat="server" ></asp:TextBox>
+                <br/>
+                <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Part Short Name :</span>
+                <asp:TextBox id="TextBox3" runat="server" ></asp:TextBox>
+                <br/>
+            </div>
+	        <div class="page-options-nav button-group" style="margin-top:-30px;">
+                <a class="fancy-button" href="javascript:void(0)">Apply Filter</a> 
+	        </div>
         </div>
-        <div style="margin-left:auto;margin-right:auto;width:930px;">
-	        <table id="kanban" title="Issued KANBAN" style="width:930px;height:auto;"
-			        url="/Handler/HandlerKanbanList.axd" 
-			        singleSelect="true" iconCls="icon-save" rownumbers="true"
-			        idField="itemid" pagination="true" 
-                    data-options="pageSize: 20">
-		        <thead>
-                    <%--KanbnaId,customer_name,model_name,part_name,part_no,tag_id,quantity,total_quantity--%>
-			        <tr>
-				        <th field="customer_name" width="95" >Customer Name</th>
-				        <th field="model_name" width="100">Model Name</th>
-				        <th field="part_name" width="200" >Paet Name</th>
-				        <th field="part_no" width="180">Part No.</th>
-				        <th field="total_quantity" width="90" align="center">Total Quantity</th>
-				        <th field="tag_id" width="160" align="right">Tag Id</th>
-				        <th field="quantity" width="70" align="right">Lot Size</th>
-			        </tr>
-		        </thead>
-	        </table>
-        </div>
+	    <table id="kanban" title="Issued KANBAN" style="width:930px;height:auto;"
+			    url="/Handler/HandlerKanbanList.axd" 
+			    singleSelect="true" iconCls="icon-save" rownumbers="false"
+			    idField="itemid" pagination="true" 
+                data-options="pageSize: 20">
+		    <thead>
+                <%--KanbnaId,customer_name,model_name,part_name,part_no,tag_id,quantity,total_quantity--%>
+			    <tr>
+				    <th field="customer_name" width="105" >Customer Name</th>
+				    <th field="model_name" width="100">Model Name</th>
+				    <th field="part_name" width="200" >Paet Name</th>
+				    <th field="part_no" width="180">Part No.</th>
+				    <th field="total_quantity" width="90" align="center">Total Quantity</th>
+				    <th field="tag_id" width="160" align="right">Tag Id</th>
+				    <th field="quantity" width="70" align="right">Lot Size</th>
+			    </tr>
+		    </thead>
+	    </table>
+    </div>
 </asp:Content>

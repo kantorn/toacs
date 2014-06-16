@@ -5,9 +5,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="production-contain" >        
         <div class="o-1 step" >             
-	        <ul  >
+	        <ul>
                 <li ><a href="ExtrusionSelection.aspx" >Extrusion Process Selection</a></li>
-                <li  tyle="171px;" ><a href="#"   >Create Work Order</a></li>
+                <li  style="171px;" ><a href="#"   >Create Work Order</a></li>
                 <li class="active" style="width:190px;" ><a href="#" >Complete Work Order</a></li>
             </ul>
 

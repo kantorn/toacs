@@ -1,12 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/Site1.Master" AutoEventWireup="true" CodeBehind="ForcastOrder.aspx.cs" Inherits="Toacts.KanbanPost.Layout.Import.ForcastOrder" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
  <style type="text/css" >
-     
-        .datagrid-view2
-        {
-            border-right:none;
-        }
-        
         .lines-bottom .datagrid-body td{
             border-bottom:1px solid #cccccc;
             border-right:1px dotted transparent;
@@ -118,6 +112,35 @@
         <div  class="easyui-tabs"  style="margin-left:auto;margin-right:auto;width:940px;margin-top: 15px;">
             <div id="forecast" title="Forcast Order"  >            
 	            <h3 id="h3"  >Forcast Order</h3>
+	            <div class="page-options-nav noborder" >
+                    <a class="fancy-button filter-button" href="javascript:void(0)">Filter Data<span class="arrow-down-icon"></span></a> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+	            </div>
+                 <div class="filter-display">
+                    <div class="filter-button-close" style="float: right;padding: 10px;" >
+                         <a style="padding:2px 6px 2px 6px;" href="javascript:$('.filter-button').click();">x</a>
+                    </div>
+                    <div style="width: 50%;float: left;padding:20px 50px;"> 
+                        <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Customer :</span>
+                        <asp:TextBox id="txtCustomer" runat="server" ></asp:TextBox>
+                        <br/>
+                        <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Model :</span>
+                        <asp:TextBox id="TextBox1"  runat="server" ></asp:TextBox>
+                        <br/>
+                    </div>
+                    <div style="width: 50%;float: left;padding:20px 0px;margin-left:-75px;"> 
+                        <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Part Name :</span>
+                        <asp:TextBox id="TextBox2" runat="server" ></asp:TextBox>
+                        <br/>
+                        <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Part Short Name :</span>
+                        <asp:TextBox id="TextBox3" runat="server" ></asp:TextBox>
+                        <br/>
+                    </div>
+            
+	                <div class="page-options-nav button-group" style="margin-top:-30px">
+                        <a class="fancy-button" href="javascript:void(0)">Apply Filter</a> 
+	                </div>
+                </div>
 	            <table id="finishing-data" title="Finishing Order" style="width:930px;height:auto;"
 			            url="/Handler/ForecastOrderHandler.axd" 
 			            singleSelect="true" iconCls="icon-save" 
@@ -140,6 +163,35 @@
             </div>
             <div  id="masterstock"  title="Master Stock Data"  >     
 	            <h3 id="h2"  >Master stock data</h3>
+                 <div class="page-options-nav noborder" >
+                    <a class="fancy-button filter-button" href="javascript:void(0)">Filter Data<span class="arrow-down-icon"></span></a> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+	            </div>
+                 <div class="filter-display">
+                    <div class="filter-button-close" style="float: right;padding: 10px;" >
+                       <a style="padding:2px 6px 2px 6px;" href="javascript:$('.filter-button').click();">x</a>
+                    </div>
+                    <div style="width: 50%;float: left;padding:20px 50px;"> 
+                        <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Customer :</span>
+                        <asp:TextBox id="TextBox4" runat="server" ></asp:TextBox>
+                        <br/>
+                        <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Model :</span>
+                        <asp:TextBox id="TextBox5"  runat="server" ></asp:TextBox>
+                        <br/>
+                    </div>
+                    <div style="width: 50%;float: left;padding:20px 0px;margin-left:-75px;"> 
+                        <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Part Name :</span>
+                        <asp:TextBox id="TextBox6" runat="server" ></asp:TextBox>
+                        <br/>
+                        <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Part Short Name :</span>
+                        <asp:TextBox id="TextBox7" runat="server" ></asp:TextBox>
+                        <br/>
+                    </div>
+            
+	                <div class="page-options-nav button-group" style="margin-top:-30px">
+                        <a class="fancy-button" href="javascript:void(0)">Apply Filter</a> 
+	                </div>
+                </div>
 	            <table id="master-stock" title="Finishing Order" style="width:930px;height:auto;"
 			            url="/Handler/MasterStockHandler.axd" 
 			            singleSelect="true" iconCls="icon-save"  

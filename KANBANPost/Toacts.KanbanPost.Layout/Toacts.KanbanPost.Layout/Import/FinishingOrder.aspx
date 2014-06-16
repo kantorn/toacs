@@ -79,23 +79,52 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <br/>      
      <div class="o-1" ">
-	        <h1 id="h2"  >Import Finishing Order</h1>
-	        <div class="page-options-nav show-border" >
-                    <span>Import Finishing Order :</span>
-                    <input type="text" value="" style="width:220px;" />
-                    <div class="fileUpload btn btn-primary">
-                        <span>Browse</span>
-                        <input type="file" class="upload" />
-                    </div>
-                    <a id="modalBtnExternalSaveFilter" class="fancy-button save-filter-button" style="float:right"  href="javascript:void(0)">Plan Calculate</a>
-                    <a class="fancy-button filter-button arrow-down" style="float:right;margin-right:20px;" href="javascript:void(0)">Upload<span class="arrow-down-icon"></span></a> 
-	        </div>
-	        <div class="cb"></div>
+	    <h1 id="h2"  >Import Finishing Order</h1>
+	    <div class="page-options-nav show-border" >
+                <span>Import Finishing Order :</span>
+                <input type="text" value="" style="width:220px;" />
+                <div class="fileUpload btn btn-primary">
+                    <span>Browse</span>
+                    <input type="file" class="upload" />
+                </div>
+                <a id="modalBtnExternalSaveFilter" class="fancy-button save-filter-button" style="float:right"  href="javascript:void(0)">Plan Calculate</a>
+                <a class="fancy-button filter-button arrow-down" style="float:right;margin-right:20px;" href="javascript:void(0)">Upload<span class="arrow-down-icon"></span></a> 
+	    </div>
+	    <div class="cb"></div>
     </div>  
     <div class="main-contain-inner"  >
+            <hr style="margin-top: 50px;margin-bottom: 0px;" />
 	        <h1 id="h3">Finishing Order</h1>
+            <div class="page-options-nav noborder" >
+                    <a class="fancy-button filter-button" href="javascript:void(0)">Filter Data<span class="arrow-down-icon"></span></a> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+	            </div>
+                 <div class="filter-display">
+                    <div class="filter-button-close" style="float: right;padding: 10px;" >
+                        <a style="padding:2px 6px 2px 6px;" href="javascript:$('.filter-button').click();">x</a>
+                    </div>
+                    <div style="width: 50%;float: left;padding:20px 50px;"> 
+                        <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Customer :</span>
+                        <asp:TextBox id="txtCustomer" runat="server" ></asp:TextBox>
+                        <br/>
+                        <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Model :</span>
+                        <asp:TextBox id="TextBox1"  runat="server" ></asp:TextBox>
+                        <br/>
+                    </div>
+                    <div style="width: 50%;float: left;padding:20px 0px;margin-left:-75px;"> 
+                        <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Part Name :</span>
+                        <asp:TextBox id="TextBox2" runat="server" ></asp:TextBox>
+                        <br/>
+                        <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Part Short Name :</span>
+                        <asp:TextBox id="TextBox3" runat="server" ></asp:TextBox>
+                        <br/>
+                    </div>
+            
+	                <div class="page-options-nav button-group" style="margin-top:-30px">
+                        <a class="fancy-button" href="javascript:void(0)">Apply Filter</a> 
+	                </div>
+                </div>
 	        <table id="finishing-data" title="Finishing Order" style="width:930px;height:auto;"
 			        url="/Handler/ForecastOrderHandler.axd" 
 			        singleSelect="true" iconCls="icon-save" 

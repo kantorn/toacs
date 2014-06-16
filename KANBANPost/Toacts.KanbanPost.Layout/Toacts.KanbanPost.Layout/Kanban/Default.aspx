@@ -90,12 +90,35 @@
 	        <div class="cb"></div>
         </div>  
         <div class="filter-display">
+            <div class="filter-button-close" style="float: right;padding: 10px;" >
+                <a  style="padding:2px 6px 2px 6px;" href="javascript:$('.filter-button').click();">x</a>
+            </div>
+            <div style="width: 50%;float: left;padding:20px 50px;"> 
+                <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Customer :</span>
+                <asp:TextBox id="txtCustomer" runat="server" ></asp:TextBox>
+                <br/>
+                <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Model :</span>
+                <asp:TextBox id="TextBox1"  runat="server" ></asp:TextBox>
+                <br/>
+            </div>
+            <div style="width: 50%;float: left;padding:20px 0px;margin-left:-75px;"> 
+                <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Part Name :</span>
+                <asp:TextBox id="TextBox2" runat="server" ></asp:TextBox>
+                <br/>
+                <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Part Short Name :</span>
+                <asp:TextBox id="TextBox3" runat="server" ></asp:TextBox>
+                <br/>
+            </div>
+            
+	        <div class="page-options-nav button-group" style="margin-top:-30px">
+                <a class="fancy-button" href="javascript:void(0)">Apply Filter</a> 
+	        </div>
         </div>
 	    <table id="kanban" title="Issued KANBAN" style="width:930px;height:auto;"
 			    url="/Handler/HandlerKanbanList.axd" 
 			    singleSelect="true" iconCls="icon-save" rownumbers="true"
 			    idField="itemid" pagination="true" 
-                data-options="pageSize: 20">
+                data-options="pageSize:20">
 		    <thead>
                 <%--KanbnaId,customer_name,model_name,part_name,part_no,tag_id,quantity,total_quantity--%>
 			    <tr>
