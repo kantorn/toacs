@@ -11,14 +11,17 @@ namespace Toacts.KanbanPost.Layout.Production.Finishing
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            divInfo.Visible = false;  
+            if (!this.IsPostBack)
+            {
+                //divInfo.Visible = false;
+            }
         }
         protected void txtKanban_TextChanged(object sender, EventArgs e)
         {
             if (this.txtKanban.Text == "TG00001")
             {
-                txtKanban.Enabled = false;
-                divInfo.Visible = true;  
+                //txtKanban.Enabled = false;
+                //divInfo.Visible = true;  
             }
         }
 

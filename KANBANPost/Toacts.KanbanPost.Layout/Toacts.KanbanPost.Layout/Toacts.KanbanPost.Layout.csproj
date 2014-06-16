@@ -531,9 +531,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handler\CustomerMasterHandler.cs" />
     <Compile Include="Handler\ForecastOrderHandler.cs" />
     <Compile Include="Handler\KanbanListHandler.cs" />
+    <Compile Include="Handler\LineMasterHandler.cs" />
+    <Compile Include="Handler\LosttimeMasterHandler.cs" />
     <Compile Include="Handler\MasterStockHandler.cs" />
+    <Compile Include="Handler\OperatorMasterHandler.cs" />
+    <Compile Include="Handler\OperatorRoleMasterHandler.cs" />
     <Compile Include="Handler\PartMasterHandler.cs" />
     <Compile Include="Handler\PDScheduleHandler.cs" />
     <Compile Include="Handler\PlanManagementHandler.cs" />

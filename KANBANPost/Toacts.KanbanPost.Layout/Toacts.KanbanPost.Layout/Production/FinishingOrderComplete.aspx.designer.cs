@@ -31,12 +31,12 @@ namespace Toacts.KanbanPost.Layout.Production.Finishing {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divInfo;
         
         /// <summary>
-        /// btnCancel control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancel;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

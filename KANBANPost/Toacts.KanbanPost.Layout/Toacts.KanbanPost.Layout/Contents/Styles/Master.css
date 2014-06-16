@@ -124,6 +124,12 @@ html,body { height: 100%; margin: 0px; padding: 0px; }
     margin-bottom:6px;
     display:inline-block;
 }
+
+.lot-information.header
+{
+    margin-left:25px;
+    font-size: 16px;
+}
 .lot-information.data
 {
     font-weight:normal;
@@ -257,8 +263,7 @@ tr .datagrid-cell {
     border-top: solid 2px #7DAAD3;
     border-left: none;
     border-right: none;
-}
-        
+}     
         
 .tabs-scroller-left 
 {
@@ -321,7 +326,12 @@ tr .datagrid-cell {
     float: right;
     
 }
-
+.page-options-nav.button-group
+{ 
+    float:right;
+    margin-right:20px;
+    margin-top: 20px;
+}
 
 .page-options-nav.show-border
 {
@@ -340,6 +350,97 @@ tr .datagrid-cell {
     background:#ffffff;
 }
 
+.production-contain
+{
+    padding-top: 10px;
+    position: absolute;
+    padding:0px 27px;
+    background:white;
+}
+
+.production-contain-inner
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:930px;
+    margin-top:58px;
+    border:solid 1px #cccccc;
+    border-radius: 5px;
+    padding: 5px 0px 40px 0px;
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.15)     
+}
+.production-contain-inner hr
+{
+    margin-top: -4px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.production-contain-inner table
+{   
+    margin-left: 40px;
+    width:865px;
+}
+.production-contain-inner table.highligh-row tr:nth-child(odd) 
+{
+    background: #F1F1F1;
+}
+.production-contain-inner table tr td
+{
+    padding-top: 5px; 
+}
+.production-scan-box
+{
+    width:650px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 200px;
+    border: solid 1px #cccccc;
+    border-radius:15px;
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+    padding: 9px;
+    background:white;    
+}
+
+.production-scan-box h1
+{
+    position:absolute;
+    margin-top:-60px;
+    font-size:28px;
+    color:#428bca;
+    font-weight:normal;
+}
+.production-scan-box span
+{
+    position:absolute;
+    margin-top:20px;
+    font-size:14px;
+    color:#428bca;
+    text-align:center;
+    width: inherit;
+}
+.production-scan-box input[type='text']
+{
+    height:100px;
+    width:100%;
+    font-size:50px;
+}
+.production-scan-box input[type='submit']
+{
+    width: 100%;
+    height: 70px;
+}
+
+.production-scan-box .separator-text
+{
+    position: fixed;
+    top: 310px;
+    width: 550px;
+    text-align: center;
+    font-weight: bold;
+    color: #2e6e9e;
+    font-size: 17px;    
+}
 h1{
     margin-left:30px;
     font-size: 23px;
@@ -374,3 +475,76 @@ h3
     color: #333;
     margin-right: 11px;
 }
+
+
+/* step */
+.o-1.step
+{
+    margin-bottom: -25px;
+}
+.o-1.step ul 
+{
+    padding:0px;
+}
+.o-1.step ul li {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    width: 215px;
+    margin: 5px 1px 0 0;
+    text-indent: 35px;
+    position: relative;
+}
+
+.o-1.step ul li:before {
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: -2px;
+    border-style: solid;
+    border-width: 15px 0 15px 15px;
+    border-color: transparent transparent transparent #fff;
+    z-index: 0;
+}
+
+.o-1.step ul li:first-child:before {
+    border-color: transparent;
+}
+
+.o-1.step ul li a:after,.o-1 ul li span:after {
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -15px;
+    border-style: solid;
+    border-width: 15px 0 15px 15px;
+    border-color: transparent transparent transparent #cccccc;
+    z-index: 10;
+}
+.o-1.step ul li a,.o-1.step ul li span {
+    color:white;
+}
+.o-1.step ul li.active a {
+    background: #428bca;
+    z-index: 100;
+}
+
+.o-1.step ul li.active a:after {
+    border-left-color: #428bca;
+}
+
+.o-1.step ul li a,.o-1 ul li span {
+    display: block;
+    background: #cccccc;
+}
+
+.o-1.step ul li a:hover {
+    background: #BDCEDD;
+}
+
+.o-1.step ul li a:hover:after {
+    border-color: transparent transparent transparent #BDCEDD;; 
+}
+/* step */
