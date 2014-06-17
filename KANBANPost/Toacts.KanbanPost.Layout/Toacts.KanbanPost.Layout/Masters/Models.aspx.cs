@@ -2,8 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Utilities.Web.Grid;
+using System.Web.Script.Serialization;
+using Toacts.KanbanPost.Services;
+using Toacts.KanbanPost.Services.BLL;
+using Toacts.KanbanPost.Services.Objects;
+using Toacts.KanbanPost.Layout.Objects;
+using Toacts.KanbanPost.Layout.Resource;
+using System.Web.Script.Services;
+using Newtonsoft.Json;
 
 namespace Toacts.KanbanPost.Layout.Masters
 {
@@ -12,6 +22,121 @@ namespace Toacts.KanbanPost.Layout.Masters
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static GridResult GetList(int? pageNumber, int? pageSize)
+        {
+            // Variables
+            pageNumber = pageNumber == null ? 1 : pageNumber;
+            pageSize = pageSize == null ? 20 : pageSize;
+
+            GridResult result = new GridResult();
+            int totalRecord = 0;
+            Toacts.KanbanPost.Services.Service1 svc = new Service1();
+            List<MAModelObject> list = svc.getModelList(ref totalRecord, pageNumber, pageSize);
+            if (list.Any())
+            {
+                result.rows = list;
+            }
+            result.total = totalRecord;
+
+            //  JavaScriptSerializer javaScriptSerializer = new JavaScriptSerializer();
+            return result;
+        }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static ResponseData Create(RequestMAModelObject reqObj)
+        {
+            ResponseData resData = new ResponseData();
+            try
+            {
+                Toacts.KanbanPost.Services.Service1 svc = new Service1();
+                if (svc.createModel(reqObj))
+                {
+                    resData.error = false;
+                    resData.message = SystemResource.SUCCESS;
+                    System.Diagnostics.EventLog.WriteEntry(ModelStructureLog.CREATE, SystemResource.SUCCESS);
+                }
+                else
+                {
+                    resData.error = true;
+                    resData.message = SystemResource.FAIL;
+                    System.Diagnostics.EventLog.WriteEntry(ModelStructureLog.CREATE, SystemResource.FAIL);
+                }
+
+            }
+            catch (Exception e)
+            {
+                resData.error = true;
+                resData.message = e.Message;
+                System.Diagnostics.EventLog.WriteEntry(ModelStructureLog.CREATE, e.Message);
+            }
+            return resData;
+        }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static ResponseData Update(RequestMAModelObject reqObj)
+        {
+            ResponseData resData = new ResponseData();
+            try
+            {
+                Toacts.KanbanPost.Services.Service1 svc = new Service1();
+                if (svc.updateModel(reqObj))
+                {
+                    resData.error = false;
+                    resData.message = SystemResource.SUCCESS;
+                    System.Diagnostics.EventLog.WriteEntry(ModelPartLog.UPDATE, SystemResource.SUCCESS);
+                }
+                else
+                {
+                    resData.error = true;
+                    resData.message = SystemResource.FAIL;
+                    System.Diagnostics.EventLog.WriteEntry(ModelPartLog.UPDATE, SystemResource.FAIL);
+                }
+
+            }
+            catch (Exception e)
+            {
+                resData.error = true;
+                resData.message = e.Message;
+                System.Diagnostics.EventLog.WriteEntry(ModelPartLog.UPDATE, e.Message);
+            }
+            return resData;
+        }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static ResponseData Delete(int ID)
+        {
+            ResponseData resData = new ResponseData();
+            try
+            {
+                Toacts.KanbanPost.Services.Service1 svc = new Service1();
+                if (svc.deleteModel(ID))
+                {
+                    resData.error = false;
+                    resData.message = SystemResource.SUCCESS;
+                    System.Diagnostics.EventLog.WriteEntry(ModelPartLog.DELETE, SystemResource.SUCCESS);
+                }
+                else
+                {
+                    resData.error = true;
+                    resData.message = SystemResource.FAIL;
+                    System.Diagnostics.EventLog.WriteEntry(ModelPartLog.DELETE, SystemResource.FAIL);
+                }
+
+            }
+            catch (Exception e)
+            {
+                resData.error = true;
+                resData.message = e.Message;
+                System.Diagnostics.EventLog.WriteEntry(ModelPartLog.DELETE, e.Message);
+            }
+            return resData;
         }
     }
 }

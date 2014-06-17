@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Toacts.KanbanPost.Layout {
+namespace Toacts.KanbanPost.Layout.Production {
     
     
-    public partial class Login {
+    public partial class Default {
         
         /// <summary>
         /// UserName control.

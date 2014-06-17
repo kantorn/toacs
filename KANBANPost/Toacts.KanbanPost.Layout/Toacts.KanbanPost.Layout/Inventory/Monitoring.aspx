@@ -179,7 +179,7 @@
         <div  id="content_extrusion"   >
 	        <h2 id="h2" style="">Extrusion Stock</h2>
 	        <table id="plan1" title="Extrusion Stock Monitoring" style="width:938px;height:auto;
-			        singleSelect="true" iconCls="icon-save" rownumbers="true"
+			        singleSelect="true" iconCls="icon-save" rownumbers="false"
 			        idField="itemid" pagination="true" 
                     data-options="pageSize: 20 " >
 	        </table>
@@ -187,7 +187,7 @@
         <div id="content_bending"  >
             <h2 id="h3" style="">Bending Stock</h2>
 	        <table id="plan2" title="Bending Stock Monitoring" style="width:938px;height:auto;
-			        singleSelect="true" iconCls="icon-save" rownumbers="true"
+			        singleSelect="true" iconCls="icon-save" rownumbers="false"
 			        idField="itemid" pagination="true" 
                     data-options="pageSize: 20 " >
 	        </table>

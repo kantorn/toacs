@@ -126,7 +126,7 @@
         <div class="main-contain-inner" style="width:900px;">  
             <h3 id="h3" style="">Extruison</h3>
 	        <table id="plan1" title="Plan Management" style="width:900px;height:auto;"
-			        singleSelect="true" iconCls="icon-save" rownumbers="true"
+			        singleSelect="true" iconCls="icon-save" rownumbers="false"
 			        idField="itemid" pagination="true" 
                     data-options="pageSize: 20 " >
                 <thead>
@@ -144,7 +144,7 @@
 	        </table>
             <h3 id="h2" style="">Bending</h3>
 	        <table id="plan2" title="Plan Management" style="width:900px;height:auto;"
-			        singleSelect="true" iconCls="icon-save" rownumbers="true"
+			        singleSelect="true" iconCls="icon-save" rownumbers="false"
 			        idField="itemid" pagination="true" 
                     data-options="pageSize: 20 " >
                 <thead>

@@ -116,7 +116,7 @@
         </div>
 	    <table id="kanban" title="Issued KANBAN" style="width:930px;height:auto;"
 			    url="/Handler/HandlerKanbanList.axd" 
-			    singleSelect="true" iconCls="icon-save" rownumbers="true"
+			    singleSelect="true" iconCls="icon-save" rownumbers="false"
 			    idField="itemid" pagination="true" 
                 data-options="pageSize:20">
 		    <thead>

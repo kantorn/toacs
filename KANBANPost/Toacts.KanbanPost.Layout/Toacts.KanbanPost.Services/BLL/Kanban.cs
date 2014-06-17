@@ -10,7 +10,7 @@ namespace Toacts.KanbanPost.Services.BLL
     public class Kanban
     {
         [OperationBehavior(Impersonation = ImpersonationOption.Allowed)]
-        public static List<KanbanList> getKanbanList(ref int totalRecord,int? pageindex = null,int? pagesize = null)
+        public static List<KanbanList> getKanbanList(ref int totalRecord, int? pageindex = null, int? pagesize = null)
         {
             List<KanbanList> result = new List<KanbanList>();
             using (TAC_KANBANEntities ef = new TAC_KANBANEntities())
@@ -47,10 +47,10 @@ namespace Toacts.KanbanPost.Services.BLL
                     }
                 }
                 catch
-                { 
-                
+                {
+
                 }
-            }           
+            }
 
             return result;
         }

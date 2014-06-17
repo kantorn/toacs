@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Utilities.Web.Grid;
+using FlexigridASPNET;
 using System.Web.Script.Serialization;
+using System.Reflection;
+using System.Collections;
 using Toacts.KanbanPost.Services;
-using Toacts.KanbanPost.Services.BLL;
-
+using Utilities.Web.Grid;
 
 namespace Toacts.KanbanPost.Layout.Handler
 {
-    public class LineMasterHandler : IHttpHandler
+    public class StockMonitoringHandler : IHttpHandler
     {
         public const string KEY_PAGEINDEX = "page";
         public const string KEY_PAGESIZE = "rows";
@@ -34,7 +35,7 @@ namespace Toacts.KanbanPost.Layout.Handler
             }
             int totalRecord = 0;
             Toacts.KanbanPost.Services.Service1 svc = new Service1();
-            List<LineMaster> list = svc.getLineMaster(ref totalRecord, pageindex, pagesize);
+            List<Toacts.KanbanPost.Services.BLL.MonitoringList> list = svc.getMonitoringList(ref totalRecord, pageindex, pagesize);
             if (list.Any())
             {
                 result.rows = list;
@@ -52,5 +53,6 @@ namespace Toacts.KanbanPost.Layout.Handler
         {
             get { return false; }
         }
+
     }
 }

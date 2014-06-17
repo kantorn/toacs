@@ -6,6 +6,7 @@ using Utilities.Web.Grid;
 using System.Web.Script.Serialization;
 using Toacts.KanbanPost.Services;
 using Toacts.KanbanPost.Services.BLL;
+using Toacts.KanbanPost.Services.Objects;
 
 namespace Toacts.KanbanPost.Layout.Handler
 {

@@ -187,7 +187,7 @@
 		            <a  class="fancy-button"   href="javascript:void(0)"><i class="fa fa-save"  ></i>Save</a>
 	            </div>
 	            <table id="plan1" title="Plan Management" style="width:938px;height:auto;
-			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            singleSelect="true" iconCls="icon-save" rownumbers="false"
 			            idField="itemid" pagination="true" 
                         data-options="pageSize: 20 " >
 	            </table>
@@ -198,7 +198,7 @@
 		            <a  class="fancy-button"  href="javascript:void(0)"><i class="fa fa-save" ></i>Save</a>
 	            </div>
 	            <table id="plan2" title="Plan Management" style="width:938px;height:auto;
-			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            singleSelect="true" iconCls="icon-save" rownumbers="false"
 			            idField="itemid" pagination="true" 
                         data-options="pageSize: 20 " >
 	            </table>
@@ -209,7 +209,7 @@
 		            <a  class="fancy-button"  href="javascript:void(0)"><i class="fa fa-save" ></i>Save</a>
 	            </div>
 	            <table id="plan3" title="Plan Management" style="width:938px;height:auto;
-			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            singleSelect="true" iconCls="icon-save" rownumbers="false"
 			            idField="itemid" pagination="true" 
                         data-options="pageSize: 20 " >
 	            </table>
@@ -220,7 +220,7 @@
 		            <a  class="fancy-button"  href="javascript:void(0)"><i class="fa fa-save" ></i>Save</a>
 	            </div>
 	            <table id="plan4" title="Plan Management" style="width:938px;height:auto;
-			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            singleSelect="true" iconCls="icon-save" rownumbers="false"
 			            idField="itemid" pagination="true" 
                         data-options="pageSize: 20 " >
 	            </table>
@@ -231,7 +231,7 @@
 		            <a  class="fancy-button"  href="javascript:void(0)"><i class="fa fa-save" ></i>Save</a>
 	            </div>
 	            <table id="plan5" title="Plan Management" style="width:938px;height:auto;
-			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            singleSelect="true" iconCls="icon-save" rownumbers="false"
 			            idField="itemid" pagination="true" 
                         data-options="pageSize: 20 " >
 	            </table>
@@ -242,7 +242,7 @@
 		            <a  class="fancy-button"  href="javascript:void(0)"><i class="fa fa-save" ></i>Save</a>
 	            </div>
 	            <table id="plan6" title="Plan Management" style="width:938px;height:auto;
-			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            singleSelect="true" iconCls="icon-save" rownumbers="false"
 			            idField="itemid" pagination="true" 
                         data-options="pageSize: 20 " >
 	            </table>
@@ -258,7 +258,7 @@
 		            <a  class="fancy-button"   href="javascript:void(0)"><i class="fa fa-save"  ></i>Save</a>
 	            </div>
 	            <table id="plan7" title="Plan Management" style="width:938px;height:auto;
-			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            singleSelect="true" iconCls="icon-save" rownumbers="false"
 			            idField="itemid" pagination="true" 
                         data-options="pageSize: 20 " >
 	            </table>
@@ -269,7 +269,7 @@
 		            <a  class="fancy-button"   href="javascript:void(0)"><i class="fa fa-save" ></i>Save</a>
 	            </div>
 	            <table id="plan8" title="Plan Management" style="width:938px;height:auto;
-			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            singleSelect="true" iconCls="icon-save" rownumbers="false"
 			            idField="itemid" pagination="true" 
                         data-options="pageSize: 20 " >
 	            </table>
@@ -280,7 +280,7 @@
 		            <a  class="fancy-button"   href="javascript:void(0)"><i class="fa fa-save"  ></i>Save</a>
 	            </div>
 	            <table id="plan9" title="Plan Management" style="width:938px;height:auto;
-			            singleSelect="true" iconCls="icon-save" rownumbers="true"
+			            singleSelect="true" iconCls="icon-save" rownumbers="false"
 			            idField="itemid" pagination="true" 
                         data-options="pageSize: 20 " >
 	            </table>

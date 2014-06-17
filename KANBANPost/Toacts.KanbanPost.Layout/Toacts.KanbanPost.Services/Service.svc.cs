@@ -6,52 +6,139 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using Toacts.KanbanPost.Services.EF;
+using Toacts.KanbanPost.Services.BLL;
+using Toacts.KanbanPost.Services.Objects;
 
 namespace Toacts.KanbanPost.Services
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     public class Service1 : IService
     {
-        public List<Toacts.KanbanPost.Services.BLL.KanbanList> getKanbanList(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        public List<KanbanList> getKanbanList(ref int totalRecord, int? pageindex = null, int? pagesize = null)
         {
-            return Toacts.KanbanPost.Services.BLL.Kanban.getKanbanList(ref totalRecord, pageindex, pagesize);
+            return Kanban.getKanbanList(ref totalRecord, pageindex, pagesize);
         }
 
         #region Master Data
-        public List<Toacts.KanbanPost.Services.BLL.Part> getPartMaster(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+
+        #region Part
+        public List<Part> getPartMaster(ref int totalRecord, int? pageindex = null, int? pagesize = null)
         {
-            return Toacts.KanbanPost.Services.BLL.MAParts.getPartsList(ref totalRecord, pageindex, pagesize);
-        }
-        public List<Toacts.KanbanPost.Services.BLL.LosttimeMaster> getLosttimeMaster(ref int totalRecord, int? pageindex = null, int? pagesize = null)
-        {
-            return Toacts.KanbanPost.Services.BLL.MALosttime.getLosttimeList(ref totalRecord, pageindex, pagesize);
+            return MAParts.getPartsList(ref totalRecord, pageindex, pagesize);
         }
 
-        public List<Toacts.KanbanPost.Services.BLL.LineMaster> getLineMaster(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        public List<Part> getPartMaster()
         {
-            return Toacts.KanbanPost.Services.BLL.MALine.getLineList(ref totalRecord, pageindex, pagesize);
+            return MAParts.getPartsList();
         }
 
-        public List<Toacts.KanbanPost.Services.BLL.OpeatorRoleMaster> getOperatorRoleMaster(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        public bool updatePart(Part part)
         {
-            return Toacts.KanbanPost.Services.BLL.MAOperatorRoles.getOperatorRoleList(ref totalRecord, pageindex, pagesize);
+            return MAParts.updatePart(part); 
         }
 
-        public List<Toacts.KanbanPost.Services.BLL.CustomerMaster> getCustomerMaster(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        public bool deletePart(int ID)
         {
-            return Toacts.KanbanPost.Services.BLL.MACustomer.getCustomerMasterList(ref totalRecord, pageindex, pagesize);
+            return MAParts.deletePart(ID);
         }
 
-        public List<Toacts.KanbanPost.Services.BLL.OperatorMaster> getOperatorMaster(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        public bool createPart(Part part)
         {
-            return Toacts.KanbanPost.Services.BLL.MAOperator.getOperatorMasterList(ref totalRecord, pageindex, pagesize);
+            return MAParts.createPart(part);
+        }
+
+        public Part getPartByID(int ID)
+        {
+            return MAParts.getPartByID(ID);
         }
         #endregion
 
-        #region Monitoring Data
-        public List<Toacts.KanbanPost.Services.BLL.MonitoringList> getMonitoringList(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        #region ModelStructures
+        public List<Toacts.KanbanPost.Services.Objects.ModelStructureObject> getModelStructuresList(ref int totalRecord, int? pageindex = null, int? pagesize = null)
         {
-            return Toacts.KanbanPost.Services.BLL.Monitoring.getMonitoringList(ref totalRecord, pageindex, pagesize);
+            return ModelStructures.getModelStructuresList(ref totalRecord, pageindex, pagesize);
+        }
+
+        public List<Toacts.KanbanPost.Services.Objects.ModelStructureObject> getModelStructuresList()
+        {
+            return ModelStructures.getModelStructuresList();
+        }
+
+        public bool updateModelStructure(RequsetUpdateModelStructureObject obj)
+        {
+            return ModelStructures.updateModelStructure(obj);
+        }
+
+        public bool deleteModelStructure(int ID)
+        {
+            return ModelStructures.deleteModelStructure(ID);
+        }
+
+        public bool createModelStructure(RequsetUpdateModelStructureObject obj)
+        {
+            return ModelStructures.createModelStructure(obj);
+        }
+        #endregion
+
+        #region Customer
+
+        public List<MACustomerObject> getModelCustomerList(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        {
+            return MACustomers.getModelCustomerList(ref totalRecord, pageindex, pagesize);
+        }
+
+        public bool updateModelCustomer(RequsetMACustomerObject reqObj)
+        {
+            return MACustomers.updateModelCustomer(reqObj);
+        }
+
+        public bool deleteModelCustomer(int ID)
+        {
+            return MACustomers.deleteModelCustomer(ID);
+        }
+
+        public bool createModelCustomer(RequsetMACustomerObject reqObj)
+        {
+            return MACustomers.createModelCustomer(reqObj);
+        }
+
+        public List<MACustomerObject> getModelCustomerList()
+        {
+            return MACustomers.getModelCustomerList();
+        }
+
+        #endregion
+
+        #region Model
+
+        public List<MAModelObject> getModelList(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        {
+            return MAModel.getModelList(ref totalRecord, pageindex, pagesize);
+        }
+
+        public bool createModel(RequestMAModelObject obj)
+        {
+            return MAModel.createModel(obj);
+        }
+
+        public bool updateModel(RequestMAModelObject obj)
+        {
+            return MAModel.updateModel(obj);
+        }
+
+        public bool deleteModel(int ID)
+        {
+            return MAModel.deleteModel(ID);
+        }
+
+        #endregion 
+
+        #endregion
+
+        #region Monitoring Data
+        public List<MonitoringList> getMonitoringList(ref int totalRecord, int? pageindex = null, int? pagesize = null)
+        {
+            return Monitoring.getMonitoringList(ref totalRecord, pageindex, pagesize);
         }
         #endregion
 

@@ -1,196 +1,104 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/Site1.Master" AutoEventWireup="true" CodeBehind="Customers.aspx.cs" Inherits="Toacts.KanbanPost.Layout.Masters.Customers" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<style type="text/css" >
-    .lines-bottom .datagrid-body td{
-        border-bottom:1px solid #cccccc;
-        border-right:1px dotted transparent;
-    }
-</style>
-<script type="text/javascript" language="javascript">
+<script  type="text/javascript" language="javascript" src="../Scripts/javascript.grid.js"></script>
 
-    // Doc Ready
-    //<![CDATA[
+<script  type="text/javascript" language="javascript" >
     $(function () {
-        $('#h1').activity({ segments: 8, width: 2, space: 0, length: 3, speed: 1.5, align: 'right' });
+        grid_option.id = '#ma_customer';
+        grid_option.url = '/Masters/Customers.aspx/GetList';
+        grid_option.url_delete = "/Masters/Customers.aspx/Delete";
 
-        $('#ma_part').datagrid({
-            pageable: true,
-            autoheight: true,
-            rownumbers: false,
-            singleSelect: true, columns: [[
-            { field: 'id', title: 'id', width: 60, hidden: true },
-            { field: 'customer_name', title: 'Customer Name', width: 240, align: 'left', editor: 'text' },
-            { field: 'customer_shortname', title: 'Short Name', width: 190, align: 'left', editor: 'text' },
-            { field: 'Action', title: 'Action', width: 190, align: 'center',
-                formatter: function (value, row, index) {
-                    if (row.editing) {
-                        var s = '<a href="#" onclick="saverow(this)">Save</a> ';
-                        var c = '<a href="#" onclick="cancelrow(this)">Cancel</a>';
-                        return s + c;
-                    } else {
-                        var e = '<a href="#" onclick="editrow(this)">Edit</a> ';
-                        var d = '<a href="#" onclick="deleterow(this)">Delete</a>';
-                        return e + d;
+        grid_option.columns = [[
+                { field: 'ID', title: 'ID', width: 100 },
+                { field: 'CUSTOMER_NAME', title: 'CUSTOMER NAME', width: 390, editor: 'text' },
+                { field: 'CUSTOMER_SHOT', title: 'CUSTOMER SHOT', width: 390,  editor: 'text' }]];
+
+        grid_option.fn_save_update = fn_save_change;
+        grid_option.fn_save_create = fn_save_create;
+        ini_grid();
+    });
+
+    function fn_save_create(row, changes) {
+        $.messager.confirm('Confirm', 'Are you sure?', function (isSave) {
+            if (isSave) {
+                var reqObj = { reqObj:
+                    {
+                        ID: -1
+                        , CUSTOMER_NAME: row.CUSTOMER_NAME
+                        , CUSTOMER_SHOT: row.CUSTOMER_SHOT
                     }
                 }
-            }
-        ]],
-            onBeforeEdit: function (index, row) {
-                row.editing = true;
-                updateActions(index);
-            },
-            onAfterEdit: function (index, row) {
-                row.editing = false;
-                updateActions(index);
-            },
-            onCancelEdit: function (index, row) {
-                row.editing = false;
-                updateActions(index);
-            }
-        })
 
-        $('#ma_part').datagrid('getPanel').addClass('lines-bottom');
-
-        $('.filter-button').click(function () {
-            if (!$('.filter-button').hasClass('actived')) {
-                $('.filter-button').addClass('actived')
-                $('.filter-display').fadeIn('fast');
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    url: '/Masters/Customers.aspx/Create',
+                    data: JSON.stringify(reqObj),
+                    success: function (result) {
+                        load_datalist();
+                    }
+                });
             }
             else {
-                $('.filter-button').removeClass('actived')
-                $('.filter-display').fadeOut('fast');
-            }
-        });
-
-        $('.insert-button').click(function () {
-            insert();
-        });
-    });
-    //]]>
-
-    function updateActions(index) {
-        $('#ma_part').datagrid('updateRow', {
-            index: index,
-            row: {}
-        });
-    }
-    function getRowIndex(target) {
-        var tr = $(target).closest('tr.datagrid-row');
-        return parseInt(tr.attr('datagrid-row-index'));
-    }
-    function editrow(target) {
-        $('#ma_part').datagrid('beginEdit', getRowIndex(target));
-    }
-    function deleterow(target) {
-        $.messager.confirm('Confirm', 'Are you sure?', function (r) {
-            if (r) {
-                $('#tt').datagrid('deleteRow', getRowIndex(target));
+                $(grid_option.id).datagrid('rejectChanges');
             }
         });
     }
-    function saverow(target) {
-        $('#ma_part').datagrid('endEdit', getRowIndex(target));
-    }
-    function cancelrow(target) {
-        $('#ma_part').datagrid('cancelEdit', getRowIndex(target));
-    }
-    function insert() {
-        var row = $('#ma_part').datagrid('getSelected');
-        if (row) {
-            var index = $('#ma_part').datagrid('getRowIndex', row);
-        } else {
-            index = 0;
-        }
-        $('#ma_part').datagrid('insertRow', {
-            index: index,
-            row: {
-                status: 'P'
+
+    function fn_save_change(row, changes) {
+        $.messager.confirm('Confirm', 'Are you sure?', function (isSave) {
+            if (isSave) {
+                var reqObj = { reqObj:
+                    {
+                        ID: row.ID
+                        , CUSTOMER_NAME: row.CUSTOMER_NAME
+                        , CUSTOMER_SHOT: row.CUSTOMER_SHOT
+                    }
+                }
+
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    url: '/Masters/Customers.aspx/Update',
+                    data: JSON.stringify(reqObj),
+                    success: function (result) {
+                        load_datalist();
+                    }
+                });
+            }
+            else {
+                $(grid_option.id).datagrid('rejectChanges');
             }
         });
-        $('#ma_part').datagrid('selectRow', index);
-        $('#ma_part').datagrid('beginEdit', index);
-    }
-    //
-    // FG Data Load
-    function fgDataLoad(sender, args) {
-        // Hide - Loading Spinner 
-        $('#h1').activity(false);
-    }
-    //
-    // FG Row Click
-    function fgRowClick(sender, args) {
-        return false;
-    }
-    //
-    //
-    // FG No Data
-    function fgNoData() {
-        // Hide - Loading Spinner 
-        $('#h1').activity(false);
-    }
-    // FG Before Send Data
-    function fgBeforeSendData(data) {
-        // Show - Loading Spinner
-        $('#h1').activity({ segments: 8, width: 2, space: 0, length: 3, speed: 1.5, align: 'right' });
     }
 
-
-
-    </script>
+</script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="main-contain-inner">       
-        <div class="o-1"  >
-	            <h1 id="h2"  >Customer Master Data</h1>
-	            <div class="page-options-nav" >
-                    <a class="fancy-button insert-button arrow-down" href="javascript:void(0)">Insert Row<span class="arrow-down-icon"></span></a> 
-                    &nbsp;&nbsp;&nbsp;&nbsp;
+        <br/>      
+        <div class="o-1" style="margin-left: auto;height: 75px;margin-right: auto;width: 930px;">
+	            <h1 id="h2" style="float:left; margin-left:30px;font-size: 23px;color: #264DB1;font-weight: bold;">Part Master Data</h1>
+	            <div class="page-options-nav" style="margin-top:15px;float:right;margin-right:20px;">
                     <a class="fancy-button filter-button arrow-down" href="javascript:void(0)">Filter Data<span class="arrow-down-icon"></span></a> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
 	            </div>
 	        <div class="cb"></div>
         </div>  
         <div class="filter-display">
-            <div class="filter-button-close" style="float: right;padding: 10px;" >
-                <a  style="padding:2px 6px 2px 6px;" href="javascript:$('.filter-button').click();">x</a>
-            </div>
-            <div style="width: 50%;float: left;padding:20px 50px;"> 
-                <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Customer :</span>
-                <asp:TextBox id="txtCustomer" runat="server" ></asp:TextBox>
-                <br/>
-                <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Model :</span>
-                <asp:TextBox id="TextBox1"  runat="server" ></asp:TextBox>
-                <br/>
-            </div>
-            <div style="width: 50%;float: left;padding:20px 0px;margin-left:-75px;"> 
-                <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Part Name :</span>
-                <asp:TextBox id="TextBox2" runat="server" ></asp:TextBox>
-                <br/>
-                <span class="lot-information" style="width:180px;padding:5px 10px;text-align:right;">Part Short Name :</span>
-                <asp:TextBox id="TextBox3" runat="server" ></asp:TextBox>
-                <br/>
-            </div>
-            
-	        <div class="page-options-nav button-group" style="margin-top:-30px">
-                <a class="fancy-button" href="javascript:void(0)">Apply Filter</a> 
+        </div>
+        <div style="margin-left:auto;margin-right:auto;width:930px;">
+	        <table id="ma_customer" title="Issued KANBAN" style="width:930px;height:500px;"
+			        singleSelect="true" iconCls="icon-save" rownumbers="false"
+			        idField="itemid" pagination="true" toolbar="#tb"
+                    data-options="pageSize: 20">
+	        </table>
+            <div id="tb" class="grid-toolbar" >
+		        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="javascript:insert_row();">Add</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="javascript:edit_row();">Edit</a>
+		        <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="javascript:delete_row();">remove</a>
 	        </div>
         </div>
-        <div style="width:630px;margin-left:auto;margin-right:auto;" >
-	        <table id="ma_part" title="Issued KANBAN" style="width:630px;height:auto;"
-			        url="/Handler/CustomerMasterHandler.axd" 
-			        singleSelect="true" iconCls="icon-save" rownumbers="true"
-			        idField="itemid" pagination="true" 
-                    data-options="pageSize: 20">
-		        <thead>
-                    <%--KanbnaId,customer_name,model_name,part_name,part_no,tag_id,quantity,total_quantity--%>
-			        <tr>
-				        <th field="id" width="95" >ID</th>
-				        <th field="customer_name" width="250">Customer Name</th>
-				        <th field="customer_shortname" width="200" >Short Name</th>
-			        </tr>
-		        </thead>
-	        </table>
-        </div>
-    </div>
 </asp:Content>

@@ -68,12 +68,10 @@
   <ItemGroup>
     <Compile Include="BLL\ForecastOrder.cs" />
     <Compile Include="BLL\Kanban.cs" />
-    <Compile Include="BLL\MACustomer.cs" />
-    <Compile Include="BLL\MALine.cs" />
-    <Compile Include="BLL\MALosttime.cs" />
-    <Compile Include="BLL\MAOperator.cs" />
-    <Compile Include="BLL\MAOperatorRoles.cs" />
+    <Compile Include="BLL\MACustomers.cs" />
+    <Compile Include="BLL\MAModel.cs" />
     <Compile Include="BLL\MAParts.cs" />
+    <Compile Include="BLL\ModelStructures.cs" />
     <Compile Include="BLL\Monitoring.cs" />
     <Compile Include="EF\TAC_KANBAN.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -82,6 +80,10 @@
     </Compile>
     <Compile Include="EF\TAC_KANBANEntities.cs" />
     <Compile Include="EF\TransactionUtils.cs" />
+    <Compile Include="Objects\MACustomerObject.cs" />
+    <Compile Include="Objects\MAModelObject.cs" />
+    <Compile Include="Objects\ModelStructureObject.cs" />
+    <Compile Include="Objects\PartObject.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
