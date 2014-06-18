@@ -676,6 +676,7 @@
     <Compile Include="Masters\Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Objects\ResponseData.cs" />
     <Compile Include="Production\ExtrusionOrderCreate.aspx.cs">
       <DependentUpon>ExtrusionOrderCreate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

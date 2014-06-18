@@ -12,7 +12,15 @@
 
        // Doc Ready
        //<![CDATA[
-       var column = [];
+       var column = [[{ field: 'FGR', title: 'FGR' },
+                       { field: 'SIF_RMF', title: 'SIF/RMF', width: 70 },
+                       { field: 'Order', title: 'Order', width: 40 },
+                       { field: 'Stock', title: 'Stock', width: 40 },
+                       { field: 'STOCK_DAY', title: 'STOCK/DAY', width: 50 },
+                       { field: 'P_Stock', title: '%Stock', width: 80 },
+                       { field: 'P_Ship', title: '%Stock', width: 50 },
+                       { field: 'Remain', title: 'Remain', width: 50 },
+                       { field: 'P_Complete', title: '%Complete', width: 50 }, ]];
        var frozen = [[{ field: 'Part_No', title: 'Part No' },
                        { field: 'Customer_Name', title: 'Customer', width: 70 },
                        { field: 'Line', title: 'Line', width: 40 },
@@ -20,29 +28,12 @@
                        { field: 'Forecast', title: 'Forecast', width: 50 },
                        { field: 'EOF', title: 'EOF', width: 80}]];
 
-       var lastIndex = {};
+       var lastIndex;
        var gridList = new Array("#plan1");
 
        $(document).ready(function () {
            $('#h1').activity({ segments: 8, width: 2, space: 0, length: 3, speed: 1.5, align: 'right' });
-
-           $.ajax({
-               url: '/Handler/PlanManagementHandler.axd?init=true',
-               type: "POST",
-               contentType: "application/json; charset=utf-8",
-               dataType: "json",
-               success: function (data) {
-                   column = data;
-                   for (i = 0; i < gridList.length; i++) {
-                       lastIndex[gridList[i]] = 0;
-                       loadDataGrid(gridList[i]);
-                   }
-
-               },
-               error: function () {
-                   alert("Error with AJAX callback");
-               }
-           });
+           loadDataGrid(gridList[0]);
 
            $('.filter-button').click(function () {
                if (!$('.filter-button').hasClass('actived')) {
@@ -103,12 +94,12 @@
                columns: column,
                onClickRow: function (rowIndex) {
                    $('.datagrid-row-selected').removeClass('datagrid-row-selected')
-                   if (lastIndex[i] != rowIndex) {
+                   if (lastIndex!= rowIndex) {
                        $(currentGrid).datagrid('endEdit', lastIndex[currentGrid]);
                        $(currentGrid).datagrid('beginEdit', rowIndex);
                        setEditing(rowIndex, currentGrid);
                    }
-                   lastIndex[currentGrid] = rowIndex;
+                   lastIndex = rowIndex;
                },
                view: detailview,
                detailFormatter: function (rowIndex, rowData) {
@@ -175,7 +166,6 @@
 	        <h1 id="h4" >Stock Monitoring</h1>
         </div> 
         <div  id="content_extrusion"   >
-	        <h2 id="h2" style="">Extrusion Stock</h2>
 	        <table id="plan1" title="Extrusion Stock Monitoring" style="width:938px;height:auto;
 			        singleSelect="true" iconCls="icon-save" rownumbers="true"
 			        idField="itemid" pagination="true" 
