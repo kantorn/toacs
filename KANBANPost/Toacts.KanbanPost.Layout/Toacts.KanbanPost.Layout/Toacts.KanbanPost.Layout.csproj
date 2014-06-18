@@ -378,7 +378,6 @@
     <Content Include="Production\FinishingOrderComplete.aspx" />
     <Content Include="Production\FinishingOrderCreate.aspx" />
     <Content Include="Production\FinishingSelection.aspx" />
-    <Content Include="Production\PDScheudle.aspx" />
     <Content Include="Scripts\combodate.js" />
     <Content Include="Scripts\datagrid-detailview.js" />
     <Content Include="Scripts\jquery.easyui.min.js" />
@@ -725,13 +724,6 @@
     </Compile>
     <Compile Include="Production\FinishingSelection.aspx.designer.cs">
       <DependentUpon>FinishingSelection.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Production\PDScheudle.aspx.cs">
-      <DependentUpon>PDScheudle.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Production\PDScheudle.aspx.designer.cs">
-      <DependentUpon>PDScheudle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\TOACSRefferences\Reference.cs">
