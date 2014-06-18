@@ -15,18 +15,17 @@
        var column = [];
        var frozen = [[{ field: 'Part_No', title: 'Part No' },
                        { field: 'Customer_Name', title: 'Customer', width: 70 },
+                       { field: 'Line', title: 'Line', width: 40 },
                        { field: 'Model_Name', title: 'Model', width: 40 },
-                       { field: 'Line_Speed', title: 'CT', width: 40 },
-                       { field: 'Packing', title: 'Packing', width: 50 },
-                       { field: 'Forecast_Qty', title: 'Forecast', width: 80}]];
+                       { field: 'Forecast', title: 'Forecast', width: 50 },
+                       { field: 'EOF', title: 'EOF', width: 80}]];
 
        var lastIndex = {};
-       var gridList = new Array("#plan1", "#plan2");
+       var gridList = new Array("#plan1");
 
        $(document).ready(function () {
            $('#h1').activity({ segments: 8, width: 2, space: 0, length: 3, speed: 1.5, align: 'right' });
 
-           //alert(sPage);
            $.ajax({
                url: '/Handler/PlanManagementHandler.axd?init=true',
                type: "POST",
@@ -84,15 +83,16 @@
                          '<tr><td >Max Stock : 3</td><td style="padding-right:15px;">Actual Stock In</td></tr>' +
                          '<tr><td ></td><td style="padding-right:15px;" >Plan Stock Out</td></tr>' +
                          '<tr><td >EOF Stock : 481</td><td style="padding-right:15px;" >Actual Stock Out</td></tr>' +
-                        '</table>'
+                        '</table>';
 
        var str_result = '<table><tr><td field="day1"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day1">0</div></td><td field="day2"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day2">0</div></td><td field="day3"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day3">0</div></td><td field="day4"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day4">0</div></td><td field="day5"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day5">0</div></td><td field="day6"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day6">0</div></td><td field="day7"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day7">0</div></td><td field="day8"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day8">0</div></td><td field="day9"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day9">0</div></td><td field="day10"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day10">0</div></td><td field="day11"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day11">0</div></td><td field="day12"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day12">0</div></td><td field="day13"><div style="" class="datagrid-cell datagrid-cell-c1-day13">0</div></td><td field="day14"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day14">0</div></td><td field="Total"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-Total">0</div></td></tr>' +
                         '<tr><td field="day1"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day1">0</div></td><td field="day2"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day2">0</div></td><td field="day3"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day3">0</div></td><td field="day4"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day4">0</div></td><td field="day5"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day5">0</div></td><td field="day6"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day6">0</div></td><td field="day7"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day7">0</div></td><td field="day8"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day8">0</div></td><td field="day9"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day9">0</div></td><td field="day10"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day10">0</div></td><td field="day11"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day11">0</div></td><td field="day12"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day12">0</div></td><td field="day13"><div style="" class="datagrid-cell datagrid-cell-c1-day13">0</div></td><td field="day14"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day14">0</div></td><td field="Total"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-Total">0</div></td></tr>' +
                         '<tr><td field="day1"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day1">0</div></td><td field="day2"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day2">0</div></td><td field="day3"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day3">0</div></td><td field="day4"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day4">0</div></td><td field="day5"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day5">0</div></td><td field="day6"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day6">0</div></td><td field="day7"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day7">0</div></td><td field="day8"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day8">0</div></td><td field="day9"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day9">0</div></td><td field="day10"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day10">0</div></td><td field="day11"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day11">0</div></td><td field="day12"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day12">0</div></td><td field="day13"><div style="" class="datagrid-cell datagrid-cell-c1-day13">0</div></td><td field="day14"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day14">0</div></td><td field="Total"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-Total">0</div></td></tr>' +
                         '<tr><td field="day1"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day1">0</div></td><td field="day2"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day2">0</div></td><td field="day3"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day3">0</div></td><td field="day4"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day4">0</div></td><td field="day5"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day5">0</div></td><td field="day6"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day6">0</div></td><td field="day7"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day7">0</div></td><td field="day8"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day8">0</div></td><td field="day9"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day9">0</div></td><td field="day10"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day10">0</div></td><td field="day11"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day11">0</div></td><td field="day12"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day12">0</div></td><td field="day13"><div style="" class="datagrid-cell datagrid-cell-c1-day13">0</div></td><td field="day14"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-day14">0</div></td><td field="Total"><div style="border:none;" class="datagrid-cell datagrid-cell-c1-Total">0</div></td></tr>' +
-                        '</table>'
+                        '</table>';
+
        function loadDataGrid(currentGrid) {
-           // setTimeout(function () {
+
            $(currentGrid).datagrid({
                url: "/Handler/PlanManagementHandler.axd",
                pageable: true,
@@ -124,8 +124,6 @@
            });
 
            $(currentGrid).datagrid('getPanel').addClass('lines-bottom');
-           //}, 100);
-
        }
 
        function setEditing(rowIndex, girdId) {
@@ -179,14 +177,6 @@
         <div  id="content_extrusion"   >
 	        <h2 id="h2" style="">Extrusion Stock</h2>
 	        <table id="plan1" title="Extrusion Stock Monitoring" style="width:938px;height:auto;
-			        singleSelect="true" iconCls="icon-save" rownumbers="true"
-			        idField="itemid" pagination="true" 
-                    data-options="pageSize: 20 " >
-	        </table>
-        </div>
-        <div id="content_bending"  >
-            <h2 id="h3" style="">Bending Stock</h2>
-	        <table id="plan2" title="Bending Stock Monitoring" style="width:938px;height:auto;
 			        singleSelect="true" iconCls="icon-save" rownumbers="true"
 			        idField="itemid" pagination="true" 
                     data-options="pageSize: 20 " >

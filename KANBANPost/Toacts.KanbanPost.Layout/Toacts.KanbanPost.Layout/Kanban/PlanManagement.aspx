@@ -177,7 +177,7 @@
         <div class="o-1"  >
 	        <h1 id="h2" >Planing Management</h1>
         </div>
-          <div class="o-2"  >
+        <div class="o-2"  >
 	        <h2 id="h_extrusion" >Extrusion Plan</h2>
         </div>
         <div  class="easyui-tabs" id="content_extrusion"  style="margin-left:auto;margin-right:auto;width:940px;">

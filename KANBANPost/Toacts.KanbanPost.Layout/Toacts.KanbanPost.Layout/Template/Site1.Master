@@ -77,7 +77,6 @@
 		                <li><a href="#">Stock Information</a>
 			                <ul>
 				                <li><a href="../Inventory/Monitoring.aspx">Stock Monitoring</a></li>
-				                <li><a href="../Inventory/Standard.aspx">Standard Stock Control</a></li>
 			                </ul>
 		                </li>
 		                <li style="border-right:none"><a href="#">Master Data</a>
